@@ -1,0 +1,100 @@
+* R programming
+
+** How to make a cross table with a custom function (e.g., mean)?
+
+   #+begin_src R
+     addmargins(xtabs(value ~ ., aggregate(value ~ factor1, factor2, DF, mean)),
+                FUN = mean)
+   #+end_src
+
+** How to make lapply return a data.frame?
+
+If =x= is a =data.frame=, which is a list with attributes, use =x[]=
+to preserve all attributes.
+   
+   #+begin_src R
+     x[] = lapply(x, type.convert)
+   #+end_src
+
+Source: [[https://github.com/J-Moravec][Jiří Moravec]]
+   
+** How to split a matrix row-wise as a list?
+  
+#+begin_src R
+  X <- matrix(rnorm(100), nrow = 20)
+  l <- as.list(as.data.frame(t(X)))
+#+end_src
+   
+** Look up a value among possibilities?
+
+   The workhorse of any labeling function
+
+   #+begin_src R
+     l <- list(key1 = "value1", key2 = NA, key3 = 022)
+     lookup <- function(x, l) { unlist(l[x]) }
+   #+end_src
+   
+   Source: [[https://gist.github.com/luisdamiano/c8dc80775970e3159b6d4282e1bd85dd][benchmark unlist versus do.call(c, list) for list lookup in R]]
+
+** How to remove columns with all NA fast?
+
+   General approach with Base R only
+    
+   #+begin_src R
+     Filter(function(x)!all(is.na(x)), df)
+   #+end_src
+
+   Via data.table for general time and memory efficiency (40% faster in example)
+
+   #+begin_src R
+     DT[, which(unlist(lapply(DT, function(x)!all(is.na(x))))), with = FALSE]
+   #+end_src
+
+   Source: [[https://stackoverflow.com/a/12614723/2860744][remove columns from dataframe where ALL values are NA]]
+   
+** How to fast subset rows corresponding to max value by group?
+
+   #+begin_src R
+     # Row with maximum `g` for each group `id` in the `bdt` data.table
+     bdt[bdt[, .I[g == max(g)], by = id]$V1]
+  #+end_src
+
+   Source: [[https://stackoverflow.com/a/16574176/2860744][subset rows corresponding to max value by group using data.table]]
+
+** How to create named vector programatically in one statement?
+
+   #+begin_src R
+     out <- setNames(c("value1", "value2"), c("name1", "name2"))
+   #+end_src
+   
+   Source: [[https://stackoverflow.com/a/22428439/2860744][create a numeric vector with names in one statement?]]
+
+** How to get all function call arguments as a list?
+
+   Including ellipsis also!
+
+   #+begin_src R
+     f <- function(a, b = 2, ...) { c(as.list(environment()), list(...)) }
+   #+end_src
+
+   Source: [[https://stackoverflow.com/a/17244041][get all Parameters as List]]
+
+** How to debug an error thrown in a package?
+
+   #+begin_src R
+     options(error = recover, show.error.locations = TRUE, warn = 2)
+   #+end_src
+
+   Source: [[https://stackoverflow.com/a/13456223/2860744][debugging unexpected errors in R -- how can I find where the
+   error occurred?]]
+
+** How to make beautiful plots with base R?
+
+   - [[http://karolis.koncevicius.lt/posts/r_base_plotting_without_wrappers/][R base plotting without wrappers]]
+
+** Resources
+
+   - [[https://pj.freefaculty.org/R/Rtips.html][Rtips]]
+   - [[http://karolis.koncevicius.lt/posts/collection_of_simple_r_shortcuts/][A Collection of Simple R Shortcuts]]
+   - [[https://csgillespie.github.io/efficientR/set-up.html#blas-and-alternative-r-interpreters][Efficient R programming]]
+     

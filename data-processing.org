@@ -1,0 +1,67 @@
+* Data processing
+
+** GNU Make
+
+   - [[https://kbroman.org/minimal_make/][Minimal make file]]
+   - [[https://stackoverflow.com/a/2214593/2860744][Passing arguments to make]]
+   - [[https://www.gnu.org/software/make/manual/make.html#Multiple-Targets][Rules with grouped targets]]: when one script produces more than one
+     target
+   - [[https://www.gnu.org/software/make/manual/make.html#Automatic-Variables][Automatic variables]]: handy to write recipes
+   - [[https://swcarpentry.github.io/make-novice/][Automation and make]]: for analysis, visualization and papers
+   - [[https://swcarpentry.github.io/make-novice/08-self-doc/index.html][Self-documenting makefiles]]
+
+** Pipeline automation
+   
+   - [[https://stat545.com/automating-pipeline.html][Automating data-analysis pipelines]]
+   - [[https://github.com/pditommaso/awesome-pipeline][Awesome pipeline]]: curated list of awesome pipeline toolkits
+
+** How to view tabular data?
+
+   - [[https://aur.archlinux.org/pspg.git][Tabular data pager]]: works fine with CSV files too!
+   - [[https://github.com/saulpw/visidata][VisiData]]: lightning fast tabular data exploring, arranging, plotting
+
+** ETL cycle
+
+   1. Cycle initiation
+   2. Build reference data
+   3. Extract (from sources)
+   4. Validate
+   5. Transform (clean, apply business rules, check for data integrity, create aggregates or disaggregates)
+   6. Stage (load into staging tables, if used)
+   7. Audit reports (for example, on compliance with business rules. Also, in case of failure, helps to diagnose/repair)
+   8. Publish (to target tables)
+   9. Archive
+
+   Source: [[https://en.wikipedia.org/wiki/Extract,_transform,_load#Real-life_ETL_cycle][Real-life ETL cycle]]
+
+*** ETL Template
+
+    - Type of tasks
+      - Data loading
+        - Keep many small units as principle
+      - Data munging
+        - Munge many small units in parallel
+      - Data processing -- computationally intensive PEA
+        - Run tasks that need many data units (prepare)
+        - Run tasks that need one data unit only in parallel (execute)
+          - One script with command argument line?
+          - Makefile call the script?
+          - One shell script to call makefile?
+          *** TODO This needs to be figured out
+        - Run tasks that need many data units (aggregate)
+      - Data storing
+        - Write many small units to disk
+        - Write aggregates for each small data unit or together?
+
+** Workflow for statistical analysis and report writing
+
+   - [[https://stackoverflow.com/questions/1429907/workflow-for-statistical-analysis-and-report-writing][Workflow for statistical analysis and report writing]]
+   - [[https://github.com/ropensci/rrrpkg][What is a research compendium for reproducible research]]
+   - [[https://books.ropensci.org/drake/similar-work.html][Drake documentation]]
+    
+* A typical workflow
+
+  1. For each dataset
+     1. Acquire raw data
+     2. Munge data
+     3. Run many independent

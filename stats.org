@@ -1,0 +1,20 @@
+* Statistics
+
+** Principal Component Regression
+
+   Let $\mathbf{T} = \mathbf{X} \mathbf{W}$ for principal component
+   score matrix $\mathbf{T}$ and loading matrix $\mathbf{W}$. Set the
+   models $Y = \mathbf{X} \mathbf{\beta} + \mathbf{\varepsilon}$ and
+   $Y = \mathbf{T} \mathbf{\beta}_T + \mathbf{\varepsilon}$. Then,
+   $\mathbf{X} \mathbf{\beta} = \mathbf{T} \mathbf{\beta}_T \iff
+   \mathbf{\beta} = \mathbf{W} \mathbf{\beta}_T$.
+
+** Priors
+
+   - [[http://www.stats.org.uk/priors/noninformative/YangBerger1998.pdf][A Catalog of Noninformative Priors]]
+
+** MCMC
+
+   - [[http://users.stat.umn.edu/~geyer/mcmc/one.html][One long run in MCMC]]: If you can't get a good answer with one
+     long run, then you can't get a good answer with many short runs
+     either.

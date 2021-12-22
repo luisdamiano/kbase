@@ -1,0 +1,21 @@
+* Math
+  
+** Linear algebra
+
+   - [[http://www2.imm.dtu.dk/pubdb/edoc/imm3274.pdf][The Matrix Cookbook]]: collection of linear algebra facts
+   - [[http://www.matrixcalculus.org/][Matrix calculus]]: symbolic vector and matrix derivatives
+   - [[http://www.ee.ic.ac.uk/hp/staff/dmb/matrix/intro.html][The Matrix Reference Manual]]: reference information about linear
+     algebra and the properties of real and complex matrices.
+   - [[https://tminka.github.io/papers/matrix/minka-matrix.pdf][Old and New Matrix Algebra Useful for Statistics]]: large number of
+     matrix identities.
+   - [[https://cs.nyu.edu/~roweis/notes.html][Useful Matrix and Gaussian formulae]]: reference sheets of useful
+     matrix and Gaussian formulae.
+
+** Optimization
+   
+   - [[http://www.geno-project.org/][GENO]]: optimization solver code generator
+
+** Other references
+
+   - [[https://en.wikipedia.org/wiki/List_of_limits][List of limits]]
+   - [[https://en.wikipedia.org/wiki/List_of_logarithmic_identities][List of logarithmic identities]]

@@ -1,0 +1,14 @@
+* Data visualization
+
+** Color palette
+
+   - [[https://ux.stackexchange.com/questions/94696/color-palette-for-all-types-of-color-blindness][Color Palette for All types of Color Blindness]]
+   - [[http://mkweb.bcgsc.ca/colorblind/][Color-palette for color blindness]]: maintain perceptual luminance
+     uniformity in color blind space
+   - [[https://jfly.uni-koeln.de/color/#pallet][Color Universal Design]]: set of colors that is unambiguous both to
+     colorblinds and non-colorblinds
+
+** Resources
+
+   - [[https://blog.datawrapper.de/colors/][What to consider when choosing colors for data visualization]]
+   - [[https://www.data-to-viz.com/#explore][Data-to-viz]]: visualization decision tree guide

@@ -1,0 +1,6 @@
+* ARCH linux
+
+** How to update pacman mirrors?
+
+   - [[https://archlinux.org/mirrorlist/][Pacman Mirrorlist Generator]]
+   - [[https://wiki.archlinux.org/title/reflector][Reflector]]: retrieve, filter, sort by speed, and overwrite mirror list

@@ -1,0 +1,56 @@
+* Bash
+
+  - [[https://devhints.io/bash][Bash scripting cheatsheet]]
+  - [[https://tldp.org/LDP/abs/html/][Advanced Bash-Scripting Guide]]: an in-depth exploration of the art
+      of shell scripting
+  - [[https://github.com/dylanaraps/pure-bash-bible][pure bash bible]]: a collection of pure bash alternatives to
+    external processes
+  - [[https://mywiki.wooledge.org/BashFAQ][BashFAQ]]: do *not* sleep on this, it's a gold mine
+
+** How to execute a loop conditionally (dry runs)
+
+   #+begin_src shell
+     #!/bin/bash
+     doit=0
+
+     for i in {1..3}; do
+         echo -n ${i}
+     done
+
+     echo "---"
+
+     for i in {1..3}; do
+         ((doit))&&(echo -n ${i})
+     done
+
+     echo "---"
+
+     for i in {1..3}; do
+         ((doit))&&echo -n ${i}
+     done
+
+     echo "---"
+
+     ((doit))&&for i in {1..3}; do
+         echo -n ${i}
+     done
+
+     echo "---"
+
+     ((doit))&&
+         for i in {1..3}; do
+             echo -n ${i}
+         done
+
+     echo "---"
+   #+end_src
+
+   Also =((dontdoit))!!echo "something"=
+  
+** How to open the N most recently modified files?
+
+   #+begin_src
+emacs $(/bin/ls */* --sort=time | tail -n 5)
+   #+end_src
+
+   

@@ -1,0 +1,46 @@
+* Emacs
+
+** How to open all files by pattern?
+
+   #+begin_src shell
+     emacs *.tex
+   #+end_src
+
+   #+begin_src shell
+     emacs *.tex */*.tex
+   #+end_src
+
+   #+begin_src shell
+     find . -iname \*tex -exec emacsclient {} +
+   #+end_src
+
+** How to profile settings?
+
+   - [[https://melpa.org/#/esup][The Emacs StartUp Profiler (ESUP)]]
+
+** Useful modes
+
+   - [[https://ftp.gnu.org/pub/gnu/auctex/12.2-extra/tex-ref.pdf][AucTex reference card]]
+
+** Emacs packages worth checking
+
+   - ripgrep
+   - eshell
+   - dired
+   - mu4e
+   - org-publish: for a website
+   - org-roam
+
+* Org-mode
+
+  - [[https://academia.stackexchange.com/questions/1273/use-cases-of-org-mode-as-a-scientific-productivity-tool-for-academics-without-pr][Use cases of org-mode as a scientific productivity tool for academics]]
+  - [[https://github.com/fniessen/refcard-org-mode][Org-mode reference card]]
+
+* Elisp
+
+** Where to start with elisp?
+
+   #+begin_src emacs-lisp
+     (info "(eintr) Top")
+   #+end_src
+

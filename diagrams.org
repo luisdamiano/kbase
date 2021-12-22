@@ -1,0 +1,13 @@
+* Graph diagrams
+
+** Graphviz
+  
+   - Engine: [[https://graphviz.org/][graphviz]], mostly [[https://graphviz.org/doc/info/lang.html][DOT]]
+   - Editor online: [[https://edotor.net/][Edotor]]
+
+** PGF/TikZ
+
+   Typically requires a bit more of work, but it's more flexible and
+   allows for neater graphs
+   
+   - Use the =graphdrawing= tikz library for automated graph layout

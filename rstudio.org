@@ -1,0 +1,16 @@
+* RStudio
+
+** Should .Rproj files be added to .gitignore?
+
+   RStudio general recommendation is to include .Rproj file in the
+   repository, i.e., do not ignore it
+
+   Source: [[https://community.rstudio.com/t/should-rproj-files-be-added-to-gitignore/1269/4][should *.Rproj files be added to .gitignore?]]
+  
+** How to order lines alphabetically?
+
+   - [[https://github.com/seasmith/AlignAssign][AlignAssign]]
+
+** How to align assignment or equal symbols across lines?
+
+   ?

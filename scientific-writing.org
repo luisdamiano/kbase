@@ -1,0 +1,16 @@
+* Scientific writing
+
+** Tags
+
+   You probably want a LaTeX command for these.
+  
+   - Citation needed: when you are very inclined to accept the
+     statement, but still need to pin-point the best reference
+   - Verification needed: when you want to double-check that something
+     is as stated
+   - Revision needed: when you want to review the math or, more
+     generally, the logic of the statement
+   - Further research needed: when you make a broad statement, typically
+     outside the scope of the current writing, that seems worth
+     exploring by you or anyone else
+   - Discussion needed: when you want to have others opinion

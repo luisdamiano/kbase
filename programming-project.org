@@ -1,0 +1,18 @@
+* Project structure
+
+  - Prefer folder-by-feature over folder-by-type ([[https://softwareengineering.stackexchange.com/a/338610][source]])
+  - Organize tests by mirroring the source tree ([[https://softwareengineering.stackexchange.com/a/112261][source]])
+  - Typical structure ([[https://softwareengineering.stackexchange.com/a/392461][source]])
+    - =/bin= Files to be executed
+    - =/src= Source files
+    - =/lib= External dependencies
+    - =/doc= Documentation, and more generally any kind of writing
+    - =/test= All tests
+    - =/sandbox= The fact that there's one is probably a bad sign, but
+      there you go
+  - Executable files
+    - Go in the =\bin= folder
+    - Start with the appropiate shebang, e.g., =#!/usr/bin/Rscript=
+    - Are truly executable, e.g., =chmod +x script.R=
+    - Has all paths set so that it can be called from the project
+      root, e.g., =./bin/process-data.R=

@@ -1,0 +1,7 @@
+* High power computing
+
+** How to nicely list all my jobs in Slurm?
+
+   #+begin_src shell
+     watch -d squeue --me --format=\"%.18i %.18P %.32j %.8u %.2t \| %.10M \| %.10l \| %.19S \| %.6D %20Y %R\" --sort=i
+   #+end_src

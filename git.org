@@ -1,0 +1,82 @@
+* git
+
+** What to do with a branch after merging?
+
+   After the merge, it's safe to delete the branch
+
+   #+begin_src shell
+     git branch -d branch1
+   #+end_src
+
+   Source: [[https://stackoverflow.com/a/14005910/2860744][what to do with branch after merge?]]
+
+** How to list unmodified files?
+
+   #+begin_src shell
+     diff <(git diff --name-only)  <(git ls-files -- sub/dir) | grep "^>" | cut -b3-
+   #+end_src
+
+   Source: [[https://stackoverflow.com/a/55419932/2860744][is there any way to list the unmodified files in Git?]]
+
+** How to clean a git repo?
+
+   #+begin_src shell
+     git clean -d -x -f
+   #+end_src
+
+   Source: [[https://stackoverflow.com/a/675797/2860744][how do I clear my local working directory in git?]]
+
+** How to change a git repo remote from https to ssh?
+
+   #+begin_src shell
+     git remote -v
+     git remote set-url origin git@server:repo.git
+     git remote -v
+   #+end_src
+
+** How to clean a .git folder that is too large?
+
+   Call the garbage collector
+   
+   #+begin_src shell
+     git gc
+   #+end_src
+
+   For binary files that change often
+
+   #+begin_src shell
+     git repack -a -d --depth=250 --window=250
+   #+end_src
+
+   Source: [[https://stackoverflow.com/a/8483112/2860744][how to shrink the .git folder?]]
+
+** How to stash files that were deleted from disk?
+
+   #+begin_src shell
+     git commit -a
+   #+end_src
+
+   Source: [[https://git-scm.com/docs/git-rm#_using_git_commit_a][using git commit -a]]
+
+   #+begin_src shell
+     git ls-files --deleted -z | xargs -r0 git rm
+   #+end_src
+
+   Source: [[https://stackoverflow.com/a/63511405/2860744][staging deleted files]]
+
+** How to revert file removal from git repo?
+
+   To revert all changes since last commit
+
+   #+begin_src shell
+     git reset --hard HEAD
+   #+end_src
+
+   To revert some changes
+
+   #+begin_src shell
+     git reset
+     git checkout <file-name>
+   #+end_src
+
+   Source: [[https://www.w3docs.com/snippets/git/how-to-revert-git-rm-r.html][how to revert git rm -r]]

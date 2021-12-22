@@ -1,0 +1,12 @@
+* Research project
+
+  Four git repositories are needed. An overarching repository for the
+  project (=project=), and subcomponents for the three elements in the
+  research project (=data=, =analytics=, =literature=
+  respectively). Possibly use git submodules for the latter.
+  
+  - Data: data acquisition and munging, i.e. from raw data to the
+    format required downstream
+  - Analytics: analyses of the above data
+  - Literature: writing based on the above analyses, e.g., abstracts,
+    reports, manuscripts, presentations

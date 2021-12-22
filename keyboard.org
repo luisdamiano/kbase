@@ -1,0 +1,7 @@
+* Math typing
+
+** Math keyboard layout with UTF-8 support
+   - Fork and change https://github.com/SV-97/Math-Layout/blob/master/gm
+
+** Compose key for mathematics
+   - Type an equation in UTF8?

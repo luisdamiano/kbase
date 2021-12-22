@@ -1,0 +1,86 @@
+* (La)TeX
+ 
+** How to write better LaTeX?                             :guidelines:
+
+   - [[https://texfaq.org/][TeX FAQ]]: The TeX Frequently Asked Question List
+   - [[https://www.ctan.org/pkg/nag][nug]]: Package that warns the user about the use of obsolete things
+   - [[https://www.ctan.org/pkg/l2tabu-english][l2tabu]]: Practical usage guide with mistakes, obsolete packages and
+     commands
+
+** How to avoid orphan words?
+
+   Sometimes, we have one or two words hanging on the last line of a
+   paragraph.
+
+   - Adjust =badness= limits
+   - =\parfillskip= controls the length at the end of a paragraph
+   
+** When should I use non-breaking space (tilde)?
+    
+   - [[https://tex.stackexchange.com/a/15555/225233][When should I use non-breaking space?]]
+   - [[https://tex.stackexchange.com/a/1797/225233][What is the right way to use of non-breakable space before math expressions?]]
+
+** How to write an unnumbered footnote?
+
+   - [[https://tex.stackexchange.com/a/170512/225233][Footnotes without numbering]]
+
+** What symbol should I use for ... ?
+
+   - [[http://www.math.toronto.edu/mathit/symbols-letter.pdf][The Comprehensive LaTeX Symbol List]]
+   - [[https://oeis.org/wiki/List_of_LaTeX_mathematical_symbols][List of LaTeX mathematical symbols]]: all predefined mathematical symbols
+
+** Symbol lookup
+
+   - [[http://detexify.kirelabs.org/classify.html][Detexify]]: draw symbol by hand or use the symbol table
+
+** How to debug the LaTeX document layout, sizes, and spacing?
+
+   - [[https://ctan.math.washington.edu/tex-archive/macros/luatex/generic/lua-visual-debug/][lua-visual-debug]]: it looks [[https://ctan.math.washington.edu/tex-archive/macros/luatex/generic/lua-visual-debug/doc/sample.pdf][gorgeous]]
+   
+** What is the document body ratio?
+
+#+begin_src latex
+  Body width:  \the\textwidth
+  Body height: \the\textheight
+#+end_src
+
+   - [[https://tex.stackexchange.com/q/253354/225233][How to interpret the page layout in LaTeX using layout package?]]
+   - [[https://i.stack.imgur.com/kOAM5.png][Page layour visual guide]]
+
+** How to reduce spacing around figures, tables, captions?
+
+   - \textfloatsep — distance between floats on the top or the bottom and the text;
+   - \floatsep — distance between two floats;
+   - \intextsep — distance between floats inserted inside the page text
+   - (using h) and the text proper.
+   - \dbltextfloatsep — distance between a float spanning both columns and the text;
+   - \dblfloatsep — distance between two floats spanning both columns.
+   - \captionsetup{font=footnotesize}
+
+
+   Source:
+   - [[https://tex.stackexchange.com/a/26522/225233][How to change the spacing between figures/tables and text?]]
+   - [[https://stackoverflow.com/a/27243065/2860744][How to reduce the size of captions in all figures?]]
+   - [[https://tex.stackexchange.com/a/45996/225233][How can I modify vertical space between figure and caption?]]
+   - [[https://tex.stackexchange.com/a/53340/225233][Reducing spacing after headings]]
+   - [[https://ctan.math.utah.edu/ctan/tex-archive/macros/latex/contrib/layouts/layman.pdf][Layouts package]]: enable the display of various elements of a
+     document's layout
+   
+** How to influence the position of a figure/table?
+
+   - Low-effort approach: load ~\usepackage[section]{placeins}~ and
+     set ~h!~ for placement specifiers. It adds a ~\FloatBarrier~
+     ([[https://tex.stackexchange.com/a/88659/225233][more]]) at the end of a section to avoid mixing floats and
+     sections.
+   - [[https://www.latex-project.org/publications/2014-FMi-TUB-tb111mitt-float-placement.pdf][How to influence the position of float environments like figure
+     and table in LATEX?]]
+
+** How to fiddle with math font height and width?
+
+   https://paste.xinu.at/m-QzacZr/
+   https://paste.xinu.at/m-sHDc/
+   
+** Resources
+
+   - [[https://tobi.oetiker.ch/lshort/lshort.pdf][The Not So Short Introduction to LaTeX2e]]: LaTeX2e in 139 minutes
+   - [[https://www.ctan.org/pkg/texbook][The TeXbook]]: an example of the business of writing a book in TeX

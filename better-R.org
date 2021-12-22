@@ -1,0 +1,15 @@
+* Write better R
+
+** Non-standard evaluation
+
+   - NSEs are like *super duper macros*
+
+** R is functional
+
+   - Functions as arguments
+   - Functions as ?
+   - Functions as output   
+
+** R has dynamic binding
+
+   Or something like that for functions, check

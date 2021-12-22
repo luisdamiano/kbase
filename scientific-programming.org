@@ -1,0 +1,3 @@
+* Scientific programming
+
+  - [[https://softwareengineering.stackexchange.com/q/373633][Programming cleanly when writing scientific code]]

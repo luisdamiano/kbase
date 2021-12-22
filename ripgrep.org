@@ -1,0 +1,10 @@
+* Ripgrep
+
+** How to find text in any file?
+
+Useful to look up code snippets, for example
+
+#+begin_src shell
+  # Find any R script that uses the memoise package
+  ack -t rr "memoise"
+#+end_src

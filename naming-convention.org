@@ -1,0 +1,94 @@
+* Naming convention
+
+** Common guidelines
+
+   - Name things mainly for their role, sometimes for their type
+   - Variable names follow mathematical notation only in low-level
+     functions, use meaningful name for user facing variables
+   - Use unabbreviated verbs for function names
+   - Keep abbreviations between 3 and 4 chars
+
+** Keywords
+
+*Modeling*
+
+    | =ou=   | Observational unit                  |
+    | =xu=   | Experimental unit                   |
+    | =sim=  | Simulated/simulations               |
+    | =rsts= | Restars                             |
+    | =init= | Initialize/initialization           |
+    | =pars= | A vector of parameter               |
+    | =fix=  | Fixed values                        |
+    | =kwn=  | Known values                        |
+    | =val=  | Validation                          |
+    | =opt=  | Optima (obtained with optimization) |
+    | =fit=  | Fit                                 |
+    | =prd=  | Predicted                           |
+
+*Cross-validation*
+  
+    | oos  | Out of sample                      |
+    | ins  | In sample                          |
+    | ios  | In and out of sample               |
+    | idx  | Index                              |
+    | ind  | Indicator (boolean, true or false) |
+    | fold | Fold (as in K-fold CV)             |
+
+# **** TODO Validation sample is missing.
+
+*Object types*
+
+    | Str | String                                                  |
+    | Ls  | List                                                    |
+    | Li  | List item                                               |
+    | Mat | Matrix                                                  |
+    | Vec | Vector                                                  |
+    | Fun | Function                                                |
+    | DF  | Data frame / data.table                                 |
+    | LDF | Long data.frame / data.table                            |
+    | WDF | Wide data.frame / data.table (might have more than one) |
+    | xi  | A scalar (must be a scalar)                             |
+    | xs  | A vector (must be a vector)                             |
+    | x   | A scalar and/or a vector (both should work)             |
+    | X   | A vector or matrix (both should work)                   |
+    | Bit | A scalar, vector, or matrix bitmask                     |
+
+*Transformations*
+
+    | sc  | Scaled                                               |
+    | uc  | Unscaled? maybe `nt` for natural? `og` for original? |
+    | svd | guess what :)                                        |
+    | pca | idem                                                 |
+
+*Other*
+
+    | id   | Identification code                        |
+    | ET   | Elapsed time                               |
+    | seed | Seed number                                |
+    | hash | For a hash (if it's an id, use id instead) |
+
+*Statistics*
+
+    | med    | Median                  |
+    | mean   | Mean                    |
+    | var    | Variance                |
+    | cov    | Covariance              |
+    | cor    | Correlation             |
+    | wt     | Weight (or ws and wi)   |
+    | lsc    | Length-scale            |
+    | qi     | Quantile                |
+    | qs     | Vector of quantiles     |
+    | sigma2 | Use 2 instead of Sq o.o |
+    | ll     | Log-likelihood          |
+    | hess   | Hessian matrix          |
+    | mse    | Mean square error       |
+    | rmse   | Root mean square error  |
+
+*Measurement units*
+
+    | Bm   | Biomass               |
+    | KgHa | Kilogram per hectare  |
+    | MgHa | Megamgram per hectare |
+    | BuAc | Bushels per acre      |
+    | Temp | Temperature           |
+    | El   | Elevation             |

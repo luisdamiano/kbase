@@ -1,0 +1,19 @@
+* Beamer
+
+** How to build a Beamer template?
+
+Mix and match:
+   
+   - A base template
+   - Text font, e.g., https://tug.org/FontCatalogue/mathfonts.html
+     - Latin Modern, Stix2, XITS, Asana, Fira Math, TeX Gyre
+       {Pagella,Bonum,Schola,Termes,Heros}, Libertinus, Euler, Lucida
+       Bright, and Minion Pro
+   - Math font, e.g., [[https://fontlibrary.org/en/font/libertinus-serif][Libertinus]]
+     - Mono math? https://tug.org/FontCatalogue/computerconcrete/
+     - [[https://tex.stackexchange.com/a/59706/225233][Suggest a "nice" font family for my basic LaTeX template (text and math)]]
+   - Color palette, e.g., https://lvjr.bitbucket.io/contrast.html
+   - Accessibility guidelines
+   - Good presentation guidelines
+   - List of slide layouts
+  

@@ -1,0 +1,104 @@
+#+AUTHOR: Luis Damiano
+#+TITLE: Tips & Tricks
+#+DESCRIPTION: Stuff I keep forgetting and need to search for too often.
+#+KEYWORDS: syntax, quick reference, cheat sheet, recommended practices
+#+KEYWORDS: best practices, don't repeat yourself, automation
+#+LANGUAGE: en
+#+PROPERTY: header-args -n :eval no
+#+EXPORT_FILE_NAME: kbase
+#+SETUPFILE: https://fniessen.github.io/org-html-themes/org/theme-readtheorg.setup
+#+OPTIONS: toc:5
+#+TOC: headlines 2
+#+HTML_HEAD: <style>
+#+HTML_HEAD:   .codeblock, pre.src, #content .literal-block, code {
+#+HTML_HEAD:     background: rgb(243, 246, 246)
+#+HTML_HEAD:   }
+#+HTML_HEAD:   h2{ border-top: 2px solid black }
+#+HTML_HEAD:   ul.org-ul{ font-size:16px }
+#+HTML_HEAD: </style>
+#+HTML_HEAD: <base target="_blank">
+
+AKA Stuff I keep forgetting and I need to think about, decide on, or
+search for too often.
+
+* Motivation
+
+#+begin_quote
+This is the way (The Mandalorian)
+#+end_quote
+
+#+begin_quote
+A power user might not have extensive technical knowledge of the
+systems they use but is rather characterized by competence or desire
+to make the most intensive use of computer programs or systems ([[https://en.wikipedia.org/wiki/Power_user][Wikipedia]])
+#+end_quote
+  
+* Linux
+
+  #+INCLUDE: arch.org
+  #+INCLUDE: bash.org
+  #+INCLUDE: linux.org
+  #+INCLUDE: keyboard.org
+
+* Utilities
+
+  #+INCLUDE: git.org
+  #+INCLUDE: ssh.org
+  #+INCLUDE: regex.org
+  #+INCLUDE: pdf-processing.org
+  
+* Typesetting
+
+  #+INCLUDE: latex.org
+  #+INCLUDE: beamer.org
+  #+INCLUDE: diagrams.org
+  #+INCLUDE: reference-management.org
+  
+* Text editors
+
+  #+INCLUDE: emacs.org
+  # INCLUDE: iterating_over_links.org
+
+* Programming
+
+  #+INCLUDE: general-programming.org
+  #+INCLUDE: programming-project.org
+  #+INCLUDE: functional-programming.org
+
+* R programming
+
+  #+INCLUDE: better-R.org
+  #+INCLUDE: R.org
+  #+INCLUDE: rstudio.org
+
+* Stan programming
+
+  #+INCLUDE: stan.org
+
+* Data science
+
+  #+INCLUDE: data-processing.org
+  #+INCLUDE: data-visualization.org
+  #+INCLUDE: hpc.org
+  #+INCLUDE: naming-convention.org
+
+* Statistics
+
+  #+INCLUDE: stats.org
+  
+* Mathematics
+
+  #+INCLUDE: math.org
+
+* Science
+
+  #+INCLUDE: scientific-communication.org
+  #+INCLUDE: scientific-programming.org
+  #+INCLUDE: scientific-project.org
+  #+INCLUDE: scientific-writing.org
+  #+INCLUDE: numerical-computing.org
+
+* REDMO
+
+  # INCLUDE: redmo.org
+  

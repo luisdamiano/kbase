@@ -1,0 +1,10 @@
+* Numerical computing
+
+** How to select algorithm tolerance for numerical differentiation?
+
+In absence of problem-specific information, use the square root of
+machine epsilon for forward difference, and the cubic root of machine
+epsilon for centered difference. Finding a minimum gets the square
+root of epsilon while finding a root gets epsilon.
+
+Source: [[https://scicomp.stackexchange.com/q/14355][Choosing epsilon]]

@@ -1,0 +1,62 @@
+* Scientific communication
+
+  Communication is as hard as it gets. There's a trade-off between
+  message length, precision, ease of reading, and understandability. I
+  thrive for short and precise sentences that are easy to digest that
+  are modular yet feel complete. Here's a couple notes for better writting.
+
+** General resources
+   - The Elements of Style by Strunk, W., Jr. and White, E.B. An
+     opinionated style guide.
+   - Garner's Modern American Usage by Bryan A. Garner.
+   - [[http://proselint.com/][proselint]]: whisper suggestions on how to improve your prose, see
+     [[http://proselint.com/checks/][what it looks for]].
+
+** My own common tics to grep for
+   - No dash when using the wise suffix, e.g., elementwise instead of
+     element-wise
+   
+** No adjectives allowed
+    
+   - Good, best, better: in what sense?
+   - Difficult: what are you trying to say more precisely? What's the
+     complexity?
+
+** Use technical terms
+
+   - List of technical names used frequently and short sentences.
+   - Emulator, surrogate, meta-model, statistical model _versus_
+     computer experiment, computer model, mechanistic model, physical
+     model, climate model, what have you.
+
+** Repeat the technical terms when in doubt
+
+   Yeah, it sounds weird to be repetitive and I sometimes feel that I
+   keep repeting myself too much. As a reader, though, I sometimes
+   wish the writter would be more _precise_ even at the price of
+   repetition. Even thought a section might be about a specific
+   density function (e.g., predictive density), make sure that in
+   every sentence it is obvious that you are referring to that
+   density and not to any of the dozen densities that a model have
+   and are highly connected to the density you are talking about.
+    
+** Attributive nouns
+
+   They are tough to beat! In most situations, I prefer an extensive
+   use of attributive nouns. Be ware they grow too big too often; I
+   sometimes break a really long chain of nouns into two smaller
+   attribute noun clauses.
+
+   Compare "/the benefit of the parametrization that we propose for
+   this model/" versus "/The proposed model parametrization benefit/.
+
+** Oral presentations
+
+   - A sentence is better than a paragraph. A phrase is better than a
+     sentence. A word is better than a phrase. An image is better than
+     a word.
+   - Have you noticed how hard it is to convey a technical detail
+     while giving an oral presentation? Now imagine how hard it is for
+     the audience to understand anything too technical. Be a nice
+     speaker instead :)
+

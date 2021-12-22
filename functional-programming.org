@@ -1,0 +1,77 @@
+* Functional programming
+
+** Concepts
+
+   - [[https://stackoverflow.com/questions/218025/what-is-the-difference-between-currying-and-partial-application][What is the difference between currying and partial application?]]
+
+** Functional design patterns
+  
+   A program is chain of monoids (which is a chain of continuations
+   (which is a chain of partial applications (which is a chain of
+   compositions (which is a chain of one-argument functions))))
+   
+   - Functions all the way down!
+     - Function as inputs
+     - Functions as outputs
+     - Function as arguments
+       - Hard-coded data, e.g., =for i in 1:10=
+       - Hard-coded behavior, e.g., =print=
+       - Decouple behavior from data, i.e., any behavior times any data
+       - Collection functions, e.g., fold, map, reduce, collect
+   - Composition pattern: chain low-level operations
+     - e.g., =apple -> cherry = apple -> banana + banana -> cherry=
+     - Low-level operation: e.g., =string -> string=
+     - Service: chained low level operations, e.g., =Address -> Validation=
+     - Use-case: chained services, e.g., =ChangeProfileRequest -> 
+       ChangeProfileResult=
+     - Application: chained use-cases, e.g., =Request -> Response=
+     - Composition is fractal
+     - Works for functions with one parameter only (see next)
+   - Partial application
+     - Write a two-parameter function as a one-parameter function that
+       returns a one parameter function, e.g., =a + b = function(b) { a +
+       b })=.
+     - Uses:
+       - When working with vectorized applications, e.g., lapply, Map,
+         Filter.
+       - To inject dependencies, e.g., on a database or file
+	 connection.
+   - Continuations: chain partial applications
+     - Bad: nested checks ([[https://en.wikipedia.org/wiki/Pyramid_of_doom_(programming)][pyramid of doom]])
+     - Good:
+       - Start with an abstract =if_ function -> returnType=
+       - Chain them:
+	 #+BEGIN_SRC
+	 if_(doA) else doNestedActionLevel1
+	 if_(doB) else doNestedActionLevel2
+	 if_(doC) else doNestedActionLevel3
+	 #+END_SRC
+   - Monoids: chain continuations
+     - Closure: combining two things always returns another one
+       thing.
+       - Readily *vectorized*!
+     - Associativity: when combining more than two things, pairwise
+         combination order does not matter
+       - Readily *parallelized*!
+       - Easy for incremental accumulation
+     - Identity: a special thing called "zero" that returns the same
+         thing that was combined with it
+       - Use as *initial value* for empty or missing data
+   - Two-track model for error handling:
+     - Use a switch function for error handling, e.g.,
+       =validate(input)= calls =sucessFun(input)= or =failure(error)=
+
+   From [[https://www.slideshare.net/ScottWlaschin/fp-patterns-ndc-london2014][Functional Programming Patterns (NDC London 2014)]] by Scott Wlaschin.
+
+** General
+
+   - [[https://fsharpforfunandprofit.com/fppatterns/][Functional Programming Design Patterns]]: design pattern overview
+     and some demonstrations
+   - [[https://softwareengineering.stackexchange.com/questions/89273/where-are-all-the-functional-programming-design-patterns][Where are all the functional programming design patterns?]]
+   - [[http://www.cs.ox.ac.uk/publications/publication2335-abstract.html][Origami programming]]: natural patterns for computation over
+     recursive datatypes
+   - [[https://alvinalexander.gumroad.com/l/lfpis][Functional Programming, Simplified]]: large [[https://alvinalexander.com/scala/functional-programming-simplified-book][free preview]] available
+     - The proper way to handle exceptions and null values
+     - Many lessons on =for=-expressions, which lead naturally into
+       monads
+   - [[https://docs.google.com/presentation/d/1a4GvI0dbL8sfAlnTUwVxhq4_j-QiDlz02_t0XZJXnzY/preview?slide=id.ga8d8f45ac_065][To know good vs bad Scala style]]

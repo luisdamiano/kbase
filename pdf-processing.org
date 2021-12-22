@@ -1,0 +1,7 @@
+* PDF processing
+
+  - [[https://github.com/tesseract-ocr/tesseract][Tesseract OCR]]: neural net (LSTM) based OCR engine
+  - Use [[https://www.xpdfreader.com/pdftotext-man.html][pdftotext]] instead of copying directly from a PDF
+  - Use [[https://wiki.archlinux.org/index.php/Ocrdesktop][OCRdesktop]] to grab content from a screen as text
+  - [[https://filingdb.com/b/pdf-text-extraction][What's so hard about PDF text extraction?]]
+  - [[https://www.emacswiki.org/emacs/DeletingWhitespace][Deleting whitespaces]]

@@ -1,0 +1,27 @@
+* Regular expressions
+
+  Gotta love them!
+
+** How to match all R dependencies?
+
+   #+begin_src shell
+     grep -Poh -r "(\w+)::|(?:library|require|requireNamespace)\(\"?(\w+)\"?\)" --include="*\.R" | uniq -d -c | sort
+   #+end_src
+  
+** How to match any number with decimals up to 10?
+   
+   #+begin_src
+     ^(?:\d|\d?\.\d+|10(?:\.0+)?)$
+   #+end_src
+
+   Source: [[https://regex101.com/r/kk8SIF/1/][https://regex101.com/r/kk8SIF/1/]]
+
+** How to generate a string that matches a regular expression?
+   A /regex to string/ kind of situation.
+
+   - [[https://onlinestringtools.com/generate-string-from-regex][onlinestringtools]]: string from regex generator
+   
+** General resources
+  
+   - [[https://docs.microsoft.com/en-us/dotnet/standard/base-types/best-practices][Best practices for regular expressions]]
+

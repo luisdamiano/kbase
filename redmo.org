@@ -1,0 +1,14 @@
+* REDMO
+
+  REasonable Default Modus Operandi
+
+  - Reasonable: makes sense without further context
+  - Default: helps with automation, but is not the only option
+  - Modus Operandi: set of rules
+
+
+ 
+  - There's no one ring to rule them all
+  - It's guided by the [[https://en.wikipedia.org/wiki/Pareto_principle][Pareto principle]]
+  - It's not the final answer but a first step until you can budget
+    more time to further look into it
