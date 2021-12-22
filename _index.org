@@ -98,7 +98,7 @@ to make the most intensive use of computer programs or systems ([[https://en.wik
   #+INCLUDE: scientific-writing.org
   #+INCLUDE: numerical-computing.org
 
-* REDMO
+# * REDMO
 
   # INCLUDE: redmo.org
   
