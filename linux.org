@@ -31,6 +31,10 @@ Use =rsync --parent= to keep the folder structure.
 Use =xev= to look for the keycode and keysym in the KeyPress or
 KeyRelease event
 
+** How to find the window dimension and position?
+
+   Run =xwininfo= on a console and click on the target window.
+
 ** How to convert a pdf to png?
 
    1920 (1080p) is often a good size
