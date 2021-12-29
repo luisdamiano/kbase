@@ -23,14 +23,14 @@
 
 ** How to make lapply return a data.frame?
 
-If =x= is a =data.frame=, which is a list with attributes, use =x[]=
-to preserve all attributes.
+   If =x= is a =data.frame=, which is a list with attributes, use =x[]=
+   to preserve all attributes.
    
    #+begin_src R
      x[] = lapply(x, type.convert)
    #+end_src
 
-Source: [[https://github.com/J-Moravec][Jiří Moravec]]
+   Source: [[https://github.com/J-Moravec][Jiří Moravec]]
    
 ** How to split a matrix row-wise as a list?
   
