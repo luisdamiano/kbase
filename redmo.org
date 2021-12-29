@@ -6,9 +6,17 @@
   - Default: helps with automation, but is not the only option
   - Modus Operandi: set of rules
 
-
- 
   - There's no one ring to rule them all
   - It's guided by the [[https://en.wikipedia.org/wiki/Pareto_principle][Pareto principle]]
   - It's not the final answer but a first step until you can budget
     more time to further look into it
+
+** How to measure feature importance?
+   PFI + CRPS is a great combo
+
+   - Divide a large data set into relatively large exclusive sub samples
+   - Identify blocks of correlated features
+   - Run permutation feature importance ny permuting the feature
+     blocks
+   - Use negative CRPS, negative PPLD, RMSE (in that order) as
+     validation statistics
