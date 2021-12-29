@@ -1,5 +1,19 @@
 * R programming
 
+** How to renumber a group?
+
+   Note that =as.numeric(as.factor(x))= does not work if =x= contains
+   numbers. Also, the match-unique combo scales better with large
+   vectors.
+
+   #+begin_src R
+     x <- c(4, 4, 4, 6, 6, 6, 6, 8, 8, 8, 8, 1, 1, 1, 5, 5, 5, 5)
+     match(x, unique(x))
+     # [1] 1 1 1 2 2 2 2 3 3 3 3 4 4 4 5 5 5 5
+   #+end_src
+
+   Source: [[https://stackoverflow.com/a/6113019/2860744][how to create a consecutive group number]]
+
 ** How to make a cross table with a custom function (e.g., mean)?
 
    #+begin_src R
