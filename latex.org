@@ -57,6 +57,24 @@
    - \dblfloatsep — distance between two floats spanning both columns.
    - \captionsetup{font=footnotesize}
 
+     #+begin_src latex
+       % Reduced margins
+       \usepackage{geometry}
+       \geometry{left=0.75in,right=0.75in,bottom=1in,top=1in}
+
+       % Minimal spacing around captions and floats
+       \setlength{\abovecaptionskip}{2pt plus 1pt minus 2pt}
+       \setlength{\belowcaptionskip}{2pt plus 1pt minus 2pt}
+       \setlength{\textfloatsep}{2pt plus 1pt minus 2pt}
+       \setlength{\intextsep}{2pt plus 1pt minus 2pt}
+       \setlength{\floatsep}{2pt plus 1pt minus 2pt}
+
+       % Minimal spacing around equations
+       \setlength{\abovedisplayskip}{0pt}
+       \setlength{\belowdisplayskip}{0pt}
+       \setlength{\abovedisplayshortskip}{0pt}
+       \setlength{\belowdisplayshortskip}{0pt}
+     #+end_src
 
    Source:
    - [[https://tex.stackexchange.com/a/26522/225233][How to change the spacing between figures/tables and text?]]
