@@ -150,7 +150,14 @@
      \titlespacing{\section}{\parindent}{0pt}{0pt}
      \titlespacing{\subsection}{\parindent}{0pt}{0pt}
    #+end_src
-   
+
+** How to change the caption font size?
+
+   #+begin_src latex
+     \usepackage{caption}
+     \captionsetup{font=footnotesize}
+   #+end_src
+
 ** Resources
 
    - [[https://tobi.oetiker.ch/lshort/lshort.pdf][The Not So Short Introduction to LaTeX2e]]: LaTeX2e in 139 minutes
