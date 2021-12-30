@@ -1,5 +1,5 @@
 * (La)TeX
- 
+
 ** How to write better LaTeX?                             :guidelines:
 
    - [[https://texfaq.org/][TeX FAQ]]: The TeX Frequently Asked Question List
@@ -39,10 +39,10 @@
    
 ** What is the document body ratio?
 
-#+begin_src latex
-  Body width:  \the\textwidth
-  Body height: \the\textheight
-#+end_src
+   #+begin_src latex
+     Body width:  \the\textwidth
+     Body height: \the\textheight
+   #+end_src
 
    - [[https://tex.stackexchange.com/q/253354/225233][How to interpret the page layout in LaTeX using layout package?]]
    - [[https://i.stack.imgur.com/kOAM5.png][Page layour visual guide]]
