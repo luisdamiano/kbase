@@ -79,6 +79,17 @@
 
    https://paste.xinu.at/m-QzacZr/
    https://paste.xinu.at/m-sHDc/
+
+** How to set a global path for input and graphic files?
+
+   #+begin_src latex
+     \makeatletter
+     \def\input@path{{/path/to/folder/}}
+     % or: \def\input@path{{/path/to/folder/}{/path/to/another/folder/}}
+     \makeatother
+   #+end_src
+
+   Source: [[https://tex.stackexchange.com/a/24827/225233][\input and absolute paths]]
    
 ** Resources
 
