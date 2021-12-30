@@ -90,6 +90,19 @@
    #+end_src
 
    Source: [[https://tex.stackexchange.com/a/24827/225233][\input and absolute paths]]
+
+** How to align table columns without counting them?
+
+   Say you want to align the first column to the left and the rest to
+   the right without needing to figure out how many columns the table
+   has. You can specify more columns than used, but not vice-versa, as
+   in =l*9r= or =l*{99}=. Use brackets for more than one digit.
+
+   #+begin_src latex
+     \begin{tabular}{l*{99}r}
+       col1 & col2 \\
+     \end{tabular}
+   #+end_src
    
 ** Resources
 
