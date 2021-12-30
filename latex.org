@@ -103,6 +103,35 @@
        col1 & col2 \\
      \end{tabular}
    #+end_src
+
+** How to add the (sub)section name in the page header?
+
+   #+begin_src latex
+     % Add section name in page header
+     \usepackage{fancyhdr}
+     \fancypagestyle{main}{
+       \fancyhf{}
+       \renewcommand{\sectionmark}[1]{\markright{\thesection\ ##1}}
+       \renewcommand{\subsectionmark}[1]{\markright{\thesubsection\ ##1}}
+       \renewcommand{\subsubsectionmark}[1]{\markright{\thesubsubsection\ ##1}}
+       \fancyhead[L]{\textsl{\footnotesize{\rightmark}}}
+     }
+     \pagestyle{main}
+   #+end_src
+
+** How to hide section headings?
+
+   #+begin_src latex
+     \usepackage{titlesec}
+
+     \makeatletter
+     \titleformat{\section}[runin]{}{}{0pt}{\@gobble}
+     \titleformat{\subsection}[runin]{}{}{0pt}{\@gobble}
+
+     \makeatother
+     \titlespacing{\section}{\parindent}{0pt}{0pt}
+     \titlespacing{\subsection}{\parindent}{0pt}{0pt}
+   #+end_src
    
 ** Resources
 
