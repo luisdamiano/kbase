@@ -144,6 +144,14 @@
      plot(x = 1:10, y = 1:10)
    #+end_src
 
+** How to plot in log scale with base R?
+
+   #+begin_src R
+     plot(exp(1:10), 1:10, log = "x")
+     plot(1:10, exp(1:10), log = "y")
+     plot(exp(1:10), exp(1:10), log = "xy")
+   #+end_src
+
 ** How to make beautiful plots with base R?
 
    - [[http://karolis.koncevicius.lt/posts/r_base_plotting_without_wrappers/][R base plotting without wrappers]]
