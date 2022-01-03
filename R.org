@@ -1,5 +1,21 @@
 * R programming
 
+** How to add a hook to a function call?
+
+   Use =trace= to get execute an expression after and before a
+   function call.
+
+   #+begin_src R
+     f_before <- function() { print("Before call") }
+     f_after  <- function() { print("After  call") }
+
+     trace(base::cumsum, f_before, f_after, print = FALSE)
+     cumsum(1:10)
+
+     untrace(base::cumsum)
+     cumsum(1:10)
+   #+end_src
+
 ** How to renumber a group?
 
    Note that =as.numeric(as.factor(x))= does not work if =x= contains
@@ -25,20 +41,20 @@
 
    If =x= is a =data.frame=, which is a list with attributes, use =x[]=
    to preserve all attributes.
-   
+
    #+begin_src R
      x[] = lapply(x, type.convert)
    #+end_src
 
    Source: [[https://github.com/J-Moravec][Jiří Moravec]]
-   
+
 ** How to split a matrix row-wise as a list?
-  
+
 #+begin_src R
   X <- matrix(rnorm(100), nrow = 20)
   l <- as.list(as.data.frame(t(X)))
 #+end_src
-   
+
 ** Look up a value among possibilities?
 
    The workhorse of any labeling function
@@ -47,13 +63,13 @@
      l <- list(key1 = "value1", key2 = NA, key3 = 022)
      lookup <- function(x, l) { unlist(l[x]) }
    #+end_src
-   
+
    Source: [[https://gist.github.com/luisdamiano/c8dc80775970e3159b6d4282e1bd85dd][benchmark unlist versus do.call(c, list) for list lookup in R]]
 
 ** How to remove columns with all NA fast?
 
    General approach with Base R only
-    
+
    #+begin_src R
      Filter(function(x)!all(is.na(x)), df)
    #+end_src
@@ -65,7 +81,7 @@
    #+end_src
 
    Source: [[https://stackoverflow.com/a/12614723/2860744][remove columns from dataframe where ALL values are NA]]
-   
+
 ** How to fast subset rows corresponding to max value by group?
 
    #+begin_src R
@@ -80,7 +96,7 @@
    #+begin_src R
      out <- setNames(c("value1", "value2"), c("name1", "name2"))
    #+end_src
-   
+
    Source: [[https://stackoverflow.com/a/22428439/2860744][create a numeric vector with names in one statement?]]
 
 ** How to get all function call arguments as a list?
@@ -111,4 +127,3 @@
    - [[https://pj.freefaculty.org/R/Rtips.html][Rtips]]
    - [[http://karolis.koncevicius.lt/posts/collection_of_simple_r_shortcuts/][A Collection of Simple R Shortcuts]]
    - [[https://csgillespie.github.io/efficientR/set-up.html#blas-and-alternative-r-interpreters][Efficient R programming]]
-     
