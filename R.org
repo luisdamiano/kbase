@@ -118,6 +118,32 @@
    Source: [[https://stackoverflow.com/a/13456223/2860744][debugging unexpected errors in R -- how can I find where the
    error occurred?]]
 
+** How to draw a plot with minimal margins?
+
+   #+begin_src R
+     # oma: Outer  = device margin lines (bltr)
+     # mar: Margin = figure margin lines (bltr)
+     # mgp:      ? = axis margin lines (title, label, line)
+
+     # No title
+     opar <- par(
+       oma = c(0, 0, 0, 0) + .1,
+       mar = c(3, 3, 0, 0),
+       mgp = c(2, 1, 0)
+     )
+
+     plot(x = 1:10, y = 1:10)
+
+     # No title nor axis labels
+     opar <- par(
+       oma = c(0, 0, 0, 0) + .1,
+       mar = c(2, 2, 0, 0),
+       mgp = c(2, 1, 0)
+     )
+
+     plot(x = 1:10, y = 1:10)
+   #+end_src
+
 ** How to make beautiful plots with base R?
 
    - [[http://karolis.koncevicius.lt/posts/r_base_plotting_without_wrappers/][R base plotting without wrappers]]
