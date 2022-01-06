@@ -158,6 +158,10 @@
      \captionsetup{font=footnotesize}
    #+end_src
 
+** How to make GitHub compile a document after a push?
+
+   - [[https://github.com/exaexa/better-mff-thesis/blob/b8d46ea25a11972ea9cb08f0b0da7df1a23ad178/.github/workflows/main.yml][GitHub workflow yaml file by exaexa]]
+
 ** Resources
 
    - [[https://tobi.oetiker.ch/lshort/lshort.pdf][The Not So Short Introduction to LaTeX2e]]: LaTeX2e in 139 minutes
