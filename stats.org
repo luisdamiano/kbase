@@ -9,6 +9,11 @@
    $\mathbf{X} \mathbf{\beta} = \mathbf{T} \mathbf{\beta}_T \iff
    \mathbf{\beta} = \mathbf{W} \mathbf{\beta}_T$.
 
+** How to revert SVD?
+
+   - [[https://stats.stackexchange.com/a/229093/31243][How to reverse PCA and reconstruct original variables from several principal components?]]
+   - [[https://stats.stackexchange.com/a/134283/31243][Relationship between SVD and PCA. How to use SVD to perform PCA?]]
+
 ** Priors
 
    - [[http://www.stats.org.uk/priors/noninformative/YangBerger1998.pdf][A Catalog of Noninformative Priors]]
