@@ -1,0 +1,10 @@
+* Data backup
+
+** What software backup should I use?
+
+   - [[https://www.borgbackup.org/][Borg]]: Deduplicating archiver with compression and encryption
+
+** How to mark a folder not to be backed up?
+
+   - [[https://bford.info/cachedir/][Cache Directory Tagging Specification]]: avoid backing up,
+     archiving, or otherwise unnecessarily copying directories
