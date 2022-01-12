@@ -152,6 +152,10 @@
      plot(exp(1:10), exp(1:10), log = "xy")
    #+end_src
 
+** How to fine tune R plot margins?
+
+   - [[https://www.rstudio.com/wp-content/uploads/2016/10/how-big-is-your-graph.pdf][How Big is Your Graph?]]
+
 ** How to make beautiful plots with base R?
 
    - [[http://karolis.koncevicius.lt/posts/r_base_plotting_without_wrappers/][R base plotting without wrappers]]
