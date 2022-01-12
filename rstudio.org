@@ -9,8 +9,8 @@
   
 ** How to order lines alphabetically?
 
-   - [[https://github.com/seasmith/AlignAssign][AlignAssign]]
+   ?
 
 ** How to align assignment or equal symbols across lines?
 
-   ?
+   - [[https://github.com/seasmith/AlignAssign][AlignAssign]]
