@@ -1,4 +1,4 @@
-* git
+* Git
 
 ** What to do with a branch after merging?
 
