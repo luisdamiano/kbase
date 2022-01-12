@@ -1,4 +1,4 @@
-* ARCH linux
+* Arch Linux
 
 ** How to update pacman mirrors?
 
