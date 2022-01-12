@@ -2,5 +2,14 @@
 
 ** How to update pacman mirrors?
 
+#+begin_src shell
+  # https://github.com/westandskif/rate-mirrors#usage
+  export TMPFILE="$(mktemp)"; \
+      sudo true; \
+      rate-mirrors --save=$TMPFILE arch --max-delay=21600 \
+          && sudo mv /etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist-backup \
+          && sudo mv $TMPFILE /etc/pacman.d/mirrorlist
+#+end_src
+
    - [[https://archlinux.org/mirrorlist/][Pacman Mirrorlist Generator]]
    - [[https://wiki.archlinux.org/title/reflector][Reflector]]: retrieve, filter, sort by speed, and overwrite mirror list
