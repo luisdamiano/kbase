@@ -47,6 +47,7 @@ to make the most intensive use of computer programs or systems ([[https://en.wik
   #+INCLUDE: ssh.org
   #+INCLUDE: regex.org
   #+INCLUDE: pdf-processing.org
+  #+INCLUDE: hugo.org
 
 * Typesetting
 
