@@ -1,25 +1,26 @@
 #+AUTHOR: Luis Damiano
-#+TITLE: Tips & Tricks
-#+DESCRIPTION: Stuff I keep forgetting and need to search for too often.
+#+TITLE: Knowledge Base
+#+DESCRIPTION: Luis Damiano Knowledge Base, Tips & Tricks, gotchas
 #+KEYWORDS: syntax, quick reference, cheat sheet, recommended practices
 #+KEYWORDS: best practices, don't repeat yourself, automation
 #+LANGUAGE: en
 #+PROPERTY: header-args -n :eval no
-#+EXPORT_FILE_NAME: kbase
+#+EXPORT_FILE_NAME: index
 #+SETUPFILE: https://fniessen.github.io/org-html-themes/org/theme-readtheorg.setup
 #+OPTIONS: toc:5
 #+TOC: headlines 2
 #+HTML_HEAD: <style>
-#+HTML_HEAD:   .codeblock, pre.src, #content .literal-block, code {
-#+HTML_HEAD:     background: rgb(243, 246, 246)
-#+HTML_HEAD:   }
 #+HTML_HEAD:   h2{ border-top: 2px solid black }
-#+HTML_HEAD:   ul.org-ul{ font-size:16px }
+#+HTML_HEAD:   ul.org-ul, ol.org-ol { font-size:16px }
 #+HTML_HEAD: </style>
-#+HTML_HEAD: <base target="_blank">
+# #+HTML_HEAD: <base target="_blank">
 
-AKA Stuff I keep forgetting and I need to think about, decide on, or
-search for too often.
+Tips & tricks
+
+My ultimate gotcha personal collection
+
+Stuff I keep forgetting and I need to think about, decide on, or
+search for too often
 
 * Motivation
 
@@ -32,7 +33,7 @@ A power user might not have extensive technical knowledge of the
 systems they use but is rather characterized by competence or desire
 to make the most intensive use of computer programs or systems ([[https://en.wikipedia.org/wiki/Power_user][Wikipedia]])
 #+end_quote
-  
+
 * Linux
 
   #+INCLUDE: arch.org
@@ -46,14 +47,14 @@ to make the most intensive use of computer programs or systems ([[https://en.wik
   #+INCLUDE: ssh.org
   #+INCLUDE: regex.org
   #+INCLUDE: pdf-processing.org
-  
+
 * Typesetting
 
   #+INCLUDE: latex.org
   #+INCLUDE: beamer.org
   #+INCLUDE: diagrams.org
   #+INCLUDE: reference-management.org
-  
+
 * Text editors
 
   #+INCLUDE: emacs.org
@@ -86,7 +87,7 @@ to make the most intensive use of computer programs or systems ([[https://en.wik
 * Statistics
 
   #+INCLUDE: stats.org
-  
+
 * Mathematics
 
   #+INCLUDE: math.org
@@ -101,5 +102,4 @@ to make the most intensive use of computer programs or systems ([[https://en.wik
 
 # * REDMO
 
-  # INCLUDE: redmo.org
-  
+#   INCLUDE:+redmo.org
