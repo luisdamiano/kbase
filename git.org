@@ -1,5 +1,11 @@
 * Git
 
+** How to rename a branch?
+
+   #+begin_example shell
+   git branch -m newname
+   #+end_example
+
 ** What to do with a branch after merging?
 
    After the merge, it's safe to delete the branch
