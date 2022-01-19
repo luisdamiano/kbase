@@ -16,6 +16,14 @@
      cumsum(1:10)
    #+end_src
 
+*** How to mimic function overloading?
+
+    Unfortunately, I haven't found anything better than optional
+    arguments. See for example [[https://github.com/wch/r-source/blob/bba8fa69246ea248da33a566f463196614bb5242/src/library/grDevices/R/xyz.coords.R#L21][?xy.coords]]. In some situations, there
+    might be better approaches.
+
+    Source: [[https://stackoverflow.com/a/9266265/2860744][R - Function overloading]]
+
 ** How to renumber a group?
 
    Note that =as.numeric(as.factor(x))= does not work if =x= contains
