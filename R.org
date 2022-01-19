@@ -1,6 +1,23 @@
 * R programming
 
-** How to add a hook to a function call?
+** Programming with functions
+
+*** How to get all function call parameters as a list?
+
+    Call =as.list(match.call())[-1]= within your function
+
+    #+begin_src R
+      mydummyfun <- function(x, y, main = NULL, ...) {
+        l <- as.list(match.call())[-1]
+        do.call(plot, l)
+      }
+
+      mydummyfun(1:10, 1:10, ylab = "Ex")
+    #+end_src
+
+    Source: [[https://stackoverflow.com/a/11892680/2860744][Get all Parameters as List]]
+
+*** How to add a hook to a function call?
 
    Use =trace= to get execute an expression after and before a
    function call.
