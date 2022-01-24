@@ -75,7 +75,14 @@
 
 ** How to split a matrix row-wise as a list?
 
+   Use =base::asplit= for efficiency, where =asplit(X, 1)= and
+   =asplit(X, 2)= return a list of rows and columns respectively.
+
 #+begin_src R
+  # I just learned about asplit
+  asplit(X, 1)
+
+  # Original note
   X <- matrix(rnorm(100), nrow = 20)
   l <- as.list(as.data.frame(t(X)))
 #+end_src
