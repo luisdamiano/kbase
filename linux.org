@@ -1,5 +1,13 @@
 * Linux
 
+** How to determine what shell I am currently working on?
+
+   #+begin_src shell
+     ps -p $$
+   #+end_src
+
+   Source: [[https://stackoverflow.com/a/3327022/2860744][How to determine the current shell I'm working on]]
+
 ** How to find and copy all files that match a regex?
 
 Use =rsync --parent= to keep the folder structure.
