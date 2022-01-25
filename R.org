@@ -41,6 +41,15 @@
 
     Source: [[https://stackoverflow.com/a/9266265/2860744][R - Function overloading]]
 
+** How to identify value changes in a sequence?
+
+   #+begin_src R
+     x <- unlist(replicate(10, rep(sample(LETTERS, 1), rpois(1, 4))))
+     head(cumsum(rle(x)$lengths)+1, -1)
+   #+end_src
+
+   Source: [[https://stackoverflow.com/a/45154771/2860744][Identifying where value changes in R data.frame column]]
+
 ** How to renumber a group?
 
    Note that =as.numeric(as.factor(x))= does not work if =x= contains
