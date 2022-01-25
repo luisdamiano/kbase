@@ -8,3 +8,29 @@ epsilon for centered difference. Finding a minimum gets the square
 root of epsilon while finding a root gets epsilon.
 
 Source: [[https://scicomp.stackexchange.com/q/14355][Choosing epsilon]]
+
+** How to compute the Euclidean distance matrix fast?
+
+   Use the dot product
+
+   #+begin_src R
+     X  <- iris3[,,1]
+
+     M  <- tcrossprod(X)
+     m  <- diag(M)
+     o  <- rep(1, nrow(M)) # column vector
+     h2 <- m %*% t(o)      # outer(m, o) = m %*% t(o)
+
+     D2 <- -2 * M + h2 + t(h2)
+
+     all.equal(D2, unname(as.matrix(dist(X))^2))
+   #+end_src
+
+   #+begin_src python
+     def compute_distances_no_loops(self, X):
+           dists = -2 * np.dot(X, self.X_train.T) + np.sum(self.X_train**2, axis=1) 
+           + np.sum(X**2, axis=1)[:, np.newaxis]
+           return dists
+   #+end_src
+
+   Source: [[https://stats.stackexchange.com/q/397288/31243][Dot Product and Distance Matrix]]
