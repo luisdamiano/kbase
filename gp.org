@@ -1,0 +1,11 @@
+* Gaussian Processes
+
+** Software
+
+   - [[https://github.com/alan-turing-institute/mogp-emulator][Multi-Output GP Emulator: fit, predict, optimize, tools for
+     experimental design, dimension reduction, and calibration.]]
+
+** Resources
+
+   - [[https://mlatcl.github.io/gpss/][Gaussian Process Summer Schoool Lectures]]
+

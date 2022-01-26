@@ -88,6 +88,7 @@ to make the most intensive use of computer programs or systems ([[https://en.wik
 * Statistics
 
   #+INCLUDE: stats.org
+  #+INCLUDE: gp.org
 
 * Mathematics
 
