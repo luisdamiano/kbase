@@ -50,6 +50,9 @@
    Compare "/the benefit of the parametrization that we propose for
    this model/" versus "/The proposed model parametrization benefit/.
 
+** Prefer short precise terms over phrases
+   - /multiple/ instead of /more than one/
+
 ** Oral presentations
 
    - A sentence is better than a paragraph. A phrase is better than a
