@@ -47,8 +47,8 @@
    sometimes break a really long chain of nouns into two smaller
    attribute noun clauses.
 
-   Compare "/the benefit of the parametrization that we propose for
-   this model/" versus "/The proposed model parametrization benefit/.
+   Compare /the benefit of the parametrization that we propose for
+   this model/ versus /the proposed model parametrization benefit/.
 
 ** Prefer short precise terms over phrases
    - /multiple/ instead of /more than one/
