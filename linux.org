@@ -1,5 +1,15 @@
 * Linux
 
+** How to clean up space in /boot?
+
+   Consider removing the fallback initramfs to make temporary
+   room. Disable in GRUB to avoid rebuilding.
+   Helpful when pacman throws =Partition /boot too full=.
+
+   #+begin_src shell
+     ls -sh /boot/initramfs-linux-fallback.img
+   #+end_src
+
 ** How to determine what shell I am currently working on?
 
    #+begin_src shell
