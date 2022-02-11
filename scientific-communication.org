@@ -15,9 +15,9 @@
 ** My own common tics to grep for
    - No dash when using the wise suffix, e.g., elementwise instead of
      element-wise
-   
+
 ** No adjectives allowed
-    
+
    - Good, best, better: in what sense?
    - Difficult: what are you trying to say more precisely? What's the
      complexity?
@@ -39,7 +39,7 @@
    every sentence it is obvious that you are referring to that
    density and not to any of the dozen densities that a model have
    and are highly connected to the density you are talking about.
-    
+
 ** Attributive nouns
 
    They are tough to beat! In most situations, I prefer an extensive
@@ -62,4 +62,3 @@
      while giving an oral presentation? Now imagine how hard it is for
      the audience to understand anything too technical. Be a nice
      speaker instead :)
-

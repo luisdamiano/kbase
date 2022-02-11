@@ -3,11 +3,11 @@
 ** How to generate a new SSH key?
 
    The path to the key has to be unique. Requires ~x-clip~.
-   
+
    #+begin_src shell
      # Generate a new key
      ssh-keygen -t ed25519 -C "your_email@example.com"
-     # Add key to the ssh-agent in your local machine 
+     # Add key to the ssh-agent in your local machine
      eval "$(ssh-agent -s)"
      ssh-add ~/.ssh/id_ed25519
      # Copy key to clipboard

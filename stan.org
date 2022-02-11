@@ -5,5 +5,5 @@
    - Variables in the =transformed parameters= blocks
      1. Can have constraints for error checking
      2. Are global
-        1. can be accessed from the =generated quantities= block
-        2. are part of the output by default
+	1. can be accessed from the =generated quantities= block
+	2. are part of the output by default

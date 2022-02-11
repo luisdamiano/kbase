@@ -8,8 +8,8 @@
 
     #+begin_src R
       mydummyfun <- function(x, y, main = NULL, ...) {
-        l <- as.list(match.call())[-1]
-        do.call(plot, l)
+	l <- as.list(match.call())[-1]
+	do.call(plot, l)
       }
 
       mydummyfun(1:10, 1:10, ylab = "Ex")
@@ -28,14 +28,14 @@
       f2 <- function(a, b, c) { prod(a, b, c) }
 
       f  <- function(a, b, c) {
-        fun <- f1
-        if (a < 0)
-          fun <- f2
+	fun <- f1
+	if (a < 0)
+	  fun <- f2
 
-        thiscall      <- match.call(expand.dots = TRUE) # get the call (fun and args)
-        thiscall[[1]] <- fun                            # change function name
-        eval.parent(thiscall)                           # evaluate new call
-        # same as fun(a, b, c)
+	thiscall      <- match.call(expand.dots = TRUE) # get the call (fun and args)
+	thiscall[[1]] <- fun                            # change function name
+	eval.parent(thiscall)                           # evaluate new call
+	# same as fun(a, b, c)
       }
 
       f(+1, 0, 5)
@@ -105,7 +105,7 @@
 
    #+begin_src R
      addmargins(xtabs(value ~ ., aggregate(value ~ factor1, factor2, DF, mean)),
-                FUN = mean)
+		FUN = mean)
    #+end_src
 
 ** How to make lapply return a data.frame?

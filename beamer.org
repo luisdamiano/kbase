@@ -3,7 +3,7 @@
 ** How to build a Beamer template?
 
 Mix and match:
-   
+
    - A base template
    - Text font, e.g., https://tug.org/FontCatalogue/mathfonts.html
      - Latin Modern, Stix2, XITS, Asana, Fira Math, TeX Gyre
@@ -16,4 +16,3 @@ Mix and match:
    - Accessibility guidelines
    - Good presentation guidelines
    - List of slide layouts
-  

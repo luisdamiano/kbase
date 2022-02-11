@@ -8,4 +8,3 @@
 ** Resources
 
    - [[https://mlatcl.github.io/gpss/][Gaussian Process Summer Schoool Lectures]]
-

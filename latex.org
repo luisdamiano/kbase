@@ -14,9 +14,9 @@
 
    - Adjust =badness= limits
    - =\parfillskip= controls the length at the end of a paragraph
-   
+
 ** When should I use non-breaking space (tilde)?
-    
+
    - [[https://tex.stackexchange.com/a/15555/225233][When should I use non-breaking space?]]
    - [[https://tex.stackexchange.com/a/1797/225233][What is the right way to use of non-breakable space before math expressions?]]
 
@@ -36,7 +36,7 @@
 ** How to debug the LaTeX document layout, sizes, and spacing?
 
    - [[https://ctan.math.washington.edu/tex-archive/macros/luatex/generic/lua-visual-debug/][lua-visual-debug]]: it looks [[https://ctan.math.washington.edu/tex-archive/macros/luatex/generic/lua-visual-debug/doc/sample.pdf][gorgeous]]
-   
+
 ** What is the document body ratio?
 
    #+begin_src latex
@@ -83,7 +83,7 @@
    - [[https://tex.stackexchange.com/a/53340/225233][Reducing spacing after headings]]
    - [[https://ctan.math.utah.edu/ctan/tex-archive/macros/latex/contrib/layouts/layman.pdf][Layouts package]]: enable the display of various elements of a
      document's layout
-   
+
 ** How to influence the position of a figure/table?
 
    - Low-effort approach: load ~\usepackage[section]{placeins}~ and

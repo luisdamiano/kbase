@@ -26,7 +26,7 @@
     | =prd=  | Predicted                           |
 
 *Cross-validation*
-  
+
     | oos  | Out of sample                      |
     | ins  | In sample                          |
     | ios  | In and out of sample               |

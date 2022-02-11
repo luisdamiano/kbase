@@ -4,7 +4,7 @@
   project (=project=), and subcomponents for the three elements in the
   research project (=data=, =analytics=, =literature=
   respectively). Possibly use git submodules for the latter.
-  
+
   - Data: data acquisition and munging, i.e. from raw data to the
     format required downstream
   - Analytics: analyses of the above data

@@ -11,7 +11,7 @@
    - [[https://swcarpentry.github.io/make-novice/08-self-doc/index.html][Self-documenting makefiles]]
 
 ** Pipeline automation
-   
+
    - [[https://stat545.com/automating-pipeline.html][Automating data-analysis pipelines]]
    - [[https://github.com/pditommaso/awesome-pipeline][Awesome pipeline]]: curated list of awesome pipeline toolkits
 
@@ -38,27 +38,27 @@
 
     - Type of tasks
       - Data loading
-        - Keep many small units as principle
+	- Keep many small units as principle
       - Data munging
-        - Munge many small units in parallel
+	- Munge many small units in parallel
       - Data processing -- computationally intensive PEA
-        - Run tasks that need many data units (prepare)
-        - Run tasks that need one data unit only in parallel (execute)
-          - One script with command argument line?
-          - Makefile call the script?
-          - One shell script to call makefile?
-          *** TODO This needs to be figured out
-        - Run tasks that need many data units (aggregate)
+	- Run tasks that need many data units (prepare)
+	- Run tasks that need one data unit only in parallel (execute)
+	  - One script with command argument line?
+	  - Makefile call the script?
+	  - One shell script to call makefile?
+	  *** TODO This needs to be figured out
+	- Run tasks that need many data units (aggregate)
       - Data storing
-        - Write many small units to disk
-        - Write aggregates for each small data unit or together?
+	- Write many small units to disk
+	- Write aggregates for each small data unit or together?
 
 ** Workflow for statistical analysis and report writing
 
    - [[https://stackoverflow.com/questions/1429907/workflow-for-statistical-analysis-and-report-writing][Workflow for statistical analysis and report writing]]
    - [[https://github.com/ropensci/rrrpkg][What is a research compendium for reproducible research]]
    - [[https://books.ropensci.org/drake/similar-work.html][Drake documentation]]
-    
+
 * A typical workflow
 
   1. For each dataset

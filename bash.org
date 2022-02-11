@@ -14,43 +14,41 @@
      doit=0
 
      for i in {1..3}; do
-         echo -n ${i}
+	 echo -n ${i}
      done
 
      echo "---"
 
      for i in {1..3}; do
-         ((doit))&&(echo -n ${i})
+	 ((doit))&&(echo -n ${i})
      done
 
      echo "---"
 
      for i in {1..3}; do
-         ((doit))&&echo -n ${i}
+	 ((doit))&&echo -n ${i}
      done
 
      echo "---"
 
      ((doit))&&for i in {1..3}; do
-         echo -n ${i}
+	 echo -n ${i}
      done
 
      echo "---"
 
      ((doit))&&
-         for i in {1..3}; do
-             echo -n ${i}
-         done
+	 for i in {1..3}; do
+	     echo -n ${i}
+	 done
 
      echo "---"
    #+end_src
 
    Also =((dontdoit))!!echo "something"=
-  
+
 ** How to open the N most recently modified files?
 
    #+begin_src
 emacs $(/bin/ls */* --sort=time | tail -n 5)
    #+end_src
-
-   

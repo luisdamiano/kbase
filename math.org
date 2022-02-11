@@ -1,5 +1,5 @@
 * Math
-  
+
 ** Linear algebra
 
    - [[http://www2.imm.dtu.dk/pubdb/edoc/imm3274.pdf][The Matrix Cookbook]]: collection of linear algebra facts
@@ -12,7 +12,7 @@
      matrix and Gaussian formulae.
 
 ** Optimization
-   
+
    - [[http://www.geno-project.org/][GENO]]: optimization solver code generator
 
 ** Other references

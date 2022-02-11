@@ -54,7 +54,7 @@
 ** How to clean a .git folder that is too large?
 
    Call the garbage collector
-   
+
    #+begin_src shell
      git gc
    #+end_src

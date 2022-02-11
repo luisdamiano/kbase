@@ -23,26 +23,26 @@
 ** How to find and copy all files that match a regex?
 
 Use =rsync --parent= to keep the folder structure.
-   
+
    #+begin_src shell
      find -iname '*.rds' -exec cp {} . \;
      find -iname '*.rds' -exec rsync --parent {} . \;
    #+end_src
-  
+
 ** How to list all files whose content match a regex?
 
    #+begin_src shell
      find . -exec grep optimHess {} +
    #+end_src
-  
+
 ** How to list memory used by processes in remote cluster?
 
 #+begin_src shell
   #!/bin/sh
-  squeue --me -o "%R" | 
+  squeue --me -o "%R" |
       while read -r host; do
-          ssh -n
-          "$host" "ps -o pid,user,%mem,rss,size,%cpu,command ax | grep \"r-4\""; 
+	  ssh -n
+	  "$host" "ps -o pid,user,%mem,rss,size,%cpu,command ax | grep \"r-4\"";
       done
 #+end_src
 
@@ -58,10 +58,9 @@ KeyRelease event
 ** How to convert a pdf to png?
 
    1920 (1080p) is often a good size
-   
+
 #+begin_src shell
 # TODO
 #+end_src
-   
-   Source: [[https://unix.stackexchange.com/questions/121293/convert-every-pdf-in-the-current-directory-to-png][Convert every pdf in the current directory to png]]
 
+   Source: [[https://unix.stackexchange.com/questions/121293/convert-every-pdf-in-the-current-directory-to-png][Convert every pdf in the current directory to png]]

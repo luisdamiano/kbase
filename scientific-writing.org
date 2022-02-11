@@ -3,7 +3,7 @@
 ** Tags
 
    You probably want a LaTeX command for these.
-  
+
    - Citation needed: when you are very inclined to accept the
      statement, but still need to pin-point the best reference
    - Verification needed: when you want to double-check that something
@@ -14,3 +14,22 @@
      outside the scope of the current writing, that seems worth
      exploring by you or anyone else
    - Discussion needed: when you want to have others opinion
+
+** Paper layout :noexport:
+*** Novel methodology with application
+    - Title: <novel methodology name> with applications to
+      <application name>
+    - Abstract:
+      - <application> is increasingly important in
+	<application context>. However, <methodology motivation>.
+      - We propose <novel methodology brief description>. <list of all
+	novel elements embeded in the methodology>.
+      - We demonstrate the methodology in <application brief
+	description> and show that <methodology benefits>.
+    - Introduction
+      - <application motivation>, <application state-of-the-art
+	approaches>.
+      - <where and why state-of-the-art approaches are limited or fail>
+      - <methodology benefits>, <methodology key aspects>
+      - <paper layout>
+    -

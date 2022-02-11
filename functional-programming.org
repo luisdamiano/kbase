@@ -5,11 +5,11 @@
    - [[https://stackoverflow.com/questions/218025/what-is-the-difference-between-currying-and-partial-application][What is the difference between currying and partial application?]]
 
 ** Functional design patterns
-  
+
    A program is chain of monoids (which is a chain of continuations
    (which is a chain of partial applications (which is a chain of
    compositions (which is a chain of one-argument functions))))
-   
+
    - Functions all the way down!
      - Function as inputs
      - Functions as outputs
@@ -22,7 +22,7 @@
      - e.g., =apple -> cherry = apple -> banana + banana -> cherry=
      - Low-level operation: e.g., =string -> string=
      - Service: chained low level operations, e.g., =Address -> Validation=
-     - Use-case: chained services, e.g., =ChangeProfileRequest -> 
+     - Use-case: chained services, e.g., =ChangeProfileRequest ->
        ChangeProfileResult=
      - Application: chained use-cases, e.g., =Request -> Response=
      - Composition is fractal
@@ -33,7 +33,7 @@
        b })=.
      - Uses:
        - When working with vectorized applications, e.g., lapply, Map,
-         Filter.
+	 Filter.
        - To inject dependencies, e.g., on a database or file
 	 connection.
    - Continuations: chain partial applications
@@ -51,11 +51,11 @@
        thing.
        - Readily *vectorized*!
      - Associativity: when combining more than two things, pairwise
-         combination order does not matter
+	 combination order does not matter
        - Readily *parallelized*!
        - Easy for incremental accumulation
      - Identity: a special thing called "zero" that returns the same
-         thing that was combined with it
+	 thing that was combined with it
        - Use as *initial value* for empty or missing data
    - Two-track model for error handling:
      - Use a switch function for error handling, e.g.,

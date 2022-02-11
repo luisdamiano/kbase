@@ -8,7 +8,7 @@
 
    - Functions as arguments
    - Functions as ?
-   - Functions as output   
+   - Functions as output
 
 ** R has dynamic binding
 

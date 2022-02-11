@@ -28,9 +28,9 @@ Source: [[https://scicomp.stackexchange.com/q/14355][Choosing epsilon]]
 
    #+begin_src python
      def compute_distances_no_loops(self, X):
-           dists = -2 * np.dot(X, self.X_train.T) + np.sum(self.X_train**2, axis=1) 
-           + np.sum(X**2, axis=1)[:, np.newaxis]
-           return dists
+	   dists = -2 * np.dot(X, self.X_train.T) + np.sum(self.X_train**2, axis=1)
+	   + np.sum(X**2, axis=1)[:, np.newaxis]
+	   return dists
    #+end_src
 
    Source: [[https://stats.stackexchange.com/q/397288/31243][Dot Product and Distance Matrix]]
