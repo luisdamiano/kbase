@@ -17,6 +17,33 @@
 
     Source: [[https://stackoverflow.com/a/11892680/2860744][Get all Parameters as List]]
 
+    If you want to pass all the arguments to a new function:
+    use =match.call= to get the complete call, and inject
+    the name of the new function, and evaluate the modified call.
+
+
+    #+begin_src R
+      f1 <- function(a, b, c) { sum(a, b, c^2) }
+
+      f2 <- function(a, b, c) { prod(a, b, c) }
+
+      f  <- function(a, b, c) {
+        fun <- f1
+        if (a < 0)
+          fun <- f2
+
+        thiscall      <- match.call(expand.dots = TRUE) # get the call (fun and args)
+        thiscall[[1]] <- fun                            # change function name
+        eval.parent(thiscall)                           # evaluate new call
+        # same as fun(a, b, c)
+      }
+
+      f(+1, 0, 5)
+      f(-1, 0, 5)
+    #+end_src
+
+    Source: [[https://stackoverflow.com/a/56811164/2860744][Passing all arguments to another function]]
+
 *** How to add a hook to a function call?
 
    Use =trace= to get execute an expression after and before a
