@@ -2,9 +2,11 @@
 
 ** How to clean up space in /boot?
 
-   Consider removing the fallback initramfs to make temporary
-   room. Disable in GRUB to avoid rebuilding.
-   Helpful when pacman throws =Partition /boot too full=.
+   Consider removing the fallback initramfs to make temporary space. A
+   definite solution is to expand the /boot folder. Edit the
+   linux.preset in /etc/mkinitcpio.d/ to disable generating a new
+   fallback image. Helpful when pacman throws =Partition /boot too
+   full=.
 
    #+begin_src shell
      ls -sh /boot/initramfs-linux-fallback.img
