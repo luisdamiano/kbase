@@ -158,6 +158,14 @@
      \captionsetup{font=footnotesize}
    #+end_src
 
+** How to properly compile a LaTeX project?
+
+   Use =latemk file.tex -pdf= and that's it. No need to run multiple
+   commands or figure out the right order. Put in a makefile if that's
+   your workflow.
+
+   Source: [[https://tex.stackexchange.com/a/40759/225233][how to properly 'make' a latex project?]]
+
 ** How to make GitHub compile a document after a push?
 
    - [[https://github.com/exaexa/better-mff-thesis/blob/b8d46ea25a11972ea9cb08f0b0da7df1a23ad178/.github/workflows/main.yml][GitHub workflow yaml file by exaexa]]
