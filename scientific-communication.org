@@ -14,7 +14,7 @@
 
 ** My own common tics to grep for
    - No dash when using the wise suffix, e.g., elementwise instead of
-     element-wise
+     element-wise, subspace instead of sub-space
 
 ** No adjectives allowed
 
