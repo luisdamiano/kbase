@@ -170,6 +170,37 @@
 
    - [[https://github.com/exaexa/better-mff-thesis/blob/b8d46ea25a11972ea9cb08f0b0da7df1a23ad178/.github/workflows/main.yml][GitHub workflow yaml file by exaexa]]
 
+** How to build a custom style?
+   - Consider building a class
+     - [[https://www.latex-project.org/help/documentation/clsguide.pdf][LATEX2e for class and package writers]] Sec 2.3
+     - Example [[https://github.com/exaexa/manurxiv/blob/master/manurxiv.cls#L20][manurxiv/manurxiv.cls at exaexa/manurxiv]]
+
+Mix and match (suggestions for a research paper style):
+
+   - Search for accessibility guidelines
+   - A base template for inspiration, e.g., [[https://www.overleaf.com/latex/templates/icml2021-template/dsftnbmjgyhv][ICML2021 Template]]
+   - Layout, e.g., two columns
+   - Portrait pages need to be easy to set up
+   - Line numbering
+   - Author affiliation need to be easy to set up
+   - Short title in header/footer
+   - Page number in header/footer
+   - Headings need to be easy to spot
+   - Text font, e.g., libertinus, palladios, see also [[https://tug.org/FontCatalogue/][The LaTeX Font
+     Catalogue]]
+   - Math font
+   - Load AMS packages
+   - Reasonably minimal page margins
+   - Reasonably minimal fig/table caption margins
+   - Allow for fig/table extending over both columns
+   - Appendix need to be easy to set up
+   - Option to hide names and acknowledgments
+   - Option for a short table of content on front page
+   - Have some basic editing commands
+     - Logical markup, see [[https://www.ctan.org/pkg/soul][CTAN: Package soul]] (Manual, Sec 5.1)
+     - Note box, see [[https://tex.stackexchange.com/a/59342/225233][How to highlight an entire paragraph?]]
+   - Recall that not everyone types in English
+
 ** Resources
 
    - [[https://tobi.oetiker.ch/lshort/lshort.pdf][The Not So Short Introduction to LaTeX2e]]: LaTeX2e in 139 minutes

@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2022-02-23 Wed 09:05 -->
+<!-- 2022-02-25 Fri 10:39 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Knowledge Base</title>
@@ -356,7 +356,8 @@ ul.org-ul, ol.org-ol { font-size:16px }
 <li><a href="#How%20to%20change%20the%20caption%20font%20size%3F">4.1.16. How to change the caption font size?</a></li>
 <li><a href="#How%20to%20properly%20compile%20a%20LaTeX%20project%3F">4.1.17. How to properly compile a LaTeX project?</a></li>
 <li><a href="#How%20to%20make%20GitHub%20compile%20a%20document%20after%20a%20push%3F">4.1.18. How to make GitHub compile a document after a push?</a></li>
-<li><a href="#Resources">4.1.19. Resources</a></li>
+<li><a href="#How%20to%20build%20a%20custom%20style%3F">4.1.19. How to build a custom style?</a></li>
+<li><a href="#Resources">4.1.20. Resources</a></li>
 </ul>
 </li>
 <li><a href="#Beamer">4.2. Beamer</a>
@@ -936,7 +937,7 @@ Source: <a href="https://git-scm.com/book/en/v2/Git-Internals-Git-Objects">Git -
 <div id="outline-container-How%20to%20rename%20a%20branch%3F" class="outline-4">
 <h4 id="How%20to%20rename%20a%20branch%3F"><span class="section-number-4">3.1.2</span> How to rename a branch?</h4>
 <div class="outline-text-4" id="text-3-1-2">
-<pre class="example" id="org8604976">
+<pre class="example" id="org043f7b5">
 git branch -m newname
 </pre>
 </div>
@@ -1529,9 +1530,54 @@ Source: <a href="https://tex.stackexchange.com/a/40759/225233">how to properly '
 </div>
 </div>
 
-<div id="outline-container-Resources" class="outline-4">
-<h4 id="Resources"><span class="section-number-4">4.1.19</span> Resources</h4>
+<div id="outline-container-How%20to%20build%20a%20custom%20style%3F" class="outline-4">
+<h4 id="How%20to%20build%20a%20custom%20style%3F"><span class="section-number-4">4.1.19</span> How to build a custom style?</h4>
 <div class="outline-text-4" id="text-4-1-19">
+<ul class="org-ul">
+<li>Consider building a class
+<ul class="org-ul">
+<li><a href="https://www.latex-project.org/help/documentation/clsguide.pdf">LATEX2e for class and package writers</a> Sec 2.3</li>
+<li>Example <a href="https://github.com/exaexa/manurxiv/blob/master/manurxiv.cls#L20">manurxiv/manurxiv.cls at exaexa/manurxiv</a></li>
+</ul></li>
+</ul>
+
+<p>
+Mix and match (suggestions for a research paper style):
+</p>
+
+<ul class="org-ul">
+<li>Search for accessibility guidelines</li>
+<li>A base template for inspiration, e.g., <a href="https://www.overleaf.com/latex/templates/icml2021-template/dsftnbmjgyhv">ICML2021 Template</a></li>
+<li>Layout, e.g., two columns</li>
+<li>Portrait pages need to be easy to set up</li>
+<li>Line numbering</li>
+<li>Author affiliation need to be easy to set up</li>
+<li>Short title in header/footer</li>
+<li>Page number in header/footer</li>
+<li>Headings need to be easy to spot</li>
+<li>Text font, e.g., libertinus, palladios, see also <a href="https://tug.org/FontCatalogue/">The LaTeX Font
+Catalogue</a></li>
+<li>Math font</li>
+<li>Load AMS packages</li>
+<li>Reasonably minimal page margins</li>
+<li>Reasonably minimal fig/table caption margins</li>
+<li>Allow for fig/table extending over both columns</li>
+<li>Appendix need to be easy to set up</li>
+<li>Option to hide names and acknowledgments</li>
+<li>Option for a short table of content on front page</li>
+<li>Have some basic editing commands
+<ul class="org-ul">
+<li>Logical markup, see <a href="https://www.ctan.org/pkg/soul">CTAN: Package soul</a> (Manual, Sec 5.1)</li>
+<li>Note box, see <a href="https://tex.stackexchange.com/a/59342/225233">How to highlight an entire paragraph?</a></li>
+</ul></li>
+<li>Recall that not everyone types in English</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-Resources" class="outline-4">
+<h4 id="Resources"><span class="section-number-4">4.1.20</span> Resources</h4>
+<div class="outline-text-4" id="text-4-1-20">
 <ul class="org-ul">
 <li><a href="https://tobi.oetiker.ch/lshort/lshort.pdf">The Not So Short Introduction to LaTeX2e</a>: LaTeX2e in 139 minutes</li>
 <li><a href="https://www.ctan.org/pkg/texbook">The TeXbook</a>: an example of the business of writing a book in TeX</li>
@@ -3340,7 +3386,7 @@ Source: <a href="https://stats.stackexchange.com/q/397288/31243">Dot Product and
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Luis Damiano</p>
-<p class="date">Created: 2022-02-23 Wed 09:05</p>
+<p class="date">Created: 2022-02-25 Fri 10:39</p>
 <p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
