@@ -4,6 +4,23 @@
 
    - [[https://stackoverflow.com/questions/218025/what-is-the-difference-between-currying-and-partial-application][What is the difference between currying and partial application?]]
 
+** Pure functions
+
+   - Requirements:
+     - Referential transparecy: always returns the same result if
+       given the same arguments
+       - Rely on their own arguments and immutable values only, e.g.,
+	 a string
+       - No dependence on random number generation, data files
+     - Must have no side effects
+       - No need to worry if used in multiple places, or down a deep
+	 call chain
+       - No uncertainty about what an object name refers to
+       - Easier to trace and debug
+   - Immutable data structures
+     - Recursion instead of for/while loops
+     - Function composition instead of attribute mutation
+
 ** Functional design patterns
 
    A program is chain of monoids (which is a chain of continuations
@@ -75,3 +92,4 @@
      - Many lessons on =for=-expressions, which lead naturally into
        monads
    - [[https://docs.google.com/presentation/d/1a4GvI0dbL8sfAlnTUwVxhq4_j-QiDlz02_t0XZJXnzY/preview?slide=id.ga8d8f45ac_065][To know good vs bad Scala style]]
+   - [[https://www.braveclojure.com/functional-programming/][Functional Programming | Clojure for the Brave and True]]
