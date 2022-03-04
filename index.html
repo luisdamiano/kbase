@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2022-02-25 Fri 10:39 -->
+<!-- 2022-03-04 Fri 14:51 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Knowledge Base</title>
@@ -357,7 +357,10 @@ ul.org-ul, ol.org-ol { font-size:16px }
 <li><a href="#How%20to%20properly%20compile%20a%20LaTeX%20project%3F">4.1.17. How to properly compile a LaTeX project?</a></li>
 <li><a href="#How%20to%20make%20GitHub%20compile%20a%20document%20after%20a%20push%3F">4.1.18. How to make GitHub compile a document after a push?</a></li>
 <li><a href="#How%20to%20build%20a%20custom%20style%3F">4.1.19. How to build a custom style?</a></li>
-<li><a href="#Resources">4.1.20. Resources</a></li>
+<li><a href="#What%20type%20of%20LaTeX%20commands%20exist%3F">4.1.20. What type of LaTeX commands exist?</a></li>
+<li><a href="#How%20to%20make%20a%20class%20color%20safe%3F">4.1.21. How to make a class color safe?</a></li>
+<li><a href="#How%20to%20write%20a%20custom%20LaTeX%20class%3F">4.1.22. How to write a custom LaTeX class?</a></li>
+<li><a href="#Resources">4.1.23. Resources</a></li>
 </ul>
 </li>
 <li><a href="#Beamer">4.2. Beamer</a>
@@ -400,8 +403,9 @@ ul.org-ul, ol.org-ol { font-size:16px }
 <li><a href="#Functional%20programming">6.3. Functional programming</a>
 <ul>
 <li><a href="#Concepts">6.3.1. Concepts</a></li>
-<li><a href="#Functional%20design%20patterns">6.3.2. Functional design patterns</a></li>
-<li><a href="#General">6.3.3. General</a></li>
+<li><a href="#Pure%20functions">6.3.2. Pure functions</a></li>
+<li><a href="#Functional%20design%20patterns">6.3.3. Functional design patterns</a></li>
+<li><a href="#General">6.3.4. General</a></li>
 </ul>
 </li>
 </ul>
@@ -431,10 +435,11 @@ ul.org-ul, ol.org-ol { font-size:16px }
 <li><a href="#How%20to%20get%20all%20function%20call%20arguments%20as%20a%20list%3F">7.2.12. How to get all function call arguments as a list?</a></li>
 <li><a href="#How%20to%20debug%20an%20error%20thrown%20in%20a%20package%3F">7.2.13. How to debug an error thrown in a package?</a></li>
 <li><a href="#How%20to%20draw%20a%20plot%20with%20minimal%20margins%3F">7.2.14. How to draw a plot with minimal margins?</a></li>
-<li><a href="#How%20to%20plot%20in%20log%20scale%20with%20base%20R%3F">7.2.15. How to plot in log scale with base R?</a></li>
-<li><a href="#How%20to%20fine%20tune%20R%20plot%20margins%3F">7.2.16. How to fine tune R plot margins?</a></li>
-<li><a href="#How%20to%20make%20beautiful%20plots%20with%20base%20R%3F">7.2.17. How to make beautiful plots with base R?</a></li>
-<li><a href="#R%20programming--Resources">7.2.18. Resources</a></li>
+<li><a href="#How%20to%20check%20if%20a%20value%20is%20in%20an%20interval%3F">7.2.15. How to check if a value is in an interval?</a></li>
+<li><a href="#How%20to%20plot%20in%20log%20scale%20with%20base%20R%3F">7.2.16. How to plot in log scale with base R?</a></li>
+<li><a href="#How%20to%20fine%20tune%20R%20plot%20margins%3F">7.2.17. How to fine tune R plot margins?</a></li>
+<li><a href="#How%20to%20make%20beautiful%20plots%20with%20base%20R%3F">7.2.18. How to make beautiful plots with base R?</a></li>
+<li><a href="#R%20programming--Resources">7.2.19. Resources</a></li>
 </ul>
 </li>
 <li><a href="#RStudio">7.3. RStudio</a>
@@ -937,7 +942,7 @@ Source: <a href="https://git-scm.com/book/en/v2/Git-Internals-Git-Objects">Git -
 <div id="outline-container-How%20to%20rename%20a%20branch%3F" class="outline-4">
 <h4 id="How%20to%20rename%20a%20branch%3F"><span class="section-number-4">3.1.2</span> How to rename a branch?</h4>
 <div class="outline-text-4" id="text-3-1-2">
-<pre class="example" id="org043f7b5">
+<pre class="example" id="org4e45348">
 git branch -m newname
 </pre>
 </div>
@@ -1563,6 +1568,7 @@ Catalogue</a></li>
 <li>Reasonably minimal fig/table caption margins</li>
 <li>Allow for fig/table extending over both columns</li>
 <li>Appendix need to be easy to set up</li>
+<li>Appendix fig/table numbering should start with A, e.g., Table A.1</li>
 <li>Option to hide names and acknowledgments</li>
 <li>Option for a short table of content on front page</li>
 <li>Have some basic editing commands
@@ -1575,9 +1581,67 @@ Catalogue</a></li>
 </div>
 </div>
 
-<div id="outline-container-Resources" class="outline-4">
-<h4 id="Resources"><span class="section-number-4">4.1.20</span> Resources</h4>
+<div id="outline-container-What%20type%20of%20LaTeX%20commands%20exist%3F" class="outline-4">
+<h4 id="What%20type%20of%20LaTeX%20commands%20exist%3F"><span class="section-number-4">4.1.20</span> What type of LaTeX commands exist?</h4>
 <div class="outline-text-4" id="text-4-1-20">
+<ul class="org-ul">
+<li>Author commands
+<ul class="org-ul">
+<li>typically short, lower case names</li>
+<li>e.g. <code>\section</code>, <code>\emph</code>, <code>\times</code></li>
+</ul></li>
+<li>Class and package writer commands
+<ul class="org-ul">
+<li>typically long, CamelCase names</li>
+<li>e.g., <code>\InputIfFileExists</code>, <code>\RequirePackage</code>, <code>\PassOptionsToClass</code></li>
+</ul></li>
+<li>Internal commands
+<ul class="org-ul">
+<li>typically contain an @ in their name</li>
+<li>e.g., <code>\@tempcnta</code>, <code>\@ifnextchar</code> and <code>\@eha</code></li>
+</ul></li>
+<li>Exceptions:
+<ul class="org-ul">
+<li><code>\hbox</code> is internal</li>
+<li><code>\m@ne</code>, the constant -1, is for class and package writers</li>
+</ul></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-How%20to%20make%20a%20class%20color%20safe%3F" class="outline-4">
+<h4 id="How%20to%20make%20a%20class%20color%20safe%3F"><span class="section-number-4">4.1.21</span> How to make a class color safe?</h4>
+<div class="outline-text-4" id="text-4-1-21">
+<ul class="org-ul">
+<li>Issue: when using <code>{\color{green} text}</code>, color is restored
+after the final <code>}</code>
+<ul class="org-ul">
+<li>e.g., \setbox0=\hbox{\color{green} ⟨text⟩}</li>
+</ul></li>
+<li>Use LaTeX box commands rather than TeX primites
+<ul class="org-ul">
+<li><code>\sbox</code> rather than <code>\setbox</code></li>
+<li><code>\mbox</code> rather than <code>\hbox</code></li>
+<li><code>\parbox</code> or a <code>minipage</code> environment rather than <code>\vbox</code></li>
+</ul></li>
+<li>Use <code>\normalcolor</code> to set regions to main document color rather
+like <code>\normalfont</code></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-How%20to%20write%20a%20custom%20LaTeX%20class%3F" class="outline-4">
+<h4 id="How%20to%20write%20a%20custom%20LaTeX%20class%3F"><span class="section-number-4">4.1.22</span> How to write a custom LaTeX class?</h4>
+<div class="outline-text-4" id="text-4-1-22">
+<ul class="org-ul">
+<li>Use the <code>doc</code> software which comes with LaTeX (see The LaTeX companion)</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-Resources" class="outline-4">
+<h4 id="Resources"><span class="section-number-4">4.1.23</span> Resources</h4>
+<div class="outline-text-4" id="text-4-1-23">
 <ul class="org-ul">
 <li><a href="https://tobi.oetiker.ch/lshort/lshort.pdf">The Not So Short Introduction to LaTeX2e</a>: LaTeX2e in 139 minutes</li>
 <li><a href="https://www.ctan.org/pkg/texbook">The TeXbook</a>: an example of the business of writing a book in TeX</li>
@@ -1811,9 +1875,39 @@ root, e.g., <code>./bin/process-data.R</code></li>
 </div>
 </div>
 
-<div id="outline-container-Functional%20design%20patterns" class="outline-4">
-<h4 id="Functional%20design%20patterns"><span class="section-number-4">6.3.2</span> Functional design patterns</h4>
+<div id="outline-container-Pure%20functions" class="outline-4">
+<h4 id="Pure%20functions"><span class="section-number-4">6.3.2</span> Pure functions</h4>
 <div class="outline-text-4" id="text-6-3-2">
+<ul class="org-ul">
+<li>Requirements:
+<ul class="org-ul">
+<li>Referential transparecy: always returns the same result if
+given the same arguments
+<ul class="org-ul">
+<li>Rely on their own arguments and immutable values only, e.g.,
+a string</li>
+<li>No dependence on random number generation, data files</li>
+</ul></li>
+<li>Must have no side effects
+<ul class="org-ul">
+<li>No need to worry if used in multiple places, or down a deep
+call chain</li>
+<li>No uncertainty about what an object name refers to</li>
+<li>Easier to trace and debug</li>
+</ul></li>
+</ul></li>
+<li>Immutable data structures
+<ul class="org-ul">
+<li>Recursion instead of for/while loops</li>
+<li>Function composition instead of attribute mutation</li>
+</ul></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-Functional%20design%20patterns" class="outline-4">
+<h4 id="Functional%20design%20patterns"><span class="section-number-4">6.3.3</span> Functional design patterns</h4>
+<div class="outline-text-4" id="text-6-3-3">
 <p>
 A program is chain of monoids (which is a chain of continuations
 (which is a chain of partial applications (which is a chain of
@@ -1906,8 +2000,8 @@ From <a href="https://www.slideshare.net/ScottWlaschin/fp-patterns-ndc-london201
 </div>
 
 <div id="outline-container-General" class="outline-4">
-<h4 id="General"><span class="section-number-4">6.3.3</span> General</h4>
-<div class="outline-text-4" id="text-6-3-3">
+<h4 id="General"><span class="section-number-4">6.3.4</span> General</h4>
+<div class="outline-text-4" id="text-6-3-4">
 <ul class="org-ul">
 <li><a href="https://fsharpforfunandprofit.com/fppatterns/">Functional Programming Design Patterns</a>: design pattern overview
 and some demonstrations</li>
@@ -1921,6 +2015,7 @@ recursive datatypes</li>
 monads</li>
 </ul></li>
 <li><a href="https://docs.google.com/presentation/d/1a4GvI0dbL8sfAlnTUwVxhq4_j-QiDlz02_t0XZJXnzY/preview?slide=id.ga8d8f45ac_065">To know good vs bad Scala style</a></li>
+<li><a href="https://www.braveclojure.com/functional-programming/">Functional Programming | Clojure for the Brave and True</a></li>
 </ul>
 </div>
 </div>
@@ -2305,9 +2400,25 @@ plot(x = 1:10, y = 1:10)
 </div>
 </div>
 
-<div id="outline-container-How%20to%20plot%20in%20log%20scale%20with%20base%20R%3F" class="outline-4">
-<h4 id="How%20to%20plot%20in%20log%20scale%20with%20base%20R%3F"><span class="section-number-4">7.2.15</span> How to plot in log scale with base R?</h4>
+<div id="outline-container-How%20to%20check%20if%20a%20value%20is%20in%20an%20interval%3F" class="outline-4">
+<h4 id="How%20to%20check%20if%20a%20value%20is%20in%20an%20interval%3F"><span class="section-number-4">7.2.15</span> How to check if a value is in an interval?</h4>
 <div class="outline-text-4" id="text-7-2-15">
+<div class="org-src-container">
+<pre class="src src-R"><span style="color: #a49462;"># </span><span style="color: #a49462;">x &lt;- 1</span>
+<span style="color: #a49462;"># </span><span style="color: #a49462;">confint &lt;- c(-0.5, 0.5)</span>
+(prod(sign(confint - x)) &lt; 0)
+</pre>
+</div>
+
+<p>
+Source: rickyrick at libera.chat
+</p>
+</div>
+</div>
+
+<div id="outline-container-How%20to%20plot%20in%20log%20scale%20with%20base%20R%3F" class="outline-4">
+<h4 id="How%20to%20plot%20in%20log%20scale%20with%20base%20R%3F"><span class="section-number-4">7.2.16</span> How to plot in log scale with base R?</h4>
+<div class="outline-text-4" id="text-7-2-16">
 <div class="org-src-container">
 <pre class="src src-R">plot(exp(1:10), 1:10, log = <span style="color: #f1fa8c;">"x"</span>)
 plot(1:10, exp(1:10), log = <span style="color: #f1fa8c;">"y"</span>)
@@ -2318,8 +2429,8 @@ plot(exp(1:10), exp(1:10), log = <span style="color: #f1fa8c;">"xy"</span>)
 </div>
 
 <div id="outline-container-How%20to%20fine%20tune%20R%20plot%20margins%3F" class="outline-4">
-<h4 id="How%20to%20fine%20tune%20R%20plot%20margins%3F"><span class="section-number-4">7.2.16</span> How to fine tune R plot margins?</h4>
-<div class="outline-text-4" id="text-7-2-16">
+<h4 id="How%20to%20fine%20tune%20R%20plot%20margins%3F"><span class="section-number-4">7.2.17</span> How to fine tune R plot margins?</h4>
+<div class="outline-text-4" id="text-7-2-17">
 <ul class="org-ul">
 <li><a href="https://www.rstudio.com/wp-content/uploads/2016/10/how-big-is-your-graph.pdf">How Big is Your Graph?</a></li>
 </ul>
@@ -2327,8 +2438,8 @@ plot(exp(1:10), exp(1:10), log = <span style="color: #f1fa8c;">"xy"</span>)
 </div>
 
 <div id="outline-container-How%20to%20make%20beautiful%20plots%20with%20base%20R%3F" class="outline-4">
-<h4 id="How%20to%20make%20beautiful%20plots%20with%20base%20R%3F"><span class="section-number-4">7.2.17</span> How to make beautiful plots with base R?</h4>
-<div class="outline-text-4" id="text-7-2-17">
+<h4 id="How%20to%20make%20beautiful%20plots%20with%20base%20R%3F"><span class="section-number-4">7.2.18</span> How to make beautiful plots with base R?</h4>
+<div class="outline-text-4" id="text-7-2-18">
 <ul class="org-ul">
 <li><a href="http://karolis.koncevicius.lt/posts/r_base_plotting_without_wrappers/">R base plotting without wrappers</a></li>
 </ul>
@@ -2336,8 +2447,8 @@ plot(exp(1:10), exp(1:10), log = <span style="color: #f1fa8c;">"xy"</span>)
 </div>
 
 <div id="outline-container-R%20programming--Resources" class="outline-4">
-<h4 id="R%20programming--Resources"><span class="section-number-4">7.2.18</span> Resources</h4>
-<div class="outline-text-4" id="text-7-2-18">
+<h4 id="R%20programming--Resources"><span class="section-number-4">7.2.19</span> Resources</h4>
+<div class="outline-text-4" id="text-7-2-19">
 <ul class="org-ul">
 <li><a href="https://pj.freefaculty.org/R/Rtips.html">Rtips</a></li>
 <li><a href="http://karolis.koncevicius.lt/posts/collection_of_simple_r_shortcuts/">A Collection of Simple R Shortcuts</a></li>
@@ -3386,7 +3497,7 @@ Source: <a href="https://stats.stackexchange.com/q/397288/31243">Dot Product and
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Luis Damiano</p>
-<p class="date">Created: 2022-02-25 Fri 10:39</p>
+<p class="date">Created: 2022-03-04 Fri 14:51</p>
 <p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
