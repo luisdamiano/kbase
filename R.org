@@ -222,6 +222,16 @@
      plot(x = 1:10, y = 1:10)
    #+end_src
 
+** How to check if a value is in an interval?
+
+   #+begin_src R
+     # x <- 1
+     # confint <- c(-0.5, 0.5)
+     (prod(sign(confint - x)) < 0)
+   #+end_src
+
+   Source: rickyrick at libera.chat
+
 ** How to plot in log scale with base R?
 
    #+begin_src R
