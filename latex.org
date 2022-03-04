@@ -194,12 +194,44 @@ Mix and match (suggestions for a research paper style):
    - Reasonably minimal fig/table caption margins
    - Allow for fig/table extending over both columns
    - Appendix need to be easy to set up
+   - Appendix fig/table numbering should start with A, e.g., Table A.1
    - Option to hide names and acknowledgments
    - Option for a short table of content on front page
    - Have some basic editing commands
      - Logical markup, see [[https://www.ctan.org/pkg/soul][CTAN: Package soul]] (Manual, Sec 5.1)
      - Note box, see [[https://tex.stackexchange.com/a/59342/225233][How to highlight an entire paragraph?]]
    - Recall that not everyone types in English
+
+** What type of LaTeX commands exist?
+
+   - Author commands
+     - typically short, lower case names
+     - e.g. =\section=, =\emph=, =\times=
+   - Class and package writer commands
+     - typically long, CamelCase names
+     - e.g., =\InputIfFileExists=, =\RequirePackage=, =\PassOptionsToClass=
+   - Internal commands
+     - typically contain an @ in their name
+     - e.g., =\@tempcnta=, =\@ifnextchar= and =\@eha=
+   - Exceptions:
+     - =\hbox= is internal
+     - =\m@ne=, the constant -1, is for class and package writers
+
+** How to make a class color safe?
+
+   - Issue: when using ={\color{green} text}=, color is restored
+     after the final =}=
+     - e.g., \setbox0=\hbox{\color{green} ⟨text⟩}
+   - Use LaTeX box commands rather than TeX primites
+     - =\sbox= rather than =\setbox=
+     - =\mbox= rather than =\hbox=
+     - =\parbox= or a =minipage= environment rather than =\vbox=
+   - Use =\normalcolor= to set regions to main document color rather
+     like =\normalfont=
+
+** How to write a custom LaTeX class?
+
+   - Use the =doc= software which comes with LaTeX (see The LaTeX companion)
 
 ** Resources
 
