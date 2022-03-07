@@ -66,6 +66,17 @@
      element-wise, subspace instead of sub-space
    - Closed compound nouns, e.g., metadata instead of meta data
 
+** Contextual formatting
+
+   - Use *bold* for (i) make the core of the message as salient as
+     possible, (ii) in-line headings at the start of the line
+   - Use /emph/, or /italic/ if emph is not available, to mark format
+     names or definition concepts
+   - Use _underline_ for editing comments that won't make it to the
+     final version
+   - Use =verbatim= for programming-like keywords, e.g., =gemv=
+   - Use ~code~ for in-line code snippets
+
 ** Oral presentations
 
    - A sentence is better than a paragraph. A phrase is better than a
