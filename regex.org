@@ -8,6 +8,21 @@
      grep -Poh -r "(\w+)::|(?:library|require|requireNamespace)\(\"?(\w+)\"?\)" --include="*\.R" | uniq -d -c | sort
    #+end_src
 
+** How to match a custom file separator?
+
+   I typically separate my file in labeled sections using this
+   pattern: comment separator (one or more), space, label (can include
+   space), space, at least four dash lines but typically enough to
+   fill the column space. This can be matched with =\S+\s(.+?)\s-{4,}=
+
+   #+begin_src
+;; Speed bar -------------------------------------------------------------------
+
+%% Introduction ----------------------------------------------------------------
+
+## Read data -------------------------------------------------------------------
+   #+end_src
+
 ** How to match any number with decimals up to 10?
 
    #+begin_src
