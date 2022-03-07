@@ -37,8 +37,15 @@
 
 * Org-mode
 
-  - [[https://academia.stackexchange.com/questions/1273/use-cases-of-org-mode-as-a-scientific-productivity-tool-for-academics-without-pr][Use cases of org-mode as a scientific productivity tool for academics]]
-  - [[https://github.com/fniessen/refcard-org-mode][Org-mode reference card]]
+** How to export/tangle automatically on commit?
+
+   - [[https://git.sr.ht/~mplscorwin/org-git-hooks][~mplscorwin/org-git-hooks]]: automatically render code and
+     documentation from org when you git commit.
+
+** General resources
+
+   - [[https://academia.stackexchange.com/questions/1273/use-cases-of-org-mode-as-a-scientific-productivity-tool-for-academics-without-pr][Use cases of org-mode as a scientific productivity tool for academics]]
+   - [[https://github.com/fniessen/refcard-org-mode][Org-mode reference card]]
 
 * Elisp
 
