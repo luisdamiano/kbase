@@ -14,7 +14,11 @@
      find . -iname \*tex -exec emacsclient {} +
    #+end_src
 
-** How to profile settings?
+** How to highlight by word, line, or regex?
+
+   - [[https://masteringemacs.org/article/highlighting-by-word-line-regexp][Highlighting by Word, Line and Regexp]]
+
+** How to profile init / settings?
 
    - [[https://melpa.org/#/esup][The Emacs StartUp Profiler (ESUP)]]
 
