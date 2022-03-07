@@ -9,12 +9,14 @@
    - The Elements of Style by Strunk, W., Jr. and White, E.B. An
      opinionated style guide.
    - Garner's Modern American Usage by Bryan A. Garner.
+   - English for Writing Research Papers by Adrian Wallwork
    - [[http://proselint.com/][proselint]]: whisper suggestions on how to improve your prose, see
      [[http://proselint.com/checks/][what it looks for]].
 
-** My own common tics to grep for
-   - No dash when using the wise suffix, e.g., elementwise instead of
-     element-wise, subspace instead of sub-space
+** Academic phrases
+
+   - [[https://melpa.org/#/academic-phrases][academic-phrases]] Emacs package
+   - 600 academic phrases from [[https://www.springer.com/gb/book/9783319260921][English for Writing Research Papers]]
 
 ** No adjectives allowed
 
@@ -52,6 +54,11 @@
 
 ** Prefer short precise terms over phrases
    - /multiple/ instead of /more than one/
+
+** My own common tics to grep for
+   - No dash when using the wise suffix, e.g., elementwise instead of
+     element-wise, subspace instead of sub-space
+   - Closed compound nouns, e.g., metadata instead of meta data
 
 ** Oral presentations
 
