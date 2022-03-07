@@ -31,6 +31,12 @@
      computer experiment, computer model, mechanistic model, physical
      model, climate model, what have you.
 
+** Repeat technical terms, no synonyms
+
+   - Prefer repeating a technical term in the same sentence, or a
+     sequence of sentences, rather than using synonyms that are not
+     defined.
+
 ** Repeat the technical terms when in doubt
 
    Yeah, it sounds weird to be repetitive and I sometimes feel that I
