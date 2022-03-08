@@ -24,15 +24,15 @@ search for too often
 
 * Motivation
 
-#+begin_quote
-This is the way (The Mandalorian)
-#+end_quote
+  #+begin_quote
+  This is the way (The Mandalorian)
+  #+end_quote
 
-#+begin_quote
-A power user might not have extensive technical knowledge of the
-systems they use but is rather characterized by competence or desire
-to make the most intensive use of computer programs or systems ([[https://en.wikipedia.org/wiki/Power_user][Wikipedia]])
-#+end_quote
+  #+begin_quote
+  A power user might not have extensive technical knowledge of the
+  systems they use but is rather characterized by competence or desire
+  to make the most intensive use of computer programs or systems ([[https://en.wikipedia.org/wiki/Power_user][Wikipedia]])
+  #+end_quote
 
 * Linux
 
@@ -103,6 +103,6 @@ to make the most intensive use of computer programs or systems ([[https://en.wik
   #+INCLUDE: scientific-writing.org
   #+INCLUDE: numerical-computing.org
 
-# * REDMO
+  # * REDMO
 
-#   INCLUDE:+redmo.org
+  #   INCLUDE:+redmo.org

@@ -2,10 +2,10 @@
 
 ** How to set =target=_blank= for all external links?
 
-#+begin_src shell
-  mkdir -p layouts/_default/_markup/render-link.html
-  echo '<a href="{{ .Destination | safeURL }}"{{ with .Title}} title="{{ . }}"{{ end }}{{ if strings.HasPrefix .Destination "http" }} target="_blank"{{ end }}>{{ .Text }}</a>' > layouts/_default/_markup/render-link.html
-#+end_src
+   #+begin_src shell
+     mkdir -p layouts/_default/_markup/render-link.html
+     echo '<a href="{{ .Destination | safeURL }}"{{ with .Title}} title="{{ . }}"{{ end }}{{ if strings.HasPrefix .Destination "http" }} target="_blank"{{ end }}>{{ .Text }}</a>' > layouts/_default/_markup/render-link.html
+   #+end_src
 
    Source: [[https://agrimprasad.com/post/hugo-goldmark-markdown/][How to Open Link in New Tab with Hugo's new Goldmark Markdown Renderer]]
 
@@ -13,9 +13,9 @@
 
    Show =contentname= as landing or home page
 
-#+begin_src shell
-    mkdir -p layouts
-    echo '{{ with .GetPage "/contentname" }}{{.Render}}{{end}}' > layouts/index.html
-#+end_src
+   #+begin_src shell
+     mkdir -p layouts
+     echo '{{ with .GetPage "/contentname" }}{{.Render}}{{end}}' > layouts/index.html
+   #+end_src
 
    Source: [[https://discourse.gohugo.io/t/i-want-to-redirect-my-homepage-to-a-content-page/16318/5][I want to redirect my Homepage to a content page]]

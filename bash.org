@@ -2,7 +2,7 @@
 
   - [[https://devhints.io/bash][Bash scripting cheatsheet]]
   - [[https://tldp.org/LDP/abs/html/][Advanced Bash-Scripting Guide]]: an in-depth exploration of the art
-      of shell scripting
+    of shell scripting
   - [[https://github.com/dylanaraps/pure-bash-bible][pure bash bible]]: a collection of pure bash alternatives to
     external processes
   - [[https://mywiki.wooledge.org/BashFAQ][BashFAQ]]: do *not* sleep on this, it's a gold mine

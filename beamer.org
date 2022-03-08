@@ -2,7 +2,7 @@
 
 ** How to build a Beamer template?
 
-Mix and match:
+   Mix and match:
 
    - A base template
    - Text font, e.g., https://tug.org/FontCatalogue/mathfonts.html

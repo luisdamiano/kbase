@@ -184,7 +184,7 @@
      - [[https://www.latex-project.org/help/documentation/clsguide.pdf][LATEX2e for class and package writers]] Sec 2.3
      - Example [[https://github.com/exaexa/manurxiv/blob/master/manurxiv.cls#L20][manurxiv/manurxiv.cls at exaexa/manurxiv]]
 
-Mix and match (suggestions for a research paper style):
+   Mix and match (suggestions for a research paper style):
 
    - Search for accessibility guidelines
    - A base template for inspiration, e.g., [[https://www.overleaf.com/latex/templates/icml2021-template/dsftnbmjgyhv][ICML2021 Template]]

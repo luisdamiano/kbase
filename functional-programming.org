@@ -68,11 +68,11 @@
        thing.
        - Readily *vectorized*!
      - Associativity: when combining more than two things, pairwise
-	 combination order does not matter
+       combination order does not matter
        - Readily *parallelized*!
        - Easy for incremental accumulation
      - Identity: a special thing called "zero" that returns the same
-	 thing that was combined with it
+       thing that was combined with it
        - Use as *initial value* for empty or missing data
    - Two-track model for error handling:
      - Use a switch function for error handling, e.g.,

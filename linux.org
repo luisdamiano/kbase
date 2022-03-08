@@ -22,7 +22,7 @@
 
 ** How to find and copy all files that match a regex?
 
-Use =rsync --parent= to keep the folder structure.
+   Use =rsync --parent= to keep the folder structure.
 
    #+begin_src shell
      find -iname '*.rds' -exec cp {} . \;
@@ -37,19 +37,19 @@ Use =rsync --parent= to keep the folder structure.
 
 ** How to list memory used by processes in remote cluster?
 
-#+begin_src shell
-  #!/bin/sh
-  squeue --me -o "%R" |
-      while read -r host; do
-	  ssh -n
-	  "$host" "ps -o pid,user,%mem,rss,size,%cpu,command ax | grep \"r-4\"";
-      done
-#+end_src
+   #+begin_src shell
+     #!/bin/sh
+     squeue --me -o "%R" |
+	 while read -r host; do
+	     ssh -n
+	     "$host" "ps -o pid,user,%mem,rss,size,%cpu,command ax | grep \"r-4\"";
+	 done
+   #+end_src
 
 ** What is the keycode of this key?
 
-Use =xev= to look for the keycode and keysym in the KeyPress or
-KeyRelease event
+   Use =xev= to look for the keycode and keysym in the KeyPress or
+   KeyRelease event
 
 ** How to find the window dimension and position?
 
@@ -59,8 +59,8 @@ KeyRelease event
 
    1920 (1080p) is often a good size
 
-#+begin_src shell
-# TODO
-#+end_src
+   #+begin_src shell
+     # TODO
+   #+end_src
 
    Source: [[https://unix.stackexchange.com/questions/121293/convert-every-pdf-in-the-current-directory-to-png][Convert every pdf in the current directory to png]]
