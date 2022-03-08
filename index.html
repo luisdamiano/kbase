@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2022-03-04 Fri 14:51 -->
+<!-- 2022-03-08 Tue 10:59 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Knowledge Base</title>
@@ -320,9 +320,10 @@ ul.org-ul, ol.org-ol { font-size:16px }
 <li><a href="#Regular%20expressions">3.3. Regular expressions</a>
 <ul>
 <li><a href="#How%20to%20match%20all%20R%20dependencies%3F">3.3.1. How to match all R dependencies?</a></li>
-<li><a href="#How%20to%20match%20any%20number%20with%20decimals%20up%20to%2010%3F">3.3.2. How to match any number with decimals up to 10?</a></li>
-<li><a href="#How%20to%20generate%20a%20string%20that%20matches%20a%20regular%20expression%3F">3.3.3. How to generate a string that matches a regular expression?</a></li>
-<li><a href="#General%20resources">3.3.4. General resources</a></li>
+<li><a href="#How%20to%20match%20a%20custom%20file%20separator%3F">3.3.2. How to match a custom file separator?</a></li>
+<li><a href="#How%20to%20match%20any%20number%20with%20decimals%20up%20to%2010%3F">3.3.3. How to match any number with decimals up to 10?</a></li>
+<li><a href="#How%20to%20generate%20a%20string%20that%20matches%20a%20regular%20expression%3F">3.3.4. How to generate a string that matches a regular expression?</a></li>
+<li><a href="#General%20resources">3.3.5. General resources</a></li>
 </ul>
 </li>
 <li><a href="#PDF%20processing">3.4. PDF processing</a></li>
@@ -347,20 +348,21 @@ ul.org-ul, ol.org-ol { font-size:16px }
 <li><a href="#How%20to%20debug%20the%20LaTeX%20document%20layout%2C%20sizes%2C%20and%20spacing%3F">4.1.7. How to debug the LaTeX document layout, sizes, and spacing?</a></li>
 <li><a href="#What%20is%20the%20document%20body%20ratio%3F">4.1.8. What is the document body ratio?</a></li>
 <li><a href="#How%20to%20reduce%20spacing%20around%20figures%2C%20tables%2C%20captions%3F">4.1.9. How to reduce spacing around figures, tables, captions?</a></li>
-<li><a href="#How%20to%20influence%20the%20position%20of%20a%20figure%2Ftable%3F">4.1.10. How to influence the position of a figure/table?</a></li>
-<li><a href="#How%20to%20fiddle%20with%20math%20font%20height%20and%20width%3F">4.1.11. How to fiddle with math font height and width?</a></li>
-<li><a href="#How%20to%20set%20a%20global%20path%20for%20input%20and%20graphic%20files%3F">4.1.12. How to set a global path for input and graphic files?</a></li>
-<li><a href="#How%20to%20align%20table%20columns%20without%20counting%20them%3F">4.1.13. How to align table columns without counting them?</a></li>
-<li><a href="#How%20to%20add%20the%20%28sub%29section%20name%20in%20the%20page%20header%3F">4.1.14. How to add the (sub)section name in the page header?</a></li>
-<li><a href="#How%20to%20hide%20section%20headings%3F">4.1.15. How to hide section headings?</a></li>
-<li><a href="#How%20to%20change%20the%20caption%20font%20size%3F">4.1.16. How to change the caption font size?</a></li>
-<li><a href="#How%20to%20properly%20compile%20a%20LaTeX%20project%3F">4.1.17. How to properly compile a LaTeX project?</a></li>
-<li><a href="#How%20to%20make%20GitHub%20compile%20a%20document%20after%20a%20push%3F">4.1.18. How to make GitHub compile a document after a push?</a></li>
-<li><a href="#How%20to%20build%20a%20custom%20style%3F">4.1.19. How to build a custom style?</a></li>
-<li><a href="#What%20type%20of%20LaTeX%20commands%20exist%3F">4.1.20. What type of LaTeX commands exist?</a></li>
-<li><a href="#How%20to%20make%20a%20class%20color%20safe%3F">4.1.21. How to make a class color safe?</a></li>
-<li><a href="#How%20to%20write%20a%20custom%20LaTeX%20class%3F">4.1.22. How to write a custom LaTeX class?</a></li>
-<li><a href="#Resources">4.1.23. Resources</a></li>
+<li><a href="#How%20to%20smash%20all%20in-line%20math%3F">4.1.10. How to smash all in-line math?</a></li>
+<li><a href="#How%20to%20influence%20the%20position%20of%20a%20figure%2Ftable%3F">4.1.11. How to influence the position of a figure/table?</a></li>
+<li><a href="#How%20to%20fiddle%20with%20math%20font%20height%20and%20width%3F">4.1.12. How to fiddle with math font height and width?</a></li>
+<li><a href="#How%20to%20set%20a%20global%20path%20for%20input%20and%20graphic%20files%3F">4.1.13. How to set a global path for input and graphic files?</a></li>
+<li><a href="#How%20to%20align%20table%20columns%20without%20counting%20them%3F">4.1.14. How to align table columns without counting them?</a></li>
+<li><a href="#How%20to%20add%20the%20%28sub%29section%20name%20in%20the%20page%20header%3F">4.1.15. How to add the (sub)section name in the page header?</a></li>
+<li><a href="#How%20to%20hide%20section%20headings%3F">4.1.16. How to hide section headings?</a></li>
+<li><a href="#How%20to%20change%20the%20caption%20font%20size%3F">4.1.17. How to change the caption font size?</a></li>
+<li><a href="#How%20to%20properly%20compile%20a%20LaTeX%20project%3F">4.1.18. How to properly compile a LaTeX project?</a></li>
+<li><a href="#How%20to%20make%20GitHub%20compile%20a%20document%20after%20a%20push%3F">4.1.19. How to make GitHub compile a document after a push?</a></li>
+<li><a href="#How%20to%20build%20a%20custom%20style%3F">4.1.20. How to build a custom style?</a></li>
+<li><a href="#What%20type%20of%20LaTeX%20commands%20exist%3F">4.1.21. What type of LaTeX commands exist?</a></li>
+<li><a href="#How%20to%20make%20a%20class%20color%20safe%3F">4.1.22. How to make a class color safe?</a></li>
+<li><a href="#How%20to%20write%20a%20custom%20LaTeX%20class%3F">4.1.23. How to write a custom LaTeX class?</a></li>
+<li><a href="#Resources">4.1.24. Resources</a></li>
 </ul>
 </li>
 <li><a href="#Beamer">4.2. Beamer</a>
@@ -383,12 +385,18 @@ ul.org-ul, ol.org-ol { font-size:16px }
 <li><a href="#Emacs">5.1. Emacs</a>
 <ul>
 <li><a href="#How%20to%20open%20all%20files%20by%20pattern%3F">5.1.1. How to open all files by pattern?</a></li>
-<li><a href="#How%20to%20profile%20settings%3F">5.1.2. How to profile settings?</a></li>
-<li><a href="#Useful%20modes">5.1.3. Useful modes</a></li>
-<li><a href="#Emacs%20packages%20worth%20checking">5.1.4. Emacs packages worth checking</a></li>
+<li><a href="#How%20to%20highlight%20by%20word%2C%20line%2C%20or%20regex%3F">5.1.2. How to highlight by word, line, or regex?</a></li>
+<li><a href="#How%20to%20profile%20init%20%2F%20settings%3F">5.1.3. How to profile init / settings?</a></li>
+<li><a href="#Useful%20modes">5.1.4. Useful modes</a></li>
+<li><a href="#Emacs%20packages%20worth%20checking">5.1.5. Emacs packages worth checking</a></li>
 </ul>
 </li>
-<li><a href="#Org-mode">5.2. Org-mode</a></li>
+<li><a href="#Org-mode">5.2. Org-mode</a>
+<ul>
+<li><a href="#How%20to%20export%2Ftangle%20automatically%20on%20commit%3F">5.2.1. How to export/tangle automatically on commit?</a></li>
+<li><a href="#Org-mode--General%20resources">5.2.2. General resources</a></li>
+</ul>
+</li>
 <li><a href="#Elisp">5.3. Elisp</a>
 <ul>
 <li><a href="#Where%20to%20start%20with%20elisp%3F">5.3.1. Where to start with elisp?</a></li>
@@ -531,13 +539,16 @@ ul.org-ul, ol.org-ol { font-size:16px }
 <li><a href="#Scientific%20communication">12.1. Scientific communication</a>
 <ul>
 <li><a href="#Scientific%20communication--General%20resources">12.1.1. General resources</a></li>
-<li><a href="#My%20own%20common%20tics%20to%20grep%20for">12.1.2. My own common tics to grep for</a></li>
+<li><a href="#Academic%20phrases">12.1.2. Academic phrases</a></li>
 <li><a href="#No%20adjectives%20allowed">12.1.3. No adjectives allowed</a></li>
 <li><a href="#Use%20technical%20terms">12.1.4. Use technical terms</a></li>
-<li><a href="#Repeat%20the%20technical%20terms%20when%20in%20doubt">12.1.5. Repeat the technical terms when in doubt</a></li>
-<li><a href="#Attributive%20nouns">12.1.6. Attributive nouns</a></li>
-<li><a href="#Prefer%20short%20precise%20terms%20over%20phrases">12.1.7. Prefer short precise terms over phrases</a></li>
-<li><a href="#Oral%20presentations">12.1.8. Oral presentations</a></li>
+<li><a href="#Repeat%20technical%20terms%2C%20no%20synonyms">12.1.5. Repeat technical terms, no synonyms</a></li>
+<li><a href="#Repeat%20the%20technical%20terms%20when%20in%20doubt">12.1.6. Repeat the technical terms when in doubt</a></li>
+<li><a href="#Attributive%20nouns">12.1.7. Attributive nouns</a></li>
+<li><a href="#Prefer%20short%20precise%20terms%20over%20phrases">12.1.8. Prefer short precise terms over phrases</a></li>
+<li><a href="#My%20own%20common%20tics%20to%20grep%20for">12.1.9. My own common tics to grep for</a></li>
+<li><a href="#Contextual%20formatting">12.1.10. Contextual formatting</a></li>
+<li><a href="#Oral%20presentations">12.1.11. Oral presentations</a></li>
 </ul>
 </li>
 <li><a href="#Scientific%20programming">12.2. Scientific programming</a></li>
@@ -942,7 +953,7 @@ Source: <a href="https://git-scm.com/book/en/v2/Git-Internals-Git-Objects">Git -
 <div id="outline-container-How%20to%20rename%20a%20branch%3F" class="outline-4">
 <h4 id="How%20to%20rename%20a%20branch%3F"><span class="section-number-4">3.1.2</span> How to rename a branch?</h4>
 <div class="outline-text-4" id="text-3-1-2">
-<pre class="example" id="org4e45348">
+<pre class="example" id="org97bf866">
 git branch -m newname
 </pre>
 </div>
@@ -1169,9 +1180,29 @@ Gotta love them!
 </div>
 </div>
 
-<div id="outline-container-How%20to%20match%20any%20number%20with%20decimals%20up%20to%2010%3F" class="outline-4">
-<h4 id="How%20to%20match%20any%20number%20with%20decimals%20up%20to%2010%3F"><span class="section-number-4">3.3.2</span> How to match any number with decimals up to 10?</h4>
+<div id="outline-container-How%20to%20match%20a%20custom%20file%20separator%3F" class="outline-4">
+<h4 id="How%20to%20match%20a%20custom%20file%20separator%3F"><span class="section-number-4">3.3.2</span> How to match a custom file separator?</h4>
 <div class="outline-text-4" id="text-3-3-2">
+<p>
+I typically separate my file in labeled sections using this
+pattern: comment separator (one or more), space, label (can include
+space), space, at least four dash lines but typically enough to
+fill the column space. This can be matched with <code>\S+\s(.+?)\s-{4,}</code>
+</p>
+
+<pre class="example">
+;; Speed bar -------------------------------------------------------------------
+
+%% Introduction ----------------------------------------------------------------
+
+## Read data -------------------------------------------------------------------
+</pre>
+</div>
+</div>
+
+<div id="outline-container-How%20to%20match%20any%20number%20with%20decimals%20up%20to%2010%3F" class="outline-4">
+<h4 id="How%20to%20match%20any%20number%20with%20decimals%20up%20to%2010%3F"><span class="section-number-4">3.3.3</span> How to match any number with decimals up to 10?</h4>
+<div class="outline-text-4" id="text-3-3-3">
 <pre class="example">
 ^(?:\d|\d?\.\d+|10(?:\.0+)?)$
 </pre>
@@ -1183,8 +1214,8 @@ Source: <a href="https://regex101.com/r/kk8SIF/1/">https://regex101.com/r/kk8SIF
 </div>
 
 <div id="outline-container-How%20to%20generate%20a%20string%20that%20matches%20a%20regular%20expression%3F" class="outline-4">
-<h4 id="How%20to%20generate%20a%20string%20that%20matches%20a%20regular%20expression%3F"><span class="section-number-4">3.3.3</span> How to generate a string that matches a regular expression?</h4>
-<div class="outline-text-4" id="text-3-3-3">
+<h4 id="How%20to%20generate%20a%20string%20that%20matches%20a%20regular%20expression%3F"><span class="section-number-4">3.3.4</span> How to generate a string that matches a regular expression?</h4>
+<div class="outline-text-4" id="text-3-3-4">
 <p>
 A <i>regex to string</i> kind of situation.
 </p>
@@ -1196,8 +1227,8 @@ A <i>regex to string</i> kind of situation.
 </div>
 
 <div id="outline-container-General%20resources" class="outline-4">
-<h4 id="General%20resources"><span class="section-number-4">3.3.4</span> General resources</h4>
-<div class="outline-text-4" id="text-3-3-4">
+<h4 id="General%20resources"><span class="section-number-4">3.3.5</span> General resources</h4>
+<div class="outline-text-4" id="text-3-3-5">
 <ul class="org-ul">
 <li><a href="https://docs.microsoft.com/en-us/dotnet/standard/base-types/best-practices">Best practices for regular expressions</a></li>
 </ul>
@@ -1403,9 +1434,25 @@ document's layout</li>
 </div>
 </div>
 
-<div id="outline-container-How%20to%20influence%20the%20position%20of%20a%20figure%2Ftable%3F" class="outline-4">
-<h4 id="How%20to%20influence%20the%20position%20of%20a%20figure%2Ftable%3F"><span class="section-number-4">4.1.10</span> How to influence the position of a figure/table?</h4>
+<div id="outline-container-How%20to%20smash%20all%20in-line%20math%3F" class="outline-4">
+<h4 id="How%20to%20smash%20all%20in-line%20math%3F"><span class="section-number-4">4.1.10</span> How to smash all in-line math?</h4>
 <div class="outline-text-4" id="text-4-1-10">
+<p>
+There is a strong argument for increasing the <code>linespread</code> to
+accomodate for <code>$Y^{(0)}$</code> if you need to use smash too often. If
+you insist, though, use <code>\setlength{\lineskiplimit}{-100pt}</code>
+</p>
+
+<ul class="org-ul">
+<li><a href="https://tex.stackexchange.com/a/86902">How does one stop automatic line spacing increases when
+typesetting tall math</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-How%20to%20influence%20the%20position%20of%20a%20figure%2Ftable%3F" class="outline-4">
+<h4 id="How%20to%20influence%20the%20position%20of%20a%20figure%2Ftable%3F"><span class="section-number-4">4.1.11</span> How to influence the position of a figure/table?</h4>
+<div class="outline-text-4" id="text-4-1-11">
 <ul class="org-ul">
 <li>Low-effort approach: load <code>\usepackage[section]{placeins}</code> and
 set <code>h!</code> for placement specifiers. It adds a <code>\FloatBarrier</code>
@@ -1418,8 +1465,8 @@ and table in LATEX?</a></li>
 </div>
 
 <div id="outline-container-How%20to%20fiddle%20with%20math%20font%20height%20and%20width%3F" class="outline-4">
-<h4 id="How%20to%20fiddle%20with%20math%20font%20height%20and%20width%3F"><span class="section-number-4">4.1.11</span> How to fiddle with math font height and width?</h4>
-<div class="outline-text-4" id="text-4-1-11">
+<h4 id="How%20to%20fiddle%20with%20math%20font%20height%20and%20width%3F"><span class="section-number-4">4.1.12</span> How to fiddle with math font height and width?</h4>
+<div class="outline-text-4" id="text-4-1-12">
 <p>
 <a href="https://paste.xinu.at/m-QzacZr/">https://paste.xinu.at/m-QzacZr/</a>
 <a href="https://paste.xinu.at/m-sHDc/">https://paste.xinu.at/m-sHDc/</a>
@@ -1428,8 +1475,8 @@ and table in LATEX?</a></li>
 </div>
 
 <div id="outline-container-How%20to%20set%20a%20global%20path%20for%20input%20and%20graphic%20files%3F" class="outline-4">
-<h4 id="How%20to%20set%20a%20global%20path%20for%20input%20and%20graphic%20files%3F"><span class="section-number-4">4.1.12</span> How to set a global path for input and graphic files?</h4>
-<div class="outline-text-4" id="text-4-1-12">
+<h4 id="How%20to%20set%20a%20global%20path%20for%20input%20and%20graphic%20files%3F"><span class="section-number-4">4.1.13</span> How to set a global path for input and graphic files?</h4>
+<div class="outline-text-4" id="text-4-1-13">
 <div class="org-src-container">
 <pre class="src src-latex"><span style="color: #ffff00;">\makeatletter</span>
 <span style="color: #ffff00;">\def\input@path</span><span style="color: #f8f8f2;">{</span><span style="color: #8be9fd;">{</span>/path/to/folder/<span style="color: #8be9fd;">}</span><span style="color: #f8f8f2;">}</span>
@@ -1445,8 +1492,8 @@ Source: <a href="https://tex.stackexchange.com/a/24827/225233">\input and absolu
 </div>
 
 <div id="outline-container-How%20to%20align%20table%20columns%20without%20counting%20them%3F" class="outline-4">
-<h4 id="How%20to%20align%20table%20columns%20without%20counting%20them%3F"><span class="section-number-4">4.1.13</span> How to align table columns without counting them?</h4>
-<div class="outline-text-4" id="text-4-1-13">
+<h4 id="How%20to%20align%20table%20columns%20without%20counting%20them%3F"><span class="section-number-4">4.1.14</span> How to align table columns without counting them?</h4>
+<div class="outline-text-4" id="text-4-1-14">
 <p>
 Say you want to align the first column to the left and the rest to
 the right without needing to figure out how many columns the table
@@ -1464,8 +1511,8 @@ in <code>l*9r</code> or <code>l*{99}</code>. Use brackets for more than one digi
 </div>
 
 <div id="outline-container-How%20to%20add%20the%20%28sub%29section%20name%20in%20the%20page%20header%3F" class="outline-4">
-<h4 id="How%20to%20add%20the%20%28sub%29section%20name%20in%20the%20page%20header%3F"><span class="section-number-4">4.1.14</span> How to add the (sub)section name in the page header?</h4>
-<div class="outline-text-4" id="text-4-1-14">
+<h4 id="How%20to%20add%20the%20%28sub%29section%20name%20in%20the%20page%20header%3F"><span class="section-number-4">4.1.15</span> How to add the (sub)section name in the page header?</h4>
+<div class="outline-text-4" id="text-4-1-15">
 <div class="org-src-container">
 <pre class="src src-latex"><span style="color: #a49462;">% </span><span style="color: #a49462;">Add section name in page header</span>
 <span style="color: #ff79c6; font-weight: bold;">\usepackage</span><span style="color: #f8f8f2;">{</span><span style="color: #50fa7b; font-weight: bold;">fancyhdr</span><span style="color: #f8f8f2;">}</span>
@@ -1483,8 +1530,8 @@ in <code>l*9r</code> or <code>l*{99}</code>. Use brackets for more than one digi
 </div>
 
 <div id="outline-container-How%20to%20hide%20section%20headings%3F" class="outline-4">
-<h4 id="How%20to%20hide%20section%20headings%3F"><span class="section-number-4">4.1.15</span> How to hide section headings?</h4>
-<div class="outline-text-4" id="text-4-1-15">
+<h4 id="How%20to%20hide%20section%20headings%3F"><span class="section-number-4">4.1.16</span> How to hide section headings?</h4>
+<div class="outline-text-4" id="text-4-1-16">
 <div class="org-src-container">
 <pre class="src src-latex"><span style="color: #ff79c6; font-weight: bold;">\usepackage</span><span style="color: #f8f8f2;">{</span><span style="color: #50fa7b; font-weight: bold;">titlesec</span><span style="color: #f8f8f2;">}</span>
 
@@ -1501,8 +1548,8 @@ in <code>l*9r</code> or <code>l*{99}</code>. Use brackets for more than one digi
 </div>
 
 <div id="outline-container-How%20to%20change%20the%20caption%20font%20size%3F" class="outline-4">
-<h4 id="How%20to%20change%20the%20caption%20font%20size%3F"><span class="section-number-4">4.1.16</span> How to change the caption font size?</h4>
-<div class="outline-text-4" id="text-4-1-16">
+<h4 id="How%20to%20change%20the%20caption%20font%20size%3F"><span class="section-number-4">4.1.17</span> How to change the caption font size?</h4>
+<div class="outline-text-4" id="text-4-1-17">
 <div class="org-src-container">
 <pre class="src src-latex"><span style="color: #ff79c6; font-weight: bold;">\usepackage</span><span style="color: #f8f8f2;">{</span><span style="color: #50fa7b; font-weight: bold;">caption</span><span style="color: #f8f8f2;">}</span>
 <span style="color: #ffff00;">\captionsetup</span><span style="color: #f8f8f2;">{</span>font=footnotesize<span style="color: #f8f8f2;">}</span>
@@ -1512,8 +1559,8 @@ in <code>l*9r</code> or <code>l*{99}</code>. Use brackets for more than one digi
 </div>
 
 <div id="outline-container-How%20to%20properly%20compile%20a%20LaTeX%20project%3F" class="outline-4">
-<h4 id="How%20to%20properly%20compile%20a%20LaTeX%20project%3F"><span class="section-number-4">4.1.17</span> How to properly compile a LaTeX project?</h4>
-<div class="outline-text-4" id="text-4-1-17">
+<h4 id="How%20to%20properly%20compile%20a%20LaTeX%20project%3F"><span class="section-number-4">4.1.18</span> How to properly compile a LaTeX project?</h4>
+<div class="outline-text-4" id="text-4-1-18">
 <p>
 Use <code>latemk file.tex -pdf</code> and that's it. No need to run multiple
 commands or figure out the right order. Put in a makefile if that's
@@ -1527,8 +1574,8 @@ Source: <a href="https://tex.stackexchange.com/a/40759/225233">how to properly '
 </div>
 
 <div id="outline-container-How%20to%20make%20GitHub%20compile%20a%20document%20after%20a%20push%3F" class="outline-4">
-<h4 id="How%20to%20make%20GitHub%20compile%20a%20document%20after%20a%20push%3F"><span class="section-number-4">4.1.18</span> How to make GitHub compile a document after a push?</h4>
-<div class="outline-text-4" id="text-4-1-18">
+<h4 id="How%20to%20make%20GitHub%20compile%20a%20document%20after%20a%20push%3F"><span class="section-number-4">4.1.19</span> How to make GitHub compile a document after a push?</h4>
+<div class="outline-text-4" id="text-4-1-19">
 <ul class="org-ul">
 <li><a href="https://github.com/exaexa/better-mff-thesis/blob/b8d46ea25a11972ea9cb08f0b0da7df1a23ad178/.github/workflows/main.yml">GitHub workflow yaml file by exaexa</a></li>
 </ul>
@@ -1536,8 +1583,8 @@ Source: <a href="https://tex.stackexchange.com/a/40759/225233">how to properly '
 </div>
 
 <div id="outline-container-How%20to%20build%20a%20custom%20style%3F" class="outline-4">
-<h4 id="How%20to%20build%20a%20custom%20style%3F"><span class="section-number-4">4.1.19</span> How to build a custom style?</h4>
-<div class="outline-text-4" id="text-4-1-19">
+<h4 id="How%20to%20build%20a%20custom%20style%3F"><span class="section-number-4">4.1.20</span> How to build a custom style?</h4>
+<div class="outline-text-4" id="text-4-1-20">
 <ul class="org-ul">
 <li>Consider building a class
 <ul class="org-ul">
@@ -1582,8 +1629,8 @@ Catalogue</a></li>
 </div>
 
 <div id="outline-container-What%20type%20of%20LaTeX%20commands%20exist%3F" class="outline-4">
-<h4 id="What%20type%20of%20LaTeX%20commands%20exist%3F"><span class="section-number-4">4.1.20</span> What type of LaTeX commands exist?</h4>
-<div class="outline-text-4" id="text-4-1-20">
+<h4 id="What%20type%20of%20LaTeX%20commands%20exist%3F"><span class="section-number-4">4.1.21</span> What type of LaTeX commands exist?</h4>
+<div class="outline-text-4" id="text-4-1-21">
 <ul class="org-ul">
 <li>Author commands
 <ul class="org-ul">
@@ -1610,8 +1657,8 @@ Catalogue</a></li>
 </div>
 
 <div id="outline-container-How%20to%20make%20a%20class%20color%20safe%3F" class="outline-4">
-<h4 id="How%20to%20make%20a%20class%20color%20safe%3F"><span class="section-number-4">4.1.21</span> How to make a class color safe?</h4>
-<div class="outline-text-4" id="text-4-1-21">
+<h4 id="How%20to%20make%20a%20class%20color%20safe%3F"><span class="section-number-4">4.1.22</span> How to make a class color safe?</h4>
+<div class="outline-text-4" id="text-4-1-22">
 <ul class="org-ul">
 <li>Issue: when using <code>{\color{green} text}</code>, color is restored
 after the final <code>}</code>
@@ -1631,8 +1678,8 @@ like <code>\normalfont</code></li>
 </div>
 
 <div id="outline-container-How%20to%20write%20a%20custom%20LaTeX%20class%3F" class="outline-4">
-<h4 id="How%20to%20write%20a%20custom%20LaTeX%20class%3F"><span class="section-number-4">4.1.22</span> How to write a custom LaTeX class?</h4>
-<div class="outline-text-4" id="text-4-1-22">
+<h4 id="How%20to%20write%20a%20custom%20LaTeX%20class%3F"><span class="section-number-4">4.1.23</span> How to write a custom LaTeX class?</h4>
+<div class="outline-text-4" id="text-4-1-23">
 <ul class="org-ul">
 <li>Use the <code>doc</code> software which comes with LaTeX (see The LaTeX companion)</li>
 </ul>
@@ -1640,8 +1687,8 @@ like <code>\normalfont</code></li>
 </div>
 
 <div id="outline-container-Resources" class="outline-4">
-<h4 id="Resources"><span class="section-number-4">4.1.23</span> Resources</h4>
-<div class="outline-text-4" id="text-4-1-23">
+<h4 id="Resources"><span class="section-number-4">4.1.24</span> Resources</h4>
+<div class="outline-text-4" id="text-4-1-24">
 <ul class="org-ul">
 <li><a href="https://tobi.oetiker.ch/lshort/lshort.pdf">The Not So Short Introduction to LaTeX2e</a>: LaTeX2e in 139 minutes</li>
 <li><a href="https://www.ctan.org/pkg/texbook">The TeXbook</a>: an example of the business of writing a book in TeX</li>
@@ -1758,9 +1805,18 @@ backend (external program that processes bibliography information)</li>
 </div>
 </div>
 
-<div id="outline-container-How%20to%20profile%20settings%3F" class="outline-4">
-<h4 id="How%20to%20profile%20settings%3F"><span class="section-number-4">5.1.2</span> How to profile settings?</h4>
+<div id="outline-container-How%20to%20highlight%20by%20word%2C%20line%2C%20or%20regex%3F" class="outline-4">
+<h4 id="How%20to%20highlight%20by%20word%2C%20line%2C%20or%20regex%3F"><span class="section-number-4">5.1.2</span> How to highlight by word, line, or regex?</h4>
 <div class="outline-text-4" id="text-5-1-2">
+<ul class="org-ul">
+<li><a href="https://masteringemacs.org/article/highlighting-by-word-line-regexp">Highlighting by Word, Line and Regexp</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-How%20to%20profile%20init%20%2F%20settings%3F" class="outline-4">
+<h4 id="How%20to%20profile%20init%20%2F%20settings%3F"><span class="section-number-4">5.1.3</span> How to profile init / settings?</h4>
+<div class="outline-text-4" id="text-5-1-3">
 <ul class="org-ul">
 <li><a href="https://melpa.org/#/esup">The Emacs StartUp Profiler (ESUP)</a></li>
 </ul>
@@ -1768,8 +1824,8 @@ backend (external program that processes bibliography information)</li>
 </div>
 
 <div id="outline-container-Useful%20modes" class="outline-4">
-<h4 id="Useful%20modes"><span class="section-number-4">5.1.3</span> Useful modes</h4>
-<div class="outline-text-4" id="text-5-1-3">
+<h4 id="Useful%20modes"><span class="section-number-4">5.1.4</span> Useful modes</h4>
+<div class="outline-text-4" id="text-5-1-4">
 <ul class="org-ul">
 <li><a href="https://ftp.gnu.org/pub/gnu/auctex/12.2-extra/tex-ref.pdf">AucTex reference card</a></li>
 </ul>
@@ -1777,8 +1833,8 @@ backend (external program that processes bibliography information)</li>
 </div>
 
 <div id="outline-container-Emacs%20packages%20worth%20checking" class="outline-4">
-<h4 id="Emacs%20packages%20worth%20checking"><span class="section-number-4">5.1.4</span> Emacs packages worth checking</h4>
-<div class="outline-text-4" id="text-5-1-4">
+<h4 id="Emacs%20packages%20worth%20checking"><span class="section-number-4">5.1.5</span> Emacs packages worth checking</h4>
+<div class="outline-text-4" id="text-5-1-5">
 <ul class="org-ul">
 <li>ripgrep</li>
 <li>eshell</li>
@@ -1794,10 +1850,32 @@ backend (external program that processes bibliography information)</li>
 <div id="outline-container-Org-mode" class="outline-3">
 <h3 id="Org-mode"><span class="section-number-3">5.2</span> Org-mode</h3>
 <div class="outline-text-3" id="text-5-2">
+</div>
+<div id="outline-container-How%20to%20export%2Ftangle%20automatically%20on%20commit%3F" class="outline-4">
+<h4 id="How%20to%20export%2Ftangle%20automatically%20on%20commit%3F"><span class="section-number-4">5.2.1</span> How to export/tangle automatically on commit?</h4>
+<div class="outline-text-4" id="text-5-2-1">
+<div class="org-src-container">
+<pre class="src src-shell"><span style="color: #ffb86c;">echo</span> <span style="color: #f1fa8c;">'type emacs &gt; /dev/null 2&gt;&amp;1 &amp;&amp;</span>
+<span style="color: #f1fa8c;">    emacs -Q README.org --batch -f org-md-export-to-markdown --kill &amp;&amp;</span>
+<span style="color: #f1fa8c;">    git add README.md'</span> &gt;&gt; .git/hooks/pre-commit &amp;&amp; chmod +x .git/hooks/pre-commit
+</pre>
+</div>
+
+<ul class="org-ul">
+<li><a href="https://git.sr.ht/~mplscorwin/org-git-hooks">~mplscorwin/org-git-hooks</a>: automatically render code and
+documentation from org when you git commit</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-Org-mode--General%20resources" class="outline-4">
+<h4 id="Org-mode--General%20resources"><span class="section-number-4">5.2.2</span> General resources</h4>
+<div class="outline-text-4" id="text-5-2-2">
 <ul class="org-ul">
 <li><a href="https://academia.stackexchange.com/questions/1273/use-cases-of-org-mode-as-a-scientific-productivity-tool-for-academics-without-pr">Use cases of org-mode as a scientific productivity tool for academics</a></li>
 <li><a href="https://github.com/fniessen/refcard-org-mode">Org-mode reference card</a></li>
 </ul>
+</div>
 </div>
 </div>
 
@@ -3289,18 +3367,19 @@ are modular yet feel complete. Here's a couple notes for better writting.
 <li>The Elements of Style by Strunk, W., Jr. and White, E.B. An
 opinionated style guide.</li>
 <li>Garner's Modern American Usage by Bryan A. Garner.</li>
+<li>English for Writing Research Papers by Adrian Wallwork</li>
 <li><a href="http://proselint.com/">proselint</a>: whisper suggestions on how to improve your prose, see
 <a href="http://proselint.com/checks/">what it looks for</a>.</li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-My%20own%20common%20tics%20to%20grep%20for" class="outline-4">
-<h4 id="My%20own%20common%20tics%20to%20grep%20for"><span class="section-number-4">12.1.2</span> My own common tics to grep for</h4>
+<div id="outline-container-Academic%20phrases" class="outline-4">
+<h4 id="Academic%20phrases"><span class="section-number-4">12.1.2</span> Academic phrases</h4>
 <div class="outline-text-4" id="text-12-1-2">
 <ul class="org-ul">
-<li>No dash when using the wise suffix, e.g., elementwise instead of
-element-wise, subspace instead of sub-space</li>
+<li><a href="https://melpa.org/#/academic-phrases">academic-phrases</a> Emacs package</li>
+<li>600 academic phrases from <a href="https://www.springer.com/gb/book/9783319260921">English for Writing Research Papers</a></li>
 </ul>
 </div>
 </div>
@@ -3328,9 +3407,20 @@ model, climate model, what have you.</li>
 </div>
 </div>
 
-<div id="outline-container-Repeat%20the%20technical%20terms%20when%20in%20doubt" class="outline-4">
-<h4 id="Repeat%20the%20technical%20terms%20when%20in%20doubt"><span class="section-number-4">12.1.5</span> Repeat the technical terms when in doubt</h4>
+<div id="outline-container-Repeat%20technical%20terms%2C%20no%20synonyms" class="outline-4">
+<h4 id="Repeat%20technical%20terms%2C%20no%20synonyms"><span class="section-number-4">12.1.5</span> Repeat technical terms, no synonyms</h4>
 <div class="outline-text-4" id="text-12-1-5">
+<ul class="org-ul">
+<li>Prefer repeating a technical term in the same sentence, or a
+sequence of sentences, rather than using synonyms that are not
+defined.</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-Repeat%20the%20technical%20terms%20when%20in%20doubt" class="outline-4">
+<h4 id="Repeat%20the%20technical%20terms%20when%20in%20doubt"><span class="section-number-4">12.1.6</span> Repeat the technical terms when in doubt</h4>
+<div class="outline-text-4" id="text-12-1-6">
 <p>
 Yeah, it sounds weird to be repetitive and I sometimes feel that I
 keep repeting myself too much. As a reader, though, I sometimes
@@ -3345,8 +3435,8 @@ and are highly connected to the density you are talking about.
 </div>
 
 <div id="outline-container-Attributive%20nouns" class="outline-4">
-<h4 id="Attributive%20nouns"><span class="section-number-4">12.1.6</span> Attributive nouns</h4>
-<div class="outline-text-4" id="text-12-1-6">
+<h4 id="Attributive%20nouns"><span class="section-number-4">12.1.7</span> Attributive nouns</h4>
+<div class="outline-text-4" id="text-12-1-7">
 <p>
 They are tough to beat! In most situations, I prefer an extensive
 use of attributive nouns. Be ware they grow too big too often; I
@@ -3362,17 +3452,44 @@ this model</i> versus <i>the proposed model parametrization benefit</i>.
 </div>
 
 <div id="outline-container-Prefer%20short%20precise%20terms%20over%20phrases" class="outline-4">
-<h4 id="Prefer%20short%20precise%20terms%20over%20phrases"><span class="section-number-4">12.1.7</span> Prefer short precise terms over phrases</h4>
-<div class="outline-text-4" id="text-12-1-7">
+<h4 id="Prefer%20short%20precise%20terms%20over%20phrases"><span class="section-number-4">12.1.8</span> Prefer short precise terms over phrases</h4>
+<div class="outline-text-4" id="text-12-1-8">
 <ul class="org-ul">
 <li><i>multiple</i> instead of <i>more than one</i></li>
 </ul>
 </div>
 </div>
 
+<div id="outline-container-My%20own%20common%20tics%20to%20grep%20for" class="outline-4">
+<h4 id="My%20own%20common%20tics%20to%20grep%20for"><span class="section-number-4">12.1.9</span> My own common tics to grep for</h4>
+<div class="outline-text-4" id="text-12-1-9">
+<ul class="org-ul">
+<li>No dash when using the wise suffix, e.g., elementwise instead of
+element-wise, subspace instead of sub-space</li>
+<li>Closed compound nouns, e.g., metadata instead of meta data</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-Contextual%20formatting" class="outline-4">
+<h4 id="Contextual%20formatting"><span class="section-number-4">12.1.10</span> Contextual formatting</h4>
+<div class="outline-text-4" id="text-12-1-10">
+<ul class="org-ul">
+<li>Use <b>bold</b> for (i) make the core of the message as salient as
+possible, (ii) in-line headings at the start of the line</li>
+<li>Use <i>emph</i>, or <i>italic</i> if emph is not available, to mark format
+names or definition concepts</li>
+<li>Use <span class="underline">underline</span> for editing comments that won't make it to the
+final version</li>
+<li>Use <code>verbatim</code> for programming-like keywords, e.g., <code>gemv</code></li>
+<li>Use <code>code</code> for in-line code snippets</li>
+</ul>
+</div>
+</div>
+
 <div id="outline-container-Oral%20presentations" class="outline-4">
-<h4 id="Oral%20presentations"><span class="section-number-4">12.1.8</span> Oral presentations</h4>
-<div class="outline-text-4" id="text-12-1-8">
+<h4 id="Oral%20presentations"><span class="section-number-4">12.1.11</span> Oral presentations</h4>
+<div class="outline-text-4" id="text-12-1-11">
 <ul class="org-ul">
 <li>A sentence is better than a paragraph. A phrase is better than a
 sentence. A word is better than a phrase. An image is better than
@@ -3497,7 +3614,7 @@ Source: <a href="https://stats.stackexchange.com/q/397288/31243">Dot Product and
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Luis Damiano</p>
-<p class="date">Created: 2022-03-04 Fri 14:51</p>
+<p class="date">Created: 2022-03-08 Tue 10:59</p>
 <p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
