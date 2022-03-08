@@ -84,6 +84,15 @@
    - [[https://ctan.math.utah.edu/ctan/tex-archive/macros/latex/contrib/layouts/layman.pdf][Layouts package]]: enable the display of various elements of a
      document's layout
 
+** How to smash all in-line math?
+
+   There is a strong argument for increasing the =linespread= to
+   accomodate for =$Y^{(0)}$= if you need to use smash too often. If
+   you insist, though, use =\setlength{\lineskiplimit}{-100pt}=
+
+   - [[https://tex.stackexchange.com/a/86902][How does one stop automatic line spacing increases when
+     typesetting tall math]]
+
 ** How to influence the position of a figure/table?
 
    - Low-effort approach: load ~\usepackage[section]{placeins}~ and
