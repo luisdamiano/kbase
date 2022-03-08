@@ -39,8 +39,14 @@
 
 ** How to export/tangle automatically on commit?
 
+   #+begin_src shell
+     echo 'type emacs > /dev/null 2>&1 &&
+	 emacs -Q README.org --batch -f org-md-export-to-markdown --kill &&
+	 git add README.md' >> .git/hooks/pre-commit && chmod +x .git/hooks/pre-commit
+   #+end_src
+
    - [[https://git.sr.ht/~mplscorwin/org-git-hooks][~mplscorwin/org-git-hooks]]: automatically render code and
-     documentation from org when you git commit.
+     documentation from org when you git commit
 
 ** General resources
 
