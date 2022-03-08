@@ -72,6 +72,7 @@ to make the most intensive use of computer programs or systems ([[https://en.wik
   #+INCLUDE: better-R.org
   #+INCLUDE: R.org
   #+INCLUDE: rstudio.org
+  #+INCLUDE: ess.org
 
 * Stan programming
 

@@ -1,0 +1,9 @@
+* Emacs Speaks Statistics
+
+** How to navigate code and jump around?
+
+   Use =ess-build-tags-for-directory= (=C-c C-e t= and =C-c C-e C-t=)
+   to build the tags, then =xref-find-definitions= (=M-.=) to look up
+   a definition via [[https://www.gnu.org/software/emacs/manual/html_node/emacs/Xref.html][Xref]].
+
+   Source: [[https://emacs.stackexchange.com/questions/45561/how-to-jump-to-r-source-code-with-ess][How to jump to R source code with ESS?]]
