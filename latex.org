@@ -26,12 +26,12 @@
 
 ** How to type a differential operator =dx=?
 
-   Use upright =d= followed by math =x=, and possibly add a space
-   between the expression and the differential operator.
+   Use upright =d= followed by math =x=, and possibly add a space =\,=
+   before the differential operator
 
    #+begin_src latex
      \begin{equation}
-       \int_0^1 x^2 \, \mathrm{d}t
+       \int_0^1 x^2 \, \mathrm{d}x
      \end{equation}
    #+end_src
 
