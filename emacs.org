@@ -39,14 +39,18 @@
 
 ** How to export/tangle automatically on commit?
 
+   NB: =--batch= implies =-q=, hence initialization files are no
+   loaded. Add =-l ~/.emacs=, =-l ~/.config/emacs/init.el= or similar.
+
    #+begin_src shell
      echo 'type emacs > /dev/null 2>&1 &&
-	 emacs -Q README.org --batch -f org-md-export-to-markdown --kill &&
+	 emacs README.org --batch -f org-md-export-to-markdown --kill &&
 	 git add README.md' >> .git/hooks/pre-commit && chmod +x .git/hooks/pre-commit
    #+end_src
 
    - [[https://git.sr.ht/~mplscorwin/org-git-hooks][~mplscorwin/org-git-hooks]]: automatically render code and
      documentation from org when you git commit
+   - [[https://lists.gnu.org/r/bug-gnu-emacs/2021-12/msg00239.html][bug#12791: 24.2; An option to load user init file with -batch]]
 
 ** General resources
 
