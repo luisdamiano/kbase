@@ -24,6 +24,20 @@
 
    - [[https://tex.stackexchange.com/a/170512/225233][Footnotes without numbering]]
 
+** How to type a differential operator =dx=?
+
+   Use upright =d= followed by math =x=, and possibly add a space
+   between the expression and the differential operator.
+
+   #+begin_src latex
+     \begin{equation}
+       \int_0^1 x^2 \, \mathrm{d}t
+     \end{equation}
+   #+end_src
+
+   - [[https://tex.stackexchange.com/a/60546/225233][Should I \mathrm the d in my integrals?]]
+   - [[https://tex.stackexchange.com/a/14822/225233][What's the proper way to typeset a differential operator?]]
+
 ** What symbol should I use for ... ?
 
    - [[http://www.math.toronto.edu/mathit/symbols-letter.pdf][The Comprehensive LaTeX Symbol List]]

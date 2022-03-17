@@ -2,6 +2,17 @@
 
 ** Programming with functions
 
+*** How to recover the name of the variable passed as argument?
+
+    #+begin_src R
+      z <- 1:10
+      f <- function(x) {
+	varName <- as.character(as.list(match.call())$x) ## "z"
+      }
+    #+end_src
+
+    Source: [[https://stackoverflow.com/a/19134129/2860744][lazy evaluation - Passing a variable name to a function in R]]
+
 *** How to get all function call parameters as a list?
 
     Call =as.list(match.call())[-1]= within your function
@@ -250,6 +261,93 @@
 ** How to make beautiful plots with base R?
 
    - [[http://karolis.koncevicius.lt/posts/r_base_plotting_without_wrappers/][R base plotting without wrappers]]
+
+** How to improve the look of my rmarkdown HTML document?
+
+   Thanks to fendur on #R at libera.chat
+
+   - Client-side, precomputed dashboard like document:
+     - Idea: one /chapter/ contains an image plus some comments
+     - Start with =html_document=
+     - Use =.tabset-pills= to organize chapters
+     - Use =.tabset-fade= to make switching smoother
+   - [[https://holtzy.github.io/Pimp-my-rmd/][Pimp my RMD: a few tips for R Markdown]]
+
+  Below is a quick template I prepared.
+
+  #+begin_src ascii
+    ---
+    title: "Barebone dashboard"
+    date: "`r Sys.Date()`"
+    output: html_document
+    ---
+
+    <style type="text/css">
+    .main-container {
+       max-width: 100% !important;
+    }
+    .title, .author, .date {
+      display:inline!important;
+    }
+    .nav-pills {
+      line-height: 0px !important;
+    }
+    .h1 {
+     font-size: 16px !important;
+    }
+    </style>
+
+    ```{r setup, include = FALSE}
+    knitr::opts_chunk$set(
+      echo       = FALSE,
+      fig.align  = "center",
+      fig.width  = 16,
+      fig.height = 8.1,
+      out.height = "80%"
+    )
+    ```
+
+    # {.tabset .tabset-fade .tabset-pills}
+
+    ## Precipitation per year
+
+    ```{r}
+    plot(Nile, col = "darkgreen", lwd = 2, log = "y")
+    title(main = "Annual flow of the river", adj = 1, line = .5)
+    ```
+
+    1. This is a full-page wide picture
+    2. Line 2
+    3. Line 3
+    4. Line 4
+    5. Line 5
+
+    ## MPG explained
+
+    ```{r}
+    par(mfrow = c(1, 2))
+    plot(mtcars$mpg, mtcars$drat)
+    plot(mtcars$mpg, mtcars$wt)
+    ```
+
+    1. This is a full-page side-by-side picture
+    2. Line 2
+    3. Line 3
+    4. Line 4
+    5. Line 5
+
+    ## Species and width
+
+    ```{r fig.width = 8.1, fig.height = 8.1}
+    pairs(iris[, 1:3], col = iris$Species, bg = iris$Species, pch = 21)
+    ```
+
+    1. This is a full-page square picture
+    2. Line 2
+    3. Line 3
+    4. Line 4
+    5. Line 5
+  #+end_src
 
 ** Resources
 

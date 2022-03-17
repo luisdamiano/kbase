@@ -64,3 +64,40 @@
    #+end_src
 
    Source: [[https://unix.stackexchange.com/questions/121293/convert-every-pdf-in-the-current-directory-to-png][Convert every pdf in the current directory to png]]
+
+** How to switch keyboard layout to type Greek letters?
+
+   To switch between US and Greek (polytonic) keyboard layouts using
+   Alt + Caps Locks. Add to =~/.xinitrc=, or possibly
+   =~/.config/i3/config=, to make it persistent.
+
+   #+begin_src shell
+     setxkbmap 'us,gr' -variant ',polytonic' -option grp:'alt_caps_toggle'
+   #+end_src
+
+** What are the keyboard layout switching keys?
+
+   - To list them all =man xkeyboard-config= [[https://unix.stackexchange.com/a/45499/88701][Other than Alt + Shift to
+     switch keyboard layout, any other Xorg key]]
+   - To list the toggle keys only
+     =grep "grp:.*toggle" /usr/share/X11/xkb/rules/base.lst=
+     [[https://wiki.archlinux.org/title/Xorg/Keyboard_configuration#Switching_between_keyboard_layouts][Xorg/Keyboard configuration]]
+
+** How to type math symbols, ascii emoji easily?
+
+   Use a Compose key. Here's my .XCompose, below there are many more
+
+   - [[https://wiki.archlinux.org/title/Xorg/Keyboard_configuration#Configuring_compose_key][Xorg/Keyboard configuration - ArchWiki]]
+   - [[https://github.com/exaexa/xcompose/blob/master/.XCompose][xcompose/.XCompose at master · exaexa/xcompose · GitHub]]
+   - [[https://github.com/svinota/XCompose/blob/master/.XCompose][XCompose/.XCompose at master · svinota/XCompose · GitHub]]
+   - [[https://github.com/nshepperd/xcompose/blob/master/math.conf][xcompose/math.conf at master · nshepperd/xcompose · GitHub]]
+   - [[https://github.com/nshepperd/xcompose/blob/master/superscripts.conf][xcompose/superscripts.conf at master · nshepperd/xcompose · GitHub]]
+   - [[https://github.com/Wafelack/dotfiles/blob/master/X/.XCompose][dotfiles/.XCompose at master · Wafelack/dotfiles · GitHub]]
+
+** How to set a compose key (=Multi_key=)?
+
+   - To list all compose key options
+     =grep "compose:" /usr/share/X11/xkb/rules/base.lst=
+   - To set a compose key
+     =setxkbmap -option compose:rctrl=
+   - [[https://wiki.archlinux.org/title/Xorg/Keyboard_configuration#Configuring_compose_key][Xorg/Keyboard configuration - ArchWiki]]
