@@ -4,7 +4,7 @@
 
    You probably want a LaTeX command for these.
 
-   - Citation needed: when you are very inclined to accept the
+   - Citation needed: when you are inclined to accept the
      statement, but still need to pin-point the best reference
    - Verification needed: when you want to double-check that something
      is as stated
@@ -32,4 +32,3 @@
       - <where and why state-of-the-art approaches are limited or fail>
       - <methodology benefits>, <methodology key aspects>
       - <paper layout>
-    -
