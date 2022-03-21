@@ -1,5 +1,19 @@
 * Numerical computing
 
+** When to use analytical versus automatic differentiation?
+
+   Automatic differentiation can decrease runtime at large over
+   numeric differentiation with little effort. In some (typically
+   surprising) cases, automatic differentiation can yield better
+   runtimes than analytical differentiation. A key aspect about
+   analytical differentiation is that, besides the math work needed to
+   obtain the analytical form, their implementation typically requires
+   a non-trivial amount of work to beat automatic
+   differentiation. Numerical differentiation is almost always the
+   least performant.
+
+   Source: [[http://ceres-solver.org/analytical_derivatives.html#when-should-you-use-analytical-derivatives][Analytic Derivatives — Ceres Solver]]
+
 ** How to select algorithm tolerance for numerical differentiation?
 
    In absence of problem-specific information, use the square root of
