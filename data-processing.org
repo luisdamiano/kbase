@@ -20,6 +20,10 @@
    - [[https://aur.archlinux.org/pspg.git][Tabular data pager]]: works fine with CSV files too!
    - [[https://github.com/saulpw/visidata][VisiData]]: lightning fast tabular data exploring, arranging, plotting
 
+** How to work with collaborators who use spreadsheets?
+
+   - [[https://doi.org/10.1080/00031305.2017.1375989][Data Organization in Spreadsheets]]
+
 ** ETL cycle
 
    1. Cycle initiation
