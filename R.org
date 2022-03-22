@@ -82,6 +82,66 @@
 
     Source: [[https://stackoverflow.com/a/9266265/2860744][R - Function overloading]]
 
+** Vectorization
+
+*** Why are for loops slow in R?
+
+    =for=, =:=, =[=, =[<-= are all function calls and function calls
+    can be time-consuming.  The following loop is, in fact, a sequence
+    of many function calls. Vectorized functions are written in C and
+    are typically faster.
+
+    #+begin_src R
+      N      <- 20
+      fib    <- rep(NA, 10)
+      fib[1] <- 0
+      fib[2] <- 1
+
+      for (i in 3:N)
+	fib[i] <- fib[i - 1] + fib[i - 2]
+    #+end_src
+
+    Source: The Art of R Programming: A Tour of Statistical Software
+    Design section 14.1.1
+
+*** Why is =apply= not fast?
+
+    While =lapply= and others are implemented in C, =apply= is actually
+    implemented in R and might not provide a high speedup.
+
+    Source: The Art of R Programming: A Tour of Statistical Software
+    Design section 14.1.1
+
+*** Which base R functions are vectorized?
+
+    Not an comprehensive list
+
+    - Math operators
+      - =+=, =-=, etc
+    - Logic
+      - ====, =!==, etc
+    - Vectors
+      - ifelse
+      - which
+      - where
+      - any
+      - all
+      - cumsum
+      - cumprod
+      - abs
+      - pmin
+      - pmax
+    - Matrix:
+      - rowSums
+      - colSums
+      - lower.tri
+      - upper.tri
+    - All pairs
+      - outer
+    - All combinations
+      - combin
+      - expand.grid
+
 ** How to create a sequence within groups?
 
    #+begin_src R
