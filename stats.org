@@ -20,7 +20,8 @@
    Look at the tail of the QR decomposition pivot vector (rickyrick at
    libera.chat)
 
-   - Source: [[https://stats.stackexchange.com/a/476216/31243][How to identify which variables are collinear in a singul...]]
+   - [[https://stats.stackexchange.com/a/476216/31243][How to identify which variables are collinear in a singul...]]
+   - [[https://en.wikipedia.org/wiki/QR_decomposition#Column_pivoting][QR decomposition - Column pivoting]]
 
 ** Priors
 
