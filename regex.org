@@ -2,6 +2,24 @@
 
   Gotta love them!
 
+** How to match a keyword except when used as a tag?
+
+   To match =foo= in any conex except when enclosed by brackets
+   ={foo}=, use negative lookarounds but be careful to match ={foo=
+   and =foo}=. Alternatively, use PCRE with =(*SKIP)(*F)|}=
+   (OnlineCop at libera.chat). Other use cases for this pattern:
+   exclude foo in comment lines (=#foo=, =//foo=, =/*foo*/=),
+   quotes (="foo"=, ='foo'=).
+
+   #+begin_src shell
+     grep "(?<!\{)foo(?!\})"
+     grep -P "\{foo\}(*SKIP)(*F)|foo"
+   #+end_src
+
+   Source:
+   - https://regex101.com/r/9j9BVZ/1
+   - https://regex101.com/r/gP0oMS/1
+
 ** How to match all R dependencies?
 
    #+begin_src shell
