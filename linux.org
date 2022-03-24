@@ -1,5 +1,14 @@
 * Linux
 
+** How to read a systemd service log for today?
+
+   Don't forget to add =--user= if it's a user service. Also, =-b= is
+   short for =-b-0= (Ghosthree3 at libera.chat)
+
+   #+begin_src shell
+     journalctl --user -u servicename -b
+   #+end_src
+
 ** How to clean up space in /boot?
 
    Consider removing the fallback initramfs to make temporary space. A
