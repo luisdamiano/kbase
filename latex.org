@@ -47,6 +47,12 @@
 
    - [[http://detexify.kirelabs.org/classify.html][Detexify]]: draw symbol by hand or use the symbol table
 
+** How to type the math symbol for definition =:==?
+
+   Use =\coloneqq= and =\vcoloneqq= from the =mathtools= package.
+
+   - Source: [[https://tex.stackexchange.com/a/194353/225233][Symbol for definition :=]]
+
 ** How to debug the LaTeX document layout, sizes, and spacing?
 
    - [[https://ctan.math.washington.edu/tex-archive/macros/luatex/generic/lua-visual-debug/][lua-visual-debug]]: it looks [[https://ctan.math.washington.edu/tex-archive/macros/luatex/generic/lua-visual-debug/doc/sample.pdf][gorgeous]]
