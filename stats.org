@@ -23,6 +23,18 @@
    - [[https://stats.stackexchange.com/a/476216/31243][How to identify which variables are collinear in a singul...]]
    - [[https://en.wikipedia.org/wiki/QR_decomposition#Column_pivoting][QR decomposition - Column pivoting]]
 
+** How to compute the Cressie and Hawkins (1980) robust estimator?
+
+   Cressie and Hawkins (1980) found that the fourth-root of χ1 has a
+   skewness of 0.08 and a kurtosis of 2.48 (compared with 0 and 3 for
+   the Gaussian distribution). Estimates of location, such as the mean
+   and the median, can then be applied to sqrt(X). Finally, these
+   estimates can be raised to the 4th power and adjusted for
+   bias. Consider the /square-root-differences cloud/ for
+   visualization.
+
+   - Source: [[https://www.doi.org/10.1002/9781119115151][10.1002/9781119115151]] eq. (2.2.8)
+
 ** Priors
 
    - [[http://www.stats.org.uk/priors/noninformative/YangBerger1998.pdf][A Catalog of Noninformative Priors]]
