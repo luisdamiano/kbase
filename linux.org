@@ -110,3 +110,27 @@
    - To set a compose key
      =setxkbmap -option compose:rctrl=
    - [[https://wiki.archlinux.org/title/Xorg/Keyboard_configuration#Configuring_compose_key][Xorg/Keyboard configuration - ArchWiki]]
+
+** How to connect OBS to Zoom or Webex?
+
+   To redirect video from OBS to a new virtual camera input
+   - Install the linux headers if you don't have them, e.g,
+     =sudo pacman -S linux-headers=
+   - Install =v4l2loopback-dkms=, e.g., =sudo pacman -S
+     v4l2loopback-dkms=
+   - Load the kernel module =sudo modprobe v4l2loopback=
+   - Select =Dummy video device= as video source in the meeting app,
+     e.g., in Zoom Settings > Video > Camera
+   - Source: [[https://wiki.archlinux.org/title/Open_Broadcaster_Software#Virtual_camera_output][Open Broadcaster Software - ArchWiki]]
+
+   To redirect audio from OBS to a new virtual sound input
+   - Create a null output device
+     #+begin_src shell
+       pulsemodule=$(pactl load-module module-null-sink sink_name=obs_audio
+		     sink_properties=device.description=obs_audio_sink_for_mic)
+     #+end_src
+   - In =pavucontrol=, Playback tab, change the output of
+     =OBS-monitor= to =Null output=
+   - In =pavucontrol=, Recording tab, change the input of =Zoom= to
+     =Null output=
+   - Source: MacGyver at libera.chat, [[https://wiki.archlinux.org/title/PulseAudio/Examples#Monitor_specific_output][PulseAudio/Examples - ArchWiki]]
