@@ -234,6 +234,36 @@
 
    Source: [[https://stackoverflow.com/a/12614723/2860744][remove columns from dataframe where ALL values are NA]]
 
+** How to fast apply a function over a ragged array?
+
+   Use =unlist(lapply(split(x, f), FUN))= for speed, but consider
+   =tapply(x, f, FUN)= for readibility maybe?
+
+   #+begin_src R
+     ## Unit: microseconds
+     ## expr          min        lq      mean    median       uq      max neval
+     ## f0(x, f)  404.974  415.2835  466.5448  419.1625  424.371 86293.33 10000
+     ## f1(x, f)  474.606  489.3690  596.5190  494.9910  501.109 86516.78 10000
+     ## f2(x, f)  964.581  983.5410 1104.5760  989.9835  998.150 87735.97 10000
+     ## f3(x, f) 1477.468 1509.2175 1675.5916 1518.9660 1531.052 93641.10 10000
+
+     set.seed(1)
+
+     x <- rnorm(10000)
+     f <- factor(rpois(10000, 5))
+
+     f0 <- function(x, f) { unlist(lapply(split(x, f), mean)) }
+     f1 <- function(x, f) { tapply(x, f, mean) }
+     f2 <- function(x, f) { ave(x, f, FUN = mean) }
+     f3 <- function(x, f) { by(x, f, mean) }
+
+     bench <- microbenchmark::microbenchmark(
+				f0(x, f), f1(x, f), f2(x, f), f3(x, f),
+				times = 1E4)
+
+     print(bench)
+   #+end_src
+
 ** How to fast subset rows corresponding to max value by group?
 
    #+begin_src R
