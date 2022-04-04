@@ -133,4 +133,7 @@
      =OBS-monitor= to =Null output=
    - In =pavucontrol=, Recording tab, change the input of =Zoom= to
      =Null output=
-   - Source: MacGyver at libera.chat, [[https://wiki.archlinux.org/title/PulseAudio/Examples#Monitor_specific_output][PulseAudio/Examples - ArchWiki]]
+   - Source:
+     - MacGyver at libera.chat,
+     - [[https://wiki.archlinux.org/title/PulseAudio/Examples#Monitor_specific_output][PulseAudio/Examples - ArchWiki]]
+     - [[https://unix.stackexchange.com/a/604082/88701][Redirecting Pulseaudio sink to a virtual source]]
