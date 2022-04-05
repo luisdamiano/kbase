@@ -12,6 +12,7 @@
    Sometimes, we have one or two words hanging on the last line of a
    paragraph.
 
+   - Add ~\looseness=-1~ immediately before the paragraph ([[https://tex.stackexchange.com/a/204087/225233][source]])
    - Adjust =badness= limits
    - =\parfillskip= controls the length at the end of a paragraph
 
