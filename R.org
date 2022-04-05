@@ -207,7 +207,7 @@
      l <- as.list(as.data.frame(t(X)))
    #+end_src
 
-** Look up a value among possibilities?
+** How to look up a value among possibilities?
 
    The workhorse of any labeling function
 
@@ -241,22 +241,25 @@
 
    #+begin_src R
      ## Unit: microseconds
-     ## expr          min       lq      mean    median        uq       max neval
-     ## f0(x, f)  407.464  415.873  428.9751  420.9835  426.0235  4896.238 10000
-     ## f1(x, f)  474.577  486.841  503.4230  493.4610  499.5985  3071.205 10000
-     ## f2(x, f) 1380.378 1436.882 1493.5056 1454.6915 1471.6040 27627.855 10000
-
+     ##     expr      min        lq      mean    median        uq       max neval
+     ## f0(x, f)  409.578  415.5165  426.9041  418.9500  424.3400  4237.466 10000
+     ## f1(x, f)  411.208  418.3095  430.4231  421.8645  427.4155  5550.120 10000
+     ## f2(x, f)  474.681  487.1265  498.8509  492.6960  497.6360  2552.075 10000
+     ## f3(x, f) 1395.582 1442.3785 1494.0197 1459.3515 1472.5205 28121.379 10000
      set.seed(1)
 
      x <- rnorm(10000)
      f <- factor(rpois(10000, 5))
 
+     tapply_ <- function(x, f, FUN) { unlist(lapply(split(x, f), FUN)) }
+
      f0 <- function(x, f) { unlist(lapply(split(x, f), mean)) }
-     f1 <- function(x, f) { tapply(x, f, mean) }
-     f2 <- function(x, f) { by(x, f, mean) }
+     f1 <- function(x, f) { tapply_(x, f, mean) }
+     f2 <- function(x, f) { tapply(x, f, mean) }
+     f3 <- function(x, f) { by(x, f, mean) }
 
      bench <- microbenchmark::microbenchmark(
-				f0(x, f), f1(x, f), f2(x, f),
+				f0(x, f), f1(x, f), f2(x, f), f3(x, f),
 				times = 1E4)
 
      print(bench)
@@ -333,6 +336,33 @@
    #+end_src
 
    Source: rickyrick at libera.chat
+
+** How to use =geom_tile= with irregular data?
+
+Note that =?geom_tile= recommends =akima::interp=.
+
+#+begin_src R
+  x <- mtcars$hp ## x-axis
+  y <- mtcars$qsec ## y-axis
+  z <- mtcars$mpg ## surface color
+
+  ak   <- akima::interp(x, y, z)
+  DF   <- expand.grid(ak[1:2])
+  DF$z <- ak[[3]]
+
+  DF <- data.frame(expand.grid(ak[1:2]), z = c(ak[[3]]))
+
+  ggplot(DF, aes(x, y, fill = z)) +
+    geom_tile()
+#+end_src
+
+If the data size is large, constructing the data.frame as follows
+might be more efficient.
+
+#+begin_src R
+  DF   <- expand.grid(ak[1:2])
+  DF$z <- ak[[3]]
+#+end_src
 
 ** How to plot in log scale with base R?
 
