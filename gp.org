@@ -1,4 +1,33 @@
-* Gaussian Processes
+* Gaussian processes
+
+** Is the mean function a Gaussian process uninteresting?
+
+   - [[https://www.jmlr.org/papers/volume7/micchelli06a/micchelli06a.pdf][Universal kernels]] should be able to approximate any continuous
+     functions on a compact subset, making a mean function nonessential
+   - The mean function may not live in the space of functions being
+     modeled
+   - A mean function can help with extrapolation when using a
+     nonperiodic kernel
+
+   Source: [[https://stats.stackexchange.com/q/222238/31243][Why is the mean function in Gaussian Process uninteresting?]]
+
+** Is the derivative of a Gaussian process another Gaussian process?
+
+   Since differentiation is a linear operator, the derivative of a
+   Gaussian process is another Gaussian process.
+
+   Source:
+   - [[http://gaussianprocess.org/gpml/chapters/RW9.pdf][Rasmussen and Williams (2006, section 9.4]])
+   - [[https://stats.stackexchange.com/a/180886/31243][Derivative of a Gaussian Process]]
+
+** Is the integral of a Gaussian process another Gaussian process?
+
+   If all finite linear combinations $\sum_i a_i X_{t_i}$ are Gaussian
+   and the process is continuous, $Y_t = \int_0^t X_s \, \mathrm{d}s$ is a
+   Gaussian process.
+
+   - [[https://math.stackexchange.com/a/1471678/113775][Integral of a Gaussian process]] (this result is more general)
+   - [[https://math.stackexchange.com/a/243977/113775][Integral of Brownian motion is Gaussian?]]
 
 ** Software
 
