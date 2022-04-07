@@ -1,5 +1,22 @@
 * Math
 
+** How to choose $u$ and $dv$ in integration by parts?
+
+   We pick $u$ and $dv$ from an expression of the form $\int f(x) g(x) dx$. We
+   need to differentiate $u$ and integrate $dv$.
+
+   - Consider $dv = f$ for $f$ the most complex expression in the
+     integrand among all those with known integral
+   - Consider $u = f$ if $\int f dx$ is not known
+   - Consider $u = f$ when $df$ is nicer to work with than $\int f$
+   - Typical choices are $u = f$ when $f$ is a logarithmic, inverse
+     trigonometric, algebraic, trigonometric, or exponential function.
+
+   - Source:
+   - [[https://math.stackexchange.com/a/2123294/113775][Methods for choosing $u$ and $dv$ when integrating by parts? (1)]]
+   - [[https://math.stackexchange.com/a/2123477/113775][Methods for choosing $u$ and $dv$ when integrating by parts? (2)]]
+   - [[https://en.wikipedia.org/wiki/Integration_by_parts#LIATE_rule][Integration by parts - Wikipedia]]
+
 ** Linear algebra
 
    - [[http://www2.imm.dtu.dk/pubdb/edoc/imm3274.pdf][The Matrix Cookbook]]: collection of linear algebra facts
