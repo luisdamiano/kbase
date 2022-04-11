@@ -7,6 +7,13 @@
    - [[https://www.ctan.org/pkg/l2tabu-english][l2tabu]]: Practical usage guide with mistakes, obsolete packages and
      commands
 
+** How to compile LaTeX document on save?
+
+   Run =latexmk -pdf -pvc file.tex= to compile the TeX document every
+   time the file changes on disk.
+
+   Source: [[https://tex.stackexchange.com/a/24238][What You See is What You Get (WYSIWYG) for PGF/TikZ?]]
+
 ** How to avoid orphan words?
 
    Sometimes, we have one or two words hanging on the last line of a
