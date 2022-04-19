@@ -1,5 +1,17 @@
 * Math
 
+** Resources for hard calculus
+
+   - Integrals
+     - General resources:
+       - [[https://en.wikipedia.org/wiki/Lists_of_integrals][Lists of integrals]]
+     - Hairy integrals:
+       - Symbolic Integration I
+	 (Vol. 1). (2005). Springer-Verlag. https://doi.org/10.1007/b138171
+   - [[https://en.wikipedia.org/wiki/List_of_limits][List of limits]]
+   - [[https://en.wikipedia.org/wiki/List_of_mathematical_series][List of mathematical series]]
+   - [[https://en.wikipedia.org/wiki/Integral_transform][Integral transform]]
+
 ** How to choose $u$ and $dv$ in integration by parts?
 
    We pick $u$ and $dv$ from an expression of the form $\int f(x) g(x) dx$. We

@@ -8,6 +8,8 @@
 ** General resources
    - The Elements of Style by Strunk, W., Jr. and White, E.B. An
      opinionated style guide.
+   - The Chicago Manual of Style (15th ed.), Chicago: University of
+     Chicago Press.
    - Garner's Modern American Usage by Bryan A. Garner.
    - English for Writing Research Papers by Adrian Wallwork
    - [[http://proselint.com/][proselint]]: whisper suggestions on how to improve your prose, see
@@ -50,7 +52,7 @@
 
 ** Attributive nouns
 
-   They are tough to beat! In most situations, I prefer an extensive
+   They are tough to beat. In most situations, I prefer an extensive
    use of attributive nouns. Be ware they grow too big too often; I
    sometimes break a really long chain of nouns into two smaller
    attribute noun clauses.
@@ -62,6 +64,11 @@
    - /multiple/ instead of /more than one/
 
 ** My own common tics to grep for
+   - Hyphens are used when two or more adjectives or an adjective and
+     a noun together modify another noun; for example, goodness-of-fit
+     test is the equivalent of test for goodness of fit.
+   - Most words with prefixes such as sub and non are not hyphenated,
+     for example: subtable, nonnormal.
    - No dash when using the wise suffix, e.g., elementwise instead of
      element-wise, subspace instead of sub-space
    - Closed compound nouns, e.g., metadata instead of meta data

@@ -9,8 +9,8 @@
 
 ** How to compile LaTeX document on save?
 
-   Run =latexmk -pdf -pvc file.tex= to compile the TeX document every
-   time the file changes on disk.
+   Run =latexmk -pdf -pvc --interaction=nonstopmode file.tex= to
+   compile the TeX document every time the file changes on disk.
 
    Source: [[https://tex.stackexchange.com/a/24238][What You See is What You Get (WYSIWYG) for PGF/TikZ?]]
 

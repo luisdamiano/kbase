@@ -11,3 +11,4 @@
    allows for neater graphs
 
    - Use the =graphdrawing= tikz library for automated graph layout
+   - [[https://pgf-tikz.github.io/pgf/pgfmanual.pdf][TikZ & PGF manual]]
