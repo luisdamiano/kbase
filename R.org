@@ -160,6 +160,15 @@
       with(grd, mapply(function(f, x, y, z) f(x, y, z), fun, x, y, z))
     #+end_src
 
+    In the case of two argument functions, the explicit expansion can
+    be avoided using =outer=
+    #+begin_src R
+      funs <- c(function(x, y) x + y, function(x, y) x^2 * y)
+      sapply(funs, function(f) outer(1:3, 1:4))
+      ## Using R > 4.1
+      sapply(funs, \(f) outer(1:3, 1:4))
+    #+end_src
+
 ** How to create a sequence within groups?
 
    #+begin_src R
