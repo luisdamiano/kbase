@@ -3,12 +3,14 @@
 ** Resources for hard calculus
 
    - Integrals
-     - General resources:
+     - General resources
        - [[https://en.wikipedia.org/wiki/Lists_of_integrals][Lists of integrals]]
-     - Hairy integrals:
+       - [[https://en.wikipedia.org/wiki/List_of_integrals_of_Gaussian_functions][List of integrals of Gaussian functions]] sweet Normals o'f mine
+     - Hairy integrals
        - Symbolic Integration I
 	 (Vol. 1). (2005). Springer-Verlag. https://doi.org/10.1007/b138171
    - [[https://en.wikipedia.org/wiki/List_of_limits][List of limits]]
+   - [[https://en.wikipedia.org/wiki/List_of_logarithmic_identities][List of logarithmic identities]]
    - [[https://en.wikipedia.org/wiki/List_of_mathematical_series][List of mathematical series]]
    - [[https://en.wikipedia.org/wiki/Integral_transform][Integral transform]]
 
@@ -24,7 +26,7 @@
    - Typical choices are $u = f$ when $f$ is a logarithmic, inverse
      trigonometric, algebraic, trigonometric, or exponential function.
 
-   - Source:
+   Source:
    - [[https://math.stackexchange.com/a/2123294/113775][Methods for choosing $u$ and $dv$ when integrating by parts? (1)]]
    - [[https://math.stackexchange.com/a/2123477/113775][Methods for choosing $u$ and $dv$ when integrating by parts? (2)]]
    - [[https://en.wikipedia.org/wiki/Integration_by_parts#LIATE_rule][Integration by parts - Wikipedia]]
@@ -43,8 +45,3 @@
 ** Optimization
 
    - [[http://www.geno-project.org/][GENO]]: optimization solver code generator
-
-** Other references
-
-   - [[https://en.wikipedia.org/wiki/List_of_limits][List of limits]]
-   - [[https://en.wikipedia.org/wiki/List_of_logarithmic_identities][List of logarithmic identities]]
