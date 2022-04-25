@@ -35,6 +35,12 @@
    - org-publish: for a website
    - org-roam
 
+** How to do collaborative editing with Emacs?
+
+   - [[https://elpa.gnu.org/packages/crdt.html][GNU ELPA - crdt]]
+   - [[https://corpix.dev/2022/02/collaborative-editing-with-emacs.html][Collaborative editing with Emacs]]
+   - [[https://emacsconf.org/2021/talks/erg/][EmacsConf - 2021 - talks - Emacs Research Group, Season Zero]]
+
 * Org-mode
 
 ** How to export/tangle automatically on commit?
