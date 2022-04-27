@@ -3,5 +3,6 @@
   - Recommended fonts: Consoles, Andale mono, fira code (ligatures),
     Source Code Pro, DejaVu Sans Mono
   - Use =Illegal1 = O0= as a test
+  - Play font tournament: [[https://codingfont.com/][Find Your True Love of Coding Fonts]]
 
   Source: [[https://stackoverflow.com/q/4689/2860744][recommended fonts for programming?]]

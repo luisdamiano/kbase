@@ -7,3 +7,8 @@
    a definition via [[https://www.gnu.org/software/emacs/manual/html_node/emacs/Xref.html][Xref]].
 
    Source: [[https://emacs.stackexchange.com/questions/45561/how-to-jump-to-r-source-code-with-ess][How to jump to R source code with ESS?]]
+
+** Resources
+
+   - [[https://ess.r-project.org/Manual/ess.html][ESS – Emacs Speaks Statistics]]
+   - [[https://ess-intro.github.io/]]

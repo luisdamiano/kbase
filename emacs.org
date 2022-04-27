@@ -22,6 +22,14 @@
 
    - [[https://melpa.org/#/esup][The Emacs StartUp Profiler (ESUP)]]
 
+** How to navigate back to part of a buffer?
+
+   - Save point in register r =C-x r SPC r= (=point-to-register=),
+     jump to position in register r =C-x r j r= (=jump-to-register=)
+     (rpav at Libera.Chat)
+   - Set a mark =C-SPC C-SPC=, then jump back =C-u C-SPC=
+     (Desertcoffee at Libera.Chat)
+
 ** Useful modes
 
    - [[https://ftp.gnu.org/pub/gnu/auctex/12.2-extra/tex-ref.pdf][AucTex reference card]]

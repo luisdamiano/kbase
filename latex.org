@@ -46,6 +46,44 @@
    - [[https://tex.stackexchange.com/a/60546/225233][Should I \mathrm the d in my integrals?]]
    - [[https://tex.stackexchange.com/a/14822/225233][What's the proper way to typeset a differential operator?]]
 
+** How should I type ...?
+
+   - Punctuation
+     - add to an inline and displayed equation the punctuation
+       required by conventional rules, e.g., question mark, comma,
+       semicolon, period
+     - add punctuation inside the math mode scope to avoid orphans
+   - Fractions
+     - prefer horizontal bar or forward slash over
+       precomposed fractions for accessibility reasons.
+     - metric units are given in decimal fractions, non-metric units
+       can be either type of fraction
+   - Upright (Roman) versus italic
+     - prefer upright over italic for operators,
+       e.g., $\mathrm{d}x$ over $dx$
+     - but prefer italic over upright for standard universal constants,
+       e.g., $e$ over $\mathrm{e}$ and $\pi$ over $\mathrm{\pi}$
+     - prefer italic for variable and function names,
+     - but prefer upright for multi-letter names, e.g., $\mathrm{log}(x)$
+       over $log(x)$ and $\mathrm{sin}(x)$ over $sin(x)$
+     - prefer upper case italics for sets
+   - Blackboard bold: standard number system and some certain
+     mathematical objects
+   - Linear algebra:
+     - prefer lowercase bold for vectors, uppercase bold for matrices
+     - transpose: prefer =\top= for a superscript non-italic capital
+       letter T
+     - scalar or dot product: prefer center dot =\cdot= over
+       juxtaposition
+     - inner product: use angle brackets =\langle= and =\rangle=,
+       e.g., $\langle \mathbf{a}, \mathbf{b} \rangle$ ([[https://tex.stackexchange.com/a/309027/225233][How to define
+       an inner product argument in LaTeX]])
+     - matrix product
+     - this is some text followed by a link ([[https://tex.stackexchange.com/a/309027/225233][This is the helpful and
+       descriptive page title]])
+
+   Source: [[https://en.wikipedia.org/wiki/Wikipedia:Manual_of_Style/Mathematics#Typesetting_of_mathematical_formulae][Manual of Style/Mathematics - Wikipedia]]
+
 ** What symbol should I use for ... ?
 
    - [[http://www.math.toronto.edu/mathit/symbols-letter.pdf][The Comprehensive LaTeX Symbol List]]
