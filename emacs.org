@@ -1,5 +1,12 @@
 * Emacs
 
+** How to input TeX style?
+
+   - =C-\ RET TeX=, then =C-u C-\= to change it back (parsnip at
+     Libera.chat)
+   - [[https://github.com/clarkgrubb/latex-input][latex-input: Enter Unicode characters using LaTeX notation]] (grym
+     at Libera.chat)
+
 ** How to open all files by pattern?
 
    #+begin_src shell

@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2022-05-04 Wed 09:24 -->
+<!-- 2022-05-04 Wed 09:28 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Knowledge Base</title>
@@ -372,13 +372,14 @@ ul.org-ul, ol.org-ol { font-size:16px }
 <ul>
 <li><a href="#Emacs">5.1. Emacs</a>
 <ul>
-<li><a href="#How%20to%20open%20all%20files%20by%20pattern%3F">5.1.1. How to open all files by pattern?</a></li>
-<li><a href="#How%20to%20highlight%20by%20word%2C%20line%2C%20or%20regex%3F">5.1.2. How to highlight by word, line, or regex?</a></li>
-<li><a href="#How%20to%20profile%20init%20%2F%20settings%3F">5.1.3. How to profile init / settings?</a></li>
-<li><a href="#How%20to%20navigate%20back%20to%20part%20of%20a%20buffer%3F">5.1.4. How to navigate back to part of a buffer?</a></li>
-<li><a href="#Useful%20modes">5.1.5. Useful modes</a></li>
-<li><a href="#Emacs%20packages%20worth%20checking">5.1.6. Emacs packages worth checking</a></li>
-<li><a href="#How%20to%20do%20collaborative%20editing%20with%20Emacs%3F">5.1.7. How to do collaborative editing with Emacs?</a></li>
+<li><a href="#How%20to%20input%20TeX%20style%3F">5.1.1. How to input TeX style?</a></li>
+<li><a href="#How%20to%20open%20all%20files%20by%20pattern%3F">5.1.2. How to open all files by pattern?</a></li>
+<li><a href="#How%20to%20highlight%20by%20word%2C%20line%2C%20or%20regex%3F">5.1.3. How to highlight by word, line, or regex?</a></li>
+<li><a href="#How%20to%20profile%20init%20%2F%20settings%3F">5.1.4. How to profile init / settings?</a></li>
+<li><a href="#How%20to%20navigate%20back%20to%20part%20of%20a%20buffer%3F">5.1.5. How to navigate back to part of a buffer?</a></li>
+<li><a href="#Useful%20modes">5.1.6. Useful modes</a></li>
+<li><a href="#Emacs%20packages%20worth%20checking">5.1.7. Emacs packages worth checking</a></li>
+<li><a href="#How%20to%20do%20collaborative%20editing%20with%20Emacs%3F">5.1.8. How to do collaborative editing with Emacs?</a></li>
 </ul>
 </li>
 <li><a href="#Org-mode">5.2. Org-mode</a>
@@ -1094,7 +1095,7 @@ Source: <a href="https://git-scm.com/book/en/v2/Git-Internals-Git-Objects">Git -
 <div id="outline-container-How%20to%20rename%20a%20branch%3F" class="outline-4">
 <h4 id="How%20to%20rename%20a%20branch%3F"><span class="section-number-4">3.1.2.</span> How to rename a branch?</h4>
 <div class="outline-text-4" id="text-3-1-2">
-<pre class="example" id="org52387b9">
+<pre class="example" id="orged6ab83">
 git branch -m newname
 </pre>
 </div>
@@ -2058,9 +2059,21 @@ backend (external program that processes bibliography information)</li>
 <h3 id="Emacs"><span class="section-number-3">5.1.</span> Emacs</h3>
 <div class="outline-text-3" id="text-5-1">
 </div>
-<div id="outline-container-How%20to%20open%20all%20files%20by%20pattern%3F" class="outline-4">
-<h4 id="How%20to%20open%20all%20files%20by%20pattern%3F"><span class="section-number-4">5.1.1.</span> How to open all files by pattern?</h4>
+<div id="outline-container-How%20to%20input%20TeX%20style%3F" class="outline-4">
+<h4 id="How%20to%20input%20TeX%20style%3F"><span class="section-number-4">5.1.1.</span> How to input TeX style?</h4>
 <div class="outline-text-4" id="text-5-1-1">
+<ul class="org-ul">
+<li><code>C-\ RET TeX</code>, then <code>C-u C-\</code> to change it back (parsnip at
+Libera.chat)</li>
+<li><a href="https://github.com/clarkgrubb/latex-input">latex-input: Enter Unicode characters using LaTeX notation</a> (grym
+at Libera.chat)</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-How%20to%20open%20all%20files%20by%20pattern%3F" class="outline-4">
+<h4 id="How%20to%20open%20all%20files%20by%20pattern%3F"><span class="section-number-4">5.1.2.</span> How to open all files by pattern?</h4>
+<div class="outline-text-4" id="text-5-1-2">
 <div class="org-src-container">
 <pre class="src src-shell">emacs *.tex
 </pre>
@@ -2079,8 +2092,8 @@ backend (external program that processes bibliography information)</li>
 </div>
 
 <div id="outline-container-How%20to%20highlight%20by%20word%2C%20line%2C%20or%20regex%3F" class="outline-4">
-<h4 id="How%20to%20highlight%20by%20word%2C%20line%2C%20or%20regex%3F"><span class="section-number-4">5.1.2.</span> How to highlight by word, line, or regex?</h4>
-<div class="outline-text-4" id="text-5-1-2">
+<h4 id="How%20to%20highlight%20by%20word%2C%20line%2C%20or%20regex%3F"><span class="section-number-4">5.1.3.</span> How to highlight by word, line, or regex?</h4>
+<div class="outline-text-4" id="text-5-1-3">
 <ul class="org-ul">
 <li><a href="https://masteringemacs.org/article/highlighting-by-word-line-regexp">Highlighting by Word, Line and Regexp</a></li>
 </ul>
@@ -2088,8 +2101,8 @@ backend (external program that processes bibliography information)</li>
 </div>
 
 <div id="outline-container-How%20to%20profile%20init%20%2F%20settings%3F" class="outline-4">
-<h4 id="How%20to%20profile%20init%20%2F%20settings%3F"><span class="section-number-4">5.1.3.</span> How to profile init / settings?</h4>
-<div class="outline-text-4" id="text-5-1-3">
+<h4 id="How%20to%20profile%20init%20%2F%20settings%3F"><span class="section-number-4">5.1.4.</span> How to profile init / settings?</h4>
+<div class="outline-text-4" id="text-5-1-4">
 <ul class="org-ul">
 <li><a href="https://melpa.org/#/esup">The Emacs StartUp Profiler (ESUP)</a></li>
 </ul>
@@ -2097,8 +2110,8 @@ backend (external program that processes bibliography information)</li>
 </div>
 
 <div id="outline-container-How%20to%20navigate%20back%20to%20part%20of%20a%20buffer%3F" class="outline-4">
-<h4 id="How%20to%20navigate%20back%20to%20part%20of%20a%20buffer%3F"><span class="section-number-4">5.1.4.</span> How to navigate back to part of a buffer?</h4>
-<div class="outline-text-4" id="text-5-1-4">
+<h4 id="How%20to%20navigate%20back%20to%20part%20of%20a%20buffer%3F"><span class="section-number-4">5.1.5.</span> How to navigate back to part of a buffer?</h4>
+<div class="outline-text-4" id="text-5-1-5">
 <ul class="org-ul">
 <li>Save point in register r <code>C-x r SPC r</code> (<code>point-to-register</code>),
 jump to position in register r <code>C-x r j r</code> (<code>jump-to-register</code>)
@@ -2110,8 +2123,8 @@ jump to position in register r <code>C-x r j r</code> (<code>jump-to-register</c
 </div>
 
 <div id="outline-container-Useful%20modes" class="outline-4">
-<h4 id="Useful%20modes"><span class="section-number-4">5.1.5.</span> Useful modes</h4>
-<div class="outline-text-4" id="text-5-1-5">
+<h4 id="Useful%20modes"><span class="section-number-4">5.1.6.</span> Useful modes</h4>
+<div class="outline-text-4" id="text-5-1-6">
 <ul class="org-ul">
 <li><a href="https://ftp.gnu.org/pub/gnu/auctex/12.2-extra/tex-ref.pdf">AucTex reference card</a></li>
 </ul>
@@ -2119,8 +2132,8 @@ jump to position in register r <code>C-x r j r</code> (<code>jump-to-register</c
 </div>
 
 <div id="outline-container-Emacs%20packages%20worth%20checking" class="outline-4">
-<h4 id="Emacs%20packages%20worth%20checking"><span class="section-number-4">5.1.6.</span> Emacs packages worth checking</h4>
-<div class="outline-text-4" id="text-5-1-6">
+<h4 id="Emacs%20packages%20worth%20checking"><span class="section-number-4">5.1.7.</span> Emacs packages worth checking</h4>
+<div class="outline-text-4" id="text-5-1-7">
 <ul class="org-ul">
 <li>ripgrep</li>
 <li>eshell</li>
@@ -2133,8 +2146,8 @@ jump to position in register r <code>C-x r j r</code> (<code>jump-to-register</c
 </div>
 
 <div id="outline-container-How%20to%20do%20collaborative%20editing%20with%20Emacs%3F" class="outline-4">
-<h4 id="How%20to%20do%20collaborative%20editing%20with%20Emacs%3F"><span class="section-number-4">5.1.7.</span> How to do collaborative editing with Emacs?</h4>
-<div class="outline-text-4" id="text-5-1-7">
+<h4 id="How%20to%20do%20collaborative%20editing%20with%20Emacs%3F"><span class="section-number-4">5.1.8.</span> How to do collaborative editing with Emacs?</h4>
+<div class="outline-text-4" id="text-5-1-8">
 <ul class="org-ul">
 <li><a href="https://elpa.gnu.org/packages/crdt.html">GNU ELPA - crdt</a></li>
 <li><a href="https://corpix.dev/2022/02/collaborative-editing-with-emacs.html">Collaborative editing with Emacs</a></li>
@@ -4439,7 +4452,7 @@ Source: <a href="https://stats.stackexchange.com/q/397288/31243">Dot Product and
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Luis Damiano</p>
-<p class="date">Created: 2022-05-04 Wed 09:24</p>
+<p class="date">Created: 2022-05-04 Wed 09:28</p>
 <p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
