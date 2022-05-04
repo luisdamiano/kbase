@@ -111,7 +111,14 @@
      =setxkbmap -option compose:rctrl=
    - [[https://wiki.archlinux.org/title/Xorg/Keyboard_configuration#Configuring_compose_key][Xorg/Keyboard configuration - ArchWiki]]
 
+** What characters have superscripts and subscripts?
+
+   - [[https://en.wikipedia.org/wiki/Unicode_subscripts_and_superscripts][Unicode subscripts and superscripts]]
+
 ** How to connect OBS to Zoom or Webex?
+
+   A PulseAudio source works as an input device (microphone, monitor) sink
+   works as an output device (speaker).
 
    To redirect video from OBS to a new virtual camera input
    - Install the linux headers if you don't have them, e.g,
