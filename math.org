@@ -14,6 +14,11 @@
    - [[https://en.wikipedia.org/wiki/List_of_mathematical_series][List of mathematical series]]
    - [[https://en.wikipedia.org/wiki/Integral_transform][Integral transform]]
 
+** Multivariable calculus
+
+   - [[https://blog.yj0.se/2022/multivariable_calculus_cheatsheet/][Multivariable Calculus Cheatsheet | Yue Jiao's blog]]
+   - [[https://en.wikipedia.org/wiki/Vector_calculus#Differential_operators][Vector calculus - Differential operators]]
+
 ** How to choose $u$ and $dv$ in integration by parts?
 
    We pick $u$ and $dv$ from an expression of the form $\int f(x) g(x) dx$. We
