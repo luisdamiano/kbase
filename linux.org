@@ -115,6 +115,10 @@
 
    - [[https://en.wikipedia.org/wiki/Unicode_subscripts_and_superscripts][Unicode subscripts and superscripts]]
 
+** Which folder does this file belong in?
+
+   - [[https://refspecs.linuxfoundation.org/FHS_3.0/fhs/index.html][Filesystem Hierarchy Standard]]
+
 ** How to connect OBS to Zoom or Webex?
 
    A PulseAudio source works as an input device (microphone, monitor) sink
