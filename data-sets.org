@@ -1,0 +1,15 @@
+* Datasets
+
+  These are hosted by other people. Use the wayback machine or web archive for
+  dead links.
+
+** Functional data
+
+   - [[https://functionaldata.wordpress.ncsu.edu/resources/][NCSU Functional Data Analysis Lab]]
+   - [[https://cran.r-project.org/package=refund][CRAN - Package refund]]
+   - [[http://lib.stat.cmu.edu/datasets/tecator][Tecator dataset]]
+
+** Spatial data
+
+   - [[http://ibex.swri.edu/researchers/publicdata.shtml][IBEX: Interstellar Boundary Explorer]]
+     - Main paper: 10.3847/1538-4365/aa66d8

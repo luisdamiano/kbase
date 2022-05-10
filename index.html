@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2022-05-09 Mon 11:21 -->
+<!-- 2022-05-10 Tue 10:03 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Knowledge Base</title>
@@ -11,190 +11,6 @@
 <meta name="description" content="Luis Damiano Knowledge Base, Tips &amp; Tricks, gotchas" />
 <meta name="keywords" content="syntax, quick reference, cheat sheet, recommended practices best practices, don't repeat yourself, automation" />
 <meta name="generator" content="Org Mode" />
-<style>
-  #content { max-width: 60em; margin: auto; }
-  .title  { text-align: center;
-             margin-bottom: .2em; }
-  .subtitle { text-align: center;
-              font-size: medium;
-              font-weight: bold;
-              margin-top:0; }
-  .todo   { font-family: monospace; color: red; }
-  .done   { font-family: monospace; color: green; }
-  .priority { font-family: monospace; color: orange; }
-  .tag    { background-color: #eee; font-family: monospace;
-            padding: 2px; font-size: 80%; font-weight: normal; }
-  .timestamp { color: #bebebe; }
-  .timestamp-kwd { color: #5f9ea0; }
-  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
-  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
-  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
-  .underline { text-decoration: underline; }
-  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
-  p.verse { margin-left: 3%; }
-  pre {
-    border: 1px solid #e6e6e6;
-    border-radius: 3px;
-    background-color: #f2f2f2;
-    padding: 8pt;
-    font-family: monospace;
-    overflow: auto;
-    margin: 1.2em;
-  }
-  pre.src {
-    position: relative;
-    overflow: auto;
-  }
-  pre.src:before {
-    display: none;
-    position: absolute;
-    top: -8px;
-    right: 12px;
-    padding: 3px;
-    color: #555;
-    background-color: #f2f2f299;
-  }
-  pre.src:hover:before { display: inline; margin-top: 14px;}
-  /* Languages per Org manual */
-  pre.src-asymptote:before { content: 'Asymptote'; }
-  pre.src-awk:before { content: 'Awk'; }
-  pre.src-authinfo::before { content: 'Authinfo'; }
-  pre.src-C:before { content: 'C'; }
-  /* pre.src-C++ doesn't work in CSS */
-  pre.src-clojure:before { content: 'Clojure'; }
-  pre.src-css:before { content: 'CSS'; }
-  pre.src-D:before { content: 'D'; }
-  pre.src-ditaa:before { content: 'ditaa'; }
-  pre.src-dot:before { content: 'Graphviz'; }
-  pre.src-calc:before { content: 'Emacs Calc'; }
-  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
-  pre.src-fortran:before { content: 'Fortran'; }
-  pre.src-gnuplot:before { content: 'gnuplot'; }
-  pre.src-haskell:before { content: 'Haskell'; }
-  pre.src-hledger:before { content: 'hledger'; }
-  pre.src-java:before { content: 'Java'; }
-  pre.src-js:before { content: 'Javascript'; }
-  pre.src-latex:before { content: 'LaTeX'; }
-  pre.src-ledger:before { content: 'Ledger'; }
-  pre.src-lisp:before { content: 'Lisp'; }
-  pre.src-lilypond:before { content: 'Lilypond'; }
-  pre.src-lua:before { content: 'Lua'; }
-  pre.src-matlab:before { content: 'MATLAB'; }
-  pre.src-mscgen:before { content: 'Mscgen'; }
-  pre.src-ocaml:before { content: 'Objective Caml'; }
-  pre.src-octave:before { content: 'Octave'; }
-  pre.src-org:before { content: 'Org mode'; }
-  pre.src-oz:before { content: 'OZ'; }
-  pre.src-plantuml:before { content: 'Plantuml'; }
-  pre.src-processing:before { content: 'Processing.js'; }
-  pre.src-python:before { content: 'Python'; }
-  pre.src-R:before { content: 'R'; }
-  pre.src-ruby:before { content: 'Ruby'; }
-  pre.src-sass:before { content: 'Sass'; }
-  pre.src-scheme:before { content: 'Scheme'; }
-  pre.src-screen:before { content: 'Gnu Screen'; }
-  pre.src-sed:before { content: 'Sed'; }
-  pre.src-sh:before { content: 'shell'; }
-  pre.src-sql:before { content: 'SQL'; }
-  pre.src-sqlite:before { content: 'SQLite'; }
-  /* additional languages in org.el's org-babel-load-languages alist */
-  pre.src-forth:before { content: 'Forth'; }
-  pre.src-io:before { content: 'IO'; }
-  pre.src-J:before { content: 'J'; }
-  pre.src-makefile:before { content: 'Makefile'; }
-  pre.src-maxima:before { content: 'Maxima'; }
-  pre.src-perl:before { content: 'Perl'; }
-  pre.src-picolisp:before { content: 'Pico Lisp'; }
-  pre.src-scala:before { content: 'Scala'; }
-  pre.src-shell:before { content: 'Shell Script'; }
-  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
-  /* additional language identifiers per "defun org-babel-execute"
-       in ob-*.el */
-  pre.src-cpp:before  { content: 'C++'; }
-  pre.src-abc:before  { content: 'ABC'; }
-  pre.src-coq:before  { content: 'Coq'; }
-  pre.src-groovy:before  { content: 'Groovy'; }
-  /* additional language identifiers from org-babel-shell-names in
-     ob-shell.el: ob-shell is the only babel language using a lambda to put
-     the execution function name together. */
-  pre.src-bash:before  { content: 'bash'; }
-  pre.src-csh:before  { content: 'csh'; }
-  pre.src-ash:before  { content: 'ash'; }
-  pre.src-dash:before  { content: 'dash'; }
-  pre.src-ksh:before  { content: 'ksh'; }
-  pre.src-mksh:before  { content: 'mksh'; }
-  pre.src-posh:before  { content: 'posh'; }
-  /* Additional Emacs modes also supported by the LaTeX listings package */
-  pre.src-ada:before { content: 'Ada'; }
-  pre.src-asm:before { content: 'Assembler'; }
-  pre.src-caml:before { content: 'Caml'; }
-  pre.src-delphi:before { content: 'Delphi'; }
-  pre.src-html:before { content: 'HTML'; }
-  pre.src-idl:before { content: 'IDL'; }
-  pre.src-mercury:before { content: 'Mercury'; }
-  pre.src-metapost:before { content: 'MetaPost'; }
-  pre.src-modula-2:before { content: 'Modula-2'; }
-  pre.src-pascal:before { content: 'Pascal'; }
-  pre.src-ps:before { content: 'PostScript'; }
-  pre.src-prolog:before { content: 'Prolog'; }
-  pre.src-simula:before { content: 'Simula'; }
-  pre.src-tcl:before { content: 'tcl'; }
-  pre.src-tex:before { content: 'TeX'; }
-  pre.src-plain-tex:before { content: 'Plain TeX'; }
-  pre.src-verilog:before { content: 'Verilog'; }
-  pre.src-vhdl:before { content: 'VHDL'; }
-  pre.src-xml:before { content: 'XML'; }
-  pre.src-nxml:before { content: 'XML'; }
-  /* add a generic configuration mode; LaTeX export needs an additional
-     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
-  pre.src-conf:before { content: 'Configuration File'; }
-
-  table { border-collapse:collapse; }
-  caption.t-above { caption-side: top; }
-  caption.t-bottom { caption-side: bottom; }
-  td, th { vertical-align:top;  }
-  th.org-right  { text-align: center;  }
-  th.org-left   { text-align: center;   }
-  th.org-center { text-align: center; }
-  td.org-right  { text-align: right;  }
-  td.org-left   { text-align: left;   }
-  td.org-center { text-align: center; }
-  dt { font-weight: bold; }
-  .footpara { display: inline; }
-  .footdef  { margin-bottom: 1em; }
-  .figure { padding: 1em; }
-  .figure p { text-align: center; }
-  .equation-container {
-    display: table;
-    text-align: center;
-    width: 100%;
-  }
-  .equation {
-    vertical-align: middle;
-  }
-  .equation-label {
-    display: table-cell;
-    text-align: right;
-    vertical-align: middle;
-  }
-  .inlinetask {
-    padding: 10px;
-    border: 2px solid gray;
-    margin: 10px;
-    background: #ffffcc;
-  }
-  #org-div-home-and-up
-   { text-align: right; font-size: 70%; white-space: nowrap; }
-  textarea { overflow-x: auto; }
-  .linenr { font-size: smaller }
-  .code-highlighted { background-color: #ffff00; }
-  .org-info-js_info-navigation { border-style: none; }
-  #org-info-js_console-label
-    { font-size: 10px; font-weight: bold; white-space: nowrap; }
-  .org-info-js_search-highlight
-    { background-color: #ffff00; color: #000000; font-weight: bold; }
-  .org-svg { width: 90%; }
-</style>
 <link rel="stylesheet" type="text/css" href="https://fniessen.github.io/org-html-themes/src/readtheorg_theme/css/htmlize.css"/>
 <link rel="stylesheet" type="text/css" href="https://fniessen.github.io/org-html-themes/src/readtheorg_theme/css/readtheorg.css"/>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
@@ -472,38 +288,44 @@ ul.org-ul, ol.org-ol { font-size:16px }
 </li>
 <li><a href="#Data%20science">9. Data science</a>
 <ul>
-<li><a href="#Data%20backup">9.1. Data backup</a>
+<li><a href="#Datasets">9.1. Datasets</a>
 <ul>
-<li><a href="#What%20software%20backup%20should%20I%20use%3F">9.1.1. What software backup should I use?</a></li>
-<li><a href="#How%20to%20mark%20a%20folder%20not%20to%20be%20backed%20up%3F">9.1.2. How to mark a folder not to be backed up?</a></li>
+<li><a href="#Functional%20data">9.1.1. Functional data</a></li>
+<li><a href="#Spatial%20data">9.1.2. Spatial data</a></li>
 </ul>
 </li>
-<li><a href="#Data%20processing">9.2. Data processing</a>
+<li><a href="#Data%20backup">9.2. Data backup</a>
 <ul>
-<li><a href="#GNU%20Make">9.2.1. GNU Make</a></li>
-<li><a href="#Pipeline%20automation">9.2.2. Pipeline automation</a></li>
-<li><a href="#How%20to%20view%20tabular%20data%3F">9.2.3. How to view tabular data?</a></li>
-<li><a href="#How%20to%20work%20with%20collaborators%20who%20use%20spreadsheets%3F">9.2.4. How to work with collaborators who use spreadsheets?</a></li>
-<li><a href="#ETL%20cycle">9.2.5. ETL cycle</a></li>
-<li><a href="#Workflow%20for%20statistical%20analysis%20and%20report%20writing">9.2.6. Workflow for statistical analysis and report writing</a></li>
+<li><a href="#What%20software%20backup%20should%20I%20use%3F">9.2.1. What software backup should I use?</a></li>
+<li><a href="#How%20to%20mark%20a%20folder%20not%20to%20be%20backed%20up%3F">9.2.2. How to mark a folder not to be backed up?</a></li>
 </ul>
 </li>
-<li><a href="#A%20typical%20workflow">9.3. A typical workflow</a></li>
-<li><a href="#Data%20visualization">9.4. Data visualization</a>
+<li><a href="#Data%20processing">9.3. Data processing</a>
 <ul>
-<li><a href="#Color%20palette">9.4.1. Color palette</a></li>
-<li><a href="#Data%20visualization--Resources">9.4.2. Resources</a></li>
+<li><a href="#GNU%20Make">9.3.1. GNU Make</a></li>
+<li><a href="#Pipeline%20automation">9.3.2. Pipeline automation</a></li>
+<li><a href="#How%20to%20view%20tabular%20data%3F">9.3.3. How to view tabular data?</a></li>
+<li><a href="#How%20to%20work%20with%20collaborators%20who%20use%20spreadsheets%3F">9.3.4. How to work with collaborators who use spreadsheets?</a></li>
+<li><a href="#ETL%20cycle">9.3.5. ETL cycle</a></li>
+<li><a href="#Workflow%20for%20statistical%20analysis%20and%20report%20writing">9.3.6. Workflow for statistical analysis and report writing</a></li>
 </ul>
 </li>
-<li><a href="#High%20power%20computing">9.5. High power computing</a>
+<li><a href="#A%20typical%20workflow">9.4. A typical workflow</a></li>
+<li><a href="#Data%20visualization">9.5. Data visualization</a>
 <ul>
-<li><a href="#How%20to%20nicely%20list%20all%20my%20jobs%20in%20Slurm%3F">9.5.1. How to nicely list all my jobs in Slurm?</a></li>
+<li><a href="#Color%20palette">9.5.1. Color palette</a></li>
+<li><a href="#Data%20visualization--Resources">9.5.2. Resources</a></li>
 </ul>
 </li>
-<li><a href="#Naming%20convention">9.6. Naming convention</a>
+<li><a href="#High%20power%20computing">9.6. High power computing</a>
 <ul>
-<li><a href="#Common%20guidelines">9.6.1. Common guidelines</a></li>
-<li><a href="#Keywords">9.6.2. Keywords</a></li>
+<li><a href="#How%20to%20nicely%20list%20all%20my%20jobs%20in%20Slurm%3F">9.6.1. How to nicely list all my jobs in Slurm?</a></li>
+</ul>
+</li>
+<li><a href="#Naming%20convention">9.7. Naming convention</a>
+<ul>
+<li><a href="#Common%20guidelines">9.7.1. Common guidelines</a></li>
+<li><a href="#Keywords">9.7.2. Keywords</a></li>
 </ul>
 </li>
 </ul>
@@ -640,12 +462,13 @@ ul.org-ul, ol.org-ol { font-size:16px }
 </li>
 <li><a href="#Data%20science">9. Data science</a>
 <ul>
-<li><a href="#Data%20backup">9.1. Data backup</a></li>
-<li><a href="#Data%20processing">9.2. Data processing</a></li>
-<li><a href="#A%20typical%20workflow">9.3. A typical workflow</a></li>
-<li><a href="#Data%20visualization">9.4. Data visualization</a></li>
-<li><a href="#High%20power%20computing">9.5. High power computing</a></li>
-<li><a href="#Naming%20convention">9.6. Naming convention</a></li>
+<li><a href="#Datasets">9.1. Datasets</a></li>
+<li><a href="#Data%20backup">9.2. Data backup</a></li>
+<li><a href="#Data%20processing">9.3. Data processing</a></li>
+<li><a href="#A%20typical%20workflow">9.4. A typical workflow</a></li>
+<li><a href="#Data%20visualization">9.5. Data visualization</a></li>
+<li><a href="#High%20power%20computing">9.6. High power computing</a></li>
+<li><a href="#Naming%20convention">9.7. Naming convention</a></li>
 </ul>
 </li>
 <li><a href="#Statistics">10. Statistics</a>
@@ -717,10 +540,10 @@ to make the most intensive use of computer programs or systems (<a href="https:/
 <div class="org-src-container">
 <pre class="src src-shell"><span style="color: #0000ff;"># </span><span style="color: #0000ff;">https://github.com/westandskif/rate-mirrors#usage</span>
 <span style="color: brightred;">export</span> <span style="color: brightwhite; font-weight: bold;">TMPFILE</span>=<span style="color: #ffff00;">"$(</span><span style="font-weight: bold;">mktemp</span><span style="color: #ffff00;">)"</span>; <span style="color: #ffff00;">\</span>
-    sudo true; <span style="color: #ffff00;">\</span>
-    rate-mirrors --save=$<span style="color: brightwhite; font-weight: bold;">TMPFILE</span> arch --max-delay=21600 <span style="color: #ffff00;">\</span>
-        &amp;&amp; sudo mv /etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist-backup <span style="color: #ffff00;">\</span>
-        &amp;&amp; sudo mv $<span style="color: brightwhite; font-weight: bold;">TMPFILE</span> /etc/pacman.d/mirrorlist
+sudo true; <span style="color: #ffff00;">\</span>
+rate-mirrors --save=$<span style="color: brightwhite; font-weight: bold;">TMPFILE</span> arch --max-delay=21600 <span style="color: #ffff00;">\</span>
+    &amp;&amp; sudo mv /etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist-backup <span style="color: #ffff00;">\</span>
+    &amp;&amp; sudo mv $<span style="color: brightwhite; font-weight: bold;">TMPFILE</span> /etc/pacman.d/mirrorlist
 </pre>
 </div>
 
@@ -752,33 +575,33 @@ external processes</li>
 <span style="color: brightwhite; font-weight: bold;">doit</span>=0
 
 <span style="color: #ff00ff; font-weight: bold;">for</span> i<span style="color: #ff00ff; font-weight: bold;"> in</span> {1..3}; <span style="color: #ff00ff; font-weight: bold;">do</span>
-    <span style="color: brightred;">echo</span> -n ${<span style="color: brightwhite; font-weight: bold;">i</span>}
+<span style="color: brightred;">echo</span> -n ${<span style="color: brightwhite; font-weight: bold;">i</span>}
 <span style="color: #ff00ff; font-weight: bold;">done</span>
 
 <span style="color: brightred;">echo</span> <span style="color: #ffff00;">"---"</span>
 
 <span style="color: #ff00ff; font-weight: bold;">for</span> i<span style="color: #ff00ff; font-weight: bold;"> in</span> {1..3}; <span style="color: #ff00ff; font-weight: bold;">do</span>
-    ((doit))&amp;&amp;(<span style="color: brightred;">echo</span> -n ${<span style="color: brightwhite; font-weight: bold;">i</span>})
+((doit))&amp;&amp;(<span style="color: brightred;">echo</span> -n ${<span style="color: brightwhite; font-weight: bold;">i</span>})
 <span style="color: #ff00ff; font-weight: bold;">done</span>
 
 <span style="color: brightred;">echo</span> <span style="color: #ffff00;">"---"</span>
 
 <span style="color: #ff00ff; font-weight: bold;">for</span> i<span style="color: #ff00ff; font-weight: bold;"> in</span> {1..3}; <span style="color: #ff00ff; font-weight: bold;">do</span>
-    ((doit))&amp;&amp;<span style="color: brightred;">echo</span> -n ${<span style="color: brightwhite; font-weight: bold;">i</span>}
+((doit))&amp;&amp;<span style="color: brightred;">echo</span> -n ${<span style="color: brightwhite; font-weight: bold;">i</span>}
 <span style="color: #ff00ff; font-weight: bold;">done</span>
 
 <span style="color: brightred;">echo</span> <span style="color: #ffff00;">"---"</span>
 
 ((doit))&amp;&amp;<span style="color: #ff00ff; font-weight: bold;">for</span> i<span style="color: #ff00ff; font-weight: bold;"> in</span> {1..3}; <span style="color: #ff00ff; font-weight: bold;">do</span>
-    <span style="color: brightred;">echo</span> -n ${<span style="color: brightwhite; font-weight: bold;">i</span>}
+<span style="color: brightred;">echo</span> -n ${<span style="color: brightwhite; font-weight: bold;">i</span>}
 <span style="color: #ff00ff; font-weight: bold;">done</span>
 
 <span style="color: brightred;">echo</span> <span style="color: #ffff00;">"---"</span>
 
 ((doit))&amp;&amp;
-    <span style="color: #ff00ff; font-weight: bold;">for</span> i<span style="color: #ff00ff; font-weight: bold;"> in</span> {1..3}; <span style="color: #ff00ff; font-weight: bold;">do</span>
-        <span style="color: brightred;">echo</span> -n ${<span style="color: brightwhite; font-weight: bold;">i</span>}
-    <span style="color: #ff00ff; font-weight: bold;">done</span>
+<span style="color: #ff00ff; font-weight: bold;">for</span> i<span style="color: #ff00ff; font-weight: bold;"> in</span> {1..3}; <span style="color: #ff00ff; font-weight: bold;">do</span>
+    <span style="color: brightred;">echo</span> -n ${<span style="color: brightwhite; font-weight: bold;">i</span>}
+<span style="color: #ff00ff; font-weight: bold;">done</span>
 
 <span style="color: brightred;">echo</span> <span style="color: #ffff00;">"---"</span>
 </pre>
@@ -881,10 +704,10 @@ find -iname <span style="color: #ffff00;">'*.rds'</span> -exec rsync --parent {}
 <div class="org-src-container">
 <pre class="src src-shell"><span style="color: #0000ff;">#</span><span style="color: #0000ff;">!/bin/</span><span style="color: #ff00ff; font-weight: bold;">sh</span>
 squeue --me -o <span style="color: #ffff00;">"%R"</span> |
-    <span style="color: #ff00ff; font-weight: bold;">while </span><span style="color: brightred;">read</span> -r host; <span style="color: #ff00ff; font-weight: bold;">do</span>
-        ssh -n
-        <span style="color: #ffff00;">"$host"</span> <span style="color: #ffff00;">"ps -o pid,user,%mem,rss,size,%cpu,command ax | grep \"r-4\""</span>;
-    <span style="color: #ff00ff; font-weight: bold;">done</span>
+<span style="color: #ff00ff; font-weight: bold;">while </span><span style="color: brightred;">read</span> -r host; <span style="color: #ff00ff; font-weight: bold;">do</span>
+    ssh -n
+    <span style="color: #ffff00;">"$host"</span> <span style="color: #ffff00;">"ps -o pid,user,%mem,rss,size,%cpu,command ax | grep \"r-4\""</span>;
+<span style="color: #ff00ff; font-weight: bold;">done</span>
 </pre>
 </div>
 </div>
@@ -1036,7 +859,7 @@ Create a null output device
 </p>
 <div class="org-src-container">
 <pre class="src src-shell"><span style="color: brightwhite; font-weight: bold;">pulsemodule</span>=$(<span style="font-weight: bold;">pactl load-module module-null-sink sink_name=obs_audio</span>
-              <span style="color: brightwhite; font-weight: bold;">sink_properties</span>=device.description=obs_audio_sink_for_mic)
+      <span style="color: brightwhite; font-weight: bold;">sink_properties</span>=device.description=obs_audio_sink_for_mic)
 </pre>
 </div></li>
 <li>In <code>pavucontrol</code>, Playback tab, change the output of
@@ -1106,7 +929,7 @@ Source: <a href="https://git-scm.com/book/en/v2/Git-Internals-Git-Objects">Git -
 <div id="outline-container-How%20to%20rename%20a%20branch%3F" class="outline-4">
 <h4 id="How%20to%20rename%20a%20branch%3F"><span class="section-number-4">3.1.2.</span> How to rename a branch?</h4>
 <div class="outline-text-4" id="text-3-1-2">
-<pre class="example" id="org1cee27d">
+<pre class="example" id="org8a9b82a">
 git branch -m newname
 </pre>
 </div>
@@ -1787,7 +1610,7 @@ in <code>l*9r</code> or <code>l*{99}</code>. Use brackets for more than one digi
 
 <div class="org-src-container">
 <pre class="src src-latex"><span style="color: #ff00ff; font-weight: bold;">\begin</span><span style="color: brightwhite;">{</span><span style="color: #00ff00; font-weight: bold;">tabular</span><span style="color: brightwhite;">}{</span>l*<span style="color: brightcyan;">{</span>99<span style="color: brightcyan;">}</span>r<span style="color: brightwhite;">}</span>
-  col1 <span style="font-weight: bold;">&amp;</span> col2 <span style="font-weight: bold;">\\</span>
+  col1 &amp; col2 \\
 <span style="color: #ff00ff; font-weight: bold;">\end</span><span style="color: brightwhite;">{</span><span style="color: #00ff00; font-weight: bold;">tabular</span><span style="color: brightwhite;">}</span>
 </pre>
 </div>
@@ -2182,8 +2005,8 @@ loaded. Add <code>-l ~/.emacs</code>, <code>-l ~/.config/emacs/init.el</code> or
 
 <div class="org-src-container">
 <pre class="src src-shell"><span style="color: brightred;">echo</span> <span style="color: #ffff00;">'type emacs &gt; /dev/null 2&gt;&amp;1 &amp;&amp;</span>
-<span style="color: #ffff00;">    emacs README.org --batch -f org-md-export-to-markdown --kill &amp;&amp;</span>
-<span style="color: #ffff00;">    git add README.md'</span> &gt;&gt; .git/hooks/pre-commit &amp;&amp; chmod +x .git/hooks/pre-commit
+<span style="color: #ffff00;">emacs README.org --batch -f org-md-export-to-markdown --kill &amp;&amp;</span>
+<span style="color: #ffff00;">git add README.md'</span> &gt;&gt; .git/hooks/pre-commit &amp;&amp; chmod +x .git/hooks/pre-commit
 </pre>
 </div>
 
@@ -2285,22 +2108,34 @@ root, e.g., <code>./bin/process-data.R</code></li>
 <h4 id="Pure%20functions"><span class="section-number-4">6.3.2.</span> Pure functions</h4>
 <div class="outline-text-4" id="text-6-3-2">
 <ul class="org-ul">
-<li>Requirements:
+<li><p>
+Requirements:
+</p>
 <ul class="org-ul">
 <li>Referential transparecy: always returns the same result if
 given the same arguments
 <ul class="org-ul">
-<li>Rely on their own arguments and immutable values only, e.g.,
-a string</li>
-<li>No dependence on random number generation, data files</li>
+<li>Rely on their own arguments and immutable values only, e.g.,</li>
 </ul></li>
+</ul>
+<p>
+a string
+</p>
+<ul class="org-ul">
+<li>No dependence on random number generation, data files</li>
+</ul>
+<ul class="org-ul">
 <li>Must have no side effects
 <ul class="org-ul">
-<li>No need to worry if used in multiple places, or down a deep
-call chain</li>
+<li>No need to worry if used in multiple places, or down a deep</li>
+</ul></li>
+</ul>
+<p>
+call chain
+</p>
+<ul class="org-ul">
 <li>No uncertainty about what an object name refers to</li>
 <li>Easier to trace and debug</li>
-</ul></li>
 </ul></li>
 <li>Immutable data structures
 <ul class="org-ul">
@@ -2344,35 +2179,43 @@ compositions (which is a chain of one-argument functions))))
 <li>Composition is fractal</li>
 <li>Works for functions with one parameter only (see next)</li>
 </ul></li>
-<li>Partial application
+<li><p>
+Partial application
+</p>
 <ul class="org-ul">
 <li>Write a two-parameter function as a one-parameter function that
 returns a one parameter function, e.g., <code>a + b = function(b) { a +
        b })</code>.</li>
 <li>Uses:
 <ul class="org-ul">
-<li>When working with vectorized applications, e.g., lapply, Map,
-Filter.</li>
-<li>To inject dependencies, e.g., on a database or file
-connection.</li>
+<li>When working with vectorized applications, e.g., lapply, Map,</li>
 </ul></li>
-</ul></li>
-<li>Continuations: chain partial applications
+</ul>
+<p>
+Filter.
+</p>
+<ul class="org-ul">
+<li>To inject dependencies, e.g., on a database or file</li>
+</ul>
+<p>
+connection.
+</p></li>
+<li><p>
+Continuations: chain partial applications
+</p>
 <ul class="org-ul">
 <li>Bad: nested checks (<a href="https://en.wikipedia.org/wiki/Pyramid_of_doom_(programming)">pyramid of doom</a>)</li>
 <li>Good:
 <ul class="org-ul">
 <li>Start with an abstract <code>if_ function -&gt; returnType</code></li>
-<li><p>
-Chain them:
-</p>
+<li>Chain them:</li>
+</ul></li>
+</ul>
 <pre class="example">
 if_(doA) else doNestedActionLevel1
 if_(doB) else doNestedActionLevel2
 if_(doC) else doNestedActionLevel3
 </pre></li>
-</ul></li>
-</ul></li>
 <li>Monoids: chain continuations
 <ul class="org-ul">
 <li>Closure: combining two things always returns another one
@@ -2477,10 +2320,10 @@ Or something like that for functions, check
 <li><a id="How%20to%20recover%20the%20name%20of%20the%20variable%20passed%20as%20argument%3F"></a>How to recover the name of the variable passed as argument?<br />
 <div class="outline-text-5" id="text-7-2-1-1">
 <div class="org-src-container">
-<pre class="src src-R">z <span style="color: brightcyan;">&lt;-</span> 1:10
-<span style="color: #00ff00; font-weight: bold;">f</span> <span style="color: brightcyan;">&lt;-</span> <span style="color: #ff00ff; font-weight: bold;">function</span>(x) {
-  varName <span style="color: brightcyan;">&lt;-</span> as.character(as.list(match.call())$x) <span style="color: #0000ff;">## </span><span style="color: #0000ff;">"z"</span>
-}
+<pre class="src src-R">  z <span style="color: brightcyan;">&lt;-</span> 1:10
+  <span style="color: #00ff00; font-weight: bold;">f</span> <span style="color: brightcyan;">&lt;-</span> <span style="color: #ff00ff; font-weight: bold;">function</span>(x) {
+varName <span style="color: brightcyan;">&lt;-</span> as.character(as.list(match.call())$x) <span style="color: #0000ff;">## </span><span style="color: #0000ff;">"z"</span>
+  }
 </pre>
 </div>
 
@@ -2497,12 +2340,12 @@ Call <code>as.list(match.call())[-1]</code> within your function
 </p>
 
 <div class="org-src-container">
-<pre class="src src-R"><span style="color: #00ff00; font-weight: bold;">mydummyfun</span> <span style="color: brightcyan;">&lt;-</span> <span style="color: #ff00ff; font-weight: bold;">function</span>(x, y, main = <span style="color: brightmagenta;">NULL</span>, ...) {
-  l <span style="color: brightcyan;">&lt;-</span> as.list(match.call())[-1]
-  do.call(plot, l)
-}
+<pre class="src src-R">  <span style="color: #00ff00; font-weight: bold;">mydummyfun</span> <span style="color: brightcyan;">&lt;-</span> <span style="color: #ff00ff; font-weight: bold;">function</span>(x, y, main = <span style="color: brightmagenta;">NULL</span>, ...) {
+l <span style="color: brightcyan;">&lt;-</span> as.list(match.call())[-1]
+do.call(plot, l)
+  }
 
-mydummyfun(1:10, 1:10, ylab = <span style="color: #ffff00;">"Ex"</span>)
+  mydummyfun(1:10, 1:10, ylab = <span style="color: #ffff00;">"Ex"</span>)
 </pre>
 </div>
 
@@ -2518,26 +2361,26 @@ the name of the new function, and evaluate the modified call.
 
 
 <div class="org-src-container">
-<pre class="src src-R"><span style="color: #00ff00; font-weight: bold;">f1</span> <span style="color: brightcyan;">&lt;-</span> <span style="color: #ff00ff; font-weight: bold;">function</span>(a, b, c) { sum(a, b, c^2) }
+<pre class="src src-R">  <span style="color: #00ff00; font-weight: bold;">f1</span> <span style="color: brightcyan;">&lt;-</span> <span style="color: #ff00ff; font-weight: bold;">function</span>(a, b, c) { sum(a, b, c^2) }
 
-<span style="color: #00ff00; font-weight: bold;">f2</span> <span style="color: brightcyan;">&lt;-</span> <span style="color: #ff00ff; font-weight: bold;">function</span>(a, b, c) { prod(a, b, c) }
+  <span style="color: #00ff00; font-weight: bold;">f2</span> <span style="color: brightcyan;">&lt;-</span> <span style="color: #ff00ff; font-weight: bold;">function</span>(a, b, c) { prod(a, b, c) }
 
-<span style="color: #00ff00; font-weight: bold;">f</span>  <span style="color: brightcyan;">&lt;-</span> <span style="color: #ff00ff; font-weight: bold;">function</span>(a, b, c) {
-  fun <span style="color: brightcyan;">&lt;-</span> f1
-  <span style="color: #ff00ff; font-weight: bold;">if</span> (a &lt; 0)
-    fun <span style="color: brightcyan;">&lt;-</span> f2
+  <span style="color: #00ff00; font-weight: bold;">f</span>  <span style="color: brightcyan;">&lt;-</span> <span style="color: #ff00ff; font-weight: bold;">function</span>(a, b, c) {
+fun <span style="color: brightcyan;">&lt;-</span> f1
+<span style="color: #ff00ff; font-weight: bold;">if</span> (a &lt; 0)
+  fun <span style="color: brightcyan;">&lt;-</span> f2
 
-  <span style="color: #0000ff;">## </span><span style="color: #0000ff;">get the call (fun and args)</span>
-  thiscall      <span style="color: brightcyan;">&lt;-</span> match.call(expand.dots = <span style="color: brightmagenta;">TRUE</span>)
-  <span style="color: #0000ff;">## </span><span style="color: #0000ff;">change function name</span>
-  thiscall[[1]] <span style="color: brightcyan;">&lt;-</span> fun
-  <span style="color: #0000ff;">## </span><span style="color: #0000ff;">evaluate new call same as fun(a, b, c)</span>
-  eval.parent(thiscall)
+<span style="color: #0000ff;">## </span><span style="color: #0000ff;">get the call (fun and args)</span>
+thiscall      <span style="color: brightcyan;">&lt;-</span> match.call(expand.dots = <span style="color: brightmagenta;">TRUE</span>)
+<span style="color: #0000ff;">## </span><span style="color: #0000ff;">change function name</span>
+thiscall[[1]] <span style="color: brightcyan;">&lt;-</span> fun
+<span style="color: #0000ff;">## </span><span style="color: #0000ff;">evaluate new call same as fun(a, b, c)</span>
+eval.parent(thiscall)
 
-}
+  }
 
-f(+1, 0, 5)
-f(-1, 0, 5)
+  f(+1, 0, 5)
+  f(-1, 0, 5)
 </pre>
 </div>
 
@@ -2599,13 +2442,13 @@ are typically faster.
 </p>
 
 <div class="org-src-container">
-<pre class="src src-R">N      <span style="color: brightcyan;">&lt;-</span> 20
-fib    <span style="color: brightcyan;">&lt;-</span> rep(<span style="color: brightmagenta;">NA</span>, 10)
-fib[1] <span style="color: brightcyan;">&lt;-</span> 0
-fib[2] <span style="color: brightcyan;">&lt;-</span> 1
+<pre class="src src-R">  N      <span style="color: brightcyan;">&lt;-</span> 20
+  fib    <span style="color: brightcyan;">&lt;-</span> rep(<span style="color: brightmagenta;">NA</span>, 10)
+  fib[1] <span style="color: brightcyan;">&lt;-</span> 0
+  fib[2] <span style="color: brightcyan;">&lt;-</span> 1
 
-<span style="color: #ff00ff; font-weight: bold;">for</span> (i <span style="color: #ff00ff; font-weight: bold;">in</span> 3:N)
-  fib[i] <span style="color: brightcyan;">&lt;-</span> fib[i - 1] + fib[i - 2]
+  <span style="color: #ff00ff; font-weight: bold;">for</span> (i <span style="color: #ff00ff; font-weight: bold;">in</span> 3:N)
+fib[i] <span style="color: brightcyan;">&lt;-</span> fib[i - 1] + fib[i - 2]
 </pre>
 </div>
 
@@ -2776,7 +2619,7 @@ Source: <a href="https://stackoverflow.com/a/6113019/2860744">how to create a co
 <div class="outline-text-4" id="text-7-2-6">
 <div class="org-src-container">
 <pre class="src src-R">addmargins(xtabs(value ~ ., aggregate(value ~ factor1, factor2, DF, mean)),
-           FUN = mean)
+   FUN = mean)
 </pre>
 </div>
 </div>
@@ -2895,8 +2738,8 @@ f <span style="color: brightcyan;">&lt;-</span> factor(rpois(10000, 5))
 <span style="color: #00ff00; font-weight: bold;">f3</span> <span style="color: brightcyan;">&lt;-</span> <span style="color: #ff00ff; font-weight: bold;">function</span>(x, f) { by(x, f, mean) }
 
 bench <span style="color: brightcyan;">&lt;-</span> microbenchmark::microbenchmark(
-                           f0(x, f), f1(x, f), f2(x, f), f3(x, f),
-                           times = 1E4)
+           f0(x, f), f1(x, f), f2(x, f), f3(x, f),
+           times = 1E4)
 
 print(bench)
 </pre>
@@ -3267,14 +3110,16 @@ Source: <a href="https://emacs.stackexchange.com/questions/45561/how-to-jump-to-
 <h4 id="How%20do%20I%20choose%20between%20%3Dtransformed%20parameters%3D%20vs%20%3Dmodel%3D%20blocks%3F"><span class="section-number-4">8.1.1.</span> How do I choose between <code>transformed parameters</code> vs <code>model</code> blocks?</h4>
 <div class="outline-text-4" id="text-8-1-1">
 <ul class="org-ul">
-<li>Variables in the <code>transformed parameters</code> blocks
+<li><p>
+Variables in the <code>transformed parameters</code> blocks
+</p>
 <ol class="org-ol">
 <li>Can have constraints for error checking</li>
-<li>Are global
+<li>Are global</li>
+</ol>
 <ol class="org-ol">
 <li>can be accessed from the <code>generated quantities</code> block</li>
 <li>are part of the output by default</li>
-</ol></li>
 </ol></li>
 </ul>
 </div>
@@ -3286,13 +3131,45 @@ Source: <a href="https://emacs.stackexchange.com/questions/45561/how-to-jump-to-
 <h2 id="Data%20science"><span class="section-number-2">9.</span> Data science</h2>
 <div class="outline-text-2" id="text-9">
 </div>
-<div id="outline-container-Data%20backup" class="outline-3">
-<h3 id="Data%20backup"><span class="section-number-3">9.1.</span> Data backup</h3>
+<div id="outline-container-Datasets" class="outline-3">
+<h3 id="Datasets"><span class="section-number-3">9.1.</span> Datasets</h3>
 <div class="outline-text-3" id="text-9-1">
+<p>
+These are hosted by other people. Use the wayback machine or web archive for
+dead links.
+</p>
+</div>
+
+<div id="outline-container-Functional%20data" class="outline-4">
+<h4 id="Functional%20data"><span class="section-number-4">9.1.1.</span> Functional data</h4>
+<div class="outline-text-4" id="text-9-1-1">
+<ul class="org-ul">
+<li><a href="https://functionaldata.wordpress.ncsu.edu/resources/">NCSU Functional Data Analysis Lab</a></li>
+<li><a href="https://cran.r-project.org/package=refund">CRAN - Package refund</a></li>
+<li><a href="http://lib.stat.cmu.edu/datasets/tecator">Tecator dataset</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-Spatial%20data" class="outline-4">
+<h4 id="Spatial%20data"><span class="section-number-4">9.1.2.</span> Spatial data</h4>
+<div class="outline-text-4" id="text-9-1-2">
+<ul class="org-ul">
+<li><a href="http://ibex.swri.edu/researchers/publicdata.shtml">IBEX: Interstellar Boundary Explorer</a>
+<ul class="org-ul">
+<li>Main paper: 10.3847/1538-4365/aa66d8</li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-Data%20backup" class="outline-3">
+<h3 id="Data%20backup"><span class="section-number-3">9.2.</span> Data backup</h3>
+<div class="outline-text-3" id="text-9-2">
 </div>
 <div id="outline-container-What%20software%20backup%20should%20I%20use%3F" class="outline-4">
-<h4 id="What%20software%20backup%20should%20I%20use%3F"><span class="section-number-4">9.1.1.</span> What software backup should I use?</h4>
-<div class="outline-text-4" id="text-9-1-1">
+<h4 id="What%20software%20backup%20should%20I%20use%3F"><span class="section-number-4">9.2.1.</span> What software backup should I use?</h4>
+<div class="outline-text-4" id="text-9-2-1">
 <ul class="org-ul">
 <li><a href="https://www.borgbackup.org/">Borg</a>: Deduplicating archiver with compression and encryption</li>
 </ul>
@@ -3300,8 +3177,8 @@ Source: <a href="https://emacs.stackexchange.com/questions/45561/how-to-jump-to-
 </div>
 
 <div id="outline-container-How%20to%20mark%20a%20folder%20not%20to%20be%20backed%20up%3F" class="outline-4">
-<h4 id="How%20to%20mark%20a%20folder%20not%20to%20be%20backed%20up%3F"><span class="section-number-4">9.1.2.</span> How to mark a folder not to be backed up?</h4>
-<div class="outline-text-4" id="text-9-1-2">
+<h4 id="How%20to%20mark%20a%20folder%20not%20to%20be%20backed%20up%3F"><span class="section-number-4">9.2.2.</span> How to mark a folder not to be backed up?</h4>
+<div class="outline-text-4" id="text-9-2-2">
 <ul class="org-ul">
 <li><a href="https://bford.info/cachedir/">Cache Directory Tagging Specification</a>: avoid backing up,
 archiving, or otherwise unnecessarily copying directories</li>
@@ -3310,12 +3187,12 @@ archiving, or otherwise unnecessarily copying directories</li>
 </div>
 </div>
 <div id="outline-container-Data%20processing" class="outline-3">
-<h3 id="Data%20processing"><span class="section-number-3">9.2.</span> Data processing</h3>
-<div class="outline-text-3" id="text-9-2">
+<h3 id="Data%20processing"><span class="section-number-3">9.3.</span> Data processing</h3>
+<div class="outline-text-3" id="text-9-3">
 </div>
 <div id="outline-container-GNU%20Make" class="outline-4">
-<h4 id="GNU%20Make"><span class="section-number-4">9.2.1.</span> GNU Make</h4>
-<div class="outline-text-4" id="text-9-2-1">
+<h4 id="GNU%20Make"><span class="section-number-4">9.3.1.</span> GNU Make</h4>
+<div class="outline-text-4" id="text-9-3-1">
 <ul class="org-ul">
 <li><a href="https://kbroman.org/minimal_make/">Minimal make file</a></li>
 <li><a href="https://stackoverflow.com/a/2214593/2860744">Passing arguments to make</a></li>
@@ -3329,8 +3206,8 @@ target</li>
 </div>
 
 <div id="outline-container-Pipeline%20automation" class="outline-4">
-<h4 id="Pipeline%20automation"><span class="section-number-4">9.2.2.</span> Pipeline automation</h4>
-<div class="outline-text-4" id="text-9-2-2">
+<h4 id="Pipeline%20automation"><span class="section-number-4">9.3.2.</span> Pipeline automation</h4>
+<div class="outline-text-4" id="text-9-3-2">
 <ul class="org-ul">
 <li><a href="https://stat545.com/automating-pipeline.html">Automating data-analysis pipelines</a></li>
 <li><a href="https://github.com/pditommaso/awesome-pipeline">Awesome pipeline</a>: curated list of awesome pipeline toolkits</li>
@@ -3339,8 +3216,8 @@ target</li>
 </div>
 
 <div id="outline-container-How%20to%20view%20tabular%20data%3F" class="outline-4">
-<h4 id="How%20to%20view%20tabular%20data%3F"><span class="section-number-4">9.2.3.</span> How to view tabular data?</h4>
-<div class="outline-text-4" id="text-9-2-3">
+<h4 id="How%20to%20view%20tabular%20data%3F"><span class="section-number-4">9.3.3.</span> How to view tabular data?</h4>
+<div class="outline-text-4" id="text-9-3-3">
 <ul class="org-ul">
 <li><a href="https://aur.archlinux.org/pspg.git">Tabular data pager</a>: works fine with CSV files too!</li>
 <li><a href="https://github.com/saulpw/visidata">VisiData</a>: lightning fast tabular data exploring, arranging, plotting</li>
@@ -3349,8 +3226,8 @@ target</li>
 </div>
 
 <div id="outline-container-How%20to%20work%20with%20collaborators%20who%20use%20spreadsheets%3F" class="outline-4">
-<h4 id="How%20to%20work%20with%20collaborators%20who%20use%20spreadsheets%3F"><span class="section-number-4">9.2.4.</span> How to work with collaborators who use spreadsheets?</h4>
-<div class="outline-text-4" id="text-9-2-4">
+<h4 id="How%20to%20work%20with%20collaborators%20who%20use%20spreadsheets%3F"><span class="section-number-4">9.3.4.</span> How to work with collaborators who use spreadsheets?</h4>
+<div class="outline-text-4" id="text-9-3-4">
 <ul class="org-ul">
 <li><a href="https://doi.org/10.1080/00031305.2017.1375989">Data Organization in Spreadsheets</a></li>
 </ul>
@@ -3358,8 +3235,8 @@ target</li>
 </div>
 
 <div id="outline-container-ETL%20cycle" class="outline-4">
-<h4 id="ETL%20cycle"><span class="section-number-4">9.2.5.</span> ETL cycle</h4>
-<div class="outline-text-4" id="text-9-2-5">
+<h4 id="ETL%20cycle"><span class="section-number-4">9.3.5.</span> ETL cycle</h4>
+<div class="outline-text-4" id="text-9-3-5">
 <ol class="org-ol">
 <li>Cycle initiation</li>
 <li>Build reference data</li>
@@ -3379,20 +3256,20 @@ Source: <a href="https://en.wikipedia.org/wiki/Extract,_transform,_load#Real-lif
 
 <ol class="org-ol">
 <li><a id="ETL%20Template"></a>ETL Template<br />
-<div class="outline-text-5" id="text-9-2-5-1">
+<div class="outline-text-5" id="text-9-3-5-1">
 <ul class="org-ul">
 <li>Type of tasks
 <ul class="org-ul">
-<li>Data loading
-<ul class="org-ul">
-<li>Keep many small units as principle</li>
+<li>Data loading</li>
 </ul></li>
-<li>Data munging
+<li>Keep many small units as principle
 <ul class="org-ul">
-<li>Munge many small units in parallel</li>
+<li>Data munging</li>
 </ul></li>
-<li>Data processing &#x2013; computationally intensive PEA
+<li>Munge many small units in parallel
 <ul class="org-ul">
+<li>Data processing &#x2013; computationally intensive PEA</li>
+</ul></li>
 <li>Run tasks that need many data units (prepare)</li>
 <li><p>
 Run tasks that need one data unit only in parallel (execute)
@@ -3405,14 +3282,12 @@ Run tasks that need one data unit only in parallel (execute)
 <p>
 <b>*</b> TODO This needs to be figured out
 </p></li>
-<li>Run tasks that need many data units (aggregate)</li>
-</ul></li>
-<li>Data storing
+<li>Run tasks that need many data units (aggregate)
 <ul class="org-ul">
+<li>Data storing</li>
+</ul></li>
 <li>Write many small units to disk</li>
 <li>Write aggregates for each small data unit or together?</li>
-</ul></li>
-</ul></li>
 </ul>
 </div>
 </li>
@@ -3420,8 +3295,8 @@ Run tasks that need one data unit only in parallel (execute)
 </div>
 
 <div id="outline-container-Workflow%20for%20statistical%20analysis%20and%20report%20writing" class="outline-4">
-<h4 id="Workflow%20for%20statistical%20analysis%20and%20report%20writing"><span class="section-number-4">9.2.6.</span> Workflow for statistical analysis and report writing</h4>
-<div class="outline-text-4" id="text-9-2-6">
+<h4 id="Workflow%20for%20statistical%20analysis%20and%20report%20writing"><span class="section-number-4">9.3.6.</span> Workflow for statistical analysis and report writing</h4>
+<div class="outline-text-4" id="text-9-3-6">
 <ul class="org-ul">
 <li><a href="https://stackoverflow.com/questions/1429907/workflow-for-statistical-analysis-and-report-writing">Workflow for statistical analysis and report writing</a></li>
 <li><a href="https://github.com/ropensci/rrrpkg">What is a research compendium for reproducible research</a></li>
@@ -3432,8 +3307,8 @@ Run tasks that need one data unit only in parallel (execute)
 </div>
 
 <div id="outline-container-A%20typical%20workflow" class="outline-3">
-<h3 id="A%20typical%20workflow"><span class="section-number-3">9.3.</span> A typical workflow</h3>
-<div class="outline-text-3" id="text-9-3">
+<h3 id="A%20typical%20workflow"><span class="section-number-3">9.4.</span> A typical workflow</h3>
+<div class="outline-text-3" id="text-9-4">
 <ol class="org-ol">
 <li>For each dataset
 <ol class="org-ol">
@@ -3445,12 +3320,12 @@ Run tasks that need one data unit only in parallel (execute)
 </div>
 </div>
 <div id="outline-container-Data%20visualization" class="outline-3">
-<h3 id="Data%20visualization"><span class="section-number-3">9.4.</span> Data visualization</h3>
-<div class="outline-text-3" id="text-9-4">
+<h3 id="Data%20visualization"><span class="section-number-3">9.5.</span> Data visualization</h3>
+<div class="outline-text-3" id="text-9-5">
 </div>
 <div id="outline-container-Color%20palette" class="outline-4">
-<h4 id="Color%20palette"><span class="section-number-4">9.4.1.</span> Color palette</h4>
-<div class="outline-text-4" id="text-9-4-1">
+<h4 id="Color%20palette"><span class="section-number-4">9.5.1.</span> Color palette</h4>
+<div class="outline-text-4" id="text-9-5-1">
 <ul class="org-ul">
 <li><a href="https://ux.stackexchange.com/questions/94696/color-palette-for-all-types-of-color-blindness">Color Palette for All types of Color Blindness</a></li>
 <li><a href="http://mkweb.bcgsc.ca/colorblind/">Color-palette for color blindness</a>: maintain perceptual luminance
@@ -3462,8 +3337,8 @@ colorblinds and non-colorblinds</li>
 </div>
 
 <div id="outline-container-Data%20visualization--Resources" class="outline-4">
-<h4 id="Data%20visualization--Resources"><span class="section-number-4">9.4.2.</span> Resources</h4>
-<div class="outline-text-4" id="text-9-4-2">
+<h4 id="Data%20visualization--Resources"><span class="section-number-4">9.5.2.</span> Resources</h4>
+<div class="outline-text-4" id="text-9-5-2">
 <ul class="org-ul">
 <li><a href="https://blog.datawrapper.de/colors/">What to consider when choosing colors for data visualization</a></li>
 <li><a href="https://www.data-to-viz.com/#explore">Data-to-viz</a>: visualization decision tree guide</li>
@@ -3472,12 +3347,12 @@ colorblinds and non-colorblinds</li>
 </div>
 </div>
 <div id="outline-container-High%20power%20computing" class="outline-3">
-<h3 id="High%20power%20computing"><span class="section-number-3">9.5.</span> High power computing</h3>
-<div class="outline-text-3" id="text-9-5">
+<h3 id="High%20power%20computing"><span class="section-number-3">9.6.</span> High power computing</h3>
+<div class="outline-text-3" id="text-9-6">
 </div>
 <div id="outline-container-How%20to%20nicely%20list%20all%20my%20jobs%20in%20Slurm%3F" class="outline-4">
-<h4 id="How%20to%20nicely%20list%20all%20my%20jobs%20in%20Slurm%3F"><span class="section-number-4">9.5.1.</span> How to nicely list all my jobs in Slurm?</h4>
-<div class="outline-text-4" id="text-9-5-1">
+<h4 id="How%20to%20nicely%20list%20all%20my%20jobs%20in%20Slurm%3F"><span class="section-number-4">9.6.1.</span> How to nicely list all my jobs in Slurm?</h4>
+<div class="outline-text-4" id="text-9-6-1">
 <div class="org-src-container">
 <pre class="src src-shell">watch -d squeue --me --format=<span style="color: #ffff00;">\"</span>%.18i %.18P %.32j %.8u %.2t <span style="color: #ffff00;">\|</span> %.10M <span style="color: #ffff00;">\|</span> %.10l <span style="color: #ffff00;">\|</span> %.19S <span style="color: #ffff00;">\|</span> %.6D %20Y %R<span style="color: #ffff00;">\"</span> --sort=i
 </pre>
@@ -3486,12 +3361,12 @@ colorblinds and non-colorblinds</li>
 </div>
 </div>
 <div id="outline-container-Naming%20convention" class="outline-3">
-<h3 id="Naming%20convention"><span class="section-number-3">9.6.</span> Naming convention</h3>
-<div class="outline-text-3" id="text-9-6">
+<h3 id="Naming%20convention"><span class="section-number-3">9.7.</span> Naming convention</h3>
+<div class="outline-text-3" id="text-9-7">
 </div>
 <div id="outline-container-Common%20guidelines" class="outline-4">
-<h4 id="Common%20guidelines"><span class="section-number-4">9.6.1.</span> Common guidelines</h4>
-<div class="outline-text-4" id="text-9-6-1">
+<h4 id="Common%20guidelines"><span class="section-number-4">9.7.1.</span> Common guidelines</h4>
+<div class="outline-text-4" id="text-9-7-1">
 <ul class="org-ul">
 <li>Name things mainly for their role, sometimes for their type</li>
 <li>Variable names follow mathematical notation only in low-level
@@ -3503,8 +3378,8 @@ functions, use meaningful name for user facing variables</li>
 </div>
 
 <div id="outline-container-Keywords" class="outline-4">
-<h4 id="Keywords"><span class="section-number-4">9.6.2.</span> Keywords</h4>
-<div class="outline-text-4" id="text-9-6-2">
+<h4 id="Keywords"><span class="section-number-4">9.7.2.</span> Keywords</h4>
+<div class="outline-text-4" id="text-9-7-2">
 <p>
 <b>Modeling</b>
 </p>
@@ -4090,7 +3965,9 @@ experimental design, dimension reduction, and calibration.</a></li>
 <h4 id="Resources%20for%20hard%20calculus"><span class="section-number-4">11.1.1.</span> Resources for hard calculus</h4>
 <div class="outline-text-4" id="text-11-1-1">
 <ul class="org-ul">
-<li>Integrals
+<li><p>
+Integrals
+</p>
 <ul class="org-ul">
 <li>General resources
 <ul class="org-ul">
@@ -4099,10 +3976,12 @@ experimental design, dimension reduction, and calibration.</a></li>
 </ul></li>
 <li>Hairy integrals
 <ul class="org-ul">
-<li>Symbolic Integration I
-(Vol. 1). (2005). Springer-Verlag. <a href="https://doi.org/10.1007/b138171">https://doi.org/10.1007/b138171</a></li>
+<li>Symbolic Integration I</li>
 </ul></li>
-</ul></li>
+</ul>
+<p>
+(Vol. 1). (2005). Springer-Verlag. <a href="https://doi.org/10.1007/b138171">https://doi.org/10.1007/b138171</a>
+</p></li>
 <li><a href="https://en.wikipedia.org/wiki/List_of_limits">List of limits</a></li>
 <li><a href="https://en.wikipedia.org/wiki/List_of_logarithmic_identities">List of logarithmic identities</a></li>
 <li><a href="https://en.wikipedia.org/wiki/List_of_mathematical_series">List of mathematical series</a></li>
@@ -4459,9 +4338,9 @@ all.equal(D2, unname(as.matrix(dist(X))^2))
 
 <div class="org-src-container">
 <pre class="src src-python"><span style="color: #ff00ff; font-weight: bold;">def</span> <span style="color: #00ff00; font-weight: bold;">compute_distances_no_loops</span>(<span style="color: #ff00ff; font-weight: bold;">self</span>, X):
-      <span style="color: brightwhite; font-weight: bold;">dists</span> = -2 * np.dot(X, <span style="color: #ff00ff; font-weight: bold;">self</span>.X_train.T) +
-      np.<span style="color: brightred;">sum</span>(<span style="color: #ff00ff; font-weight: bold;">self</span>.X_train**2, axis=1) + np.<span style="color: brightred;">sum</span>(X**2, axis=1)[:, np.newaxis]
-      <span style="color: #ff00ff; font-weight: bold;">return</span> dists
+  <span style="color: brightwhite; font-weight: bold;">dists</span> = -2 * np.dot(X, <span style="color: #ff00ff; font-weight: bold;">self</span>.X_train.T) +
+  np.<span style="color: brightred;">sum</span>(<span style="color: #ff00ff; font-weight: bold;">self</span>.X_train**2, axis=1) + np.<span style="color: brightred;">sum</span>(X**2, axis=1)[:, np.newaxis]
+  <span style="color: #ff00ff; font-weight: bold;">return</span> dists
 </pre>
 </div>
 
@@ -4475,7 +4354,7 @@ Source: <a href="https://stats.stackexchange.com/q/397288/31243">Dot Product and
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Luis Damiano</p>
-<p class="date">Created: 2022-05-09 Mon 11:21</p>
+<p class="date">Created: 2022-05-10 Tue 10:03</p>
 <p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
