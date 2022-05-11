@@ -1,5 +1,48 @@
 * Statistics
 
+** What is the Karhunen–Loève theorem?
+
+   Let $X_t$, $t\in[a,b]$ be a centered stochastic process with $\mathrm{E}[X_t]
+   = 0$ for $t\in[a,b]$ Assume the process satifies a technical continuity
+   condition. Then, we have
+   \begin{equation}
+     X_t = \sum_{k=1}^{\infty}
+     Z_k e_k(t)
+   \end{equation}
+   where $Z_k$ are pairwise uncorrelated rando mvariables and $e_k$ are
+   continuous real-valued functions on $[a,b]$ that are pariwise orthogonal in
+   $L^2([a,b])$. If the process is Gaussian, then $Z_k$ are Gaussian and
+   stochastically indepenedent.
+
+   Given any orthonormal basis $e_k(t)$ of $L^2([a,b])$, we can approximate the
+   stochastic process with
+   \begin{equation}
+     \hat{X}_t = \sum_{k=1}^{K} A_k\,e_k(t),\
+     A_k =
+       \int_a^b X_t\,e_k(t)\,\mathrm{d}t
+     ,\, K\in\mathbb{N}
+   \end{equation}
+   The Karhunen–Loève expansion minimizes the total mean square error resulting
+   of its truncation.
+
+   Source: [[https://en.wikipedia.org/wiki/Kosambi%E2%80%93Karhunen%E2%80%93Lo%C3%A8ve_theorem][Kosambi–Karhunen–Loève theorem - Wikipedia]]
+
+** What is the Karhunen–Loève decomposition of a Wiener process?
+
+   Let $W_t$ be a Wiener process, i.e., a center standard Gaussian process with
+   covariance function $K_{W}(t,s)=\operatorname {cov} (W_{t},W_{s})=\min(s,t)$.
+   Then, the expansion consists of sinusoidal functions
+   \begin{align}
+     e_{k}(t)
+     &={\sqrt{2}}\sin\left(\left(k-{\tfrac{1}{2}}\right)\pit\right)
+     &\text{eigenfunctions}\\
+     \lambda_{k}
+     &=\frac{1}{(k-{\frac{1}{2}})^{2}\pi^{2}}
+     &\text{eigenvalues}
+   \end{align}
+
+   Source: [[https://en.wikipedia.org/wiki/Kosambi%E2%80%93Karhunen%E2%80%93Lo%C3%A8ve_theorem#The_Wiener_process][Kosambi–Karhunen–Loève theorem - Wikipedia]]
+
 ** Principal Component Regression
 
    Let $\mathbf{T} = \mathbf{X} \mathbf{W}$ for principal component
