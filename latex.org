@@ -7,6 +7,36 @@
    - [[https://www.ctan.org/pkg/l2tabu-english][l2tabu]]: Practical usage guide with mistakes, obsolete packages and
      commands
 
+** How to organize LaTeX files?
+
+   Elements are in order recommended in The Chicago Manual of Style
+
+   Short document
+   - myclass.cls
+   - wrapper.tex
+   - frontmatter.tex
+     - title page, table of contents, list of illustrations, list of tables,
+       list of abbreviations
+   - mainmatter.tex
+     - introduction
+     - rest of the content
+   - backmatter.tex
+     - appendices, bibliography, index
+
+   Full book
+   - myclass.cls
+   - wrapper.tex
+   - frontmatter.tex
+     - half title (main title sans subtitle), series title or frontispiece,
+       title page, copyright page, dedication, epigraph, table of contents, list
+       of illustrations, list of tables, foreword, preface, acknowledgements,
+       list of abbreviations, second half title
+   - mainmatter.tex
+     - introduction
+     - rest of the content
+   - backmatter.tex
+     - epilogue, appendices, glossary, bibliography, index, and colophon
+
 ** How to compile LaTeX document on save?
 
    Run =latexmk -pdf -pvc --interaction=nonstopmode file.tex= to
