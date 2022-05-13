@@ -34,6 +34,11 @@
      model, climate model, what have you.
    - /Siginificant(ly)/ has a technical connotation, use /considerable/
      or /considerably/ if one want to avoid such connotation
+   - A vector/scalar(-valued) function of a vector/scalar variable (greenbagels
+     at Libera.Chat). A function of a vector variable, associated with
+     [[https://en.wikipedia.org/wiki/Multivariable_calculus][multivariate calculus]], depends on the domain of the function. A
+     [[https://en.wikipedia.org/wiki/Vector-valued_function][vector-valued]] or scalar-valued function, associated with [[https://en.wikipedia.org/wiki/Vector_calculus][vector calculus]],
+     depends on the range of the function.
 
 ** Repeat technical terms, no synonyms
 
