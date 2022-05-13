@@ -357,3 +357,5 @@
 
    - [[https://tobi.oetiker.ch/lshort/lshort.pdf][The Not So Short Introduction to LaTeX2e]]: LaTeX2e in 139 minutes
    - [[https://www.ctan.org/pkg/texbook][The TeXbook]]: an example of the business of writing a book in TeX
+   - [[https://www.ctan.org/pkg/texbytopic][TeXbyTopic]]: covers the way TeX works in as much detail as most ordinary
+     programmers will ever need to know
