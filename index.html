@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2022-05-19 Thu 12:45 -->
+<!-- 2022-05-20 Fri 07:55 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Knowledge Base</title>
@@ -342,9 +342,10 @@ ul.org-ul, ol.org-ol { font-size:16px }
 <li><a href="#Principal%20Component%20Regression">10.1.3. Principal Component Regression</a></li>
 <li><a href="#How%20to%20revert%20SVD%3F">10.1.4. How to revert SVD?</a></li>
 <li><a href="#How%20to%20find%20which%20variables%20are%20collinear%3F">10.1.5. How to find which variables are collinear?</a></li>
-<li><a href="#How%20to%20compute%20the%20Cressie%20and%20Hawkins%20%281980%29%20robust%20estimator%3F">10.1.6. How to compute the Cressie and Hawkins (1980) robust estimator?</a></li>
-<li><a href="#Priors">10.1.7. Priors</a></li>
-<li><a href="#MCMC">10.1.8. MCMC</a></li>
+<li><a href="#What%20classification%20model%20to%20use%20for%20observations%20in%20a%20map%3F">10.1.6. What classification model to use for observations in a map?</a></li>
+<li><a href="#How%20to%20compute%20the%20Cressie%20and%20Hawkins%20%281980%29%20robust%20estimator%3F">10.1.7. How to compute the Cressie and Hawkins (1980) robust estimator?</a></li>
+<li><a href="#Priors">10.1.8. Priors</a></li>
+<li><a href="#MCMC">10.1.9. MCMC</a></li>
 </ul>
 </li>
 <li><a href="#Gaussian%20processes">10.2. Gaussian processes</a>
@@ -934,7 +935,7 @@ Source: <a href="https://git-scm.com/book/en/v2/Git-Internals-Git-Objects">Git -
 <div id="outline-container-How%20to%20rename%20a%20branch%3F" class="outline-4">
 <h4 id="How%20to%20rename%20a%20branch%3F"><span class="section-number-4">3.1.2.</span> How to rename a branch?</h4>
 <div class="outline-text-4" id="text-3-1-2">
-<pre class="example" id="org4ed5953">
+<pre class="example" id="orgfb86114">
 git branch -m newname
 </pre>
 </div>
@@ -3995,9 +3996,21 @@ libera.chat)
 </div>
 </div>
 
-<div id="outline-container-How%20to%20compute%20the%20Cressie%20and%20Hawkins%20%281980%29%20robust%20estimator%3F" class="outline-4">
-<h4 id="How%20to%20compute%20the%20Cressie%20and%20Hawkins%20%281980%29%20robust%20estimator%3F"><span class="section-number-4">10.1.6.</span> How to compute the Cressie and Hawkins (1980) robust estimator?</h4>
+<div id="outline-container-What%20classification%20model%20to%20use%20for%20observations%20in%20a%20map%3F" class="outline-4">
+<h4 id="What%20classification%20model%20to%20use%20for%20observations%20in%20a%20map%3F"><span class="section-number-4">10.1.6.</span> What classification model to use for observations in a map?</h4>
 <div class="outline-text-4" id="text-10-1-6">
+<ul class="org-ul">
+<li><a href="https://en.wikipedia.org/wiki/Conditional_random_field">Conditional random field</a>: considers the context (neighborhood) of an
+observation when predicting a label</li>
+<li><a href="https://en.wikipedia.org/wiki/Markov_random_field">Markov random field</a>: finite or infinite undirected graphical model that can
+do cyclic dependencies but can't do induced dependencies</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-How%20to%20compute%20the%20Cressie%20and%20Hawkins%20%281980%29%20robust%20estimator%3F" class="outline-4">
+<h4 id="How%20to%20compute%20the%20Cressie%20and%20Hawkins%20%281980%29%20robust%20estimator%3F"><span class="section-number-4">10.1.7.</span> How to compute the Cressie and Hawkins (1980) robust estimator?</h4>
+<div class="outline-text-4" id="text-10-1-7">
 <p>
 Cressie and Hawkins (1980) found that the fourth-root of χ1 has a
 skewness of 0.08 and a kurtosis of 2.48 (compared with 0 and 3 for
@@ -4015,8 +4028,8 @@ visualization.
 </div>
 
 <div id="outline-container-Priors" class="outline-4">
-<h4 id="Priors"><span class="section-number-4">10.1.7.</span> Priors</h4>
-<div class="outline-text-4" id="text-10-1-7">
+<h4 id="Priors"><span class="section-number-4">10.1.8.</span> Priors</h4>
+<div class="outline-text-4" id="text-10-1-8">
 <ul class="org-ul">
 <li><a href="http://www.stats.org.uk/priors/noninformative/YangBerger1998.pdf">A Catalog of Noninformative Priors</a></li>
 </ul>
@@ -4024,8 +4037,8 @@ visualization.
 </div>
 
 <div id="outline-container-MCMC" class="outline-4">
-<h4 id="MCMC"><span class="section-number-4">10.1.8.</span> MCMC</h4>
-<div class="outline-text-4" id="text-10-1-8">
+<h4 id="MCMC"><span class="section-number-4">10.1.9.</span> MCMC</h4>
+<div class="outline-text-4" id="text-10-1-9">
 <ul class="org-ul">
 <li><a href="http://users.stat.umn.edu/~geyer/mcmc/one.html">One long run in MCMC</a>: If you can't get a good answer with one
 long run, then you can't get a good answer with many short runs
@@ -4517,7 +4530,7 @@ Source: <a href="https://stats.stackexchange.com/q/397288/31243">Dot Product and
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Luis Damiano</p>
-<p class="date">Created: 2022-05-19 Thu 12:45</p>
+<p class="date">Created: 2022-05-20 Fri 07:55</p>
 <p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>

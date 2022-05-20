@@ -66,6 +66,13 @@
    - [[https://stats.stackexchange.com/a/476216/31243][How to identify which variables are collinear in a singul...]]
    - [[https://en.wikipedia.org/wiki/QR_decomposition#Column_pivoting][QR decomposition - Column pivoting]]
 
+** What classification model to use for observations in a map?
+
+   - [[https://en.wikipedia.org/wiki/Conditional_random_field][Conditional random field]]: considers the context (neighborhood) of an
+     observation when predicting a label
+   - [[https://en.wikipedia.org/wiki/Markov_random_field][Markov random field]]: finite or infinite undirected graphical model that can
+     do cyclic dependencies but can't do induced dependencies
+
 ** How to compute the Cressie and Hawkins (1980) robust estimator?
 
    Cressie and Hawkins (1980) found that the fourth-root of χ1 has a
