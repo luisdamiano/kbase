@@ -32,7 +32,7 @@
    - Emulator, surrogate, meta-model, statistical model _versus_
      computer experiment, computer model, mechanistic model, physical
      model, climate model, what have you
-   - /Siginificant(ly)/ has a technical connotation, use /considerable/
+   - /Significant(ly)/ has a technical connotation, use /considerable/
      or /considerably/ if one want to avoid such connotation
    - A vector/scalar(-valued) function of a vector/scalar variable (greenbagels
      at Libera.Chat). A function of a vector variable, associated with
