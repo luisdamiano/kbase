@@ -55,6 +55,20 @@
    - Adjust =badness= limits
    - =\parfillskip= controls the length at the end of a paragraph
 
+** How to prepend letter to figure name?
+
+   #+begin_src latex
+     %% Add prefix S to label names
+     \renewcommand{\thepage}{S\arabic{page}}
+     \renewcommand{\thesection}{S\arabic{section}}
+     \renewcommand{\thetable}{S\arabic{table}}
+     \renewcommand{\thefigure}{S\arabic{figure}}
+     %% Modify the text used at the start of the caption
+     \renewcommand{\figurename}{Supplemental Material, Figure}
+   #+end_src
+
+   - [[https://stackoverflow.com/a/50213009/2860744][adding prefix to figure caption in LaTeX?]]
+
 ** When should I use non-breaking space (tilde)?
 
    - [[https://tex.stackexchange.com/a/15555/225233][When should I use non-breaking space?]]
