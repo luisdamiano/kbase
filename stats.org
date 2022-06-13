@@ -85,6 +85,27 @@
 
    - Source: [[https://www.doi.org/10.1002/9781119115151][10.1002/9781119115151]] eq. (2.2.8)
 
+** How to transform a covariate taking non-negative values with zeroes?
+
+   Consider a covariate (AKA independent variable, regressor, predictor) with
+   true zeroes observed.
+   - $log(x+1)$ which maps 0 to 0
+   - $log(x+c)$ where $c$ is either estimated or set to be some small positive
+     value
+     - [[https://stats.stackexchange.com/a/1496/31243][Model sensitivity rule of thumb]]
+   - inverse hyperbolic sine, which behaves like a log for large values
+   - replace with two variables: a binary indicator for zero, and $log(x)$ for
+     if $x$ is nonzero or zero otherwise
+     (see Hosmer & Lemeshow's book)
+     - probability plots of the positive part of the original variable are
+       useful for identifying an appropriate re-expression
+   - Box-Cox
+   - Square root, or [[https://journals.sagepub.com/doi/pdf/10.1177/1536867X1101100112][cube root]], for something quick and dirty to get you going
+
+   - Source
+     - [[https://stats.stackexchange.com/questions/1444/how-should-i-transform-non-negative-data-including-zeros][How should I transform non-negative data including zeros?]]
+     - [[https://robjhyndman.com/hyndsight/transformations/][Transforming data with zeros | Rob J Hyndman]]
+
 ** Priors
 
    - [[http://www.stats.org.uk/priors/noninformative/YangBerger1998.pdf][A Catalog of Noninformative Priors]]

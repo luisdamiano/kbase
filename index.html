@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2022-06-07 Tue 14:52 -->
+<!-- 2022-06-13 Mon 10:23 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Knowledge Base</title>
@@ -345,8 +345,9 @@ ul.org-ul, ol.org-ol { font-size:16px }
 <li><a href="#How%20to%20find%20which%20variables%20are%20collinear%3F">10.1.5. How to find which variables are collinear?</a></li>
 <li><a href="#What%20classification%20model%20to%20use%20for%20observations%20in%20a%20map%3F">10.1.6. What classification model to use for observations in a map?</a></li>
 <li><a href="#How%20to%20compute%20the%20Cressie%20and%20Hawkins%20%281980%29%20robust%20estimator%3F">10.1.7. How to compute the Cressie and Hawkins (1980) robust estimator?</a></li>
-<li><a href="#Priors">10.1.8. Priors</a></li>
-<li><a href="#MCMC">10.1.9. MCMC</a></li>
+<li><a href="#How%20to%20transform%20a%20covariate%20taking%20non-negative%20values%20with%20zeroes%3F">10.1.8. How to transform a covariate taking non-negative values with zeroes?</a></li>
+<li><a href="#Priors">10.1.9. Priors</a></li>
+<li><a href="#MCMC">10.1.10. MCMC</a></li>
 </ul>
 </li>
 <li><a href="#Gaussian%20processes">10.2. Gaussian processes</a>
@@ -936,7 +937,7 @@ Source: <a href="https://git-scm.com/book/en/v2/Git-Internals-Git-Objects">Git -
 <div id="outline-container-How%20to%20rename%20a%20branch%3F" class="outline-4">
 <h4 id="How%20to%20rename%20a%20branch%3F"><span class="section-number-4">3.1.2.</span> How to rename a branch?</h4>
 <div class="outline-text-4" id="text-3-1-2">
-<pre class="example" id="orgf7709e2">
+<pre class="example" id="org141d7cd">
 git branch -m newname
 </pre>
 </div>
@@ -4048,9 +4049,43 @@ visualization.
 </div>
 </div>
 
-<div id="outline-container-Priors" class="outline-4">
-<h4 id="Priors"><span class="section-number-4">10.1.8.</span> Priors</h4>
+<div id="outline-container-How%20to%20transform%20a%20covariate%20taking%20non-negative%20values%20with%20zeroes%3F" class="outline-4">
+<h4 id="How%20to%20transform%20a%20covariate%20taking%20non-negative%20values%20with%20zeroes%3F"><span class="section-number-4">10.1.8.</span> How to transform a covariate taking non-negative values with zeroes?</h4>
 <div class="outline-text-4" id="text-10-1-8">
+<p>
+Consider a covariate (AKA independent variable, regressor, predictor) with
+true zeroes observed.
+</p>
+<ul class="org-ul">
+<li>\(log(x+1)\) which maps 0 to 0</li>
+<li>\(log(x+c)\) where \(c\) is either estimated or set to be some small positive
+value
+<ul class="org-ul">
+<li><a href="https://stats.stackexchange.com/a/1496/31243">Model sensitivity rule of thumb</a></li>
+</ul></li>
+<li>inverse hyperbolic sine, which behaves like a log for large values</li>
+<li>replace with two variables: a binary indicator for zero, and \(log(x)\) for
+if \(x\) is nonzero or zero otherwise
+(see Hosmer &amp; Lemeshow's book)
+<ul class="org-ul">
+<li>probability plots of the positive part of the original variable are
+useful for identifying an appropriate re-expression</li>
+</ul></li>
+<li>Box-Cox</li>
+<li>Square root, or <a href="https://journals.sagepub.com/doi/pdf/10.1177/1536867X1101100112">cube root</a>, for something quick and dirty to get you going</li>
+
+<li>Source
+<ul class="org-ul">
+<li><a href="https://stats.stackexchange.com/questions/1444/how-should-i-transform-non-negative-data-including-zeros">How should I transform non-negative data including zeros?</a></li>
+<li><a href="https://robjhyndman.com/hyndsight/transformations/">Transforming data with zeros | Rob J Hyndman</a></li>
+</ul></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-Priors" class="outline-4">
+<h4 id="Priors"><span class="section-number-4">10.1.9.</span> Priors</h4>
+<div class="outline-text-4" id="text-10-1-9">
 <ul class="org-ul">
 <li><a href="http://www.stats.org.uk/priors/noninformative/YangBerger1998.pdf">A Catalog of Noninformative Priors</a></li>
 </ul>
@@ -4058,8 +4093,8 @@ visualization.
 </div>
 
 <div id="outline-container-MCMC" class="outline-4">
-<h4 id="MCMC"><span class="section-number-4">10.1.9.</span> MCMC</h4>
-<div class="outline-text-4" id="text-10-1-9">
+<h4 id="MCMC"><span class="section-number-4">10.1.10.</span> MCMC</h4>
+<div class="outline-text-4" id="text-10-1-10">
 <ul class="org-ul">
 <li><a href="http://users.stat.umn.edu/~geyer/mcmc/one.html">One long run in MCMC</a>: If you can't get a good answer with one
 long run, then you can't get a good answer with many short runs
@@ -4551,7 +4586,7 @@ Source: <a href="https://stats.stackexchange.com/q/397288/31243">Dot Product and
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Luis Damiano</p>
-<p class="date">Created: 2022-06-07 Tue 14:52</p>
+<p class="date">Created: 2022-06-13 Mon 10:23</p>
 <p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
