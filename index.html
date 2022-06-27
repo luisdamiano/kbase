@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2022-06-13 Mon 10:23 -->
+<!-- 2022-06-27 Mon 09:04 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Knowledge Base</title>
@@ -401,8 +401,9 @@ ul.org-ul, ol.org-ol { font-size:16px }
 <li><a href="#Numerical%20computing">12.5. Numerical computing</a>
 <ul>
 <li><a href="#When%20to%20use%20analytical%20versus%20automatic%20differentiation%3F">12.5.1. When to use analytical versus automatic differentiation?</a></li>
-<li><a href="#How%20to%20select%20algorithm%20tolerance%20for%20numerical%20differentiation%3F">12.5.2. How to select algorithm tolerance for numerical differentiation?</a></li>
-<li><a href="#How%20to%20compute%20the%20Euclidean%20distance%20matrix%20fast%3F">12.5.3. How to compute the Euclidean distance matrix fast?</a></li>
+<li><a href="#How%20many%20evaluations%20do%20L-BFGS-B%20require%3F">12.5.2. How many evaluations do L-BFGS-B require?</a></li>
+<li><a href="#How%20to%20select%20algorithm%20tolerance%20for%20numerical%20differentiation%3F">12.5.3. How to select algorithm tolerance for numerical differentiation?</a></li>
+<li><a href="#How%20to%20compute%20the%20Euclidean%20distance%20matrix%20fast%3F">12.5.4. How to compute the Euclidean distance matrix fast?</a></li>
 </ul>
 </li>
 </ul>
@@ -937,7 +938,7 @@ Source: <a href="https://git-scm.com/book/en/v2/Git-Internals-Git-Objects">Git -
 <div id="outline-container-How%20to%20rename%20a%20branch%3F" class="outline-4">
 <h4 id="How%20to%20rename%20a%20branch%3F"><span class="section-number-4">3.1.2.</span> How to rename a branch?</h4>
 <div class="outline-text-4" id="text-3-1-2">
-<pre class="example" id="org141d7cd">
+<pre class="example" id="org678c729">
 git branch -m newname
 </pre>
 </div>
@@ -4531,9 +4532,25 @@ Source: <a href="http://ceres-solver.org/analytical_derivatives.html#when-should
 </div>
 </div>
 
-<div id="outline-container-How%20to%20select%20algorithm%20tolerance%20for%20numerical%20differentiation%3F" class="outline-4">
-<h4 id="How%20to%20select%20algorithm%20tolerance%20for%20numerical%20differentiation%3F"><span class="section-number-4">12.5.2.</span> How to select algorithm tolerance for numerical differentiation?</h4>
+<div id="outline-container-How%20many%20evaluations%20do%20L-BFGS-B%20require%3F" class="outline-4">
+<h4 id="How%20many%20evaluations%20do%20L-BFGS-B%20require%3F"><span class="section-number-4">12.5.2.</span> How many evaluations do L-BFGS-B require?</h4>
 <div class="outline-text-4" id="text-12-5-2">
+<p>
+To optimize a function of \(m\) parameters, L-BFGS-B spends per step roughly
+\(2m\) calls on calculating a tangent plane (derivatives) plus a further call
+at each newly chosen location, which is typically at a short distance.
+L-BFGS-B can be more robust in higher dimension settings than Nelder-Mead.
+</p>
+
+<p>
+Source: <a href="https://bobby.gramacy.com/surrogates/">Surrogates - Robert Gramacy</a>
+</p>
+</div>
+</div>
+
+<div id="outline-container-How%20to%20select%20algorithm%20tolerance%20for%20numerical%20differentiation%3F" class="outline-4">
+<h4 id="How%20to%20select%20algorithm%20tolerance%20for%20numerical%20differentiation%3F"><span class="section-number-4">12.5.3.</span> How to select algorithm tolerance for numerical differentiation?</h4>
+<div class="outline-text-4" id="text-12-5-3">
 <p>
 In absence of problem-specific information, use the square root of
 machine epsilon for forward difference, and the cubic root of machine
@@ -4548,8 +4565,8 @@ Source: <a href="https://scicomp.stackexchange.com/q/14355">Choosing epsilon</a>
 </div>
 
 <div id="outline-container-How%20to%20compute%20the%20Euclidean%20distance%20matrix%20fast%3F" class="outline-4">
-<h4 id="How%20to%20compute%20the%20Euclidean%20distance%20matrix%20fast%3F"><span class="section-number-4">12.5.3.</span> How to compute the Euclidean distance matrix fast?</h4>
-<div class="outline-text-4" id="text-12-5-3">
+<h4 id="How%20to%20compute%20the%20Euclidean%20distance%20matrix%20fast%3F"><span class="section-number-4">12.5.4.</span> How to compute the Euclidean distance matrix fast?</h4>
+<div class="outline-text-4" id="text-12-5-4">
 <p>
 Use the dot product
 </p>
@@ -4586,7 +4603,7 @@ Source: <a href="https://stats.stackexchange.com/q/397288/31243">Dot Product and
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Luis Damiano</p>
-<p class="date">Created: 2022-06-13 Mon 10:23</p>
+<p class="date">Created: 2022-06-27 Mon 09:04</p>
 <p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>

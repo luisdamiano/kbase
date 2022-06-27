@@ -14,6 +14,15 @@
 
    Source: [[http://ceres-solver.org/analytical_derivatives.html#when-should-you-use-analytical-derivatives][Analytic Derivatives — Ceres Solver]]
 
+** How many evaluations do L-BFGS-B require?
+
+   To optimize a function of $m$ parameters, L-BFGS-B spends per step roughly
+   $2m$ calls on calculating a tangent plane (derivatives) plus a further call
+   at each newly chosen location, which is typically at a short distance.
+   L-BFGS-B can be more robust in higher dimension settings than Nelder-Mead.
+
+   Source: [[https://bobby.gramacy.com/surrogates/][Surrogates - Robert Gramacy]]
+
 ** How to select algorithm tolerance for numerical differentiation?
 
    In absence of problem-specific information, use the square root of
