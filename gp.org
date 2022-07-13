@@ -29,10 +29,20 @@
    - [[https://math.stackexchange.com/a/1471678/113775][Integral of a Gaussian process]] (this result is more general)
    - [[https://math.stackexchange.com/a/243977/113775][Integral of Brownian motion is Gaussian?]]
 
+** What are the main limitations of a Gaussian process?
+
+   - Computationally impractical for large data sets: inference requires the
+     inversion of an $N\times{}N$ covariance matrix, which is $O(N^3)$
+     - Use a large data approximation: [[https://doi.org/10.1109/TNNLS.2019.2957109][When Gaussian Process Meets Big Data: A
+       Review of Scalable GPs]]
+   - Covariance function is commonly assumed to be stationary, limiting modeling
+     flexiblity (e.g., noise variance is different in differents parts of the
+     input space, the function has a discontinuity)
+
 ** Software
 
-   - [[https://github.com/alan-turing-institute/mogp-emulator][Multi-Output GP Emulator: fit, predict, optimize, tools for
-     experimental design, dimension reduction, and calibration.]]
+   - [[https://github.com/alan-turing-institute/mogp-emulator][Multi-Output GP Emulator: fit, predict, optimize, tools for experimental
+     design, dimension reduction, and calibration.]]
 
 ** Resources
 

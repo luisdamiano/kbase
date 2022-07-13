@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2022-06-27 Mon 09:04 -->
+<!-- 2022-07-13 Wed 12:35 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Knowledge Base</title>
@@ -355,8 +355,9 @@ ul.org-ul, ol.org-ol { font-size:16px }
 <li><a href="#Is%20the%20mean%20function%20a%20Gaussian%20process%20uninteresting%3F">10.2.1. Is the mean function a Gaussian process uninteresting?</a></li>
 <li><a href="#Is%20the%20derivative%20of%20a%20Gaussian%20process%20another%20Gaussian%20process%3F">10.2.2. Is the derivative of a Gaussian process another Gaussian process?</a></li>
 <li><a href="#Is%20the%20integral%20of%20a%20Gaussian%20process%20another%20Gaussian%20process%3F">10.2.3. Is the integral of a Gaussian process another Gaussian process?</a></li>
-<li><a href="#Software">10.2.4. Software</a></li>
-<li><a href="#Gaussian%20processes--Resources">10.2.5. Resources</a></li>
+<li><a href="#What%20are%20the%20main%20limitations%20of%20a%20Gaussian%20process%3F">10.2.4. What are the main limitations of a Gaussian process?</a></li>
+<li><a href="#Software">10.2.5. Software</a></li>
+<li><a href="#Gaussian%20processes--Resources">10.2.6. Resources</a></li>
 </ul>
 </li>
 </ul>
@@ -938,7 +939,7 @@ Source: <a href="https://git-scm.com/book/en/v2/Git-Internals-Git-Objects">Git -
 <div id="outline-container-How%20to%20rename%20a%20branch%3F" class="outline-4">
 <h4 id="How%20to%20rename%20a%20branch%3F"><span class="section-number-4">3.1.2.</span> How to rename a branch?</h4>
 <div class="outline-text-4" id="text-3-1-2">
-<pre class="example" id="org678c729">
+<pre class="example" id="org1686679">
 git branch -m newname
 </pre>
 </div>
@@ -4160,19 +4161,36 @@ Gaussian process.
 </div>
 </div>
 
-<div id="outline-container-Software" class="outline-4">
-<h4 id="Software"><span class="section-number-4">10.2.4.</span> Software</h4>
+<div id="outline-container-What%20are%20the%20main%20limitations%20of%20a%20Gaussian%20process%3F" class="outline-4">
+<h4 id="What%20are%20the%20main%20limitations%20of%20a%20Gaussian%20process%3F"><span class="section-number-4">10.2.4.</span> What are the main limitations of a Gaussian process?</h4>
 <div class="outline-text-4" id="text-10-2-4">
 <ul class="org-ul">
-<li><a href="https://github.com/alan-turing-institute/mogp-emulator">Multi-Output GP Emulator: fit, predict, optimize, tools for
-experimental design, dimension reduction, and calibration.</a></li>
+<li>Computationally impractical for large data sets: inference requires the
+inversion of an \(N\times{}N\) covariance matrix, which is \(O(N^3)\)
+<ul class="org-ul">
+<li>Use a large data approximation: <a href="https://doi.org/10.1109/TNNLS.2019.2957109">When Gaussian Process Meets Big Data: A
+Review of Scalable GPs</a></li>
+</ul></li>
+<li>Covariance function is commonly assumed to be stationary, limiting modeling
+flexiblity (e.g., noise variance is different in differents parts of the
+input space, the function has a discontinuity)</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-Software" class="outline-4">
+<h4 id="Software"><span class="section-number-4">10.2.5.</span> Software</h4>
+<div class="outline-text-4" id="text-10-2-5">
+<ul class="org-ul">
+<li><a href="https://github.com/alan-turing-institute/mogp-emulator">Multi-Output GP Emulator: fit, predict, optimize, tools for experimental
+design, dimension reduction, and calibration.</a></li>
 </ul>
 </div>
 </div>
 
 <div id="outline-container-Gaussian%20processes--Resources" class="outline-4">
-<h4 id="Gaussian%20processes--Resources"><span class="section-number-4">10.2.5.</span> Resources</h4>
-<div class="outline-text-4" id="text-10-2-5">
+<h4 id="Gaussian%20processes--Resources"><span class="section-number-4">10.2.6.</span> Resources</h4>
+<div class="outline-text-4" id="text-10-2-6">
 <ul class="org-ul">
 <li><a href="https://mlatcl.github.io/gpss/">Gaussian Process Summer Schoool Lectures</a></li>
 </ul>
@@ -4603,7 +4621,7 @@ Source: <a href="https://stats.stackexchange.com/q/397288/31243">Dot Product and
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Luis Damiano</p>
-<p class="date">Created: 2022-06-27 Mon 09:04</p>
+<p class="date">Created: 2022-07-13 Wed 12:35</p>
 <p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
