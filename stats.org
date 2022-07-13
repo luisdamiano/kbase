@@ -115,3 +115,7 @@
    - [[http://users.stat.umn.edu/~geyer/mcmc/one.html][One long run in MCMC]]: If you can't get a good answer with one
      long run, then you can't get a good answer with many short runs
      either.
+** Neural networks
+
+   - [[https://archive.org/download/c24bcbd791979fda2b274e7c42b22bb8b0462d20d28b0db09f8f60bd0bd1f827/c24bcbd791979fda2b274e7c42b22bb8b0462d20d28b0db09f8f60bd0bd1f827.png][A mostly complete chart of Neural Networks]] by Fjodor van Veen at the Asimov
+     Institute
