@@ -29,6 +29,14 @@
    - [[https://math.stackexchange.com/a/1471678/113775][Integral of a Gaussian process]] (this result is more general)
    - [[https://math.stackexchange.com/a/243977/113775][Integral of Brownian motion is Gaussian?]]
 
+** Is the convolution of a Gaussian process another Gaussian process?
+
+   The convolution of a Gaussian process, as a linear combination of Gaussia
+   nrandom variables, remains a Gaussian process.
+
+   - 10.1109/TSP.2011.2119315
+   - [[https://papers.nips.cc/paper/2008/hash/149e9677a5989fd342ae44213df68868-Abstract.html][Sparse Convolved Gaussian Processes for Multi-output Regression]]
+
 ** What are the main limitations of a Gaussian process?
 
    - Computationally impractical for large data sets: inference requires the
