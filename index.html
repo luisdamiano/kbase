@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2022-08-01 Mon 08:18 -->
+<!-- 2022-08-01 Mon 09:01 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Knowledge Base</title>
@@ -170,7 +170,8 @@ ul.org-ul, ol.org-ol { font-size:16px }
 <li><a href="#What%20type%20of%20LaTeX%20commands%20exist%3F">4.1.28. What type of LaTeX commands exist?</a></li>
 <li><a href="#How%20to%20make%20a%20class%20color%20safe%3F">4.1.29. How to make a class color safe?</a></li>
 <li><a href="#How%20to%20write%20a%20custom%20LaTeX%20class%3F">4.1.30. How to write a custom LaTeX class?</a></li>
-<li><a href="#Resources">4.1.31. Resources</a></li>
+<li><a href="#Where%20do%20I%20put%20local%20LaTeX%20style%20files%20and%20packages%3F">4.1.31. Where do I put local LaTeX style files and packages?</a></li>
+<li><a href="#Resources">4.1.32. Resources</a></li>
 </ul>
 </li>
 <li><a href="#Beamer">4.2. Beamer</a>
@@ -942,7 +943,7 @@ Source: <a href="https://git-scm.com/book/en/v2/Git-Internals-Git-Objects">Git -
 <div id="outline-container-How%20to%20rename%20a%20branch%3F" class="outline-4">
 <h4 id="How%20to%20rename%20a%20branch%3F"><span class="section-number-4">3.1.2.</span> How to rename a branch?</h4>
 <div class="outline-text-4" id="text-3-1-2">
-<pre class="example" id="org5f5d774">
+<pre class="example" id="org85f8b9f">
 git branch -m newname
 </pre>
 </div>
@@ -1906,9 +1907,26 @@ like <code>\normalfont</code></li>
 </div>
 </div>
 
-<div id="outline-container-Resources" class="outline-4">
-<h4 id="Resources"><span class="section-number-4">4.1.31.</span> Resources</h4>
+<div id="outline-container-Where%20do%20I%20put%20local%20LaTeX%20style%20files%20and%20packages%3F" class="outline-4">
+<h4 id="Where%20do%20I%20put%20local%20LaTeX%20style%20files%20and%20packages%3F"><span class="section-number-4">4.1.31.</span> Where do I put local LaTeX style files and packages?</h4>
 <div class="outline-text-4" id="text-4-1-31">
+<p>
+The path of the local folder, and many others, are defined in
+<code>/etc/texmf/web2c/texmf.cnf</code>. The default path for local files is <code>~/texmf</code>.
+Packages, .tex and .sty files go in <code>~/texmf/tex/latex</code>, bibtex style files
+.bst go in <code>~/texmf/bibtex/bst/</code>. Finally, run <code>texhash ~/texmf/</code> to update
+the database.
+</p>
+
+<ul class="org-ul">
+<li>Source: <a href="https://www.ias.edu/math/computing/faq/local-latex-style-files">Where can I put local latex style files and packages?</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-Resources" class="outline-4">
+<h4 id="Resources"><span class="section-number-4">4.1.32.</span> Resources</h4>
+<div class="outline-text-4" id="text-4-1-32">
 <ul class="org-ul">
 <li><a href="https://tobi.oetiker.ch/lshort/lshort.pdf">The Not So Short Introduction to LaTeX2e</a>: LaTeX2e in 139 minutes</li>
 <li><a href="https://www.ctan.org/pkg/texbook">The TeXbook</a>: an example of the business of writing a book in TeX</li>
@@ -4660,7 +4678,7 @@ Source: <a href="https://stats.stackexchange.com/q/397288/31243">Dot Product and
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Luis Damiano</p>
-<p class="date">Created: 2022-08-01 Mon 08:18</p>
+<p class="date">Created: 2022-08-01 Mon 09:01</p>
 <p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>

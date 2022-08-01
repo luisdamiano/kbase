@@ -368,6 +368,16 @@
 
    - Use the =doc= software which comes with LaTeX (see The LaTeX companion)
 
+** Where do I put local LaTeX style files and packages?
+
+   The path of the local folder, and many others, are defined in
+   =/etc/texmf/web2c/texmf.cnf=. The default path for local files is =~/texmf=.
+   Packages, .tex and .sty files go in =~/texmf/tex/latex=, bibtex style files
+   .bst go in =~/texmf/bibtex/bst/=. Finally, run =texhash ~/texmf/= to update
+   the database.
+
+   - Source: [[https://www.ias.edu/math/computing/faq/local-latex-style-files][Where can I put local latex style files and packages?]]
+
 ** Resources
 
    - [[https://tobi.oetiker.ch/lshort/lshort.pdf][The Not So Short Introduction to LaTeX2e]]: LaTeX2e in 139 minutes
