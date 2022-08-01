@@ -70,6 +70,12 @@
 ** Prefer short precise terms over phrases
    - /multiple/ instead of /more than one/
 
+** Getting determiners right
+
+   - [[https://en.wikipedia.org/wiki/List_of_English_determiners#Positive_paucal_determiners[1]:_391][List
+     of English determiners: Positive paucal determiners]]
+   - The Cambridge Grammar of the English Language. DOI: 10.1017/9781316423530
+
 ** My own common tics to grep for
    - Hyphens are used when two or more adjectives or an adjective and
      a noun together modify another noun; for example, goodness-of-fit

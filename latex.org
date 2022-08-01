@@ -308,6 +308,7 @@
    - Consider building a class
      - [[https://www.latex-project.org/help/documentation/clsguide.pdf][LATEX2e for class and package writers]] Sec 2.3
      - Example [[https://github.com/exaexa/manurxiv/blob/master/manurxiv.cls#L20][manurxiv/manurxiv.cls at exaexa/manurxiv]]
+     - [[https://tex.stackexchange.com/a/132239/225233][documentclass writing - cls file - multiple files]]
 
    Mix and match (suggestions for a research paper style):
 

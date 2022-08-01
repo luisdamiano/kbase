@@ -16,6 +16,7 @@
    - Discussion needed: when you want to have others opinion
 
 ** Paper layout :noexport:
+
 *** Novel methodology with application
     - Title: <novel methodology name> with applications to
       <application name>
@@ -32,3 +33,18 @@
       - <where and why state-of-the-art approaches are limited or fail>
       - <methodology benefits>, <methodology key aspects>
       - <paper layout>
+
+*** Case study
+    - Data
+    - Models
+      - Alternative methods to be compared
+      - Include a /straw human/ model
+      - Include common pratice models, even if they feel hacky
+      - Include state of the art models
+    - Evaluation criteria
+      - Possibly several criteria
+      - Assess the quality of fit
+      - Should be aligned with what the model is trying to improve upon
+    - Results
+      - Qualitative performance based on visualization and intuition
+      - Quantiative performance based on the evaluation criteria
