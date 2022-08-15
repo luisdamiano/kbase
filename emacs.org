@@ -37,12 +37,19 @@
    - Set a mark =C-SPC C-SPC=, then jump back =C-u C-SPC=
      (Desertcoffee at Libera.Chat)
 
-** Useful modes
+** How to do collaborative editing with Emacs?
 
-   - [[https://ftp.gnu.org/pub/gnu/auctex/12.2-extra/tex-ref.pdf][AucTex reference card]]
+   - [[https://elpa.gnu.org/packages/crdt.html][GNU ELPA - crdt]]
+   - [[https://corpix.dev/2022/02/collaborative-editing-with-emacs.html][Collaborative editing with Emacs]]
+   - [[https://emacsconf.org/2021/talks/erg/][EmacsConf - 2021 - talks - Emacs Research Group, Season Zero]]
+
+** What are some good .emacs config files?
+
+   - [[https://github.com/caisah/emacs.dz][GitHub - caisah/emacs.dz: Awesome emacs config files]]
 
 ** Emacs packages worth checking
 
+   - [[https://github.com/emacs-tw/awesome-emacs][GitHub - emacs-tw/awesome-emacs: A community driven list of useful Emacs pack...]]
    - ripgrep
    - eshell
    - dired
@@ -50,11 +57,9 @@
    - org-publish: for a website
    - org-roam
 
-** How to do collaborative editing with Emacs?
+** Useful modes
 
-   - [[https://elpa.gnu.org/packages/crdt.html][GNU ELPA - crdt]]
-   - [[https://corpix.dev/2022/02/collaborative-editing-with-emacs.html][Collaborative editing with Emacs]]
-   - [[https://emacsconf.org/2021/talks/erg/][EmacsConf - 2021 - talks - Emacs Research Group, Season Zero]]
+   - [[https://ftp.gnu.org/pub/gnu/auctex/12.2-extra/tex-ref.pdf][AucTex reference card]]
 
 * Org-mode
 
