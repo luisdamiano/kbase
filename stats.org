@@ -106,6 +106,14 @@
      - [[https://stats.stackexchange.com/questions/1444/how-should-i-transform-non-negative-data-including-zeros][How should I transform non-negative data including zeros?]]
      - [[https://robjhyndman.com/hyndsight/transformations/][Transforming data with zeros | Rob J Hyndman]]
 
+** What is the difference between cross-validation and the WAIC?
+
+   For hierarchical models, WAIC estimates predictive performance for a new
+   observation from an existing group whereas cross-validation estimates the
+   predictive performance for a new observation from a new group.
+
+   - Source: [[https://statmodeling.stat.columbia.edu/2014/05/26/waic-cross-validation-stan/#comment-167504][WAIC and cross-validation in Stan! | Statistical Modeling, Causal Inference, ...]]
+
 ** Priors
 
    - [[http://www.stats.org.uk/priors/noninformative/YangBerger1998.pdf][A Catalog of Noninformative Priors]]
