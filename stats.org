@@ -114,6 +114,12 @@
 
    - Source: [[https://statmodeling.stat.columbia.edu/2014/05/26/waic-cross-validation-stan/#comment-167504][WAIC and cross-validation in Stan! | Statistical Modeling, Causal Inference, ...]]
 
+** How to do positivity-preserving interpolation?
+
+   - [[https://doi.org/10.2307/2005928][Splines with Nonnegative $B$-Spline Coefficients]]
+   - [[https://math.stackexchange.com/a/677839/113775][How can I find a non-negative interpolation function?]]
+     (positivity-preserving interpolation is hard)
+
 ** Priors
 
    - [[http://www.stats.org.uk/priors/noninformative/YangBerger1998.pdf][A Catalog of Noninformative Priors]]

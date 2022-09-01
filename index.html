@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2022-08-29 Mon 16:08 -->
+<!-- 2022-09-01 Thu 08:27 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Knowledge Base</title>
@@ -349,9 +349,10 @@ ul.org-ul, ol.org-ol { font-size:16px }
 <li><a href="#How%20to%20compute%20the%20Cressie%20and%20Hawkins%20%281980%29%20robust%20estimator%3F">10.1.7. How to compute the Cressie and Hawkins (1980) robust estimator?</a></li>
 <li><a href="#How%20to%20transform%20a%20covariate%20taking%20non-negative%20values%20with%20zeroes%3F">10.1.8. How to transform a covariate taking non-negative values with zeroes?</a></li>
 <li><a href="#What%20is%20the%20difference%20between%20cross-validation%20and%20the%20WAIC%3F">10.1.9. What is the difference between cross-validation and the WAIC?</a></li>
-<li><a href="#Priors">10.1.10. Priors</a></li>
-<li><a href="#MCMC">10.1.11. MCMC</a></li>
-<li><a href="#Neural%20networks">10.1.12. Neural networks</a></li>
+<li><a href="#How%20to%20do%20positivity-preserving%20interpolation%3F">10.1.10. How to do positivity-preserving interpolation?</a></li>
+<li><a href="#Priors">10.1.11. Priors</a></li>
+<li><a href="#MCMC">10.1.12. MCMC</a></li>
+<li><a href="#Neural%20networks">10.1.13. Neural networks</a></li>
 </ul>
 </li>
 <li><a href="#Gaussian%20processes">10.2. Gaussian processes</a>
@@ -946,7 +947,7 @@ Source: <a href="https://git-scm.com/book/en/v2/Git-Internals-Git-Objects">Git -
 <div id="outline-container-How%20to%20rename%20a%20branch%3F" class="outline-4">
 <h4 id="How%20to%20rename%20a%20branch%3F"><span class="section-number-4">3.1.2.</span> How to rename a branch?</h4>
 <div class="outline-text-4" id="text-3-1-2">
-<pre class="example" id="org237eb9f">
+<pre class="example" id="org2585062">
 git branch -m newname
 </pre>
 </div>
@@ -4135,9 +4136,20 @@ predictive performance for a new observation from a new group.
 </div>
 </div>
 
-<div id="outline-container-Priors" class="outline-4">
-<h4 id="Priors"><span class="section-number-4">10.1.10.</span> Priors</h4>
+<div id="outline-container-How%20to%20do%20positivity-preserving%20interpolation%3F" class="outline-4">
+<h4 id="How%20to%20do%20positivity-preserving%20interpolation%3F"><span class="section-number-4">10.1.10.</span> How to do positivity-preserving interpolation?</h4>
 <div class="outline-text-4" id="text-10-1-10">
+<ul class="org-ul">
+<li><a href="https://doi.org/10.2307/2005928">Splines with Nonnegative $B$-Spline Coefficients</a></li>
+<li><a href="https://math.stackexchange.com/a/677839/113775">How can I find a non-negative interpolation function?</a>
+(positivity-preserving interpolation is hard)</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-Priors" class="outline-4">
+<h4 id="Priors"><span class="section-number-4">10.1.11.</span> Priors</h4>
+<div class="outline-text-4" id="text-10-1-11">
 <ul class="org-ul">
 <li><a href="http://www.stats.org.uk/priors/noninformative/YangBerger1998.pdf">A Catalog of Noninformative Priors</a></li>
 </ul>
@@ -4145,8 +4157,8 @@ predictive performance for a new observation from a new group.
 </div>
 
 <div id="outline-container-MCMC" class="outline-4">
-<h4 id="MCMC"><span class="section-number-4">10.1.11.</span> MCMC</h4>
-<div class="outline-text-4" id="text-10-1-11">
+<h4 id="MCMC"><span class="section-number-4">10.1.12.</span> MCMC</h4>
+<div class="outline-text-4" id="text-10-1-12">
 <ul class="org-ul">
 <li><a href="http://users.stat.umn.edu/~geyer/mcmc/one.html">One long run in MCMC</a>: If you can't get a good answer with one
 long run, then you can't get a good answer with many short runs
@@ -4155,8 +4167,8 @@ either.</li>
 </div>
 </div>
 <div id="outline-container-Neural%20networks" class="outline-4">
-<h4 id="Neural%20networks"><span class="section-number-4">10.1.12.</span> Neural networks</h4>
-<div class="outline-text-4" id="text-10-1-12">
+<h4 id="Neural%20networks"><span class="section-number-4">10.1.13.</span> Neural networks</h4>
+<div class="outline-text-4" id="text-10-1-13">
 <ul class="org-ul">
 <li><a href="https://archive.org/download/c24bcbd791979fda2b274e7c42b22bb8b0462d20d28b0db09f8f60bd0bd1f827/c24bcbd791979fda2b274e7c42b22bb8b0462d20d28b0db09f8f60bd0bd1f827.png">A mostly complete chart of Neural Networks</a> by Fjodor van Veen at the Asimov
 Institute</li>
@@ -4724,7 +4736,7 @@ Source: <a href="https://stats.stackexchange.com/q/397288/31243">Dot Product and
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Luis Damiano</p>
-<p class="date">Created: 2022-08-29 Mon 16:08</p>
+<p class="date">Created: 2022-09-01 Thu 08:27</p>
 <p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
