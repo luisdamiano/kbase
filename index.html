@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2022-09-01 Thu 08:27 -->
+<!-- 2022-09-13 Tue 09:03 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Knowledge Base</title>
@@ -127,7 +127,13 @@ ul.org-ul, ol.org-ol { font-size:16px }
 <li><a href="#General%20resources">3.3.6. General resources</a></li>
 </ul>
 </li>
-<li><a href="#PDF%20processing">3.4. PDF processing</a></li>
+<li><a href="#PDF%20processing">3.4. PDF processing</a>
+<ul>
+<li><a href="#How%20to%20merge%20PDF%20files%3F">3.4.1. How to merge PDF files?</a></li>
+<li><a href="#How%20to%20extract%20some%20pages%20from%20a%20PDF%20file%3F">3.4.2. How to extract some pages from a PDF file?</a></li>
+<li><a href="#How%20to%20compress%20a%20PDF%20file%3F">3.4.3. How to compress a PDF file?</a></li>
+</ul>
+</li>
 <li><a href="#Hugo">3.5. Hugo</a>
 <ul>
 <li><a href="#How%20to%20set%20%3Dtarget%3D_blank%3D%20for%20all%20external%20links%3F">3.5.1. How to set <code>target=_blank</code> for all external links?</a></li>
@@ -947,7 +953,7 @@ Source: <a href="https://git-scm.com/book/en/v2/Git-Internals-Git-Objects">Git -
 <div id="outline-container-How%20to%20rename%20a%20branch%3F" class="outline-4">
 <h4 id="How%20to%20rename%20a%20branch%3F"><span class="section-number-4">3.1.2.</span> How to rename a branch?</h4>
 <div class="outline-text-4" id="text-3-1-2">
-<pre class="example" id="org2585062">
+<pre class="example" id="org9b6d834">
 git branch -m newname
 </pre>
 </div>
@@ -1267,6 +1273,80 @@ A <i>regex to string</i> kind of situation.
 <li><a href="https://filingdb.com/b/pdf-text-extraction">What's so hard about PDF text extraction?</a></li>
 <li><a href="https://www.emacswiki.org/emacs/DeletingWhitespace">Deleting whitespaces</a></li>
 </ul>
+</div>
+
+<div id="outline-container-How%20to%20merge%20PDF%20files%3F" class="outline-4">
+<h4 id="How%20to%20merge%20PDF%20files%3F"><span class="section-number-4">3.4.1.</span> How to merge PDF files?</h4>
+<div class="outline-text-4" id="text-3-4-1">
+<p>
+Use <a href="https://en.wikipedia.org/wiki/Ghostscript">Ghostscript</a> to merge <code>input1.pdf</code> and <code>input2.pdf</code> into
+<code>merged_document.pdf</code>.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-sh">gs -sDEVICE=pdfwrite dNOPAUSE -dBATCH -dSAFER -dQUIET  <span style="color: #ffff00;">\</span>
+   -dAutoRotatePages=/None <span style="color: #ffff00;">\</span>
+   -sOutputFile=<span style="color: #ffff00;">"merged_document.pdf"</span> input1.pdf input2.pdf
+</pre>
+</div>
+
+<p>
+Source: <a href="https://askubuntu.com/a/257170">How to merge several PDF files?</a>
+</p>
+</div>
+</div>
+
+<div id="outline-container-How%20to%20extract%20some%20pages%20from%20a%20PDF%20file%3F" class="outline-4">
+<h4 id="How%20to%20extract%20some%20pages%20from%20a%20PDF%20file%3F"><span class="section-number-4">3.4.2.</span> How to extract some pages from a PDF file?</h4>
+<div class="outline-text-4" id="text-3-4-2">
+<p>
+Use <a href="https://en.wikipedia.org/wiki/Ghostscript">Ghostscript</a> to extract pages 12-15 from <code>input.pdf</code> into
+<code>extracted_document.pdf</code>.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-sh">gs -sDEVICE=pdfwrite dNOPAUSE -dBATCH -dSAFER -dQUIET  <span style="color: #ffff00;">\</span>
+     -dFirstPage=12 <span style="color: #ffff00;">\</span>
+     -dLastPage=15 <span style="color: #ffff00;">\</span>
+     -sOutputFile=<span style="color: #ffff00;">"extracted_document.pdf"</span> <span style="color: #ffff00;">\</span>
+     input.pdf
+</pre>
+</div>
+
+<p>
+Source: <a href="https://askubuntu.com/a/282105/933499">How can I extract a page range / a part of a PDF?</a>
+</p>
+</div>
+</div>
+
+<div id="outline-container-How%20to%20compress%20a%20PDF%20file%3F" class="outline-4">
+<h4 id="How%20to%20compress%20a%20PDF%20file%3F"><span class="section-number-4">3.4.3.</span> How to compress a PDF file?</h4>
+<div class="outline-text-4" id="text-3-4-3">
+<p>
+Use <a href="https://en.wikipedia.org/wiki/Ghostscript">Ghostscript</a> to compress <code>input.pdf</code> and write into
+<code>compressed_document.pdf</code> using a <a href="https://www.ghostscript.com/doc/current/VectorDevices.htm#distillerparams">distiller preset</a>
+</p>
+<ul class="org-ul">
+<li><code>-dPDFSETTINGS=/screen</code> lower quality, smaller size (72 dpi)</li>
+<li><code>-dPDFSETTINGS=/ebook</code>  better quality, slightly larger size (150
+dpi)</li>
+<li><code>-dPDFSETTINGS=/prepress</code> prepress optimized (300 dpi)</li>
+<li><code>-dPDFSETTINGS=/printer</code>  print optimized (300 dpi)</li>
+<li><code>-dPDFSETTINGS=/default</code> wide variety of uses, larger size</li>
+</ul>
+
+<div class="org-src-container">
+<pre class="src src-sh">gs -sDEVICE=pdfwrite dNOPAUSE -dBATCH -dSAFER -dQUIET  <span style="color: #ffff00;">\</span>
+   -dCompatibilityLevel=1.4 <span style="color: #ffff00;">\</span>
+   -dPDFSETTINGS=/ebook <span style="color: #ffff00;">\</span>
+   -sOutputFile=<span style="color: #ffff00;">"compressed_document.pdf"</span> input.pdf
+</pre>
+</div>
+
+<p>
+Source: <a href="https://askubuntu.com/a/256449/933499">How can I reduce the file size of a scanned PDF file?</a>
+</p>
+</div>
 </div>
 </div>
 <div id="outline-container-Hugo" class="outline-3">
@@ -4736,7 +4816,7 @@ Source: <a href="https://stats.stackexchange.com/q/397288/31243">Dot Product and
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Luis Damiano</p>
-<p class="date">Created: 2022-09-01 Thu 08:27</p>
+<p class="date">Created: 2022-09-13 Tue 09:03</p>
 <p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
