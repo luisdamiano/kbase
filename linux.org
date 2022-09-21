@@ -1,5 +1,15 @@
 * Linux
 
+** How to restart the bluetooth service?
+
+   Use =bluetoothctl= to turn the bluetooth controller off and on
+
+   #+begin_src shell
+     echo -e 'show\npower off\npower on\nquit' | bluetoothctl
+   #+end_src
+
+   Source: https://unix.stackexchange.com/a/533782/88701
+
 ** How to read a systemd service log for today?
 
    Don't forget to add =--user= if it's a user service. Also, =-b= is
