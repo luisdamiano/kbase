@@ -76,6 +76,17 @@
      of English determiners: Positive paucal determiners]]
    - The Cambridge Grammar of the English Language. DOI: 10.1017/9781316423530
 
+** Double negation is not an affirmation
+
+   Litotes help moderate an adjective, e.g., not unlike vs like, not uncommon vs
+   common, non-trivial vs complex. "Not unlike" is slightly different than
+   saying "like" much like saying "I love apples" is not the same thing as
+   saying "I don't hate apples."
+
+   Source:
+   - [[https://en.wikipedia.org/wiki/Litotes][Litotes - Wikipedia]]
+   - [[https://english.stackexchange.com/a/21012]["Like" versus "not unlike" - English Language & Usage Stack Exchange]]
+
 ** My own common tics to grep for
    - Hyphens are used when two or more adjectives or an adjective and
      a noun together modify another noun; for example, goodness-of-fit
