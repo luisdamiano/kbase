@@ -391,6 +391,34 @@ might be more efficient.
   DF$z <- ak[[3]]
 #+end_src
 
+** How to plot in reverse log scale with ggplot2?
+
+   #+begin_src R
+     #' Reverse log transformation
+     #'
+     #' @param base a positive or complex number: logarithm base.
+     # 'Defaults to `e=exp(1)`.
+     #' @return
+     #' @reference https://gist.github.com/JoFrhwld/2266961
+     .revlog_trans <- function(base = exp(1)){
+       scales::trans_new(
+                 name      = paste("revlog-", base, sep = ""),
+                 transform = function(x){ -log(x, base) },
+                 inverse   = function(x){ base^(-x) },
+                 breaks    = scales::log_breaks(base = base),
+                 domain    = c(1e-100, Inf)
+               )
+     }
+
+     scale_x_revlog10 <- function(...) {
+       scale_x_continuous(trans = .revlog_trans(base = 10), ...)
+     }
+
+     scale_y_revlog10 <- function(...) {
+       scale_y_continuous(trans = .revlog_trans(base = 10), ...)
+     }
+   #+end_src
+
 ** How to plot in log scale with base R?
 
    #+begin_src R
