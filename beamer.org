@@ -1,5 +1,21 @@
 * Beamer
 
+** How to hide a frame in Beamer?
+
+   Use =<beamer:0>= to hide it in the presentation, use =<handout:0>= to hide it
+   in the handout, use =<handout:0|beamer:0>= or simply =<all:0>= to hide it in
+   both beamer and handout mode.
+
+   #+begin_src latex
+     \begin{frame}<beamer:0>
+       \frametitle{This frame won't be visible}
+       Lorem ipsum
+     \end{frame}
+   #+end_src
+
+   Source:
+   - [[https://tex.stackexchange.com/a/252741][How to exclude certain slides from handout]]
+
 ** How to build a Beamer template?
 
    Mix and match:
