@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2022-09-27 Tue 10:15 -->
+<!-- 2022-09-27 Tue 16:33 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Knowledge Base</title>
@@ -130,9 +130,12 @@ ul.org-ul, ol.org-ol { font-size:16px }
 </li>
 <li><a href="#PDF%20processing">3.4. PDF processing</a>
 <ul>
-<li><a href="#How%20to%20merge%20PDF%20files%3F">3.4.1. How to merge PDF files?</a></li>
-<li><a href="#How%20to%20extract%20some%20pages%20from%20a%20PDF%20file%3F">3.4.2. How to extract some pages from a PDF file?</a></li>
-<li><a href="#How%20to%20compress%20a%20PDF%20file%3F">3.4.3. How to compress a PDF file?</a></li>
+<li><a href="#How%20to%20convert%20a%20PDF%20file%20to%20a%20text%20file%3F">3.4.1. How to convert a PDF file to a text file?</a></li>
+<li><a href="#How%20to%20list%20all%20the%20fonts%20used%20in%20a%20PDF%20file%3F">3.4.2. How to list all the fonts used in a PDF file?</a></li>
+<li><a href="#How%20to%20extract%20images%20from%20a%20PDF%20file%3F">3.4.3. How to extract images from a PDF file?</a></li>
+<li><a href="#How%20to%20merge%20PDF%20files%3F">3.4.4. How to merge PDF files?</a></li>
+<li><a href="#How%20to%20extract%20some%20pages%20from%20a%20PDF%20file%3F">3.4.5. How to extract some pages from a PDF file?</a></li>
+<li><a href="#How%20to%20compress%20a%20PDF%20file%3F">3.4.6. How to compress a PDF file?</a></li>
 </ul>
 </li>
 <li><a href="#Hugo">3.5. Hugo</a>
@@ -975,7 +978,7 @@ Source: <a href="https://git-scm.com/book/en/v2/Git-Internals-Git-Objects">Git -
 <div id="outline-container-How%20to%20rename%20a%20branch%3F" class="outline-4">
 <h4 id="How%20to%20rename%20a%20branch%3F"><span class="section-number-4">3.1.2.</span> How to rename a branch?</h4>
 <div class="outline-text-4" id="text-3-1-2">
-<pre class="example" id="orgb743ea5">
+<pre class="example" id="org474afcd">
 git branch -m newname
 </pre>
 </div>
@@ -1297,9 +1300,63 @@ A <i>regex to string</i> kind of situation.
 </ul>
 </div>
 
-<div id="outline-container-How%20to%20merge%20PDF%20files%3F" class="outline-4">
-<h4 id="How%20to%20merge%20PDF%20files%3F"><span class="section-number-4">3.4.1.</span> How to merge PDF files?</h4>
+<div id="outline-container-How%20to%20convert%20a%20PDF%20file%20to%20a%20text%20file%3F" class="outline-4">
+<h4 id="How%20to%20convert%20a%20PDF%20file%20to%20a%20text%20file%3F"><span class="section-number-4">3.4.1.</span> How to convert a PDF file to a text file?</h4>
 <div class="outline-text-4" id="text-3-4-1">
+<p>
+Use <code>pdftotext</code> to extract the content of a PDF file and write it into a text
+file.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-sh">pdftotext document.pdf document.txt
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-How%20to%20list%20all%20the%20fonts%20used%20in%20a%20PDF%20file%3F" class="outline-4">
+<h4 id="How%20to%20list%20all%20the%20fonts%20used%20in%20a%20PDF%20file%3F"><span class="section-number-4">3.4.2.</span> How to list all the fonts used in a PDF file?</h4>
+<div class="outline-text-4" id="text-3-4-2">
+<p>
+Use <code>pdffonts</code> to list all the fonts used in a PDF
+</p>
+
+<div class="org-src-container">
+<pre class="src src-sh">pdffonts document.pdf
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-How%20to%20extract%20images%20from%20a%20PDF%20file%3F" class="outline-4">
+<h4 id="How%20to%20extract%20images%20from%20a%20PDF%20file%3F"><span class="section-number-4">3.4.3.</span> How to extract images from a PDF file?</h4>
+<div class="outline-text-4" id="text-3-4-3">
+<p>
+Use <code>pdfimages</code> to extract images from a PDF file
+</p>
+
+<div class="org-src-container">
+<pre class="src src-sh">pdfimages -list document.pdf
+pdfimages -png -f 1 -l 10 document.pdf
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-How%20to%20merge%20PDF%20files%3F" class="outline-4">
+<h4 id="How%20to%20merge%20PDF%20files%3F"><span class="section-number-4">3.4.4.</span> How to merge PDF files?</h4>
+<div class="outline-text-4" id="text-3-4-4">
+<p>
+Use <code>pdfunite</code> to merge <code>input1.pdf</code> and <code>input2.pdf</code> into
+<code>merged_document.pdf</code>.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-sh">pdfunite input1.pdf input2.pdf merged_document.pdf
+</pre>
+</div>
+
 <p>
 Use <a href="https://en.wikipedia.org/wiki/Ghostscript">Ghostscript</a> to merge <code>input1.pdf</code> and <code>input2.pdf</code> into
 <code>merged_document.pdf</code>.
@@ -1319,8 +1376,18 @@ Source: <a href="https://askubuntu.com/a/257170">How to merge several PDF files?
 </div>
 
 <div id="outline-container-How%20to%20extract%20some%20pages%20from%20a%20PDF%20file%3F" class="outline-4">
-<h4 id="How%20to%20extract%20some%20pages%20from%20a%20PDF%20file%3F"><span class="section-number-4">3.4.2.</span> How to extract some pages from a PDF file?</h4>
-<div class="outline-text-4" id="text-3-4-2">
+<h4 id="How%20to%20extract%20some%20pages%20from%20a%20PDF%20file%3F"><span class="section-number-4">3.4.5.</span> How to extract some pages from a PDF file?</h4>
+<div class="outline-text-4" id="text-3-4-5">
+<p>
+Use <code>pdfseparate</code> to extract page by page as sample-1.pdf, sample-2.pdf,
+sample-3.pdf.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-sh">pdfseparate sample.pdf sample-%d.pdf
+</pre>
+</div>
+
 <p>
 Use <a href="https://en.wikipedia.org/wiki/Ghostscript">Ghostscript</a> to extract pages 12-15 from <code>input.pdf</code> into
 <code>extracted_document.pdf</code>.
@@ -1342,8 +1409,8 @@ Source: <a href="https://askubuntu.com/a/282105/933499">How can I extract a page
 </div>
 
 <div id="outline-container-How%20to%20compress%20a%20PDF%20file%3F" class="outline-4">
-<h4 id="How%20to%20compress%20a%20PDF%20file%3F"><span class="section-number-4">3.4.3.</span> How to compress a PDF file?</h4>
-<div class="outline-text-4" id="text-3-4-3">
+<h4 id="How%20to%20compress%20a%20PDF%20file%3F"><span class="section-number-4">3.4.6.</span> How to compress a PDF file?</h4>
+<div class="outline-text-4" id="text-3-4-6">
 <p>
 Use <a href="https://en.wikipedia.org/wiki/Ghostscript">Ghostscript</a> to compress <code>input.pdf</code> and write into
 <code>compressed_document.pdf</code> using a <a href="https://www.ghostscript.com/doc/current/VectorDevices.htm#distillerparams">distiller preset</a>
@@ -4916,7 +4983,7 @@ Source: <a href="https://stats.stackexchange.com/q/397288/31243">Dot Product and
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Luis Damiano</p>
-<p class="date">Created: 2022-09-27 Tue 10:15</p>
+<p class="date">Created: 2022-09-27 Tue 16:33</p>
 <p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>

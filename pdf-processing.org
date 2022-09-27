@@ -6,7 +6,40 @@
   - [[https://filingdb.com/b/pdf-text-extraction][What's so hard about PDF text extraction?]]
   - [[https://www.emacswiki.org/emacs/DeletingWhitespace][Deleting whitespaces]]
 
+** How to convert a PDF file to a text file?
+
+   Use =pdftotext= to extract the content of a PDF file and write it into a text
+   file.
+
+   #+begin_src sh
+     pdftotext document.pdf document.txt
+   #+end_src
+
+** How to list all the fonts used in a PDF file?
+
+   Use =pdffonts= to list all the fonts used in a PDF
+
+   #+begin_src sh
+     pdffonts document.pdf
+   #+end_src
+
+** How to extract images from a PDF file?
+
+   Use =pdfimages= to extract images from a PDF file
+
+   #+begin_src sh
+     pdfimages -list document.pdf
+     pdfimages -png -f 1 -l 10 document.pdf
+   #+end_src
+
 ** How to merge PDF files?
+
+   Use =pdfunite= to merge =input1.pdf= and =input2.pdf= into
+   =merged_document.pdf=.
+
+   #+begin_src sh
+     pdfunite input1.pdf input2.pdf merged_document.pdf
+   #+end_src
 
    Use [[https://en.wikipedia.org/wiki/Ghostscript][Ghostscript]] to merge =input1.pdf= and =input2.pdf= into
    =merged_document.pdf=.
@@ -20,6 +53,13 @@
    Source: [[https://askubuntu.com/a/257170][How to merge several PDF files?]]
 
 ** How to extract some pages from a PDF file?
+
+   Use =pdfseparate= to extract page by page as sample-1.pdf, sample-2.pdf,
+   sample-3.pdf.
+
+   #+begin_src sh
+     pdfseparate sample.pdf sample-%d.pdf
+   #+end_src
 
    Use [[https://en.wikipedia.org/wiki/Ghostscript][Ghostscript]] to extract pages 12-15 from =input.pdf= into
    =extracted_document.pdf=.
