@@ -16,6 +16,15 @@
    Source:
    - [[https://tex.stackexchange.com/a/252741][How to exclude certain slides from handout]]
 
+** How not to count appendix slides in Beamer?
+
+   Use =\usepackage{appendixnumberbeamer}= to automatically reset the frame
+   counter when the =\appendix= command is called. No need to do this by hand :)
+
+   - [[https://www.ctan.org/pkg/appendixnumberbeamer][CTAN: Package appendixnumberbeamer]]
+   - [[https://tex.stackexchange.com/a/70495/225233][Don't count backup slides - TeX - LaTeX Stack Exchange]]
+   - [[https://tex.stackexchange.com/a/17921/225233][Beamer frame numbering in appendix - TeX - LaTeX Stack Exchange]]
+
 ** How to build a Beamer template?
 
    Mix and match:
