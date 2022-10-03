@@ -292,6 +292,17 @@
      \captionsetup{font=footnotesize}
    #+end_src
 
+** How to include a tex file with multicolumn commands?
+
+   Long story short, you can't call =\input{filename}= before =\multicolumn=.
+
+   #+begin_src latex
+     \csname @@input\endcsname filename
+   #+end_src
+
+   Source:
+   - [[https://tex.stackexchange.com/a/432308/225233][! Misplaced \omit error when inputting table with multicolumn]]
+
 ** How to properly compile a LaTeX project?
 
    Use =latemk file.tex -pdf= and that's it. No need to run multiple

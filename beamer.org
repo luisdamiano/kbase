@@ -25,6 +25,16 @@
    - [[https://tex.stackexchange.com/a/70495/225233][Don't count backup slides - TeX - LaTeX Stack Exchange]]
    - [[https://tex.stackexchange.com/a/17921/225233][Beamer frame numbering in appendix - TeX - LaTeX Stack Exchange]]
 
+** How to add a hyperlink to a Beamer frame?
+
+   Load =\usepckage{hyperref}=. Use =\label{somename}= or
+   =\hypertarget{somename}= to set a target. Use =\hyperlink{somename}{text to
+   show}= or =\hyperlink{somename}{\beamerbutton{text to show}}= to print a text
+   or button linking to the target.
+
+   - [[https://www.ctan.org/pkg/beamer][CTAN: Package beamer]]
+   - [[https://tex.stackexchange.com/a/269579/225233][Beamer: Hyperlink to specific slide in frame? - TeX - LaTeX Stack ...]]
+
 ** How to build a Beamer template?
 
    Mix and match:

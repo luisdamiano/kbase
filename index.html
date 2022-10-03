@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2022-09-28 Wed 10:39 -->
+<!-- 2022-10-03 Mon 11:10 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Knowledge Base</title>
@@ -174,21 +174,23 @@ ul.org-ul, ol.org-ol { font-size:16px }
 <li><a href="#How%20to%20add%20the%20%28sub%29section%20name%20in%20the%20page%20header%3F">4.1.22. How to add the (sub)section name in the page header?</a></li>
 <li><a href="#How%20to%20hide%20section%20headings%3F">4.1.23. How to hide section headings?</a></li>
 <li><a href="#How%20to%20change%20the%20caption%20font%20size%3F">4.1.24. How to change the caption font size?</a></li>
-<li><a href="#How%20to%20properly%20compile%20a%20LaTeX%20project%3F">4.1.25. How to properly compile a LaTeX project?</a></li>
-<li><a href="#How%20to%20make%20GitHub%20compile%20a%20document%20after%20a%20push%3F">4.1.26. How to make GitHub compile a document after a push?</a></li>
-<li><a href="#How%20to%20build%20a%20custom%20style%3F">4.1.27. How to build a custom style?</a></li>
-<li><a href="#What%20type%20of%20LaTeX%20commands%20exist%3F">4.1.28. What type of LaTeX commands exist?</a></li>
-<li><a href="#How%20to%20make%20a%20class%20color%20safe%3F">4.1.29. How to make a class color safe?</a></li>
-<li><a href="#How%20to%20write%20a%20custom%20LaTeX%20class%3F">4.1.30. How to write a custom LaTeX class?</a></li>
-<li><a href="#Where%20do%20I%20put%20local%20LaTeX%20style%20files%20and%20packages%3F">4.1.31. Where do I put local LaTeX style files and packages?</a></li>
-<li><a href="#Resources">4.1.32. Resources</a></li>
+<li><a href="#How%20to%20include%20a%20tex%20file%20with%20multicolumn%20commands%3F">4.1.25. How to include a tex file with multicolumn commands?</a></li>
+<li><a href="#How%20to%20properly%20compile%20a%20LaTeX%20project%3F">4.1.26. How to properly compile a LaTeX project?</a></li>
+<li><a href="#How%20to%20make%20GitHub%20compile%20a%20document%20after%20a%20push%3F">4.1.27. How to make GitHub compile a document after a push?</a></li>
+<li><a href="#How%20to%20build%20a%20custom%20style%3F">4.1.28. How to build a custom style?</a></li>
+<li><a href="#What%20type%20of%20LaTeX%20commands%20exist%3F">4.1.29. What type of LaTeX commands exist?</a></li>
+<li><a href="#How%20to%20make%20a%20class%20color%20safe%3F">4.1.30. How to make a class color safe?</a></li>
+<li><a href="#How%20to%20write%20a%20custom%20LaTeX%20class%3F">4.1.31. How to write a custom LaTeX class?</a></li>
+<li><a href="#Where%20do%20I%20put%20local%20LaTeX%20style%20files%20and%20packages%3F">4.1.32. Where do I put local LaTeX style files and packages?</a></li>
+<li><a href="#Resources">4.1.33. Resources</a></li>
 </ul>
 </li>
 <li><a href="#Beamer">4.2. Beamer</a>
 <ul>
 <li><a href="#How%20to%20hide%20a%20frame%20in%20Beamer%3F">4.2.1. How to hide a frame in Beamer?</a></li>
 <li><a href="#How%20not%20to%20count%20appendix%20slides%20in%20Beamer%3F">4.2.2. How not to count appendix slides in Beamer?</a></li>
-<li><a href="#How%20to%20build%20a%20Beamer%20template%3F">4.2.3. How to build a Beamer template?</a></li>
+<li><a href="#How%20to%20add%20a%20hyperlink%20to%20a%20Beamer%20frame%3F">4.2.3. How to add a hyperlink to a Beamer frame?</a></li>
+<li><a href="#How%20to%20build%20a%20Beamer%20template%3F">4.2.4. How to build a Beamer template?</a></li>
 </ul>
 </li>
 <li><a href="#Graph%20diagrams">4.3. Graph diagrams</a>
@@ -979,7 +981,7 @@ Source: <a href="https://git-scm.com/book/en/v2/Git-Internals-Git-Objects">Git -
 <div id="outline-container-How%20to%20rename%20a%20branch%3F" class="outline-4">
 <h4 id="How%20to%20rename%20a%20branch%3F"><span class="section-number-4">3.1.2.</span> How to rename a branch?</h4>
 <div class="outline-text-4" id="text-3-1-2">
-<pre class="example" id="orga8bc6d0">
+<pre class="example" id="orgfbdf86d">
 git branch -m newname
 </pre>
 </div>
@@ -1952,9 +1954,30 @@ in <code>l*9r</code> or <code>l*{99}</code>. Use brackets for more than one digi
 </div>
 </div>
 
-<div id="outline-container-How%20to%20properly%20compile%20a%20LaTeX%20project%3F" class="outline-4">
-<h4 id="How%20to%20properly%20compile%20a%20LaTeX%20project%3F"><span class="section-number-4">4.1.25.</span> How to properly compile a LaTeX project?</h4>
+<div id="outline-container-How%20to%20include%20a%20tex%20file%20with%20multicolumn%20commands%3F" class="outline-4">
+<h4 id="How%20to%20include%20a%20tex%20file%20with%20multicolumn%20commands%3F"><span class="section-number-4">4.1.25.</span> How to include a tex file with multicolumn commands?</h4>
 <div class="outline-text-4" id="text-4-1-25">
+<p>
+Long story short, you can't call <code>\input{filename}</code> before <code>\multicolumn</code>.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-latex"><span style="color: #ffff00;">\csname</span> @@input<span style="color: #ffff00;">\endcsname</span> filename
+</pre>
+</div>
+
+<p>
+Source:
+</p>
+<ul class="org-ul">
+<li><a href="https://tex.stackexchange.com/a/432308/225233">! Misplaced \omit error when inputting table with multicolumn</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-How%20to%20properly%20compile%20a%20LaTeX%20project%3F" class="outline-4">
+<h4 id="How%20to%20properly%20compile%20a%20LaTeX%20project%3F"><span class="section-number-4">4.1.26.</span> How to properly compile a LaTeX project?</h4>
+<div class="outline-text-4" id="text-4-1-26">
 <p>
 Use <code>latemk file.tex -pdf</code> and that's it. No need to run multiple
 commands or figure out the right order. Put in a makefile if that's
@@ -1968,8 +1991,8 @@ Source: <a href="https://tex.stackexchange.com/a/40759/225233">how to properly '
 </div>
 
 <div id="outline-container-How%20to%20make%20GitHub%20compile%20a%20document%20after%20a%20push%3F" class="outline-4">
-<h4 id="How%20to%20make%20GitHub%20compile%20a%20document%20after%20a%20push%3F"><span class="section-number-4">4.1.26.</span> How to make GitHub compile a document after a push?</h4>
-<div class="outline-text-4" id="text-4-1-26">
+<h4 id="How%20to%20make%20GitHub%20compile%20a%20document%20after%20a%20push%3F"><span class="section-number-4">4.1.27.</span> How to make GitHub compile a document after a push?</h4>
+<div class="outline-text-4" id="text-4-1-27">
 <ul class="org-ul">
 <li><a href="https://github.com/exaexa/better-mff-thesis/blob/b8d46ea25a11972ea9cb08f0b0da7df1a23ad178/.github/workflows/main.yml">GitHub workflow yaml file by exaexa</a></li>
 </ul>
@@ -1977,8 +2000,8 @@ Source: <a href="https://tex.stackexchange.com/a/40759/225233">how to properly '
 </div>
 
 <div id="outline-container-How%20to%20build%20a%20custom%20style%3F" class="outline-4">
-<h4 id="How%20to%20build%20a%20custom%20style%3F"><span class="section-number-4">4.1.27.</span> How to build a custom style?</h4>
-<div class="outline-text-4" id="text-4-1-27">
+<h4 id="How%20to%20build%20a%20custom%20style%3F"><span class="section-number-4">4.1.28.</span> How to build a custom style?</h4>
+<div class="outline-text-4" id="text-4-1-28">
 <ul class="org-ul">
 <li>Consider building a class
 <ul class="org-ul">
@@ -2024,8 +2047,8 @@ Catalogue</a></li>
 </div>
 
 <div id="outline-container-What%20type%20of%20LaTeX%20commands%20exist%3F" class="outline-4">
-<h4 id="What%20type%20of%20LaTeX%20commands%20exist%3F"><span class="section-number-4">4.1.28.</span> What type of LaTeX commands exist?</h4>
-<div class="outline-text-4" id="text-4-1-28">
+<h4 id="What%20type%20of%20LaTeX%20commands%20exist%3F"><span class="section-number-4">4.1.29.</span> What type of LaTeX commands exist?</h4>
+<div class="outline-text-4" id="text-4-1-29">
 <ul class="org-ul">
 <li>Author commands
 <ul class="org-ul">
@@ -2052,8 +2075,8 @@ Catalogue</a></li>
 </div>
 
 <div id="outline-container-How%20to%20make%20a%20class%20color%20safe%3F" class="outline-4">
-<h4 id="How%20to%20make%20a%20class%20color%20safe%3F"><span class="section-number-4">4.1.29.</span> How to make a class color safe?</h4>
-<div class="outline-text-4" id="text-4-1-29">
+<h4 id="How%20to%20make%20a%20class%20color%20safe%3F"><span class="section-number-4">4.1.30.</span> How to make a class color safe?</h4>
+<div class="outline-text-4" id="text-4-1-30">
 <ul class="org-ul">
 <li>Issue: when using <code>{\color{green} text}</code>, color is restored
 after the final <code>}</code>
@@ -2073,8 +2096,8 @@ like <code>\normalfont</code></li>
 </div>
 
 <div id="outline-container-How%20to%20write%20a%20custom%20LaTeX%20class%3F" class="outline-4">
-<h4 id="How%20to%20write%20a%20custom%20LaTeX%20class%3F"><span class="section-number-4">4.1.30.</span> How to write a custom LaTeX class?</h4>
-<div class="outline-text-4" id="text-4-1-30">
+<h4 id="How%20to%20write%20a%20custom%20LaTeX%20class%3F"><span class="section-number-4">4.1.31.</span> How to write a custom LaTeX class?</h4>
+<div class="outline-text-4" id="text-4-1-31">
 <ul class="org-ul">
 <li>Use the <code>doc</code> software which comes with LaTeX (see The LaTeX companion)</li>
 </ul>
@@ -2082,8 +2105,8 @@ like <code>\normalfont</code></li>
 </div>
 
 <div id="outline-container-Where%20do%20I%20put%20local%20LaTeX%20style%20files%20and%20packages%3F" class="outline-4">
-<h4 id="Where%20do%20I%20put%20local%20LaTeX%20style%20files%20and%20packages%3F"><span class="section-number-4">4.1.31.</span> Where do I put local LaTeX style files and packages?</h4>
-<div class="outline-text-4" id="text-4-1-31">
+<h4 id="Where%20do%20I%20put%20local%20LaTeX%20style%20files%20and%20packages%3F"><span class="section-number-4">4.1.32.</span> Where do I put local LaTeX style files and packages?</h4>
+<div class="outline-text-4" id="text-4-1-32">
 <p>
 The path of the local folder, and many others, are defined in
 <code>/etc/texmf/web2c/texmf.cnf</code>. The default path for local files is <code>~/texmf</code>.
@@ -2099,8 +2122,8 @@ the database.
 </div>
 
 <div id="outline-container-Resources" class="outline-4">
-<h4 id="Resources"><span class="section-number-4">4.1.32.</span> Resources</h4>
-<div class="outline-text-4" id="text-4-1-32">
+<h4 id="Resources"><span class="section-number-4">4.1.33.</span> Resources</h4>
+<div class="outline-text-4" id="text-4-1-33">
 <ul class="org-ul">
 <li><a href="https://tobi.oetiker.ch/lshort/lshort.pdf">The Not So Short Introduction to LaTeX2e</a>: LaTeX2e in 139 minutes</li>
 <li><a href="https://www.ctan.org/pkg/texbook">The TeXbook</a>: an example of the business of writing a book in TeX</li>
@@ -2156,9 +2179,26 @@ counter when the <code>\appendix</code> command is called. No need to do this by
 </div>
 </div>
 
-<div id="outline-container-How%20to%20build%20a%20Beamer%20template%3F" class="outline-4">
-<h4 id="How%20to%20build%20a%20Beamer%20template%3F"><span class="section-number-4">4.2.3.</span> How to build a Beamer template?</h4>
+<div id="outline-container-How%20to%20add%20a%20hyperlink%20to%20a%20Beamer%20frame%3F" class="outline-4">
+<h4 id="How%20to%20add%20a%20hyperlink%20to%20a%20Beamer%20frame%3F"><span class="section-number-4">4.2.3.</span> How to add a hyperlink to a Beamer frame?</h4>
 <div class="outline-text-4" id="text-4-2-3">
+<p>
+Load <code>\usepckage{hyperref}</code>. Use <code>\label{somename}</code> or
+<code>\hypertarget{somename}</code> to set a target. Use <code>\hyperlink{somename}{text to
+   show}</code> or <code>\hyperlink{somename}{\beamerbutton{text to show}}</code> to print a text
+or button linking to the target.
+</p>
+
+<ul class="org-ul">
+<li><a href="https://www.ctan.org/pkg/beamer">CTAN: Package beamer</a></li>
+<li><a href="https://tex.stackexchange.com/a/269579/225233">Beamer: Hyperlink to specific slide in frame? - TeX - LaTeX Stack &#x2026;</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-How%20to%20build%20a%20Beamer%20template%3F" class="outline-4">
+<h4 id="How%20to%20build%20a%20Beamer%20template%3F"><span class="section-number-4">4.2.4.</span> How to build a Beamer template?</h4>
+<div class="outline-text-4" id="text-4-2-4">
 <p>
 Mix and match:
 </p>
@@ -5000,7 +5040,7 @@ Source: <a href="https://stats.stackexchange.com/q/397288/31243">Dot Product and
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Luis Damiano</p>
-<p class="date">Created: 2022-09-28 Wed 10:39</p>
+<p class="date">Created: 2022-10-03 Mon 11:10</p>
 <p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
