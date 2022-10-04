@@ -93,3 +93,10 @@
    #+end_src
 
    Source: [[https://askubuntu.com/a/256449/933499][How can I reduce the file size of a scanned PDF file?]]
+** How to automatically crop margins from a PDF file?
+
+   Use =pdfcrop= to automatically crop margins from a PDF file
+
+   #+begin_src sh
+     pdfcrop document.pdf
+   #+end_src
