@@ -52,3 +52,18 @@
    #+begin_src
 emacs $(/bin/ls */* --sort=time | tail -n 5)
    #+end_src
+** How to cast a string to intenger?
+
+   Cast a string to integer in bash by adding 0. It works well if the string is
+   NULL.
+
+   #+begin_src shell
+     NUM="99"
+     NUM=$(($NUM+0))
+
+     NUM=""
+     NUM=$(($NUM+0))
+   #+end_src
+
+   Source:
+   - [[https://stackoverflow.com/a/17093431/2860744][Bash: comparing a string as an integer - Stack Overflow]]
