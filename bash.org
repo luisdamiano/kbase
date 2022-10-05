@@ -52,6 +52,7 @@
    #+begin_src
 emacs $(/bin/ls */* --sort=time | tail -n 5)
    #+end_src
+
 ** How to cast a string to intenger?
 
    Cast a string to integer in bash by adding 0. It works well if the string is
@@ -67,3 +68,15 @@ emacs $(/bin/ls */* --sort=time | tail -n 5)
 
    Source:
    - [[https://stackoverflow.com/a/17093431/2860744][Bash: comparing a string as an integer - Stack Overflow]]
+
+** How to make a conditional assignment in bash?
+
+   Use the following expression if the assignment is numerical.
+
+   #+begin_src shell
+     # Assign 20 if true, or 10 if false
+     variable=$(( 1 > 0 ? 20 : 10 ))
+   #+end_src
+
+   Source:
+   - [[https://stackoverflow.com/a/2440950/2860744][How to build a conditional assignment in bash? - Stack Overflow]]

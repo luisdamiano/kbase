@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2022-10-05 Wed 09:19 -->
+<!-- 2022-10-05 Wed 10:34 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Knowledge Base</title>
@@ -65,6 +65,7 @@ ul.org-ul, ol.org-ol { font-size:16px }
 <li><a href="#How%20to%20execute%20a%20loop%20conditionally%20%28dry%20runs%29">2.2.1. How to execute a loop conditionally (dry runs)</a></li>
 <li><a href="#How%20to%20open%20the%20N%20most%20recently%20modified%20files%3F">2.2.2. How to open the N most recently modified files?</a></li>
 <li><a href="#How%20to%20cast%20a%20string%20to%20intenger%3F">2.2.3. How to cast a string to intenger?</a></li>
+<li><a href="#How%20to%20make%20a%20conditional%20assignment%20in%20bash%3F">2.2.4. How to make a conditional assignment in bash?</a></li>
 </ul>
 </li>
 <li><a href="#Linux--Linux">2.3. Linux</a>
@@ -657,6 +658,7 @@ emacs $(/bin/ls */* --sort=time | tail -n 5)
 </pre>
 </div>
 </div>
+
 <div id="outline-container-How%20to%20cast%20a%20string%20to%20intenger%3F" class="outline-4">
 <h4 id="How%20to%20cast%20a%20string%20to%20intenger%3F"><span class="section-number-4">2.2.3.</span> How to cast a string to intenger?</h4>
 <div class="outline-text-4" id="text-2-2-3">
@@ -679,6 +681,28 @@ Source:
 </p>
 <ul class="org-ul">
 <li><a href="https://stackoverflow.com/a/17093431/2860744">Bash: comparing a string as an integer - Stack Overflow</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-How%20to%20make%20a%20conditional%20assignment%20in%20bash%3F" class="outline-4">
+<h4 id="How%20to%20make%20a%20conditional%20assignment%20in%20bash%3F"><span class="section-number-4">2.2.4.</span> How to make a conditional assignment in bash?</h4>
+<div class="outline-text-4" id="text-2-2-4">
+<p>
+Use the following expression if the assignment is numerical.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-shell"><span style="color: #0000ff;"># </span><span style="color: #0000ff;">Assign 20 if true, or 10 if false</span>
+<span style="color: brightwhite; font-weight: bold;">variable</span>=$(<span style="font-weight: bold;">( 1 &gt; 0 ? 20 : 10 </span>))
+</pre>
+</div>
+
+<p>
+Source:
+</p>
+<ul class="org-ul">
+<li><a href="https://stackoverflow.com/a/2440950/2860744">How to build a conditional assignment in bash? - Stack Overflow</a></li>
 </ul>
 </div>
 </div>
@@ -1008,7 +1032,7 @@ Source: <a href="https://git-scm.com/book/en/v2/Git-Internals-Git-Objects">Git -
 <div id="outline-container-How%20to%20rename%20a%20branch%3F" class="outline-4">
 <h4 id="How%20to%20rename%20a%20branch%3F"><span class="section-number-4">3.1.2.</span> How to rename a branch?</h4>
 <div class="outline-text-4" id="text-3-1-2">
-<pre class="example" id="org9502d86">
+<pre class="example" id="org04f65c2">
 git branch -m newname
 </pre>
 </div>
@@ -5080,7 +5104,7 @@ Source: <a href="https://stats.stackexchange.com/q/397288/31243">Dot Product and
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Luis Damiano</p>
-<p class="date">Created: 2022-10-05 Wed 09:19</p>
+<p class="date">Created: 2022-10-05 Wed 10:34</p>
 <p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
