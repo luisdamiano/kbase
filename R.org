@@ -419,6 +419,22 @@ might be more efficient.
      }
    #+end_src
 
+** How to add labels near the plot boundaries with ggplot2?
+
+   Use =-Inf= and =Inf= to signal the left/bottom and right/top end
+   respectively, e.g., use =x=Inf= and =y=Inf= to place a =geom_label= on the
+   north-eath.
+
+   #+begin_src R
+     ggplot() +
+       geom_point(aes(x = 1:10, y = rnorm(10))) +
+       geom_label(aes(x = Inf, y = Inf, label = "Some text"),
+                  vjust = 1, hjust = 1)
+   #+end_src
+
+   Source:
+   - [[https://stackoverflow.com/a/61277246/2860744][How to add a geom_text label containing data in the top right of a ggplot...]]
+
 ** How to plot in log scale with base R?
 
    #+begin_src R

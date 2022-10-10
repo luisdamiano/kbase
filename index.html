@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2022-10-05 Wed 10:34 -->
+<!-- 2022-10-10 Mon 14:05 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Knowledge Base</title>
@@ -278,11 +278,12 @@ ul.org-ul, ol.org-ol { font-size:16px }
 <li><a href="#How%20to%20check%20if%20a%20value%20is%20in%20an%20interval%3F">7.2.17. How to check if a value is in an interval?</a></li>
 <li><a href="#How%20to%20use%20%3Dgeom_tile%3D%20with%20irregular%20data%3F">7.2.18. How to use <code>geom_tile</code> with irregular data?</a></li>
 <li><a href="#How%20to%20plot%20in%20reverse%20log%20scale%20with%20ggplot2%3F">7.2.19. How to plot in reverse log scale with ggplot2?</a></li>
-<li><a href="#How%20to%20plot%20in%20log%20scale%20with%20base%20R%3F">7.2.20. How to plot in log scale with base R?</a></li>
-<li><a href="#How%20to%20fine%20tune%20R%20plot%20margins%3F">7.2.21. How to fine tune R plot margins?</a></li>
-<li><a href="#How%20to%20make%20beautiful%20plots%20with%20base%20R%3F">7.2.22. How to make beautiful plots with base R?</a></li>
-<li><a href="#How%20to%20improve%20the%20look%20of%20my%20rmarkdown%20HTML%20document%3F">7.2.23. How to improve the look of my rmarkdown HTML document?</a></li>
-<li><a href="#R%20programming--Resources">7.2.24. Resources</a></li>
+<li><a href="#How%20to%20add%20labels%20near%20the%20plot%20boundaries%20with%20ggplot2%3F">7.2.20. How to add labels near the plot boundaries with ggplot2?</a></li>
+<li><a href="#How%20to%20plot%20in%20log%20scale%20with%20base%20R%3F">7.2.21. How to plot in log scale with base R?</a></li>
+<li><a href="#How%20to%20fine%20tune%20R%20plot%20margins%3F">7.2.22. How to fine tune R plot margins?</a></li>
+<li><a href="#How%20to%20make%20beautiful%20plots%20with%20base%20R%3F">7.2.23. How to make beautiful plots with base R?</a></li>
+<li><a href="#How%20to%20improve%20the%20look%20of%20my%20rmarkdown%20HTML%20document%3F">7.2.24. How to improve the look of my rmarkdown HTML document?</a></li>
+<li><a href="#R%20programming--Resources">7.2.25. Resources</a></li>
 </ul>
 </li>
 <li><a href="#RStudio">7.3. RStudio</a>
@@ -1032,7 +1033,7 @@ Source: <a href="https://git-scm.com/book/en/v2/Git-Internals-Git-Objects">Git -
 <div id="outline-container-How%20to%20rename%20a%20branch%3F" class="outline-4">
 <h4 id="How%20to%20rename%20a%20branch%3F"><span class="section-number-4">3.1.2.</span> How to rename a branch?</h4>
 <div class="outline-text-4" id="text-3-1-2">
-<pre class="example" id="org04f65c2">
+<pre class="example" id="org870ddc6">
 git branch -m newname
 </pre>
 </div>
@@ -3386,9 +3387,35 @@ DF$z <span style="color: brightcyan;">&lt;-</span> ak[[3]]
 </div>
 </div>
 
-<div id="outline-container-How%20to%20plot%20in%20log%20scale%20with%20base%20R%3F" class="outline-4">
-<h4 id="How%20to%20plot%20in%20log%20scale%20with%20base%20R%3F"><span class="section-number-4">7.2.20.</span> How to plot in log scale with base R?</h4>
+<div id="outline-container-How%20to%20add%20labels%20near%20the%20plot%20boundaries%20with%20ggplot2%3F" class="outline-4">
+<h4 id="How%20to%20add%20labels%20near%20the%20plot%20boundaries%20with%20ggplot2%3F"><span class="section-number-4">7.2.20.</span> How to add labels near the plot boundaries with ggplot2?</h4>
 <div class="outline-text-4" id="text-7-2-20">
+<p>
+Use <code>-Inf</code> and <code>Inf</code> to signal the left/bottom and right/top end
+respectively, e.g., use <code>x=Inf</code> and <code>y=Inf</code> to place a <code>geom_label</code> on the
+north-eath.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-R">ggplot() +
+  geom_point(aes(x = 1:10, y = rnorm(10))) +
+  geom_label(aes(x = <span style="color: brightmagenta;">Inf</span>, y = <span style="color: brightmagenta;">Inf</span>, label = <span style="color: #ffff00;">"Some text"</span>),
+             vjust = 1, hjust = 1)
+</pre>
+</div>
+
+<p>
+Source:
+</p>
+<ul class="org-ul">
+<li><a href="https://stackoverflow.com/a/61277246/2860744">How to add a geom<sub>text</sub> label containing data in the top right of a ggplot&#x2026;</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-How%20to%20plot%20in%20log%20scale%20with%20base%20R%3F" class="outline-4">
+<h4 id="How%20to%20plot%20in%20log%20scale%20with%20base%20R%3F"><span class="section-number-4">7.2.21.</span> How to plot in log scale with base R?</h4>
+<div class="outline-text-4" id="text-7-2-21">
 <div class="org-src-container">
 <pre class="src src-R">plot(exp(1:10), 1:10, log = <span style="color: #ffff00;">"x"</span>)
 plot(1:10, exp(1:10), log = <span style="color: #ffff00;">"y"</span>)
@@ -3399,8 +3426,8 @@ plot(exp(1:10), exp(1:10), log = <span style="color: #ffff00;">"xy"</span>)
 </div>
 
 <div id="outline-container-How%20to%20fine%20tune%20R%20plot%20margins%3F" class="outline-4">
-<h4 id="How%20to%20fine%20tune%20R%20plot%20margins%3F"><span class="section-number-4">7.2.21.</span> How to fine tune R plot margins?</h4>
-<div class="outline-text-4" id="text-7-2-21">
+<h4 id="How%20to%20fine%20tune%20R%20plot%20margins%3F"><span class="section-number-4">7.2.22.</span> How to fine tune R plot margins?</h4>
+<div class="outline-text-4" id="text-7-2-22">
 <ul class="org-ul">
 <li><a href="https://www.rstudio.com/wp-content/uploads/2016/10/how-big-is-your-graph.pdf">How Big is Your Graph?</a></li>
 </ul>
@@ -3408,8 +3435,8 @@ plot(exp(1:10), exp(1:10), log = <span style="color: #ffff00;">"xy"</span>)
 </div>
 
 <div id="outline-container-How%20to%20make%20beautiful%20plots%20with%20base%20R%3F" class="outline-4">
-<h4 id="How%20to%20make%20beautiful%20plots%20with%20base%20R%3F"><span class="section-number-4">7.2.22.</span> How to make beautiful plots with base R?</h4>
-<div class="outline-text-4" id="text-7-2-22">
+<h4 id="How%20to%20make%20beautiful%20plots%20with%20base%20R%3F"><span class="section-number-4">7.2.23.</span> How to make beautiful plots with base R?</h4>
+<div class="outline-text-4" id="text-7-2-23">
 <ul class="org-ul">
 <li><a href="http://karolis.koncevicius.lt/posts/r_base_plotting_without_wrappers/">R base plotting without wrappers</a></li>
 </ul>
@@ -3417,8 +3444,8 @@ plot(exp(1:10), exp(1:10), log = <span style="color: #ffff00;">"xy"</span>)
 </div>
 
 <div id="outline-container-How%20to%20improve%20the%20look%20of%20my%20rmarkdown%20HTML%20document%3F" class="outline-4">
-<h4 id="How%20to%20improve%20the%20look%20of%20my%20rmarkdown%20HTML%20document%3F"><span class="section-number-4">7.2.23.</span> How to improve the look of my rmarkdown HTML document?</h4>
-<div class="outline-text-4" id="text-7-2-23">
+<h4 id="How%20to%20improve%20the%20look%20of%20my%20rmarkdown%20HTML%20document%3F"><span class="section-number-4">7.2.24.</span> How to improve the look of my rmarkdown HTML document?</h4>
+<div class="outline-text-4" id="text-7-2-24">
 <p>
 Thanks to fendur on #R at libera.chat
 </p>
@@ -3516,8 +3543,8 @@ pairs(iris[, 1:3], col = iris$Species, bg = iris$Species, pch = 21)
 </div>
 
 <div id="outline-container-R%20programming--Resources" class="outline-4">
-<h4 id="R%20programming--Resources"><span class="section-number-4">7.2.24.</span> Resources</h4>
-<div class="outline-text-4" id="text-7-2-24">
+<h4 id="R%20programming--Resources"><span class="section-number-4">7.2.25.</span> Resources</h4>
+<div class="outline-text-4" id="text-7-2-25">
 <ul class="org-ul">
 <li><a href="https://pj.freefaculty.org/R/Rtips.html">Rtips</a></li>
 <li><a href="http://karolis.koncevicius.lt/posts/collection_of_simple_r_shortcuts/">A Collection of Simple R Shortcuts</a></li>
@@ -5104,7 +5131,7 @@ Source: <a href="https://stats.stackexchange.com/q/397288/31243">Dot Product and
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Luis Damiano</p>
-<p class="date">Created: 2022-10-05 Wed 10:34</p>
+<p class="date">Created: 2022-10-10 Mon 14:05</p>
 <p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
