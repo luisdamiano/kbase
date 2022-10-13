@@ -46,6 +46,7 @@ search for too often
   #+INCLUDE: git.org
   #+INCLUDE: ssh.org
   #+INCLUDE: regex.org
+  #+INCLUDE: make.org
   #+INCLUDE: pdf-processing.org
   #+INCLUDE: hugo.org
 

@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2022-10-10 Mon 14:05 -->
+<!-- 2022-10-13 Thu 11:37 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Knowledge Base</title>
@@ -130,21 +130,26 @@ ul.org-ul, ol.org-ol { font-size:16px }
 <li><a href="#General%20resources">3.3.6. General resources</a></li>
 </ul>
 </li>
-<li><a href="#PDF%20processing">3.4. PDF processing</a>
+<li><a href="#GNU%20Make">3.4. GNU Make</a>
 <ul>
-<li><a href="#How%20to%20convert%20a%20PDF%20file%20to%20a%20text%20file%3F">3.4.1. How to convert a PDF file to a text file?</a></li>
-<li><a href="#How%20to%20list%20all%20the%20fonts%20used%20in%20a%20PDF%20file%3F">3.4.2. How to list all the fonts used in a PDF file?</a></li>
-<li><a href="#How%20to%20extract%20images%20from%20a%20PDF%20file%3F">3.4.3. How to extract images from a PDF file?</a></li>
-<li><a href="#How%20to%20merge%20PDF%20files%3F">3.4.4. How to merge PDF files?</a></li>
-<li><a href="#How%20to%20extract%20some%20pages%20from%20a%20PDF%20file%3F">3.4.5. How to extract some pages from a PDF file?</a></li>
-<li><a href="#How%20to%20compress%20a%20PDF%20file%3F">3.4.6. How to compress a PDF file?</a></li>
-<li><a href="#How%20to%20automatically%20crop%20margins%20from%20a%20PDF%20file%3F">3.4.7. How to automatically crop margins from a PDF file?</a></li>
+<li><a href="#How%20to%20call%20Make%20on%20all%20files%20in%20a%20directory%3F">3.4.1. How to call Make on all files in a directory?</a></li>
 </ul>
 </li>
-<li><a href="#Hugo">3.5. Hugo</a>
+<li><a href="#PDF%20processing">3.5. PDF processing</a>
 <ul>
-<li><a href="#How%20to%20set%20%3Dtarget%3D_blank%3D%20for%20all%20external%20links%3F">3.5.1. How to set <code>target=_blank</code> for all external links?</a></li>
-<li><a href="#How%20to%20set%20the%20home%20page%20to%20other%20content%3F">3.5.2. How to set the home page to other content?</a></li>
+<li><a href="#How%20to%20convert%20a%20PDF%20file%20to%20a%20text%20file%3F">3.5.1. How to convert a PDF file to a text file?</a></li>
+<li><a href="#How%20to%20list%20all%20the%20fonts%20used%20in%20a%20PDF%20file%3F">3.5.2. How to list all the fonts used in a PDF file?</a></li>
+<li><a href="#How%20to%20extract%20images%20from%20a%20PDF%20file%3F">3.5.3. How to extract images from a PDF file?</a></li>
+<li><a href="#How%20to%20merge%20PDF%20files%3F">3.5.4. How to merge PDF files?</a></li>
+<li><a href="#How%20to%20extract%20some%20pages%20from%20a%20PDF%20file%3F">3.5.5. How to extract some pages from a PDF file?</a></li>
+<li><a href="#How%20to%20compress%20a%20PDF%20file%3F">3.5.6. How to compress a PDF file?</a></li>
+<li><a href="#How%20to%20automatically%20crop%20margins%20from%20a%20PDF%20file%3F">3.5.7. How to automatically crop margins from a PDF file?</a></li>
+</ul>
+</li>
+<li><a href="#Hugo">3.6. Hugo</a>
+<ul>
+<li><a href="#How%20to%20set%20%3Dtarget%3D_blank%3D%20for%20all%20external%20links%3F">3.6.1. How to set <code>target=_blank</code> for all external links?</a></li>
+<li><a href="#How%20to%20set%20the%20home%20page%20to%20other%20content%3F">3.6.2. How to set the home page to other content?</a></li>
 </ul>
 </li>
 </ul>
@@ -223,8 +228,9 @@ ul.org-ul, ol.org-ol { font-size:16px }
 </li>
 <li><a href="#Org-mode">5.2. Org-mode</a>
 <ul>
-<li><a href="#How%20to%20export%2Ftangle%20automatically%20on%20commit%3F">5.2.1. How to export/tangle automatically on commit?</a></li>
-<li><a href="#Org-mode--General%20resources">5.2.2. General resources</a></li>
+<li><a href="#What%20is%20the%20programming%20language%20identifier%20for%20a%20source%20block%3F">5.2.1. What is the programming language identifier for a source block?</a></li>
+<li><a href="#How%20to%20export%2Ftangle%20automatically%20on%20commit%3F">5.2.2. How to export/tangle automatically on commit?</a></li>
+<li><a href="#Org-mode--General%20resources">5.2.3. General resources</a></li>
 </ul>
 </li>
 <li><a href="#Elisp">5.3. Elisp</a>
@@ -327,7 +333,7 @@ ul.org-ul, ol.org-ol { font-size:16px }
 </li>
 <li><a href="#Data%20processing">9.3. Data processing</a>
 <ul>
-<li><a href="#GNU%20Make">9.3.1. GNU Make</a></li>
+<li><a href="#Data%20processing--GNU%20Make">9.3.1. GNU Make</a></li>
 <li><a href="#Pipeline%20automation">9.3.2. Pipeline automation</a></li>
 <li><a href="#How%20to%20view%20tabular%20data%3F">9.3.3. How to view tabular data?</a></li>
 <li><a href="#How%20to%20work%20with%20collaborators%20who%20use%20spreadsheets%3F">9.3.4. How to work with collaborators who use spreadsheets?</a></li>
@@ -458,8 +464,9 @@ ul.org-ul, ol.org-ol { font-size:16px }
 <li><a href="#Git">3.1. Git</a></li>
 <li><a href="#SSH">3.2. SSH</a></li>
 <li><a href="#Regular%20expressions">3.3. Regular expressions</a></li>
-<li><a href="#PDF%20processing">3.4. PDF processing</a></li>
-<li><a href="#Hugo">3.5. Hugo</a></li>
+<li><a href="#GNU%20Make">3.4. GNU Make</a></li>
+<li><a href="#PDF%20processing">3.5. PDF processing</a></li>
+<li><a href="#Hugo">3.6. Hugo</a></li>
 </ul>
 </li>
 <li><a href="#Typesetting">4. Typesetting</a>
@@ -1033,7 +1040,7 @@ Source: <a href="https://git-scm.com/book/en/v2/Git-Internals-Git-Objects">Git -
 <div id="outline-container-How%20to%20rename%20a%20branch%3F" class="outline-4">
 <h4 id="How%20to%20rename%20a%20branch%3F"><span class="section-number-4">3.1.2.</span> How to rename a branch?</h4>
 <div class="outline-text-4" id="text-3-1-2">
-<pre class="example" id="org870ddc6">
+<pre class="example" id="org78120b8">
 git branch -m newname
 </pre>
 </div>
@@ -1343,9 +1350,40 @@ A <i>regex to string</i> kind of situation.
 </div>
 </div>
 </div>
-<div id="outline-container-PDF%20processing" class="outline-3">
-<h3 id="PDF%20processing"><span class="section-number-3">3.4.</span> PDF processing</h3>
+<div id="outline-container-GNU%20Make" class="outline-3">
+<h3 id="GNU%20Make"><span class="section-number-3">3.4.</span> GNU Make</h3>
 <div class="outline-text-3" id="text-3-4">
+</div>
+<div id="outline-container-How%20to%20call%20Make%20on%20all%20files%20in%20a%20directory%3F" class="outline-4">
+<h4 id="How%20to%20call%20Make%20on%20all%20files%20in%20a%20directory%3F"><span class="section-number-4">3.4.1.</span> How to call Make on all files in a directory?</h4>
+<div class="outline-text-4" id="text-3-4-1">
+<p>
+Populate the <code>all</code> target programatically. For each file with extension
+<code>ext1</code>, build a file with the same name but extension <code>ext2</code>.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-makefile"><span style="color: #00ff00; font-weight: bold;">all</span> : $(<span style="color: brightwhite; font-weight: bold;">patsubst</span> %.ext1, %.ext2, $(<span style="color: brightwhite; font-weight: bold;">wildcard</span> *.ext1))
+</pre>
+</div>
+
+<div class="org-src-container">
+<pre class="src src-makefile"><span style="color: #00ff00; font-weight: bold;">all</span> : $(<span style="color: brightwhite; font-weight: bold;">patsubst</span> %.tex, %.pdf, $(<span style="color: brightwhite; font-weight: bold;">wildcard</span> *.tex))
+</pre>
+</div>
+
+<p>
+Source:
+</p>
+<ul class="org-ul">
+<li><a href="https://stackoverflow.com/a/9789115/2860744">c++ - Makefile that compiles all cpp files in a directory into separate execu&#x2026;</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-PDF%20processing" class="outline-3">
+<h3 id="PDF%20processing"><span class="section-number-3">3.5.</span> PDF processing</h3>
+<div class="outline-text-3" id="text-3-5">
 <ul class="org-ul">
 <li><a href="https://github.com/tesseract-ocr/tesseract">Tesseract OCR</a>: neural net (LSTM) based OCR engine</li>
 <li>Use <a href="https://www.xpdfreader.com/pdftotext-man.html">pdftotext</a> instead of copying directly from a PDF</li>
@@ -1356,8 +1394,8 @@ A <i>regex to string</i> kind of situation.
 </div>
 
 <div id="outline-container-How%20to%20convert%20a%20PDF%20file%20to%20a%20text%20file%3F" class="outline-4">
-<h4 id="How%20to%20convert%20a%20PDF%20file%20to%20a%20text%20file%3F"><span class="section-number-4">3.4.1.</span> How to convert a PDF file to a text file?</h4>
-<div class="outline-text-4" id="text-3-4-1">
+<h4 id="How%20to%20convert%20a%20PDF%20file%20to%20a%20text%20file%3F"><span class="section-number-4">3.5.1.</span> How to convert a PDF file to a text file?</h4>
+<div class="outline-text-4" id="text-3-5-1">
 <p>
 Use <code>pdftotext</code> to extract the content of a PDF file and write it into a text
 file.
@@ -1371,8 +1409,8 @@ file.
 </div>
 
 <div id="outline-container-How%20to%20list%20all%20the%20fonts%20used%20in%20a%20PDF%20file%3F" class="outline-4">
-<h4 id="How%20to%20list%20all%20the%20fonts%20used%20in%20a%20PDF%20file%3F"><span class="section-number-4">3.4.2.</span> How to list all the fonts used in a PDF file?</h4>
-<div class="outline-text-4" id="text-3-4-2">
+<h4 id="How%20to%20list%20all%20the%20fonts%20used%20in%20a%20PDF%20file%3F"><span class="section-number-4">3.5.2.</span> How to list all the fonts used in a PDF file?</h4>
+<div class="outline-text-4" id="text-3-5-2">
 <p>
 Use <code>pdffonts</code> to list all the fonts used in a PDF
 </p>
@@ -1385,8 +1423,8 @@ Use <code>pdffonts</code> to list all the fonts used in a PDF
 </div>
 
 <div id="outline-container-How%20to%20extract%20images%20from%20a%20PDF%20file%3F" class="outline-4">
-<h4 id="How%20to%20extract%20images%20from%20a%20PDF%20file%3F"><span class="section-number-4">3.4.3.</span> How to extract images from a PDF file?</h4>
-<div class="outline-text-4" id="text-3-4-3">
+<h4 id="How%20to%20extract%20images%20from%20a%20PDF%20file%3F"><span class="section-number-4">3.5.3.</span> How to extract images from a PDF file?</h4>
+<div class="outline-text-4" id="text-3-5-3">
 <p>
 Use <code>pdfimages</code> to extract images from a PDF file
 </p>
@@ -1400,8 +1438,8 @@ pdfimages -png -f 1 -l 10 document.pdf
 </div>
 
 <div id="outline-container-How%20to%20merge%20PDF%20files%3F" class="outline-4">
-<h4 id="How%20to%20merge%20PDF%20files%3F"><span class="section-number-4">3.4.4.</span> How to merge PDF files?</h4>
-<div class="outline-text-4" id="text-3-4-4">
+<h4 id="How%20to%20merge%20PDF%20files%3F"><span class="section-number-4">3.5.4.</span> How to merge PDF files?</h4>
+<div class="outline-text-4" id="text-3-5-4">
 <p>
 Use <code>pdfunite</code> to merge <code>input1.pdf</code> and <code>input2.pdf</code> into
 <code>merged_document.pdf</code>.
@@ -1431,8 +1469,8 @@ Source: <a href="https://askubuntu.com/a/257170">How to merge several PDF files?
 </div>
 
 <div id="outline-container-How%20to%20extract%20some%20pages%20from%20a%20PDF%20file%3F" class="outline-4">
-<h4 id="How%20to%20extract%20some%20pages%20from%20a%20PDF%20file%3F"><span class="section-number-4">3.4.5.</span> How to extract some pages from a PDF file?</h4>
-<div class="outline-text-4" id="text-3-4-5">
+<h4 id="How%20to%20extract%20some%20pages%20from%20a%20PDF%20file%3F"><span class="section-number-4">3.5.5.</span> How to extract some pages from a PDF file?</h4>
+<div class="outline-text-4" id="text-3-5-5">
 <p>
 Use <code>pdfseparate</code> to extract page by page as sample-1.pdf, sample-2.pdf,
 sample-3.pdf.
@@ -1464,8 +1502,8 @@ Source: <a href="https://askubuntu.com/a/282105/933499">How can I extract a page
 </div>
 
 <div id="outline-container-How%20to%20compress%20a%20PDF%20file%3F" class="outline-4">
-<h4 id="How%20to%20compress%20a%20PDF%20file%3F"><span class="section-number-4">3.4.6.</span> How to compress a PDF file?</h4>
-<div class="outline-text-4" id="text-3-4-6">
+<h4 id="How%20to%20compress%20a%20PDF%20file%3F"><span class="section-number-4">3.5.6.</span> How to compress a PDF file?</h4>
+<div class="outline-text-4" id="text-3-5-6">
 <p>
 Use <a href="https://en.wikipedia.org/wiki/Ghostscript">Ghostscript</a> to compress <code>input.pdf</code> and write into
 <code>compressed_document.pdf</code> using a <a href="https://www.ghostscript.com/doc/current/VectorDevices.htm#distillerparams">distiller preset</a>
@@ -1493,8 +1531,8 @@ Source: <a href="https://askubuntu.com/a/256449/933499">How can I reduce the fil
 </div>
 </div>
 <div id="outline-container-How%20to%20automatically%20crop%20margins%20from%20a%20PDF%20file%3F" class="outline-4">
-<h4 id="How%20to%20automatically%20crop%20margins%20from%20a%20PDF%20file%3F"><span class="section-number-4">3.4.7.</span> How to automatically crop margins from a PDF file?</h4>
-<div class="outline-text-4" id="text-3-4-7">
+<h4 id="How%20to%20automatically%20crop%20margins%20from%20a%20PDF%20file%3F"><span class="section-number-4">3.5.7.</span> How to automatically crop margins from a PDF file?</h4>
+<div class="outline-text-4" id="text-3-5-7">
 <p>
 Use <code>pdfcrop</code> to automatically crop margins from a PDF file
 </p>
@@ -1507,12 +1545,12 @@ Use <code>pdfcrop</code> to automatically crop margins from a PDF file
 </div>
 </div>
 <div id="outline-container-Hugo" class="outline-3">
-<h3 id="Hugo"><span class="section-number-3">3.5.</span> Hugo</h3>
-<div class="outline-text-3" id="text-3-5">
+<h3 id="Hugo"><span class="section-number-3">3.6.</span> Hugo</h3>
+<div class="outline-text-3" id="text-3-6">
 </div>
 <div id="outline-container-How%20to%20set%20%3Dtarget%3D_blank%3D%20for%20all%20external%20links%3F" class="outline-4">
-<h4 id="How%20to%20set%20%3Dtarget%3D_blank%3D%20for%20all%20external%20links%3F"><span class="section-number-4">3.5.1.</span> How to set <code>target=_blank</code> for all external links?</h4>
-<div class="outline-text-4" id="text-3-5-1">
+<h4 id="How%20to%20set%20%3Dtarget%3D_blank%3D%20for%20all%20external%20links%3F"><span class="section-number-4">3.6.1.</span> How to set <code>target=_blank</code> for all external links?</h4>
+<div class="outline-text-4" id="text-3-6-1">
 <div class="org-src-container">
 <pre class="src src-shell">mkdir -p layouts/_default/_markup/render-link.html
 <span style="color: brightred;">echo</span> <span style="color: #ffff00;">'&lt;a href="{{ .Destination | safeURL }}"{{ with .Title}} title="{{ . }}"{{ end }}{{ if strings.HasPrefix .Destination "http" }} target="_blank"{{ end }}&gt;{{ .Text }}&lt;/a&gt;'</span> &gt; layouts/_default/_markup/render-link.html
@@ -1526,8 +1564,8 @@ Source: <a href="https://agrimprasad.com/post/hugo-goldmark-markdown/">How to Op
 </div>
 
 <div id="outline-container-How%20to%20set%20the%20home%20page%20to%20other%20content%3F" class="outline-4">
-<h4 id="How%20to%20set%20the%20home%20page%20to%20other%20content%3F"><span class="section-number-4">3.5.2.</span> How to set the home page to other content?</h4>
-<div class="outline-text-4" id="text-3-5-2">
+<h4 id="How%20to%20set%20the%20home%20page%20to%20other%20content%3F"><span class="section-number-4">3.6.2.</span> How to set the home page to other content?</h4>
+<div class="outline-text-4" id="text-3-6-2">
 <p>
 Show <code>contentname</code> as landing or home page
 </p>
@@ -2459,9 +2497,18 @@ jump to position in register r <code>C-x r j r</code> (<code>jump-to-register</c
 <h3 id="Org-mode"><span class="section-number-3">5.2.</span> Org-mode</h3>
 <div class="outline-text-3" id="text-5-2">
 </div>
-<div id="outline-container-How%20to%20export%2Ftangle%20automatically%20on%20commit%3F" class="outline-4">
-<h4 id="How%20to%20export%2Ftangle%20automatically%20on%20commit%3F"><span class="section-number-4">5.2.1.</span> How to export/tangle automatically on commit?</h4>
+<div id="outline-container-What%20is%20the%20programming%20language%20identifier%20for%20a%20source%20block%3F" class="outline-4">
+<h4 id="What%20is%20the%20programming%20language%20identifier%20for%20a%20source%20block%3F"><span class="section-number-4">5.2.1.</span> What is the programming language identifier for a source block?</h4>
 <div class="outline-text-4" id="text-5-2-1">
+<p>
+See Tables 1 and 2 in <a href="https://orgmode.org/worg/org-contrib/babel/languages/index.html">Babel: Languages</a>.
+</p>
+</div>
+</div>
+
+<div id="outline-container-How%20to%20export%2Ftangle%20automatically%20on%20commit%3F" class="outline-4">
+<h4 id="How%20to%20export%2Ftangle%20automatically%20on%20commit%3F"><span class="section-number-4">5.2.2.</span> How to export/tangle automatically on commit?</h4>
+<div class="outline-text-4" id="text-5-2-2">
 <p>
 NB: <code>--batch</code> implies <code>-q</code>, hence initialization files are no
 loaded. Add <code>-l ~/.emacs</code>, <code>-l ~/.config/emacs/init.el</code> or similar.
@@ -2483,8 +2530,8 @@ documentation from org when you git commit</li>
 </div>
 
 <div id="outline-container-Org-mode--General%20resources" class="outline-4">
-<h4 id="Org-mode--General%20resources"><span class="section-number-4">5.2.2.</span> General resources</h4>
-<div class="outline-text-4" id="text-5-2-2">
+<h4 id="Org-mode--General%20resources"><span class="section-number-4">5.2.3.</span> General resources</h4>
+<div class="outline-text-4" id="text-5-2-3">
 <ul class="org-ul">
 <li><a href="https://academia.stackexchange.com/questions/1273/use-cases-of-org-mode-as-a-scientific-productivity-tool-for-academics-without-pr">Use cases of org-mode as a scientific productivity tool for academics</a></li>
 <li><a href="https://github.com/fniessen/refcard-org-mode">Org-mode reference card</a></li>
@@ -3721,8 +3768,8 @@ archiving, or otherwise unnecessarily copying directories</li>
 <h3 id="Data%20processing"><span class="section-number-3">9.3.</span> Data processing</h3>
 <div class="outline-text-3" id="text-9-3">
 </div>
-<div id="outline-container-GNU%20Make" class="outline-4">
-<h4 id="GNU%20Make"><span class="section-number-4">9.3.1.</span> GNU Make</h4>
+<div id="outline-container-Data%20processing--GNU%20Make" class="outline-4">
+<h4 id="Data%20processing--GNU%20Make"><span class="section-number-4">9.3.1.</span> GNU Make</h4>
 <div class="outline-text-4" id="text-9-3-1">
 <ul class="org-ul">
 <li><a href="https://kbroman.org/minimal_make/">Minimal make file</a></li>
@@ -5131,7 +5178,7 @@ Source: <a href="https://stats.stackexchange.com/q/397288/31243">Dot Product and
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Luis Damiano</p>
-<p class="date">Created: 2022-10-10 Mon 14:05</p>
+<p class="date">Created: 2022-10-13 Thu 11:37</p>
 <p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>

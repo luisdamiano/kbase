@@ -63,6 +63,10 @@
 
 * Org-mode
 
+** What is the programming language identifier for a source block?
+
+   See Tables 1 and 2 in [[https://orgmode.org/worg/org-contrib/babel/languages/index.html][Babel: Languages]].
+
 ** How to export/tangle automatically on commit?
 
    NB: =--batch= implies =-q=, hence initialization files are no

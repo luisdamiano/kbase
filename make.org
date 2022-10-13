@@ -1,0 +1,17 @@
+* GNU Make
+
+** How to call Make on all files in a directory?
+
+   Populate the =all= target programatically. For each file with extension
+   =ext1=, build a file with the same name but extension =ext2=.
+
+   #+begin_src makefile
+     all : $(patsubst %.ext1, %.ext2, $(wildcard *.ext1))
+   #+end_src
+
+   #+begin_src makefile
+     all : $(patsubst %.tex, %.pdf, $(wildcard *.tex))
+   #+end_src
+
+   Source:
+   - [[https://stackoverflow.com/a/9789115/2860744][c++ - Makefile that compiles all cpp files in a directory into separate execu...]]
