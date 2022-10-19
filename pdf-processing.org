@@ -11,7 +11,7 @@
    Use =pdftotext= to extract the content of a PDF file and write it into a text
    file.
 
-   #+begin_src sh
+   #+begin_src shell
      pdftotext document.pdf document.txt
    #+end_src
 
@@ -19,7 +19,7 @@
 
    Use =pdffonts= to list all the fonts used in a PDF
 
-   #+begin_src sh
+   #+begin_src shell
      pdffonts document.pdf
    #+end_src
 
@@ -27,7 +27,7 @@
 
    Use =pdfimages= to extract images from a PDF file
 
-   #+begin_src sh
+   #+begin_src shell
      pdfimages -list document.pdf
      pdfimages -png -f 1 -l 10 document.pdf
    #+end_src
@@ -37,14 +37,14 @@
    Use =pdfunite= to merge =input1.pdf= and =input2.pdf= into
    =merged_document.pdf=.
 
-   #+begin_src sh
+   #+begin_src shell
      pdfunite input1.pdf input2.pdf merged_document.pdf
    #+end_src
 
    Use [[https://en.wikipedia.org/wiki/Ghostscript][Ghostscript]] to merge =input1.pdf= and =input2.pdf= into
    =merged_document.pdf=.
 
-   #+begin_src sh
+   #+begin_src shell
      gs -sDEVICE=pdfwrite dNOPAUSE -dBATCH -dSAFER -dQUIET  \
         -dAutoRotatePages=/None \
         -sOutputFile="merged_document.pdf" input1.pdf input2.pdf
@@ -57,14 +57,14 @@
    Use =pdfseparate= to extract page by page as sample-1.pdf, sample-2.pdf,
    sample-3.pdf.
 
-   #+begin_src sh
+   #+begin_src shell
      pdfseparate sample.pdf sample-%d.pdf
    #+end_src
 
    Use [[https://en.wikipedia.org/wiki/Ghostscript][Ghostscript]] to extract pages 12-15 from =input.pdf= into
    =extracted_document.pdf=.
 
-   #+begin_src sh
+   #+begin_src shell
      gs -sDEVICE=pdfwrite dNOPAUSE -dBATCH -dSAFER -dQUIET  \
           -dFirstPage=12 \
           -dLastPage=15 \
@@ -85,7 +85,7 @@
    - =-dPDFSETTINGS=/printer=  print optimized (300 dpi)
    - =-dPDFSETTINGS=/default= wide variety of uses, larger size
 
-   #+begin_src sh
+   #+begin_src shell
      gs -sDEVICE=pdfwrite dNOPAUSE -dBATCH -dSAFER -dQUIET  \
         -dCompatibilityLevel=1.4 \
         -dPDFSETTINGS=/ebook \
@@ -97,6 +97,6 @@
 
    Use =pdfcrop= to automatically crop margins from a PDF file
 
-   #+begin_src sh
+   #+begin_src shell
      pdfcrop document.pdf
    #+end_src

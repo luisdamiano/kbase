@@ -22,8 +22,11 @@
 
 ** How to match all R dependencies?
 
+   Note the need to use single quotes around the regex and to double-escape the
+   function call parenthesis to match, for example, =library(capturethis)=
+
    #+begin_src shell
-     grep -Eoh -r "(\w+)::|(?:library|require|requireNamespace)\(\"?(\w+)\"?\)" --include="*\.R" | sort | uniq
+     grep -Poh -r '(\w+)(?=::)|(?:library|require(?:Namespace)?)\\("?(\w+)"?\\)' --include="*\.R" | sort | uniq
    #+end_src
 
    Source:

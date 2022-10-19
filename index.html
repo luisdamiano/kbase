@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2022-10-19 Wed 10:31 -->
+<!-- 2022-10-19 Wed 12:28 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Knowledge Base</title>
@@ -22,7 +22,7 @@ h2{ border-top: 2px solid black }
 ul.org-ul, ol.org-ol { font-size:16px }
 </style>
 <style type="text/css">
- pre.src {background-color: unspecified-bg; color: brightwhite;}</style>
+ pre.src {background-color: #282a36; color: #f8f8f2;}</style>
 <script type="text/x-mathjax-config">
     MathJax.Hub.Config({
         displayAlign: "center",
@@ -583,12 +583,12 @@ to make the most intensive use of computer programs or systems (<a href="https:/
 <h4 id="How%20to%20update%20pacman%20mirrors%3F"><span class="section-number-4">2.1.1.</span> How to update pacman mirrors?</h4>
 <div class="outline-text-4" id="text-2-1-1">
 <div class="org-src-container">
-<pre class="src src-shell"><span style="color: #0000ff;"># </span><span style="color: #0000ff;">https://github.com/westandskif/rate-mirrors#usage</span>
-<span style="color: brightred;">export</span> <span style="color: brightwhite; font-weight: bold;">TMPFILE</span>=<span style="color: #ffff00;">"$(</span><span style="font-weight: bold;">mktemp</span><span style="color: #ffff00;">)"</span>; <span style="color: #ffff00;">\</span>
-sudo true; <span style="color: #ffff00;">\</span>
-rate-mirrors --save=$<span style="color: brightwhite; font-weight: bold;">TMPFILE</span> arch --max-delay=21600 <span style="color: #ffff00;">\</span>
-    &amp;&amp; sudo mv /etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist-backup <span style="color: #ffff00;">\</span>
-    &amp;&amp; sudo mv $<span style="color: brightwhite; font-weight: bold;">TMPFILE</span> /etc/pacman.d/mirrorlist
+<pre class="src src-shell"><span style="color: #a49462;"># </span><span style="color: #a49462;">https://github.com/westandskif/rate-mirrors#usage</span>
+<span style="color: #ffb86c;">export</span> <span style="color: #f8f8f2; font-weight: bold;">TMPFILE</span>=<span style="color: #f1fa8c;">"$(</span><span style="color: #fa8072;">mktemp</span><span style="color: #f1fa8c;">)"</span>; <span style="color: #f1fa8c;">\</span>
+sudo true; <span style="color: #f1fa8c;">\</span>
+rate-mirrors --save=$<span style="color: #f8f8f2; font-weight: bold;">TMPFILE</span> arch --max-delay=21600 <span style="color: #f1fa8c;">\</span>
+    &amp;&amp; sudo mv /etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist-backup <span style="color: #f1fa8c;">\</span>
+    &amp;&amp; sudo mv $<span style="color: #f8f8f2; font-weight: bold;">TMPFILE</span> /etc/pacman.d/mirrorlist
 </pre>
 </div>
 
@@ -616,39 +616,39 @@ external processes</li>
 <h4 id="How%20to%20execute%20a%20loop%20conditionally%20%28dry%20runs%29"><span class="section-number-4">2.2.1.</span> How to execute a loop conditionally (dry runs)</h4>
 <div class="outline-text-4" id="text-2-2-1">
 <div class="org-src-container">
-<pre class="src src-shell"><span style="color: #0000ff;">#</span><span style="color: #0000ff;">!/bin/</span><span style="color: #ff00ff; font-weight: bold;">bash</span>
-<span style="color: brightwhite; font-weight: bold;">doit</span>=0
+<pre class="src src-shell"><span style="color: #a49462;">#</span><span style="color: #a49462;">!/bin/</span><span style="color: #ff79c6; font-weight: bold;">bash</span>
+<span style="color: #f8f8f2; font-weight: bold;">doit</span>=0
 
-<span style="color: #ff00ff; font-weight: bold;">for</span> i<span style="color: #ff00ff; font-weight: bold;"> in</span> {1..3}; <span style="color: #ff00ff; font-weight: bold;">do</span>
-<span style="color: brightred;">echo</span> -n ${<span style="color: brightwhite; font-weight: bold;">i</span>}
-<span style="color: #ff00ff; font-weight: bold;">done</span>
+<span style="color: #ff79c6; font-weight: bold;">for</span> i<span style="color: #ff79c6; font-weight: bold;"> in</span> {1..3}; <span style="color: #ff79c6; font-weight: bold;">do</span>
+<span style="color: #ffb86c;">echo</span> -n ${<span style="color: #f8f8f2; font-weight: bold;">i</span>}
+<span style="color: #ff79c6; font-weight: bold;">done</span>
 
-<span style="color: brightred;">echo</span> <span style="color: #ffff00;">"---"</span>
+<span style="color: #ffb86c;">echo</span> <span style="color: #f1fa8c;">"---"</span>
 
-<span style="color: #ff00ff; font-weight: bold;">for</span> i<span style="color: #ff00ff; font-weight: bold;"> in</span> {1..3}; <span style="color: #ff00ff; font-weight: bold;">do</span>
-((doit))&amp;&amp;(<span style="color: brightred;">echo</span> -n ${<span style="color: brightwhite; font-weight: bold;">i</span>})
-<span style="color: #ff00ff; font-weight: bold;">done</span>
+<span style="color: #ff79c6; font-weight: bold;">for</span> i<span style="color: #ff79c6; font-weight: bold;"> in</span> {1..3}; <span style="color: #ff79c6; font-weight: bold;">do</span>
+((doit))&amp;&amp;(<span style="color: #ffb86c;">echo</span> -n ${<span style="color: #f8f8f2; font-weight: bold;">i</span>})
+<span style="color: #ff79c6; font-weight: bold;">done</span>
 
-<span style="color: brightred;">echo</span> <span style="color: #ffff00;">"---"</span>
+<span style="color: #ffb86c;">echo</span> <span style="color: #f1fa8c;">"---"</span>
 
-<span style="color: #ff00ff; font-weight: bold;">for</span> i<span style="color: #ff00ff; font-weight: bold;"> in</span> {1..3}; <span style="color: #ff00ff; font-weight: bold;">do</span>
-((doit))&amp;&amp;<span style="color: brightred;">echo</span> -n ${<span style="color: brightwhite; font-weight: bold;">i</span>}
-<span style="color: #ff00ff; font-weight: bold;">done</span>
+<span style="color: #ff79c6; font-weight: bold;">for</span> i<span style="color: #ff79c6; font-weight: bold;"> in</span> {1..3}; <span style="color: #ff79c6; font-weight: bold;">do</span>
+((doit))&amp;&amp;<span style="color: #ffb86c;">echo</span> -n ${<span style="color: #f8f8f2; font-weight: bold;">i</span>}
+<span style="color: #ff79c6; font-weight: bold;">done</span>
 
-<span style="color: brightred;">echo</span> <span style="color: #ffff00;">"---"</span>
+<span style="color: #ffb86c;">echo</span> <span style="color: #f1fa8c;">"---"</span>
 
-((doit))&amp;&amp;<span style="color: #ff00ff; font-weight: bold;">for</span> i<span style="color: #ff00ff; font-weight: bold;"> in</span> {1..3}; <span style="color: #ff00ff; font-weight: bold;">do</span>
-<span style="color: brightred;">echo</span> -n ${<span style="color: brightwhite; font-weight: bold;">i</span>}
-<span style="color: #ff00ff; font-weight: bold;">done</span>
+((doit))&amp;&amp;<span style="color: #ff79c6; font-weight: bold;">for</span> i<span style="color: #ff79c6; font-weight: bold;"> in</span> {1..3}; <span style="color: #ff79c6; font-weight: bold;">do</span>
+<span style="color: #ffb86c;">echo</span> -n ${<span style="color: #f8f8f2; font-weight: bold;">i</span>}
+<span style="color: #ff79c6; font-weight: bold;">done</span>
 
-<span style="color: brightred;">echo</span> <span style="color: #ffff00;">"---"</span>
+<span style="color: #ffb86c;">echo</span> <span style="color: #f1fa8c;">"---"</span>
 
 ((doit))&amp;&amp;
-<span style="color: #ff00ff; font-weight: bold;">for</span> i<span style="color: #ff00ff; font-weight: bold;"> in</span> {1..3}; <span style="color: #ff00ff; font-weight: bold;">do</span>
-    <span style="color: brightred;">echo</span> -n ${<span style="color: brightwhite; font-weight: bold;">i</span>}
-<span style="color: #ff00ff; font-weight: bold;">done</span>
+<span style="color: #ff79c6; font-weight: bold;">for</span> i<span style="color: #ff79c6; font-weight: bold;"> in</span> {1..3}; <span style="color: #ff79c6; font-weight: bold;">do</span>
+    <span style="color: #ffb86c;">echo</span> -n ${<span style="color: #f8f8f2; font-weight: bold;">i</span>}
+<span style="color: #ff79c6; font-weight: bold;">done</span>
 
-<span style="color: brightred;">echo</span> <span style="color: #ffff00;">"---"</span>
+<span style="color: #ffb86c;">echo</span> <span style="color: #f1fa8c;">"---"</span>
 </pre>
 </div>
 
@@ -676,11 +676,11 @@ NULL.
 </p>
 
 <div class="org-src-container">
-<pre class="src src-shell"><span style="color: brightwhite; font-weight: bold;">NUM</span>=<span style="color: #ffff00;">"99"</span>
-<span style="color: brightwhite; font-weight: bold;">NUM</span>=$(<span style="font-weight: bold;">($NUM+0</span>))
+<pre class="src src-shell"><span style="color: #f8f8f2; font-weight: bold;">NUM</span>=<span style="color: #f1fa8c;">"99"</span>
+<span style="color: #f8f8f2; font-weight: bold;">NUM</span>=$(<span style="color: #fa8072;">($NUM+0</span>))
 
-<span style="color: brightwhite; font-weight: bold;">NUM</span>=<span style="color: #ffff00;">""</span>
-<span style="color: brightwhite; font-weight: bold;">NUM</span>=$(<span style="font-weight: bold;">($NUM+0</span>))
+<span style="color: #f8f8f2; font-weight: bold;">NUM</span>=<span style="color: #f1fa8c;">""</span>
+<span style="color: #f8f8f2; font-weight: bold;">NUM</span>=$(<span style="color: #fa8072;">($NUM+0</span>))
 </pre>
 </div>
 
@@ -701,8 +701,8 @@ Use the following expression if the assignment is numerical.
 </p>
 
 <div class="org-src-container">
-<pre class="src src-shell"><span style="color: #0000ff;"># </span><span style="color: #0000ff;">Assign 20 if true, or 10 if false</span>
-<span style="color: brightwhite; font-weight: bold;">variable</span>=$(<span style="font-weight: bold;">( 1 &gt; 0 ? 20 : 10 </span>))
+<pre class="src src-shell"><span style="color: #a49462;"># </span><span style="color: #a49462;">Assign 20 if true, or 10 if false</span>
+<span style="color: #f8f8f2; font-weight: bold;">variable</span>=$(<span style="color: #fa8072;">( 1 &gt; 0 ? 20 : 10 </span>))
 </pre>
 </div>
 
@@ -727,7 +727,7 @@ Use <code>bluetoothctl</code> to turn the bluetooth controller off and on
 </p>
 
 <div class="org-src-container">
-<pre class="src src-shell"><span style="color: brightred;">echo</span> -e <span style="color: #ffff00;">'show\npower off\npower on\nquit'</span> | bluetoothctl
+<pre class="src src-shell"><span style="color: #ffb86c;">echo</span> -e <span style="color: #f1fa8c;">'show\npower off\npower on\nquit'</span> | bluetoothctl
 </pre>
 </div>
 
@@ -774,7 +774,7 @@ fallback image. Helpful when pacman throws <code>Partition /boot too
 <h4 id="How%20to%20determine%20what%20shell%20I%20am%20currently%20working%20on%3F"><span class="section-number-4">2.3.4.</span> How to determine what shell I am currently working on?</h4>
 <div class="outline-text-4" id="text-2-3-4">
 <div class="org-src-container">
-<pre class="src src-shell">ps -p $<span style="color: brightwhite; font-weight: bold;">$</span>
+<pre class="src src-shell">ps -p $<span style="color: #f8f8f2; font-weight: bold;">$</span>
 </pre>
 </div>
 
@@ -792,8 +792,8 @@ Use <code>rsync --parent</code> to keep the folder structure.
 </p>
 
 <div class="org-src-container">
-<pre class="src src-shell">find -iname <span style="color: #ffff00;">'*.rds'</span> -exec cp {} <span style="color: brightred;">.</span> <span style="color: #ffff00;">\;</span>
-find -iname <span style="color: #ffff00;">'*.rds'</span> -exec rsync --parent {} <span style="color: brightred;">.</span> <span style="color: #ffff00;">\;</span>
+<pre class="src src-shell">find -iname <span style="color: #f1fa8c;">'*.rds'</span> -exec cp {} <span style="color: #ffb86c;">.</span> <span style="color: #f1fa8c;">\;</span>
+find -iname <span style="color: #f1fa8c;">'*.rds'</span> -exec rsync --parent {} <span style="color: #ffb86c;">.</span> <span style="color: #f1fa8c;">\;</span>
 </pre>
 </div>
 </div>
@@ -813,12 +813,12 @@ find -iname <span style="color: #ffff00;">'*.rds'</span> -exec rsync --parent {}
 <h4 id="How%20to%20list%20memory%20used%20by%20processes%20in%20remote%20cluster%3F"><span class="section-number-4">2.3.7.</span> How to list memory used by processes in remote cluster?</h4>
 <div class="outline-text-4" id="text-2-3-7">
 <div class="org-src-container">
-<pre class="src src-shell"><span style="color: #0000ff;">#</span><span style="color: #0000ff;">!/bin/</span><span style="color: #ff00ff; font-weight: bold;">sh</span>
-squeue --me -o <span style="color: #ffff00;">"%R"</span> |
-<span style="color: #ff00ff; font-weight: bold;">while </span><span style="color: brightred;">read</span> -r host; <span style="color: #ff00ff; font-weight: bold;">do</span>
+<pre class="src src-shell"><span style="color: #a49462;">#</span><span style="color: #a49462;">!/bin/</span><span style="color: #ff79c6; font-weight: bold;">sh</span>
+squeue --me -o <span style="color: #f1fa8c;">"%R"</span> |
+<span style="color: #ff79c6; font-weight: bold;">while </span><span style="color: #ffb86c;">read</span> -r host; <span style="color: #ff79c6; font-weight: bold;">do</span>
     ssh -n
-    <span style="color: #ffff00;">"$host"</span> <span style="color: #ffff00;">"ps -o pid,user,%mem,rss,size,%cpu,command ax | grep \"r-4\""</span>;
-<span style="color: #ff00ff; font-weight: bold;">done</span>
+    <span style="color: #f1fa8c;">"$host"</span> <span style="color: #f1fa8c;">"ps -o pid,user,%mem,rss,size,%cpu,command ax | grep \"r-4\""</span>;
+<span style="color: #ff79c6; font-weight: bold;">done</span>
 </pre>
 </div>
 </div>
@@ -851,7 +851,7 @@ Run <code>xwininfo</code> on a console and click on the target window.
 </p>
 
 <div class="org-src-container">
-<pre class="src src-shell"><span style="color: #0000ff;"># </span><span style="color: #FF0000;">TODO</span>
+<pre class="src src-shell"><span style="color: #a49462;"># </span><span style="color: #FF0000;">TODO</span>
 </pre>
 </div>
 
@@ -871,7 +871,7 @@ Alt + Caps Locks. Add to <code>~/.xinitrc</code>, or possibly
 </p>
 
 <div class="org-src-container">
-<pre class="src src-shell">setxkbmap <span style="color: #ffff00;">'us,gr'</span> -variant <span style="color: #ffff00;">',polytonic'</span> -option grp:<span style="color: #ffff00;">'alt_caps_toggle'</span>
+<pre class="src src-shell">setxkbmap <span style="color: #f1fa8c;">'us,gr'</span> -variant <span style="color: #f1fa8c;">',polytonic'</span> -option grp:<span style="color: #f1fa8c;">'alt_caps_toggle'</span>
 </pre>
 </div>
 </div>
@@ -969,8 +969,8 @@ To redirect audio from OBS to a new virtual sound input
 Create a null output device
 </p>
 <div class="org-src-container">
-<pre class="src src-shell"><span style="color: brightwhite; font-weight: bold;">pulsemodule</span>=$(<span style="font-weight: bold;">pactl load-module module-null-sink sink_name=obs_audio</span>
-      <span style="color: brightwhite; font-weight: bold;">sink_properties</span>=device.description=obs_audio_sink_for_mic)
+<pre class="src src-shell"><span style="color: #f8f8f2; font-weight: bold;">pulsemodule</span>=$(<span style="color: #fa8072;">pactl load-module module-null-sink sink_name=obs_audio</span>
+      <span style="color: #f8f8f2; font-weight: bold;">sink_properties</span>=device.description=obs_audio_sink_for_mic)
 </pre>
 </div></li>
 <li>In <code>pavucontrol</code>, Playback tab, change the output of
@@ -1040,7 +1040,7 @@ Source: <a href="https://git-scm.com/book/en/v2/Git-Internals-Git-Objects">Git -
 <div id="outline-container-How%20to%20rename%20a%20branch%3F" class="outline-4">
 <h4 id="How%20to%20rename%20a%20branch%3F"><span class="section-number-4">3.1.2.</span> How to rename a branch?</h4>
 <div class="outline-text-4" id="text-3-1-2">
-<pre class="example" id="org5447731">
+<pre class="example" id="orgce167c8">
 git branch -m newname
 </pre>
 </div>
@@ -1068,7 +1068,7 @@ Source: <a href="https://stackoverflow.com/a/14005910/2860744">what to do with b
 <h4 id="How%20to%20list%20unmodified%20files%3F"><span class="section-number-4">3.1.4.</span> How to list unmodified files?</h4>
 <div class="outline-text-4" id="text-3-1-4">
 <div class="org-src-container">
-<pre class="src src-shell">diff &lt;(git diff --name-only)  &lt;(git ls-files -- sub/dir) | grep <span style="color: #ffff00;">"^&gt;"</span> | cut -b3-
+<pre class="src src-shell">diff &lt;(git diff --name-only)  &lt;(git ls-files -- sub/dir) | grep <span style="color: #f1fa8c;">"^&gt;"</span> | cut -b3-
 </pre>
 </div>
 
@@ -1194,12 +1194,12 @@ The path to the key has to be unique. Requires <code>x-clip</code>.
 </p>
 
 <div class="org-src-container">
-<pre class="src src-shell"><span style="color: #0000ff;"># </span><span style="color: #0000ff;">Generate a new key</span>
-ssh-keygen -t ed25519 -C <span style="color: #ffff00;">"your_email@example.com"</span>
-<span style="color: #0000ff;"># </span><span style="color: #0000ff;">Add key to the ssh-agent in your local machine</span>
-<span style="color: brightred;">eval</span> <span style="color: #ffff00;">"$(</span><span style="font-weight: bold;">ssh-agent -s</span><span style="color: #ffff00;">)"</span>
+<pre class="src src-shell"><span style="color: #a49462;"># </span><span style="color: #a49462;">Generate a new key</span>
+ssh-keygen -t ed25519 -C <span style="color: #f1fa8c;">"your_email@example.com"</span>
+<span style="color: #a49462;"># </span><span style="color: #a49462;">Add key to the ssh-agent in your local machine</span>
+<span style="color: #ffb86c;">eval</span> <span style="color: #f1fa8c;">"$(</span><span style="color: #fa8072;">ssh-agent -s</span><span style="color: #f1fa8c;">)"</span>
 ssh-add ~/.ssh/id_ed25519
-<span style="color: #0000ff;"># </span><span style="color: #0000ff;">Copy key to clipboard</span>
+<span style="color: #a49462;"># </span><span style="color: #a49462;">Copy key to clipboard</span>
 xclip -selection clipboard &lt; ~/.ssh/id_ed25519.pub
 </pre>
 </div>
@@ -1270,8 +1270,8 @@ quotes (<code>"foo"</code>, <code>'foo'</code>).
 </p>
 
 <div class="org-src-container">
-<pre class="src src-shell">grep <span style="color: #ffff00;">"(?&lt;!\{)foo(?!\})"</span>
-grep -P <span style="color: #ffff00;">"\{foo\}(*SKIP)(*F)|foo"</span>
+<pre class="src src-shell">grep <span style="color: #f1fa8c;">"(?&lt;!\{)foo(?!\})"</span>
+grep -P <span style="color: #f1fa8c;">"\{foo\}(*SKIP)(*F)|foo"</span>
 </pre>
 </div>
 
@@ -1288,8 +1288,13 @@ Source:
 <div id="outline-container-How%20to%20match%20all%20R%20dependencies%3F" class="outline-4">
 <h4 id="How%20to%20match%20all%20R%20dependencies%3F"><span class="section-number-4">3.3.2.</span> How to match all R dependencies?</h4>
 <div class="outline-text-4" id="text-3-3-2">
+<p>
+Note the need to use single quotes around the regex and to double-escape the
+function call parenthesis to match, for example, <code>library(capturethis)</code>
+</p>
+
 <div class="org-src-container">
-<pre class="src src-shell">grep -Eoh -r <span style="color: #ffff00;">"(\w+)::|(?:library|require|requireNamespace)\(\"?(\w+)\"?\)"</span> --include=<span style="color: #ffff00;">"*\.R"</span> | sort | uniq
+<pre class="src src-shell">grep -Poh -r <span style="color: #f1fa8c;">'(\w+)(?=::)|(?:library|require(?:Namespace)?)\\("?(\w+)"?\\)'</span> --include=<span style="color: #f1fa8c;">"*\.R"</span> | sort | uniq
 </pre>
 </div>
 
@@ -1370,12 +1375,12 @@ Populate the <code>all</code> target programatically. For each file with extensi
 </p>
 
 <div class="org-src-container">
-<pre class="src src-makefile"><span style="color: #00ff00; font-weight: bold;">all</span> : $(<span style="color: brightwhite; font-weight: bold;">patsubst</span> %.ext1, %.ext2, $(<span style="color: brightwhite; font-weight: bold;">wildcard</span> *.ext1))
+<pre class="src src-makefile"><span style="color: #50fa7b; font-weight: bold;">all</span> : $(<span style="color: #f8f8f2; font-weight: bold;">patsubst</span> %.ext1, %.ext2, $(<span style="color: #f8f8f2; font-weight: bold;">wildcard</span> *.ext1))
 </pre>
 </div>
 
 <div class="org-src-container">
-<pre class="src src-makefile"><span style="color: #00ff00; font-weight: bold;">all</span> : $(<span style="color: brightwhite; font-weight: bold;">patsubst</span> %.tex, %.pdf, $(<span style="color: brightwhite; font-weight: bold;">wildcard</span> *.tex))
+<pre class="src src-makefile"><span style="color: #50fa7b; font-weight: bold;">all</span> : $(<span style="color: #f8f8f2; font-weight: bold;">patsubst</span> %.tex, %.pdf, $(<span style="color: #f8f8f2; font-weight: bold;">wildcard</span> *.tex))
 </pre>
 </div>
 
@@ -1409,7 +1414,7 @@ file.
 </p>
 
 <div class="org-src-container">
-<pre class="src src-sh">pdftotext document.pdf document.txt
+<pre class="src src-shell">pdftotext document.pdf document.txt
 </pre>
 </div>
 </div>
@@ -1423,7 +1428,7 @@ Use <code>pdffonts</code> to list all the fonts used in a PDF
 </p>
 
 <div class="org-src-container">
-<pre class="src src-sh">pdffonts document.pdf
+<pre class="src src-shell">pdffonts document.pdf
 </pre>
 </div>
 </div>
@@ -1437,7 +1442,7 @@ Use <code>pdfimages</code> to extract images from a PDF file
 </p>
 
 <div class="org-src-container">
-<pre class="src src-sh">pdfimages -list document.pdf
+<pre class="src src-shell">pdfimages -list document.pdf
 pdfimages -png -f 1 -l 10 document.pdf
 </pre>
 </div>
@@ -1453,7 +1458,7 @@ Use <code>pdfunite</code> to merge <code>input1.pdf</code> and <code>input2.pdf<
 </p>
 
 <div class="org-src-container">
-<pre class="src src-sh">pdfunite input1.pdf input2.pdf merged_document.pdf
+<pre class="src src-shell">pdfunite input1.pdf input2.pdf merged_document.pdf
 </pre>
 </div>
 
@@ -1463,9 +1468,9 @@ Use <a href="https://en.wikipedia.org/wiki/Ghostscript">Ghostscript</a> to merge
 </p>
 
 <div class="org-src-container">
-<pre class="src src-sh">gs -sDEVICE=pdfwrite dNOPAUSE -dBATCH -dSAFER -dQUIET  <span style="color: #ffff00;">\</span>
-   -dAutoRotatePages=/None <span style="color: #ffff00;">\</span>
-   -sOutputFile=<span style="color: #ffff00;">"merged_document.pdf"</span> input1.pdf input2.pdf
+<pre class="src src-shell">gs -sDEVICE=pdfwrite dNOPAUSE -dBATCH -dSAFER -dQUIET  <span style="color: #f1fa8c;">\</span>
+   -dAutoRotatePages=/None <span style="color: #f1fa8c;">\</span>
+   -sOutputFile=<span style="color: #f1fa8c;">"merged_document.pdf"</span> input1.pdf input2.pdf
 </pre>
 </div>
 
@@ -1484,7 +1489,7 @@ sample-3.pdf.
 </p>
 
 <div class="org-src-container">
-<pre class="src src-sh">pdfseparate sample.pdf sample-%d.pdf
+<pre class="src src-shell">pdfseparate sample.pdf sample-%d.pdf
 </pre>
 </div>
 
@@ -1494,10 +1499,10 @@ Use <a href="https://en.wikipedia.org/wiki/Ghostscript">Ghostscript</a> to extra
 </p>
 
 <div class="org-src-container">
-<pre class="src src-sh">gs -sDEVICE=pdfwrite dNOPAUSE -dBATCH -dSAFER -dQUIET  <span style="color: #ffff00;">\</span>
-     -dFirstPage=12 <span style="color: #ffff00;">\</span>
-     -dLastPage=15 <span style="color: #ffff00;">\</span>
-     -sOutputFile=<span style="color: #ffff00;">"extracted_document.pdf"</span> <span style="color: #ffff00;">\</span>
+<pre class="src src-shell">gs -sDEVICE=pdfwrite dNOPAUSE -dBATCH -dSAFER -dQUIET  <span style="color: #f1fa8c;">\</span>
+     -dFirstPage=12 <span style="color: #f1fa8c;">\</span>
+     -dLastPage=15 <span style="color: #f1fa8c;">\</span>
+     -sOutputFile=<span style="color: #f1fa8c;">"extracted_document.pdf"</span> <span style="color: #f1fa8c;">\</span>
      input.pdf
 </pre>
 </div>
@@ -1525,10 +1530,10 @@ dpi)</li>
 </ul>
 
 <div class="org-src-container">
-<pre class="src src-sh">gs -sDEVICE=pdfwrite dNOPAUSE -dBATCH -dSAFER -dQUIET  <span style="color: #ffff00;">\</span>
-   -dCompatibilityLevel=1.4 <span style="color: #ffff00;">\</span>
-   -dPDFSETTINGS=/ebook <span style="color: #ffff00;">\</span>
-   -sOutputFile=<span style="color: #ffff00;">"compressed_document.pdf"</span> input.pdf
+<pre class="src src-shell">gs -sDEVICE=pdfwrite dNOPAUSE -dBATCH -dSAFER -dQUIET  <span style="color: #f1fa8c;">\</span>
+   -dCompatibilityLevel=1.4 <span style="color: #f1fa8c;">\</span>
+   -dPDFSETTINGS=/ebook <span style="color: #f1fa8c;">\</span>
+   -sOutputFile=<span style="color: #f1fa8c;">"compressed_document.pdf"</span> input.pdf
 </pre>
 </div>
 
@@ -1545,7 +1550,7 @@ Use <code>pdfcrop</code> to automatically crop margins from a PDF file
 </p>
 
 <div class="org-src-container">
-<pre class="src src-sh">pdfcrop document.pdf
+<pre class="src src-shell">pdfcrop document.pdf
 </pre>
 </div>
 </div>
@@ -1560,7 +1565,7 @@ Use <code>pdfcrop</code> to automatically crop margins from a PDF file
 <div class="outline-text-4" id="text-3-6-1">
 <div class="org-src-container">
 <pre class="src src-shell">mkdir -p layouts/_default/_markup/render-link.html
-<span style="color: brightred;">echo</span> <span style="color: #ffff00;">'&lt;a href="{{ .Destination | safeURL }}"{{ with .Title}} title="{{ . }}"{{ end }}{{ if strings.HasPrefix .Destination "http" }} target="_blank"{{ end }}&gt;{{ .Text }}&lt;/a&gt;'</span> &gt; layouts/_default/_markup/render-link.html
+<span style="color: #ffb86c;">echo</span> <span style="color: #f1fa8c;">'&lt;a href="{{ .Destination | safeURL }}"{{ with .Title}} title="{{ . }}"{{ end }}{{ if strings.HasPrefix .Destination "http" }} target="_blank"{{ end }}&gt;{{ .Text }}&lt;/a&gt;'</span> &gt; layouts/_default/_markup/render-link.html
 </pre>
 </div>
 
@@ -1579,7 +1584,7 @@ Show <code>contentname</code> as landing or home page
 
 <div class="org-src-container">
 <pre class="src src-shell">mkdir -p layouts
-<span style="color: brightred;">echo</span> <span style="color: #ffff00;">'{{ with .GetPage "/contentname" }}{{.Render}}{{end}}'</span> &gt; layouts/index.html
+<span style="color: #ffb86c;">echo</span> <span style="color: #f1fa8c;">'{{ with .GetPage "/contentname" }}{{.Render}}{{end}}'</span> &gt; layouts/index.html
 </pre>
 </div>
 
@@ -1702,13 +1707,13 @@ adding <code>\clubpenalty=10000</code> (<a href="https://mirror.mwt.me/ctan/syst
 <h4 id="How%20to%20prepend%20letter%20to%20figure%20name%3F"><span class="section-number-4">4.1.5.</span> How to prepend letter to figure name?</h4>
 <div class="outline-text-4" id="text-4-1-5">
 <div class="org-src-container">
-<pre class="src src-latex"><span style="color: #0000ff;">%% </span><span style="color: #0000ff;">Add prefix S to label names</span>
-<span style="color: #ff00ff; font-weight: bold;">\renewcommand</span><span style="color: brightwhite;">{</span><span style="color: #00ff00; font-weight: bold;">\thepage</span><span style="color: brightwhite;">}{</span><span style="color: #00ff00; font-weight: bold;">S</span><span style="color: #ff00ff; font-weight: bold;">\arabic</span><span style="color: brightcyan; font-weight: bold;">{</span><span style="color: brightwhite; font-weight: bold;">page</span><span style="color: brightcyan; font-weight: bold;">}</span><span style="color: brightwhite;">}</span>
-<span style="color: #ff00ff; font-weight: bold;">\renewcommand</span><span style="color: brightwhite;">{</span><span style="color: #00ff00; font-weight: bold;">\thesection</span><span style="color: brightwhite;">}{</span><span style="color: #00ff00; font-weight: bold;">S</span><span style="color: #ff00ff; font-weight: bold;">\arabic</span><span style="color: brightcyan; font-weight: bold;">{</span><span style="color: brightwhite; font-weight: bold;">section</span><span style="color: brightcyan; font-weight: bold;">}</span><span style="color: brightwhite;">}</span>
-<span style="color: #ff00ff; font-weight: bold;">\renewcommand</span><span style="color: brightwhite;">{</span><span style="color: #00ff00; font-weight: bold;">\thetable</span><span style="color: brightwhite;">}{</span><span style="color: #00ff00; font-weight: bold;">S</span><span style="color: #ff00ff; font-weight: bold;">\arabic</span><span style="color: brightcyan; font-weight: bold;">{</span><span style="color: brightwhite; font-weight: bold;">table</span><span style="color: brightcyan; font-weight: bold;">}</span><span style="color: brightwhite;">}</span>
-<span style="color: #ff00ff; font-weight: bold;">\renewcommand</span><span style="color: brightwhite;">{</span><span style="color: #00ff00; font-weight: bold;">\thefigure</span><span style="color: brightwhite;">}{</span><span style="color: #00ff00; font-weight: bold;">S</span><span style="color: #ff00ff; font-weight: bold;">\arabic</span><span style="color: brightcyan; font-weight: bold;">{</span><span style="color: brightwhite; font-weight: bold;">figure</span><span style="color: brightcyan; font-weight: bold;">}</span><span style="color: brightwhite;">}</span>
-<span style="color: #0000ff;">%% </span><span style="color: #0000ff;">Modify the text used at the start of the caption</span>
-<span style="color: #ff00ff; font-weight: bold;">\renewcommand</span><span style="color: brightwhite;">{</span><span style="color: #00ff00; font-weight: bold;">\figurename</span><span style="color: brightwhite;">}{</span><span style="color: #00ff00; font-weight: bold;">Supplemental Material, Figure</span><span style="color: brightwhite;">}</span>
+<pre class="src src-latex"><span style="color: #a49462;">%% </span><span style="color: #a49462;">Add prefix S to label names</span>
+<span style="color: #ff79c6; font-weight: bold;">\renewcommand</span><span style="color: #f8f8f2;">{</span><span style="color: #50fa7b; font-weight: bold;">\thepage</span><span style="color: #f8f8f2;">}{</span><span style="color: #50fa7b; font-weight: bold;">S</span><span style="color: #ff79c6; font-weight: bold;">\arabic</span><span style="color: #8be9fd; font-weight: bold;">{</span><span style="color: #f8f8f2; font-weight: bold;">page</span><span style="color: #8be9fd; font-weight: bold;">}</span><span style="color: #f8f8f2;">}</span>
+<span style="color: #ff79c6; font-weight: bold;">\renewcommand</span><span style="color: #f8f8f2;">{</span><span style="color: #50fa7b; font-weight: bold;">\thesection</span><span style="color: #f8f8f2;">}{</span><span style="color: #50fa7b; font-weight: bold;">S</span><span style="color: #ff79c6; font-weight: bold;">\arabic</span><span style="color: #8be9fd; font-weight: bold;">{</span><span style="color: #f8f8f2; font-weight: bold;">section</span><span style="color: #8be9fd; font-weight: bold;">}</span><span style="color: #f8f8f2;">}</span>
+<span style="color: #ff79c6; font-weight: bold;">\renewcommand</span><span style="color: #f8f8f2;">{</span><span style="color: #50fa7b; font-weight: bold;">\thetable</span><span style="color: #f8f8f2;">}{</span><span style="color: #50fa7b; font-weight: bold;">S</span><span style="color: #ff79c6; font-weight: bold;">\arabic</span><span style="color: #8be9fd; font-weight: bold;">{</span><span style="color: #f8f8f2; font-weight: bold;">table</span><span style="color: #8be9fd; font-weight: bold;">}</span><span style="color: #f8f8f2;">}</span>
+<span style="color: #ff79c6; font-weight: bold;">\renewcommand</span><span style="color: #f8f8f2;">{</span><span style="color: #50fa7b; font-weight: bold;">\thefigure</span><span style="color: #f8f8f2;">}{</span><span style="color: #50fa7b; font-weight: bold;">S</span><span style="color: #ff79c6; font-weight: bold;">\arabic</span><span style="color: #8be9fd; font-weight: bold;">{</span><span style="color: #f8f8f2; font-weight: bold;">figure</span><span style="color: #8be9fd; font-weight: bold;">}</span><span style="color: #f8f8f2;">}</span>
+<span style="color: #a49462;">%% </span><span style="color: #a49462;">Modify the text used at the start of the caption</span>
+<span style="color: #ff79c6; font-weight: bold;">\renewcommand</span><span style="color: #f8f8f2;">{</span><span style="color: #50fa7b; font-weight: bold;">\figurename</span><span style="color: #f8f8f2;">}{</span><span style="color: #50fa7b; font-weight: bold;">Supplemental Material, Figure</span><span style="color: #f8f8f2;">}</span>
 </pre>
 </div>
 
@@ -1746,9 +1751,9 @@ before the differential operator
 </p>
 
 <div class="org-src-container">
-<pre class="src src-latex"><span style="color: #ff00ff; font-weight: bold;">\begin</span><span style="color: brightwhite;">{</span><span style="color: #00ff00; font-weight: bold;">equation</span><span style="color: brightwhite;">}</span>
-<span style="color: #ffff00;">  </span><span style="color: #ffff00;">\int</span><span style="color: #6b8e23;">_</span><span style="color: #ffff00;">0</span><span style="color: #6b8e23;">^</span><span style="color: #ffff00;">1 x</span><span style="color: #6b8e23;">^</span><span style="color: #ffff00;">2 \, </span><span style="color: #ffff00;">\mathrm</span><span style="color: brightwhite;">{</span><span style="color: #ffff00;">d</span><span style="color: brightwhite;">}</span><span style="color: #ffff00;">x</span>
-<span style="color: #ff00ff; font-weight: bold;">\end</span><span style="color: brightwhite;">{</span><span style="color: #00ff00; font-weight: bold;">equation</span><span style="color: brightwhite;">}</span>
+<pre class="src src-latex"><span style="color: #ff79c6; font-weight: bold;">\begin</span><span style="color: #f8f8f2;">{</span><span style="color: #50fa7b; font-weight: bold;">equation</span><span style="color: #f8f8f2;">}</span>
+<span style="color: #ffff00;">  </span><span style="color: #ffff00;">\int</span><span style="color: #6b8e23;">_</span><span style="color: #ffff00;">0</span><span style="color: #6b8e23;">^</span><span style="color: #ffff00;">1 x</span><span style="color: #6b8e23;">^</span><span style="color: #ffff00;">2 \, </span><span style="color: #ffff00;">\mathrm</span><span style="color: #f8f8f2;">{</span><span style="color: #ffff00;">d</span><span style="color: #f8f8f2;">}</span><span style="color: #ffff00;">x</span>
+<span style="color: #ff79c6; font-weight: bold;">\end</span><span style="color: #f8f8f2;">{</span><span style="color: #50fa7b; font-weight: bold;">equation</span><span style="color: #f8f8f2;">}</span>
 </pre>
 </div>
 
@@ -1884,22 +1889,22 @@ Body height: <span style="color: #ffff00;">\the\textheight</span>
 </p>
 
 <div class="org-src-container">
-<pre class="src src-latex"><span style="color: #0000ff;">% </span><span style="color: #0000ff;">Reduced margins</span>
-<span style="color: #ff00ff; font-weight: bold;">\usepackage</span><span style="color: brightwhite;">{</span><span style="color: #00ff00; font-weight: bold;">geometry</span><span style="color: brightwhite;">}</span>
-<span style="color: #ffff00;">\geometry</span><span style="color: brightwhite;">{</span>left=0.75in,right=0.75in,bottom=1in,top=1in<span style="color: brightwhite;">}</span>
+<pre class="src src-latex"><span style="color: #a49462;">% </span><span style="color: #a49462;">Reduced margins</span>
+<span style="color: #ff79c6; font-weight: bold;">\usepackage</span><span style="color: #f8f8f2;">{</span><span style="color: #50fa7b; font-weight: bold;">geometry</span><span style="color: #f8f8f2;">}</span>
+<span style="color: #ffff00;">\geometry</span><span style="color: #f8f8f2;">{</span>left=0.75in,right=0.75in,bottom=1in,top=1in<span style="color: #f8f8f2;">}</span>
 
-<span style="color: #0000ff;">% </span><span style="color: #0000ff;">Minimal spacing around captions and floats</span>
-<span style="color: #ff00ff; font-weight: bold;">\setlength</span><span style="color: brightwhite;">{</span><span style="color: brightwhite; font-weight: bold;">\abovecaptionskip</span><span style="color: brightwhite;">}{</span><span style="color: brightwhite; font-weight: bold;">2pt plus 1pt minus 2pt</span><span style="color: brightwhite;">}</span>
-<span style="color: #ff00ff; font-weight: bold;">\setlength</span><span style="color: brightwhite;">{</span><span style="color: brightwhite; font-weight: bold;">\belowcaptionskip</span><span style="color: brightwhite;">}{</span><span style="color: brightwhite; font-weight: bold;">2pt plus 1pt minus 2pt</span><span style="color: brightwhite;">}</span>
-<span style="color: #ff00ff; font-weight: bold;">\setlength</span><span style="color: brightwhite;">{</span><span style="color: brightwhite; font-weight: bold;">\textfloatsep</span><span style="color: brightwhite;">}{</span><span style="color: brightwhite; font-weight: bold;">2pt plus 1pt minus 2pt</span><span style="color: brightwhite;">}</span>
-<span style="color: #ff00ff; font-weight: bold;">\setlength</span><span style="color: brightwhite;">{</span><span style="color: brightwhite; font-weight: bold;">\intextsep</span><span style="color: brightwhite;">}{</span><span style="color: brightwhite; font-weight: bold;">2pt plus 1pt minus 2pt</span><span style="color: brightwhite;">}</span>
-<span style="color: #ff00ff; font-weight: bold;">\setlength</span><span style="color: brightwhite;">{</span><span style="color: brightwhite; font-weight: bold;">\floatsep</span><span style="color: brightwhite;">}{</span><span style="color: brightwhite; font-weight: bold;">2pt plus 1pt minus 2pt</span><span style="color: brightwhite;">}</span>
+<span style="color: #a49462;">% </span><span style="color: #a49462;">Minimal spacing around captions and floats</span>
+<span style="color: #ff79c6; font-weight: bold;">\setlength</span><span style="color: #f8f8f2;">{</span><span style="color: #f8f8f2; font-weight: bold;">\abovecaptionskip</span><span style="color: #f8f8f2;">}{</span><span style="color: #f8f8f2; font-weight: bold;">2pt plus 1pt minus 2pt</span><span style="color: #f8f8f2;">}</span>
+<span style="color: #ff79c6; font-weight: bold;">\setlength</span><span style="color: #f8f8f2;">{</span><span style="color: #f8f8f2; font-weight: bold;">\belowcaptionskip</span><span style="color: #f8f8f2;">}{</span><span style="color: #f8f8f2; font-weight: bold;">2pt plus 1pt minus 2pt</span><span style="color: #f8f8f2;">}</span>
+<span style="color: #ff79c6; font-weight: bold;">\setlength</span><span style="color: #f8f8f2;">{</span><span style="color: #f8f8f2; font-weight: bold;">\textfloatsep</span><span style="color: #f8f8f2;">}{</span><span style="color: #f8f8f2; font-weight: bold;">2pt plus 1pt minus 2pt</span><span style="color: #f8f8f2;">}</span>
+<span style="color: #ff79c6; font-weight: bold;">\setlength</span><span style="color: #f8f8f2;">{</span><span style="color: #f8f8f2; font-weight: bold;">\intextsep</span><span style="color: #f8f8f2;">}{</span><span style="color: #f8f8f2; font-weight: bold;">2pt plus 1pt minus 2pt</span><span style="color: #f8f8f2;">}</span>
+<span style="color: #ff79c6; font-weight: bold;">\setlength</span><span style="color: #f8f8f2;">{</span><span style="color: #f8f8f2; font-weight: bold;">\floatsep</span><span style="color: #f8f8f2;">}{</span><span style="color: #f8f8f2; font-weight: bold;">2pt plus 1pt minus 2pt</span><span style="color: #f8f8f2;">}</span>
 
-<span style="color: #0000ff;">% </span><span style="color: #0000ff;">Minimal spacing around equations</span>
-<span style="color: #ff00ff; font-weight: bold;">\setlength</span><span style="color: brightwhite;">{</span><span style="color: brightwhite; font-weight: bold;">\abovedisplayskip</span><span style="color: brightwhite;">}{</span><span style="color: brightwhite; font-weight: bold;">0pt</span><span style="color: brightwhite;">}</span>
-<span style="color: #ff00ff; font-weight: bold;">\setlength</span><span style="color: brightwhite;">{</span><span style="color: brightwhite; font-weight: bold;">\belowdisplayskip</span><span style="color: brightwhite;">}{</span><span style="color: brightwhite; font-weight: bold;">0pt</span><span style="color: brightwhite;">}</span>
-<span style="color: #ff00ff; font-weight: bold;">\setlength</span><span style="color: brightwhite;">{</span><span style="color: brightwhite; font-weight: bold;">\abovedisplayshortskip</span><span style="color: brightwhite;">}{</span><span style="color: brightwhite; font-weight: bold;">0pt</span><span style="color: brightwhite;">}</span>
-<span style="color: #ff00ff; font-weight: bold;">\setlength</span><span style="color: brightwhite;">{</span><span style="color: brightwhite; font-weight: bold;">\belowdisplayshortskip</span><span style="color: brightwhite;">}{</span><span style="color: brightwhite; font-weight: bold;">0pt</span><span style="color: brightwhite;">}</span>
+<span style="color: #a49462;">% </span><span style="color: #a49462;">Minimal spacing around equations</span>
+<span style="color: #ff79c6; font-weight: bold;">\setlength</span><span style="color: #f8f8f2;">{</span><span style="color: #f8f8f2; font-weight: bold;">\abovedisplayskip</span><span style="color: #f8f8f2;">}{</span><span style="color: #f8f8f2; font-weight: bold;">0pt</span><span style="color: #f8f8f2;">}</span>
+<span style="color: #ff79c6; font-weight: bold;">\setlength</span><span style="color: #f8f8f2;">{</span><span style="color: #f8f8f2; font-weight: bold;">\belowdisplayskip</span><span style="color: #f8f8f2;">}{</span><span style="color: #f8f8f2; font-weight: bold;">0pt</span><span style="color: #f8f8f2;">}</span>
+<span style="color: #ff79c6; font-weight: bold;">\setlength</span><span style="color: #f8f8f2;">{</span><span style="color: #f8f8f2; font-weight: bold;">\abovedisplayshortskip</span><span style="color: #f8f8f2;">}{</span><span style="color: #f8f8f2; font-weight: bold;">0pt</span><span style="color: #f8f8f2;">}</span>
+<span style="color: #ff79c6; font-weight: bold;">\setlength</span><span style="color: #f8f8f2;">{</span><span style="color: #f8f8f2; font-weight: bold;">\belowdisplayshortskip</span><span style="color: #f8f8f2;">}{</span><span style="color: #f8f8f2; font-weight: bold;">0pt</span><span style="color: #f8f8f2;">}</span>
 </pre>
 </div></li>
 </ul>
@@ -1985,8 +1990,8 @@ and table in LATEX?</a></li>
 <div class="outline-text-4" id="text-4-1-20">
 <div class="org-src-container">
 <pre class="src src-latex"><span style="color: #ffff00;">\makeatletter</span>
-<span style="color: #ffff00;">\def\input@path</span><span style="color: brightwhite;">{</span><span style="color: brightcyan;">{</span>/path/to/folder/<span style="color: brightcyan;">}</span><span style="color: brightwhite;">}</span>
-<span style="color: #0000ff;">% </span><span style="color: #0000ff;">or: </span><span style="color: #0000ff;">\def\input@path</span><span style="color: #0000ff;">{{/path/to/folder/}{/path/to/another/folder/}}</span>
+<span style="color: #ffff00;">\def\input@path</span><span style="color: #f8f8f2;">{</span><span style="color: #8be9fd;">{</span>/path/to/folder/<span style="color: #8be9fd;">}</span><span style="color: #f8f8f2;">}</span>
+<span style="color: #a49462;">% </span><span style="color: #a49462;">or: </span><span style="color: #a49462;">\def\input@path</span><span style="color: #a49462;">{{/path/to/folder/}{/path/to/another/folder/}}</span>
 <span style="color: #ffff00;">\makeatother</span>
 </pre>
 </div>
@@ -2008,9 +2013,9 @@ in <code>l*9r</code> or <code>l*{99}</code>. Use brackets for more than one digi
 </p>
 
 <div class="org-src-container">
-<pre class="src src-latex"><span style="color: #ff00ff; font-weight: bold;">\begin</span><span style="color: brightwhite;">{</span><span style="color: #00ff00; font-weight: bold;">tabular</span><span style="color: brightwhite;">}{</span>l*<span style="color: brightcyan;">{</span>99<span style="color: brightcyan;">}</span>r<span style="color: brightwhite;">}</span>
-  col1 &amp; col2 \\
-<span style="color: #ff00ff; font-weight: bold;">\end</span><span style="color: brightwhite;">{</span><span style="color: #00ff00; font-weight: bold;">tabular</span><span style="color: brightwhite;">}</span>
+<pre class="src src-latex"><span style="color: #ff79c6; font-weight: bold;">\begin</span><span style="color: #f8f8f2;">{</span><span style="color: #50fa7b; font-weight: bold;">tabular</span><span style="color: #f8f8f2;">}{</span>l*<span style="color: #8be9fd;">{</span>99<span style="color: #8be9fd;">}</span>r<span style="color: #f8f8f2;">}</span>
+  col1 <span style="color: #ff0000;">&amp;</span> col2 <span style="color: #ff0000;">\\</span>
+<span style="color: #ff79c6; font-weight: bold;">\end</span><span style="color: #f8f8f2;">{</span><span style="color: #50fa7b; font-weight: bold;">tabular</span><span style="color: #f8f8f2;">}</span>
 </pre>
 </div>
 </div>
@@ -2020,16 +2025,16 @@ in <code>l*9r</code> or <code>l*{99}</code>. Use brackets for more than one digi
 <h4 id="How%20to%20add%20the%20%28sub%29section%20name%20in%20the%20page%20header%3F"><span class="section-number-4">4.1.22.</span> How to add the (sub)section name in the page header?</h4>
 <div class="outline-text-4" id="text-4-1-22">
 <div class="org-src-container">
-<pre class="src src-latex"><span style="color: #0000ff;">% </span><span style="color: #0000ff;">Add section name in page header</span>
-<span style="color: #ff00ff; font-weight: bold;">\usepackage</span><span style="color: brightwhite;">{</span><span style="color: #00ff00; font-weight: bold;">fancyhdr</span><span style="color: brightwhite;">}</span>
-<span style="color: #ffff00;">\fancypagestyle</span><span style="color: brightwhite;">{</span>main<span style="color: brightwhite;">}{</span>
-  <span style="color: #ffff00;">\fancyhf</span><span style="color: brightcyan;">{}</span>
-  <span style="color: #ff00ff; font-weight: bold;">\renewcommand</span><span style="color: brightcyan;">{</span><span style="color: #ff00ff; font-weight: bold;">\</span><span style="color: #ff00ff; font-weight: bold;">sectionmark</span><span style="color: brightcyan;">}[</span><span style="color: brightwhite; font-weight: bold;">1</span><span style="color: brightcyan;">]{</span><span style="color: #00ff00; font-weight: bold;">\markright</span><span style="color: brightmagenta; font-weight: bold;">{</span><span style="color: #00ff00; font-weight: bold;">\thesection</span><span style="color: #00ff00; font-weight: bold;">\ ##1</span><span style="color: brightmagenta; font-weight: bold;">}</span><span style="color: brightcyan;">}</span>
-  <span style="color: #ff00ff; font-weight: bold;">\renewcommand</span><span style="color: brightcyan;">{</span><span style="color: #ff00ff; font-weight: bold;">\</span><span style="color: #ff00ff; font-weight: bold;">subsectionmark</span><span style="color: brightcyan;">}[</span><span style="color: brightwhite; font-weight: bold;">1</span><span style="color: brightcyan;">]{</span><span style="color: #00ff00; font-weight: bold;">\markright</span><span style="color: brightmagenta; font-weight: bold;">{</span><span style="color: #00ff00; font-weight: bold;">\thesubsection</span><span style="color: #00ff00; font-weight: bold;">\ ##1</span><span style="color: brightmagenta; font-weight: bold;">}</span><span style="color: brightcyan;">}</span>
-  <span style="color: #ff00ff; font-weight: bold;">\renewcommand</span><span style="color: brightcyan;">{</span><span style="color: #ff00ff; font-weight: bold;">\</span><span style="color: #ff00ff; font-weight: bold;">subsubsectionmark</span><span style="color: brightcyan;">}[</span><span style="color: brightwhite; font-weight: bold;">1</span><span style="color: brightcyan;">]{</span><span style="color: #00ff00; font-weight: bold;">\markright</span><span style="color: brightmagenta; font-weight: bold;">{</span><span style="color: #00ff00; font-weight: bold;">\thesubsubsection</span><span style="color: #00ff00; font-weight: bold;">\ ##1</span><span style="color: brightmagenta; font-weight: bold;">}</span><span style="color: brightcyan;">}</span>
-  <span style="color: #ffff00;">\fancyhead</span><span style="color: brightcyan;">[</span>L<span style="color: brightcyan;">]{</span><span style="color: #ff00ff; font-weight: bold;">\textsl</span><span style="color: brightmagenta;">{</span><span style="color: #ff00ff; font-weight: bold; font-style: italic;">\footnotesize</span><span style="color: #ff00ff; font-style: italic;">{</span><span style="color: #ff00ff; font-style: italic;">\rightmark</span><span style="color: #ff00ff; font-style: italic;">}</span><span style="color: brightmagenta;">}</span><span style="color: brightcyan;">}</span>
-<span style="color: brightwhite;">}</span>
-<span style="color: #ff00ff; font-weight: bold;">\pagestyle</span><span style="color: brightwhite;">{</span><span style="color: #00ff00; font-weight: bold;">main</span><span style="color: brightwhite;">}</span>
+<pre class="src src-latex"><span style="color: #a49462;">% </span><span style="color: #a49462;">Add section name in page header</span>
+<span style="color: #ff79c6; font-weight: bold;">\usepackage</span><span style="color: #f8f8f2;">{</span><span style="color: #50fa7b; font-weight: bold;">fancyhdr</span><span style="color: #f8f8f2;">}</span>
+<span style="color: #ffff00;">\fancypagestyle</span><span style="color: #f8f8f2;">{</span>main<span style="color: #f8f8f2;">}{</span>
+  <span style="color: #ffff00;">\fancyhf</span><span style="color: #8be9fd;">{}</span>
+  <span style="color: #ff79c6; font-weight: bold;">\renewcommand</span><span style="color: #8be9fd;">{</span><span style="color: #ff0000; font-weight: bold;">\</span><span style="color: #ff79c6; font-weight: bold;">sectionmark</span><span style="color: #8be9fd;">}[</span><span style="color: #f8f8f2; font-weight: bold;">1</span><span style="color: #8be9fd;">]{</span><span style="color: #50fa7b; font-weight: bold;">\markright</span><span style="color: #bd93f9; font-weight: bold;">{</span><span style="color: #50fa7b; font-weight: bold;">\thesection</span><span style="color: #50fa7b; font-weight: bold;">\ ##1</span><span style="color: #bd93f9; font-weight: bold;">}</span><span style="color: #8be9fd;">}</span>
+  <span style="color: #ff79c6; font-weight: bold;">\renewcommand</span><span style="color: #8be9fd;">{</span><span style="color: #ff0000; font-weight: bold;">\</span><span style="color: #ff79c6; font-weight: bold;">subsectionmark</span><span style="color: #8be9fd;">}[</span><span style="color: #f8f8f2; font-weight: bold;">1</span><span style="color: #8be9fd;">]{</span><span style="color: #50fa7b; font-weight: bold;">\markright</span><span style="color: #bd93f9; font-weight: bold;">{</span><span style="color: #50fa7b; font-weight: bold;">\thesubsection</span><span style="color: #50fa7b; font-weight: bold;">\ ##1</span><span style="color: #bd93f9; font-weight: bold;">}</span><span style="color: #8be9fd;">}</span>
+  <span style="color: #ff79c6; font-weight: bold;">\renewcommand</span><span style="color: #8be9fd;">{</span><span style="color: #ff0000; font-weight: bold;">\</span><span style="color: #ff79c6; font-weight: bold;">subsubsectionmark</span><span style="color: #8be9fd;">}[</span><span style="color: #f8f8f2; font-weight: bold;">1</span><span style="color: #8be9fd;">]{</span><span style="color: #50fa7b; font-weight: bold;">\markright</span><span style="color: #bd93f9; font-weight: bold;">{</span><span style="color: #50fa7b; font-weight: bold;">\thesubsubsection</span><span style="color: #50fa7b; font-weight: bold;">\ ##1</span><span style="color: #bd93f9; font-weight: bold;">}</span><span style="color: #8be9fd;">}</span>
+  <span style="color: #ffff00;">\fancyhead</span><span style="color: #8be9fd;">[</span>L<span style="color: #8be9fd;">]{</span><span style="color: #ff79c6; font-weight: bold;">\textsl</span><span style="color: #bd93f9;">{</span><span style="color: #ff79c6; font-weight: bold; font-style: italic;">\footnotesize</span><span style="color: #ff79c6; font-style: italic;">{</span><span style="color: #ff79c6; font-style: italic;">\rightmark</span><span style="color: #ff79c6; font-style: italic;">}</span><span style="color: #bd93f9;">}</span><span style="color: #8be9fd;">}</span>
+<span style="color: #f8f8f2;">}</span>
+<span style="color: #ff79c6; font-weight: bold;">\pagestyle</span><span style="color: #f8f8f2;">{</span><span style="color: #50fa7b; font-weight: bold;">main</span><span style="color: #f8f8f2;">}</span>
 </pre>
 </div>
 </div>
@@ -2039,15 +2044,15 @@ in <code>l*9r</code> or <code>l*{99}</code>. Use brackets for more than one digi
 <h4 id="How%20to%20hide%20section%20headings%3F"><span class="section-number-4">4.1.23.</span> How to hide section headings?</h4>
 <div class="outline-text-4" id="text-4-1-23">
 <div class="org-src-container">
-<pre class="src src-latex"><span style="color: #ff00ff; font-weight: bold;">\usepackage</span><span style="color: brightwhite;">{</span><span style="color: #00ff00; font-weight: bold;">titlesec</span><span style="color: brightwhite;">}</span>
+<pre class="src src-latex"><span style="color: #ff79c6; font-weight: bold;">\usepackage</span><span style="color: #f8f8f2;">{</span><span style="color: #50fa7b; font-weight: bold;">titlesec</span><span style="color: #f8f8f2;">}</span>
 
 <span style="color: #ffff00;">\makeatletter</span>
-<span style="color: #ffff00;">\titleformat</span><span style="color: brightwhite;">{</span><span style="color: #ff00ff; font-weight: bold;">\</span><span style="color: #ff00ff; font-weight: bold;">section</span><span style="color: brightwhite;">}[</span>runin<span style="color: brightwhite;">]{}{}{</span>0pt<span style="color: brightwhite;">}{</span><span style="color: #ffff00;">\@gobble</span><span style="color: brightwhite;">}</span>
-<span style="color: #ffff00;">\titleformat</span><span style="color: brightwhite;">{</span><span style="color: #ff00ff; font-weight: bold;">\</span><span style="color: #ff00ff; font-weight: bold;">subsection</span><span style="color: brightwhite;">}[</span>runin<span style="color: brightwhite;">]{}{}{</span>0pt<span style="color: brightwhite;">}{</span><span style="color: #ffff00;">\@gobble</span><span style="color: brightwhite;">}</span>
+<span style="color: #ffff00;">\titleformat</span><span style="color: #f8f8f2;">{</span><span style="color: #ff0000; font-weight: bold;">\</span><span style="color: #ff79c6; font-weight: bold;">section</span><span style="color: #f8f8f2;">}[</span>runin<span style="color: #f8f8f2;">]{}{}{</span>0pt<span style="color: #f8f8f2;">}{</span><span style="color: #ffff00;">\@gobble</span><span style="color: #f8f8f2;">}</span>
+<span style="color: #ffff00;">\titleformat</span><span style="color: #f8f8f2;">{</span><span style="color: #ff0000; font-weight: bold;">\</span><span style="color: #ff79c6; font-weight: bold;">subsection</span><span style="color: #f8f8f2;">}[</span>runin<span style="color: #f8f8f2;">]{}{}{</span>0pt<span style="color: #f8f8f2;">}{</span><span style="color: #ffff00;">\@gobble</span><span style="color: #f8f8f2;">}</span>
 
 <span style="color: #ffff00;">\makeatother</span>
-<span style="color: #ffff00;">\titlespacing</span><span style="color: brightwhite;">{</span><span style="color: #ff00ff; font-weight: bold;">\</span><span style="color: #ff00ff; font-weight: bold;">section</span><span style="color: brightwhite;">}{</span><span style="color: #ffff00;">\parindent</span><span style="color: brightwhite;">}{</span>0pt<span style="color: brightwhite;">}{</span>0pt<span style="color: brightwhite;">}</span>
-<span style="color: #ffff00;">\titlespacing</span><span style="color: brightwhite;">{</span><span style="color: #ff00ff; font-weight: bold;">\</span><span style="color: #ff00ff; font-weight: bold;">subsection</span><span style="color: brightwhite;">}{</span><span style="color: #ffff00;">\parindent</span><span style="color: brightwhite;">}{</span>0pt<span style="color: brightwhite;">}{</span>0pt<span style="color: brightwhite;">}</span>
+<span style="color: #ffff00;">\titlespacing</span><span style="color: #f8f8f2;">{</span><span style="color: #ff0000; font-weight: bold;">\</span><span style="color: #ff79c6; font-weight: bold;">section</span><span style="color: #f8f8f2;">}{</span><span style="color: #ffff00;">\parindent</span><span style="color: #f8f8f2;">}{</span>0pt<span style="color: #f8f8f2;">}{</span>0pt<span style="color: #f8f8f2;">}</span>
+<span style="color: #ffff00;">\titlespacing</span><span style="color: #f8f8f2;">{</span><span style="color: #ff0000; font-weight: bold;">\</span><span style="color: #ff79c6; font-weight: bold;">subsection</span><span style="color: #f8f8f2;">}{</span><span style="color: #ffff00;">\parindent</span><span style="color: #f8f8f2;">}{</span>0pt<span style="color: #f8f8f2;">}{</span>0pt<span style="color: #f8f8f2;">}</span>
 </pre>
 </div>
 </div>
@@ -2057,8 +2062,8 @@ in <code>l*9r</code> or <code>l*{99}</code>. Use brackets for more than one digi
 <h4 id="How%20to%20change%20the%20caption%20font%20size%3F"><span class="section-number-4">4.1.24.</span> How to change the caption font size?</h4>
 <div class="outline-text-4" id="text-4-1-24">
 <div class="org-src-container">
-<pre class="src src-latex"><span style="color: #ff00ff; font-weight: bold;">\usepackage</span><span style="color: brightwhite;">{</span><span style="color: #00ff00; font-weight: bold;">caption</span><span style="color: brightwhite;">}</span>
-<span style="color: #ffff00;">\captionsetup</span><span style="color: brightwhite;">{</span>font=footnotesize<span style="color: brightwhite;">}</span>
+<pre class="src src-latex"><span style="color: #ff79c6; font-weight: bold;">\usepackage</span><span style="color: #f8f8f2;">{</span><span style="color: #50fa7b; font-weight: bold;">caption</span><span style="color: #f8f8f2;">}</span>
+<span style="color: #ffff00;">\captionsetup</span><span style="color: #f8f8f2;">{</span>font=footnotesize<span style="color: #f8f8f2;">}</span>
 </pre>
 </div>
 </div>
@@ -2257,10 +2262,10 @@ both beamer and handout mode.
 </p>
 
 <div class="org-src-container">
-<pre class="src src-latex"><span style="color: #ff00ff; font-weight: bold;">\begin</span><span style="color: brightwhite;">{</span><span style="color: #00ff00; font-weight: bold;">frame</span><span style="color: brightwhite;">}</span>&lt;beamer:0&gt;
-  <span style="color: #ffff00;">\frametitle</span><span style="color: brightwhite;">{</span>This frame won't be visible<span style="color: brightwhite;">}</span>
+<pre class="src src-latex"><span style="color: #ff79c6; font-weight: bold;">\begin</span><span style="color: #f8f8f2;">{</span><span style="color: #50fa7b; font-weight: bold;">frame</span><span style="color: #f8f8f2;">}</span>&lt;beamer:0&gt;
+  <span style="color: #ffff00;">\frametitle</span><span style="color: #f8f8f2;">{</span>This frame won't be visible<span style="color: #f8f8f2;">}</span>
   Lorem ipsum
-<span style="color: #ff00ff; font-weight: bold;">\end</span><span style="color: brightwhite;">{</span><span style="color: #00ff00; font-weight: bold;">frame</span><span style="color: brightwhite;">}</span>
+<span style="color: #ff79c6; font-weight: bold;">\end</span><span style="color: #f8f8f2;">{</span><span style="color: #50fa7b; font-weight: bold;">frame</span><span style="color: #f8f8f2;">}</span>
 </pre>
 </div>
 
@@ -2418,7 +2423,7 @@ at Libera.chat)</li>
 </div>
 
 <div class="org-src-container">
-<pre class="src src-shell">find . -iname <span style="color: #ffff00;">\*</span>tex -exec emacsclient {} +
+<pre class="src src-shell">find . -iname <span style="color: #f1fa8c;">\*</span>tex -exec emacsclient {} +
 </pre>
 </div>
 </div>
@@ -2522,9 +2527,9 @@ loaded. Add <code>-l ~/.emacs</code>, <code>-l ~/.config/emacs/init.el</code> or
 </p>
 
 <div class="org-src-container">
-<pre class="src src-shell"><span style="color: brightred;">echo</span> <span style="color: #ffff00;">'type emacs &gt; /dev/null 2&gt;&amp;1 &amp;&amp;</span>
-<span style="color: #ffff00;">emacs README.org --batch -f org-md-export-to-markdown --kill &amp;&amp;</span>
-<span style="color: #ffff00;">git add README.md'</span> &gt;&gt; .git/hooks/pre-commit &amp;&amp; chmod +x .git/hooks/pre-commit
+<pre class="src src-shell"><span style="color: #ffb86c;">echo</span> <span style="color: #f1fa8c;">'type emacs &gt; /dev/null 2&gt;&amp;1 &amp;&amp;</span>
+<span style="color: #f1fa8c;">emacs README.org --batch -f org-md-export-to-markdown --kill &amp;&amp;</span>
+<span style="color: #f1fa8c;">git add README.md'</span> &gt;&gt; .git/hooks/pre-commit &amp;&amp; chmod +x .git/hooks/pre-commit
 </pre>
 </div>
 
@@ -2555,7 +2560,7 @@ documentation from org when you git commit</li>
 <h4 id="Where%20to%20start%20with%20elisp%3F"><span class="section-number-4">5.3.1.</span> Where to start with elisp?</h4>
 <div class="outline-text-4" id="text-5-3-1">
 <div class="org-src-container">
-<pre class="src src-emacs-lisp">(info <span style="color: #ffff00;">"(eintr) Top"</span>)
+<pre class="src src-emacs-lisp">(info <span style="color: #f1fa8c;">"(eintr) Top"</span>)
 </pre>
 </div>
 </div>
@@ -2838,9 +2843,9 @@ Or something like that for functions, check
 <li><a id="How%20to%20recover%20the%20name%20of%20the%20variable%20passed%20as%20argument%3F"></a>How to recover the name of the variable passed as argument?<br />
 <div class="outline-text-5" id="text-7-2-1-1">
 <div class="org-src-container">
-<pre class="src src-R">  z <span style="color: brightcyan;">&lt;-</span> 1:10
-  <span style="color: #00ff00; font-weight: bold;">f</span> <span style="color: brightcyan;">&lt;-</span> <span style="color: #ff00ff; font-weight: bold;">function</span>(x) {
-varName <span style="color: brightcyan;">&lt;-</span> as.character(as.list(match.call())$x) <span style="color: #0000ff;">## </span><span style="color: #0000ff;">"z"</span>
+<pre class="src src-R">  z <span style="color: #8be9fd;">&lt;-</span> 1:10
+  <span style="color: #50fa7b; font-weight: bold;">f</span> <span style="color: #8be9fd;">&lt;-</span> <span style="color: #ff79c6; font-weight: bold;">function</span>(x) {
+varName <span style="color: #8be9fd;">&lt;-</span> as.character(as.list(match.call())$x) <span style="color: #a49462;">## </span><span style="color: #a49462;">"z"</span>
   }
 </pre>
 </div>
@@ -2858,12 +2863,12 @@ Call <code>as.list(match.call())[-1]</code> within your function
 </p>
 
 <div class="org-src-container">
-<pre class="src src-R">  <span style="color: #00ff00; font-weight: bold;">mydummyfun</span> <span style="color: brightcyan;">&lt;-</span> <span style="color: #ff00ff; font-weight: bold;">function</span>(x, y, main = <span style="color: brightmagenta;">NULL</span>, ...) {
-l <span style="color: brightcyan;">&lt;-</span> as.list(match.call())[-1]
+<pre class="src src-R">  <span style="color: #50fa7b; font-weight: bold;">mydummyfun</span> <span style="color: #8be9fd;">&lt;-</span> <span style="color: #ff79c6; font-weight: bold;">function</span>(x, y, main = <span style="color: #bd93f9;">NULL</span>, ...) {
+l <span style="color: #8be9fd;">&lt;-</span> as.list(match.call())[-1]
 do.call(plot, l)
   }
 
-  mydummyfun(1:10, 1:10, ylab = <span style="color: #ffff00;">"Ex"</span>)
+  mydummyfun(1:10, 1:10, ylab = <span style="color: #f1fa8c;">"Ex"</span>)
 </pre>
 </div>
 
@@ -2879,20 +2884,20 @@ the name of the new function, and evaluate the modified call.
 
 
 <div class="org-src-container">
-<pre class="src src-R">  <span style="color: #00ff00; font-weight: bold;">f1</span> <span style="color: brightcyan;">&lt;-</span> <span style="color: #ff00ff; font-weight: bold;">function</span>(a, b, c) { sum(a, b, c^2) }
+<pre class="src src-R">  <span style="color: #50fa7b; font-weight: bold;">f1</span> <span style="color: #8be9fd;">&lt;-</span> <span style="color: #ff79c6; font-weight: bold;">function</span>(a, b, c) { sum(a, b, c^2) }
 
-  <span style="color: #00ff00; font-weight: bold;">f2</span> <span style="color: brightcyan;">&lt;-</span> <span style="color: #ff00ff; font-weight: bold;">function</span>(a, b, c) { prod(a, b, c) }
+  <span style="color: #50fa7b; font-weight: bold;">f2</span> <span style="color: #8be9fd;">&lt;-</span> <span style="color: #ff79c6; font-weight: bold;">function</span>(a, b, c) { prod(a, b, c) }
 
-  <span style="color: #00ff00; font-weight: bold;">f</span>  <span style="color: brightcyan;">&lt;-</span> <span style="color: #ff00ff; font-weight: bold;">function</span>(a, b, c) {
-fun <span style="color: brightcyan;">&lt;-</span> f1
-<span style="color: #ff00ff; font-weight: bold;">if</span> (a &lt; 0)
-  fun <span style="color: brightcyan;">&lt;-</span> f2
+  <span style="color: #50fa7b; font-weight: bold;">f</span>  <span style="color: #8be9fd;">&lt;-</span> <span style="color: #ff79c6; font-weight: bold;">function</span>(a, b, c) {
+fun <span style="color: #8be9fd;">&lt;-</span> f1
+<span style="color: #ff79c6; font-weight: bold;">if</span> (a &lt; 0)
+  fun <span style="color: #8be9fd;">&lt;-</span> f2
 
-<span style="color: #0000ff;">## </span><span style="color: #0000ff;">get the call (fun and args)</span>
-thiscall      <span style="color: brightcyan;">&lt;-</span> match.call(expand.dots = <span style="color: brightmagenta;">TRUE</span>)
-<span style="color: #0000ff;">## </span><span style="color: #0000ff;">change function name</span>
-thiscall[[1]] <span style="color: brightcyan;">&lt;-</span> fun
-<span style="color: #0000ff;">## </span><span style="color: #0000ff;">evaluate new call same as fun(a, b, c)</span>
+<span style="color: #a49462;">## </span><span style="color: #a49462;">get the call (fun and args)</span>
+thiscall      <span style="color: #8be9fd;">&lt;-</span> match.call(expand.dots = <span style="color: #bd93f9;">TRUE</span>)
+<span style="color: #a49462;">## </span><span style="color: #a49462;">change function name</span>
+thiscall[[1]] <span style="color: #8be9fd;">&lt;-</span> fun
+<span style="color: #a49462;">## </span><span style="color: #a49462;">evaluate new call same as fun(a, b, c)</span>
 eval.parent(thiscall)
 
   }
@@ -2916,10 +2921,10 @@ function call.
 </p>
 
 <div class="org-src-container">
-<pre class="src src-R"><span style="color: #00ff00; font-weight: bold;">f_before</span> <span style="color: brightcyan;">&lt;-</span> <span style="color: #ff00ff; font-weight: bold;">function</span>() { print(<span style="color: #ffff00;">"Before call"</span>) }
-<span style="color: #00ff00; font-weight: bold;">f_after</span>  <span style="color: brightcyan;">&lt;-</span> <span style="color: #ff00ff; font-weight: bold;">function</span>() { print(<span style="color: #ffff00;">"After  call"</span>) }
+<pre class="src src-R"><span style="color: #50fa7b; font-weight: bold;">f_before</span> <span style="color: #8be9fd;">&lt;-</span> <span style="color: #ff79c6; font-weight: bold;">function</span>() { print(<span style="color: #f1fa8c;">"Before call"</span>) }
+<span style="color: #50fa7b; font-weight: bold;">f_after</span>  <span style="color: #8be9fd;">&lt;-</span> <span style="color: #ff79c6; font-weight: bold;">function</span>() { print(<span style="color: #f1fa8c;">"After  call"</span>) }
 
-trace(base::cumsum, f_before, f_after, print = <span style="color: brightmagenta;">FALSE</span>)
+trace(base::cumsum, f_before, f_after, print = <span style="color: #bd93f9;">FALSE</span>)
 cumsum(1:10)
 
 untrace(base::cumsum)
@@ -2960,13 +2965,13 @@ are typically faster.
 </p>
 
 <div class="org-src-container">
-<pre class="src src-R">  N      <span style="color: brightcyan;">&lt;-</span> 20
-  fib    <span style="color: brightcyan;">&lt;-</span> rep(<span style="color: brightmagenta;">NA</span>, 10)
-  fib[1] <span style="color: brightcyan;">&lt;-</span> 0
-  fib[2] <span style="color: brightcyan;">&lt;-</span> 1
+<pre class="src src-R">  N      <span style="color: #8be9fd;">&lt;-</span> 20
+  fib    <span style="color: #8be9fd;">&lt;-</span> rep(<span style="color: #bd93f9;">NA</span>, 10)
+  fib[1] <span style="color: #8be9fd;">&lt;-</span> 0
+  fib[2] <span style="color: #8be9fd;">&lt;-</span> 1
 
-  <span style="color: #ff00ff; font-weight: bold;">for</span> (i <span style="color: #ff00ff; font-weight: bold;">in</span> 3:N)
-fib[i] <span style="color: brightcyan;">&lt;-</span> fib[i - 1] + fib[i - 2]
+  <span style="color: #ff79c6; font-weight: bold;">for</span> (i <span style="color: #ff79c6; font-weight: bold;">in</span> 3:N)
+fib[i] <span style="color: #8be9fd;">&lt;-</span> fib[i - 1] + fib[i - 2]
 </pre>
 </div>
 
@@ -3047,9 +3052,9 @@ anonymous function that calls the function passed as argument to
 the remaining arguments (credits: Fendur at libera.chat)
 </p>
 <div class="org-src-container">
-<pre class="src src-R">funs <span style="color: brightcyan;">&lt;-</span> c(<span style="color: #ff00ff; font-weight: bold;">function</span>(x, y) x + y, <span style="color: #ff00ff; font-weight: bold;">function</span>(x, y) x^2 * y)
-grd  <span style="color: brightcyan;">&lt;-</span> expand.grid(fun = funs, x = 1:3, y = 1:4)
-with(grd, mapply(<span style="color: #ff00ff; font-weight: bold;">function</span>(f, x, y) f(x, y), fun, x, y))
+<pre class="src src-R">funs <span style="color: #8be9fd;">&lt;-</span> c(<span style="color: #ff79c6; font-weight: bold;">function</span>(x, y) x + y, <span style="color: #ff79c6; font-weight: bold;">function</span>(x, y) x^2 * y)
+grd  <span style="color: #8be9fd;">&lt;-</span> expand.grid(fun = funs, x = 1:3, y = 1:4)
+with(grd, mapply(<span style="color: #ff79c6; font-weight: bold;">function</span>(f, x, y) f(x, y), fun, x, y))
 </pre>
 </div>
 
@@ -3057,9 +3062,9 @@ with(grd, mapply(<span style="color: #ff00ff; font-weight: bold;">function</span
 Use ellipsis for functions taking different arguments
 </p>
 <div class="org-src-container">
-<pre class="src src-R">funs <span style="color: brightcyan;">&lt;-</span> c(<span style="color: #ff00ff; font-weight: bold;">function</span>(x, y, ...) x + y, <span style="color: #ff00ff; font-weight: bold;">function</span>(x, y, z) x^2 * y/z)
-grd  <span style="color: brightcyan;">&lt;-</span> expand.grid(fun = funs, x = 1:3, y = 1:4, z = 1:2)
-with(grd, mapply(<span style="color: #ff00ff; font-weight: bold;">function</span>(f, x, y, z) f(x, y, z), fun, x, y, z))
+<pre class="src src-R">funs <span style="color: #8be9fd;">&lt;-</span> c(<span style="color: #ff79c6; font-weight: bold;">function</span>(x, y, ...) x + y, <span style="color: #ff79c6; font-weight: bold;">function</span>(x, y, z) x^2 * y/z)
+grd  <span style="color: #8be9fd;">&lt;-</span> expand.grid(fun = funs, x = 1:3, y = 1:4, z = 1:2)
+with(grd, mapply(<span style="color: #ff79c6; font-weight: bold;">function</span>(f, x, y, z) f(x, y, z), fun, x, y, z))
 </pre>
 </div>
 
@@ -3068,9 +3073,9 @@ In the case of two argument functions, the explicit expansion can
 be avoided using <code>outer</code>
 </p>
 <div class="org-src-container">
-<pre class="src src-R">funs <span style="color: brightcyan;">&lt;-</span> c(<span style="color: #ff00ff; font-weight: bold;">function</span>(x, y) x + y, <span style="color: #ff00ff; font-weight: bold;">function</span>(x, y) x^2 * y)
-sapply(funs, <span style="color: #ff00ff; font-weight: bold;">function</span>(f) outer(1:3, 1:4))
-<span style="color: #0000ff;">## </span><span style="color: #0000ff;">Using R &gt; 4.1</span>
+<pre class="src src-R">funs <span style="color: #8be9fd;">&lt;-</span> c(<span style="color: #ff79c6; font-weight: bold;">function</span>(x, y) x + y, <span style="color: #ff79c6; font-weight: bold;">function</span>(x, y) x^2 * y)
+sapply(funs, <span style="color: #ff79c6; font-weight: bold;">function</span>(f) outer(1:3, 1:4))
+<span style="color: #a49462;">## </span><span style="color: #a49462;">Using R &gt; 4.1</span>
 sapply(funs, \(f) outer(1:3, 1:4))
 </pre>
 </div>
@@ -3083,9 +3088,9 @@ sapply(funs, \(f) outer(1:3, 1:4))
 <h4 id="How%20to%20create%20a%20sequence%20within%20groups%3F"><span class="section-number-4">7.2.3.</span> How to create a sequence within groups?</h4>
 <div class="outline-text-4" id="text-7-2-3">
 <div class="org-src-container">
-<pre class="src src-R">x <span style="color: brightcyan;">&lt;-</span> unlist(replicate(10, rep(sample(LETTERS, 1), rpois(1, 4))))
-sequence(rle(x)$lengths)                  <span style="color: #0000ff;"># </span><span style="color: #0000ff;">if ordered</span>
-unlist(sapply(unname(table(x)), seq.int)) <span style="color: #0000ff;"># </span><span style="color: #0000ff;">doesn't need ordering</span>
+<pre class="src src-R">x <span style="color: #8be9fd;">&lt;-</span> unlist(replicate(10, rep(sample(LETTERS, 1), rpois(1, 4))))
+sequence(rle(x)$lengths)                  <span style="color: #a49462;"># </span><span style="color: #a49462;">if ordered</span>
+unlist(sapply(unname(table(x)), seq.int)) <span style="color: #a49462;"># </span><span style="color: #a49462;">doesn't need ordering</span>
 </pre>
 </div>
 
@@ -3099,7 +3104,7 @@ Source: <a href="https://stackoverflow.com/a/18815118/2860744">generate sequence
 <h4 id="How%20to%20identify%20value%20changes%20in%20a%20sequence%3F"><span class="section-number-4">7.2.4.</span> How to identify value changes in a sequence?</h4>
 <div class="outline-text-4" id="text-7-2-4">
 <div class="org-src-container">
-<pre class="src src-R">x <span style="color: brightcyan;">&lt;-</span> unlist(replicate(10, rep(sample(LETTERS, 1), rpois(1, 4))))
+<pre class="src src-R">x <span style="color: #8be9fd;">&lt;-</span> unlist(replicate(10, rep(sample(LETTERS, 1), rpois(1, 4))))
 head(cumsum(rle(x)$lengths)+1, -1)
 </pre>
 </div>
@@ -3120,9 +3125,9 @@ vectors.
 </p>
 
 <div class="org-src-container">
-<pre class="src src-R">x <span style="color: brightcyan;">&lt;-</span> c(4, 4, 4, 6, 6, 6, 6, 8, 8, 8, 8, 1, 1, 1, 5, 5, 5, 5)
+<pre class="src src-R">x <span style="color: #8be9fd;">&lt;-</span> c(4, 4, 4, 6, 6, 6, 6, 8, 8, 8, 8, 1, 1, 1, 5, 5, 5, 5)
 match(x, unique(x))
-<span style="color: #0000ff;">## </span><span style="color: #0000ff;">[1] 1 1 1 2 2 2 2 3 3 3 3 4 4 4 5 5 5 5</span>
+<span style="color: #a49462;">## </span><span style="color: #a49462;">[1] 1 1 1 2 2 2 2 3 3 3 3 4 4 4 5 5 5 5</span>
 </pre>
 </div>
 
@@ -3171,12 +3176,12 @@ Use <code>base::asplit</code> for efficiency, where <code>asplit(X, 1)</code> an
 </p>
 
 <div class="org-src-container">
-<pre class="src src-R"><span style="color: #0000ff;">## </span><span style="color: #0000ff;">I just learned about asplit</span>
+<pre class="src src-R"><span style="color: #a49462;">## </span><span style="color: #a49462;">I just learned about asplit</span>
 asplit(X, 1)
 
-<span style="color: #0000ff;">## </span><span style="color: #0000ff;">Original note</span>
-X <span style="color: brightcyan;">&lt;-</span> matrix(rnorm(100), nrow = 20)
-l <span style="color: brightcyan;">&lt;-</span> as.list(as.data.frame(t(X)))
+<span style="color: #a49462;">## </span><span style="color: #a49462;">Original note</span>
+X <span style="color: #8be9fd;">&lt;-</span> matrix(rnorm(100), nrow = 20)
+l <span style="color: #8be9fd;">&lt;-</span> as.list(as.data.frame(t(X)))
 </pre>
 </div>
 </div>
@@ -3190,8 +3195,8 @@ The workhorse of any labeling function
 </p>
 
 <div class="org-src-container">
-<pre class="src src-R">l <span style="color: brightcyan;">&lt;-</span> list(key1 = <span style="color: #ffff00;">"value1"</span>, key2 = <span style="color: brightmagenta;">NA</span>, key3 = 022)
-<span style="color: #00ff00; font-weight: bold;">lookup</span> <span style="color: brightcyan;">&lt;-</span> <span style="color: #ff00ff; font-weight: bold;">function</span>(x, l) { unlist(l[x]) }
+<pre class="src src-R">l <span style="color: #8be9fd;">&lt;-</span> list(key1 = <span style="color: #f1fa8c;">"value1"</span>, key2 = <span style="color: #bd93f9;">NA</span>, key3 = 022)
+<span style="color: #50fa7b; font-weight: bold;">lookup</span> <span style="color: #8be9fd;">&lt;-</span> <span style="color: #ff79c6; font-weight: bold;">function</span>(x, l) { unlist(l[x]) }
 </pre>
 </div>
 
@@ -3209,7 +3214,7 @@ General approach with Base R only
 </p>
 
 <div class="org-src-container">
-<pre class="src src-R">Filter(<span style="color: #ff00ff; font-weight: bold;">function</span>(x)!all(is.na(x)), df)
+<pre class="src src-R">Filter(<span style="color: #ff79c6; font-weight: bold;">function</span>(x)!all(is.na(x)), df)
 </pre>
 </div>
 
@@ -3218,7 +3223,7 @@ Via data.table for general time and memory efficiency (40% faster in example)
 </p>
 
 <div class="org-src-container">
-<pre class="src src-R">DT[, which(unlist(lapply(DT, <span style="color: #ff00ff; font-weight: bold;">function</span>(x)!all(is.na(x))))), with = <span style="color: brightmagenta;">FALSE</span>]
+<pre class="src src-R">DT[, which(unlist(lapply(DT, <span style="color: #ff79c6; font-weight: bold;">function</span>(x)!all(is.na(x))))), with = <span style="color: #bd93f9;">FALSE</span>]
 </pre>
 </div>
 
@@ -3237,25 +3242,25 @@ Use <code>unlist(lapply(split(x, f), FUN))</code> for speed, but consider
 </p>
 
 <div class="org-src-container">
-<pre class="src src-R"><span style="color: #0000ff;">## </span><span style="color: #0000ff;">Unit: microseconds</span>
-<span style="color: #0000ff;">##     </span><span style="color: #0000ff;">expr      min        lq      mean    median        uq       max neval</span>
-<span style="color: #0000ff;">## </span><span style="color: #0000ff;">f0(x, f)  409.578  415.5165  426.9041  418.9500  424.3400  4237.466 10000</span>
-<span style="color: #0000ff;">## </span><span style="color: #0000ff;">f1(x, f)  411.208  418.3095  430.4231  421.8645  427.4155  5550.120 10000</span>
-<span style="color: #0000ff;">## </span><span style="color: #0000ff;">f2(x, f)  474.681  487.1265  498.8509  492.6960  497.6360  2552.075 10000</span>
-<span style="color: #0000ff;">## </span><span style="color: #0000ff;">f3(x, f) 1395.582 1442.3785 1494.0197 1459.3515 1472.5205 28121.379 10000</span>
+<pre class="src src-R"><span style="color: #a49462;">## </span><span style="color: #a49462;">Unit: microseconds</span>
+<span style="color: #a49462;">##     </span><span style="color: #a49462;">expr      min        lq      mean    median        uq       max neval</span>
+<span style="color: #a49462;">## </span><span style="color: #a49462;">f0(x, f)  409.578  415.5165  426.9041  418.9500  424.3400  4237.466 10000</span>
+<span style="color: #a49462;">## </span><span style="color: #a49462;">f1(x, f)  411.208  418.3095  430.4231  421.8645  427.4155  5550.120 10000</span>
+<span style="color: #a49462;">## </span><span style="color: #a49462;">f2(x, f)  474.681  487.1265  498.8509  492.6960  497.6360  2552.075 10000</span>
+<span style="color: #a49462;">## </span><span style="color: #a49462;">f3(x, f) 1395.582 1442.3785 1494.0197 1459.3515 1472.5205 28121.379 10000</span>
 set.seed(1)
 
-x <span style="color: brightcyan;">&lt;-</span> rnorm(10000)
-f <span style="color: brightcyan;">&lt;-</span> factor(rpois(10000, 5))
+x <span style="color: #8be9fd;">&lt;-</span> rnorm(10000)
+f <span style="color: #8be9fd;">&lt;-</span> factor(rpois(10000, 5))
 
-<span style="color: #00ff00; font-weight: bold;">tapply_</span> <span style="color: brightcyan;">&lt;-</span> <span style="color: #ff00ff; font-weight: bold;">function</span>(x, f, FUN) { unlist(lapply(split(x, f), FUN)) }
+<span style="color: #50fa7b; font-weight: bold;">tapply_</span> <span style="color: #8be9fd;">&lt;-</span> <span style="color: #ff79c6; font-weight: bold;">function</span>(x, f, FUN) { unlist(lapply(split(x, f), FUN)) }
 
-<span style="color: #00ff00; font-weight: bold;">f0</span> <span style="color: brightcyan;">&lt;-</span> <span style="color: #ff00ff; font-weight: bold;">function</span>(x, f) { unlist(lapply(split(x, f), mean)) }
-<span style="color: #00ff00; font-weight: bold;">f1</span> <span style="color: brightcyan;">&lt;-</span> <span style="color: #ff00ff; font-weight: bold;">function</span>(x, f) { tapply_(x, f, mean) }
-<span style="color: #00ff00; font-weight: bold;">f2</span> <span style="color: brightcyan;">&lt;-</span> <span style="color: #ff00ff; font-weight: bold;">function</span>(x, f) { tapply(x, f, mean) }
-<span style="color: #00ff00; font-weight: bold;">f3</span> <span style="color: brightcyan;">&lt;-</span> <span style="color: #ff00ff; font-weight: bold;">function</span>(x, f) { by(x, f, mean) }
+<span style="color: #50fa7b; font-weight: bold;">f0</span> <span style="color: #8be9fd;">&lt;-</span> <span style="color: #ff79c6; font-weight: bold;">function</span>(x, f) { unlist(lapply(split(x, f), mean)) }
+<span style="color: #50fa7b; font-weight: bold;">f1</span> <span style="color: #8be9fd;">&lt;-</span> <span style="color: #ff79c6; font-weight: bold;">function</span>(x, f) { tapply_(x, f, mean) }
+<span style="color: #50fa7b; font-weight: bold;">f2</span> <span style="color: #8be9fd;">&lt;-</span> <span style="color: #ff79c6; font-weight: bold;">function</span>(x, f) { tapply(x, f, mean) }
+<span style="color: #50fa7b; font-weight: bold;">f3</span> <span style="color: #8be9fd;">&lt;-</span> <span style="color: #ff79c6; font-weight: bold;">function</span>(x, f) { by(x, f, mean) }
 
-bench <span style="color: brightcyan;">&lt;-</span> microbenchmark::microbenchmark(
+bench <span style="color: #8be9fd;">&lt;-</span> microbenchmark::microbenchmark(
            f0(x, f), f1(x, f), f2(x, f), f3(x, f),
            times = 1E4)
 
@@ -3269,7 +3274,7 @@ print(bench)
 <h4 id="How%20to%20fast%20subset%20rows%20corresponding%20to%20max%20value%20by%20group%3F"><span class="section-number-4">7.2.12.</span> How to fast subset rows corresponding to max value by group?</h4>
 <div class="outline-text-4" id="text-7-2-12">
 <div class="org-src-container">
-<pre class="src src-R"><span style="color: #0000ff;">## </span><span style="color: #0000ff;">Row with maximum `g` for each group `id` in the `bdt` data.table</span>
+<pre class="src src-R"><span style="color: #a49462;">## </span><span style="color: #a49462;">Row with maximum `g` for each group `id` in the `bdt` data.table</span>
 bdt[bdt[, .I[g == max(g)], by = id]$V1]
 </pre>
 </div>
@@ -3284,7 +3289,7 @@ Source: <a href="https://stackoverflow.com/a/16574176/2860744">subset rows corre
 <h4 id="How%20to%20create%20named%20vector%20programatically%20in%20one%20statement%3F"><span class="section-number-4">7.2.13.</span> How to create named vector programatically in one statement?</h4>
 <div class="outline-text-4" id="text-7-2-13">
 <div class="org-src-container">
-<pre class="src src-R">out <span style="color: brightcyan;">&lt;-</span> setNames(c(<span style="color: #ffff00;">"value1"</span>, <span style="color: #ffff00;">"value2"</span>), c(<span style="color: #ffff00;">"name1"</span>, <span style="color: #ffff00;">"name2"</span>))
+<pre class="src src-R">out <span style="color: #8be9fd;">&lt;-</span> setNames(c(<span style="color: #f1fa8c;">"value1"</span>, <span style="color: #f1fa8c;">"value2"</span>), c(<span style="color: #f1fa8c;">"name1"</span>, <span style="color: #f1fa8c;">"name2"</span>))
 </pre>
 </div>
 
@@ -3302,7 +3307,7 @@ Including ellipsis also!
 </p>
 
 <div class="org-src-container">
-<pre class="src src-R"><span style="color: #00ff00; font-weight: bold;">f</span> <span style="color: brightcyan;">&lt;-</span> <span style="color: #ff00ff; font-weight: bold;">function</span>(a, b = 2, ...) { c(as.list(environment()), list(...)) }
+<pre class="src src-R"><span style="color: #50fa7b; font-weight: bold;">f</span> <span style="color: #8be9fd;">&lt;-</span> <span style="color: #ff79c6; font-weight: bold;">function</span>(a, b = 2, ...) { c(as.list(environment()), list(...)) }
 </pre>
 </div>
 
@@ -3316,7 +3321,7 @@ Source: <a href="https://stackoverflow.com/a/17244041">get all Parameters as Lis
 <h4 id="How%20to%20debug%20an%20error%20thrown%20in%20a%20package%3F"><span class="section-number-4">7.2.15.</span> How to debug an error thrown in a package?</h4>
 <div class="outline-text-4" id="text-7-2-15">
 <div class="org-src-container">
-<pre class="src src-R"><span style="color: brightcyan;">options</span>(error = recover, show.error.locations = <span style="color: brightmagenta;">TRUE</span>, warn = 2)
+<pre class="src src-R"><span style="color: #8be9fd;">options</span>(error = recover, show.error.locations = <span style="color: #bd93f9;">TRUE</span>, warn = 2)
 </pre>
 </div>
 
@@ -3331,12 +3336,12 @@ error occurred?</a>
 <h4 id="How%20to%20draw%20a%20plot%20with%20minimal%20margins%3F"><span class="section-number-4">7.2.16.</span> How to draw a plot with minimal margins?</h4>
 <div class="outline-text-4" id="text-7-2-16">
 <div class="org-src-container">
-<pre class="src src-R"><span style="color: #0000ff;">## </span><span style="color: #0000ff;">oma: Outer  = device margin lines (bltr)</span>
-<span style="color: #0000ff;">## </span><span style="color: #0000ff;">mar: Margin = figure margin lines (bltr)</span>
-<span style="color: #0000ff;">## </span><span style="color: #0000ff;">mgp:      ? = axis margin lines (title, label, line)</span>
+<pre class="src src-R"><span style="color: #a49462;">## </span><span style="color: #a49462;">oma: Outer  = device margin lines (bltr)</span>
+<span style="color: #a49462;">## </span><span style="color: #a49462;">mar: Margin = figure margin lines (bltr)</span>
+<span style="color: #a49462;">## </span><span style="color: #a49462;">mgp:      ? = axis margin lines (title, label, line)</span>
 
-<span style="color: #0000ff;">## </span><span style="color: #0000ff;">No title</span>
-opar <span style="color: brightcyan;">&lt;-</span> <span style="color: brightcyan;">par</span>(
+<span style="color: #a49462;">## </span><span style="color: #a49462;">No title</span>
+opar <span style="color: #8be9fd;">&lt;-</span> <span style="color: #8be9fd;">par</span>(
   oma = c(0, 0, 0, 0) + .1,
   mar = c(3, 3, 0, 0),
   mgp = c(2, 1, 0)
@@ -3344,8 +3349,8 @@ opar <span style="color: brightcyan;">&lt;-</span> <span style="color: brightcya
 
 plot(x = 1:10, y = 1:10)
 
-<span style="color: #0000ff;">## </span><span style="color: #0000ff;">No title nor axis labels</span>
-opar <span style="color: brightcyan;">&lt;-</span> <span style="color: brightcyan;">par</span>(
+<span style="color: #a49462;">## </span><span style="color: #a49462;">No title nor axis labels</span>
+opar <span style="color: #8be9fd;">&lt;-</span> <span style="color: #8be9fd;">par</span>(
   oma = c(0, 0, 0, 0) + .1,
   mar = c(2, 2, 0, 0),
   mgp = c(2, 1, 0)
@@ -3361,8 +3366,8 @@ plot(x = 1:10, y = 1:10)
 <h4 id="How%20to%20check%20if%20a%20value%20is%20in%20an%20interval%3F"><span class="section-number-4">7.2.17.</span> How to check if a value is in an interval?</h4>
 <div class="outline-text-4" id="text-7-2-17">
 <div class="org-src-container">
-<pre class="src src-R"><span style="color: #0000ff;">## </span><span style="color: #0000ff;">x &lt;- 1</span>
-<span style="color: #0000ff;">## </span><span style="color: #0000ff;">confint &lt;- c(-0.5, 0.5)</span>
+<pre class="src src-R"><span style="color: #a49462;">## </span><span style="color: #a49462;">x &lt;- 1</span>
+<span style="color: #a49462;">## </span><span style="color: #a49462;">confint &lt;- c(-0.5, 0.5)</span>
 (prod(sign(confint - x)) &lt; 0)
 </pre>
 </div>
@@ -3381,15 +3386,15 @@ Note that <code>?geom_tile</code> recommends <code>akima::interp</code>.
 </p>
 
 <div class="org-src-container">
-<pre class="src src-R">x <span style="color: brightcyan;">&lt;-</span> mtcars$hp <span style="color: #0000ff;">## </span><span style="color: #0000ff;">x-axis</span>
-y <span style="color: brightcyan;">&lt;-</span> mtcars$qsec <span style="color: #0000ff;">## </span><span style="color: #0000ff;">y-axis</span>
-z <span style="color: brightcyan;">&lt;-</span> mtcars$mpg <span style="color: #0000ff;">## </span><span style="color: #0000ff;">surface color</span>
+<pre class="src src-R">x <span style="color: #8be9fd;">&lt;-</span> mtcars$hp <span style="color: #a49462;">## </span><span style="color: #a49462;">x-axis</span>
+y <span style="color: #8be9fd;">&lt;-</span> mtcars$qsec <span style="color: #a49462;">## </span><span style="color: #a49462;">y-axis</span>
+z <span style="color: #8be9fd;">&lt;-</span> mtcars$mpg <span style="color: #a49462;">## </span><span style="color: #a49462;">surface color</span>
 
-ak   <span style="color: brightcyan;">&lt;-</span> akima::interp(x, y, z)
-DF   <span style="color: brightcyan;">&lt;-</span> expand.grid(ak[1:2])
-DF$z <span style="color: brightcyan;">&lt;-</span> ak[[3]]
+ak   <span style="color: #8be9fd;">&lt;-</span> akima::interp(x, y, z)
+DF   <span style="color: #8be9fd;">&lt;-</span> expand.grid(ak[1:2])
+DF$z <span style="color: #8be9fd;">&lt;-</span> ak[[3]]
 
-DF <span style="color: brightcyan;">&lt;-</span> data.frame(expand.grid(ak[1:2]), z = c(ak[[3]]))
+DF <span style="color: #8be9fd;">&lt;-</span> data.frame(expand.grid(ak[1:2]), z = c(ak[[3]]))
 
 ggplot(DF, aes(x, y, fill = z)) +
   geom_tile()
@@ -3402,8 +3407,8 @@ might be more efficient.
 </p>
 
 <div class="org-src-container">
-<pre class="src src-R">DF   <span style="color: brightcyan;">&lt;-</span> expand.grid(ak[1:2])
-DF$z <span style="color: brightcyan;">&lt;-</span> ak[[3]]
+<pre class="src src-R">DF   <span style="color: #8be9fd;">&lt;-</span> expand.grid(ak[1:2])
+DF$z <span style="color: #8be9fd;">&lt;-</span> ak[[3]]
 </pre>
 </div>
 </div>
@@ -3413,27 +3418,27 @@ DF$z <span style="color: brightcyan;">&lt;-</span> ak[[3]]
 <h4 id="How%20to%20plot%20in%20reverse%20log%20scale%20with%20ggplot2%3F"><span class="section-number-4">7.2.19.</span> How to plot in reverse log scale with ggplot2?</h4>
 <div class="outline-text-4" id="text-7-2-19">
 <div class="org-src-container">
-<pre class="src src-R"><span style="color: #0000ff;">#</span><span style="color: #0000ff;">'</span><span style="color: #0000ff;"> Reverse log transformation</span>
-<span style="color: #0000ff;">#</span><span style="color: #0000ff;">'</span>
-<span style="color: #0000ff;">#</span><span style="color: #0000ff;">'</span><span style="color: #0000ff;"> </span><span style="color: #ff00ff; font-weight: bold;">@param</span><span style="color: #0000ff;"> </span><span style="color: brightwhite; font-weight: bold;">base</span><span style="color: #0000ff;"> a positive or complex number: logarithm base.</span>
-<span style="color: #0000ff;"># </span><span style="color: #0000ff;">'Defaults to `e=exp(1)`.</span>
-<span style="color: #0000ff;">#</span><span style="color: #0000ff;">'</span><span style="color: #0000ff;"> </span><span style="color: #ff00ff; font-weight: bold;">@return</span>
-<span style="color: #0000ff;">#</span><span style="color: #0000ff;">'</span><span style="color: #0000ff;"> @reference https://gist.github.com/JoFrhwld/2266961</span>
-<span style="color: #00ff00; font-weight: bold;">.revlog_trans</span> <span style="color: brightcyan;">&lt;-</span> <span style="color: #ff00ff; font-weight: bold;">function</span>(base = exp(1)){
+<pre class="src src-R"><span style="color: #a49462;">#</span><span style="color: #a49462;">'</span><span style="color: #a49462;"> Reverse log transformation</span>
+<span style="color: #a49462;">#</span><span style="color: #a49462;">'</span>
+<span style="color: #a49462;">#</span><span style="color: #a49462;">'</span><span style="color: #a49462;"> </span><span style="color: #ff79c6; font-weight: bold;">@param</span><span style="color: #a49462;"> </span><span style="color: #f8f8f2; font-weight: bold;">base</span><span style="color: #a49462;"> a positive or complex number: logarithm base.</span>
+<span style="color: #a49462;"># </span><span style="color: #a49462;">'Defaults to `e=exp(1)`.</span>
+<span style="color: #a49462;">#</span><span style="color: #a49462;">'</span><span style="color: #a49462;"> </span><span style="color: #ff79c6; font-weight: bold;">@return</span>
+<span style="color: #a49462;">#</span><span style="color: #a49462;">'</span><span style="color: #a49462;"> @reference https://gist.github.com/JoFrhwld/2266961</span>
+<span style="color: #50fa7b; font-weight: bold;">.revlog_trans</span> <span style="color: #8be9fd;">&lt;-</span> <span style="color: #ff79c6; font-weight: bold;">function</span>(base = exp(1)){
   scales::trans_new(
-            name      = paste(<span style="color: #ffff00;">"revlog-"</span>, base, sep = <span style="color: #ffff00;">""</span>),
-            transform = <span style="color: #ff00ff; font-weight: bold;">function</span>(x){ -log(x, base) },
-            inverse   = <span style="color: #ff00ff; font-weight: bold;">function</span>(x){ base^(-x) },
+            name      = paste(<span style="color: #f1fa8c;">"revlog-"</span>, base, sep = <span style="color: #f1fa8c;">""</span>),
+            transform = <span style="color: #ff79c6; font-weight: bold;">function</span>(x){ -log(x, base) },
+            inverse   = <span style="color: #ff79c6; font-weight: bold;">function</span>(x){ base^(-x) },
             breaks    = scales::log_breaks(base = base),
-            domain    = c(1e-100, <span style="color: brightmagenta;">Inf</span>)
+            domain    = c(1e-100, <span style="color: #bd93f9;">Inf</span>)
           )
 }
 
-<span style="color: #00ff00; font-weight: bold;">scale_x_revlog10</span> <span style="color: brightcyan;">&lt;-</span> <span style="color: #ff00ff; font-weight: bold;">function</span>(...) {
+<span style="color: #50fa7b; font-weight: bold;">scale_x_revlog10</span> <span style="color: #8be9fd;">&lt;-</span> <span style="color: #ff79c6; font-weight: bold;">function</span>(...) {
   scale_x_continuous(trans = .revlog_trans(base = 10), ...)
 }
 
-<span style="color: #00ff00; font-weight: bold;">scale_y_revlog10</span> <span style="color: brightcyan;">&lt;-</span> <span style="color: #ff00ff; font-weight: bold;">function</span>(...) {
+<span style="color: #50fa7b; font-weight: bold;">scale_y_revlog10</span> <span style="color: #8be9fd;">&lt;-</span> <span style="color: #ff79c6; font-weight: bold;">function</span>(...) {
   scale_y_continuous(trans = .revlog_trans(base = 10), ...)
 }
 </pre>
@@ -3453,7 +3458,7 @@ north-eath.
 <div class="org-src-container">
 <pre class="src src-R">ggplot() +
   geom_point(aes(x = 1:10, y = rnorm(10))) +
-  geom_label(aes(x = <span style="color: brightmagenta;">Inf</span>, y = <span style="color: brightmagenta;">Inf</span>, label = <span style="color: #ffff00;">"Some text"</span>),
+  geom_label(aes(x = <span style="color: #bd93f9;">Inf</span>, y = <span style="color: #bd93f9;">Inf</span>, label = <span style="color: #f1fa8c;">"Some text"</span>),
              vjust = 1, hjust = 1)
 </pre>
 </div>
@@ -3471,9 +3476,9 @@ Source:
 <h4 id="How%20to%20plot%20in%20log%20scale%20with%20base%20R%3F"><span class="section-number-4">7.2.21.</span> How to plot in log scale with base R?</h4>
 <div class="outline-text-4" id="text-7-2-21">
 <div class="org-src-container">
-<pre class="src src-R">plot(exp(1:10), 1:10, log = <span style="color: #ffff00;">"x"</span>)
-plot(1:10, exp(1:10), log = <span style="color: #ffff00;">"y"</span>)
-plot(exp(1:10), exp(1:10), log = <span style="color: #ffff00;">"xy"</span>)
+<pre class="src src-R">plot(exp(1:10), 1:10, log = <span style="color: #f1fa8c;">"x"</span>)
+plot(1:10, exp(1:10), log = <span style="color: #f1fa8c;">"y"</span>)
+plot(exp(1:10), exp(1:10), log = <span style="color: #f1fa8c;">"xy"</span>)
 </pre>
 </div>
 </div>
@@ -3939,7 +3944,7 @@ colorblinds and non-colorblinds</li>
 <h4 id="How%20to%20nicely%20list%20all%20my%20jobs%20in%20Slurm%3F"><span class="section-number-4">9.6.1.</span> How to nicely list all my jobs in Slurm?</h4>
 <div class="outline-text-4" id="text-9-6-1">
 <div class="org-src-container">
-<pre class="src src-shell">watch -d squeue --me --format=<span style="color: #ffff00;">\"</span>%.18i %.18P %.32j %.8u %.2t <span style="color: #ffff00;">\|</span> %.10M <span style="color: #ffff00;">\|</span> %.10l <span style="color: #ffff00;">\|</span> %.19S <span style="color: #ffff00;">\|</span> %.6D %20Y %R<span style="color: #ffff00;">\"</span> --sort=i
+<pre class="src src-shell">watch -d squeue --me --format=<span style="color: #f1fa8c;">\"</span>%.18i %.18P %.32j %.8u %.2t <span style="color: #f1fa8c;">\|</span> %.10M <span style="color: #f1fa8c;">\|</span> %.10l <span style="color: #f1fa8c;">\|</span> %.19S <span style="color: #f1fa8c;">\|</span> %.6D %20Y %R<span style="color: #f1fa8c;">\"</span> --sort=i
 </pre>
 </div>
 </div>
@@ -5154,24 +5159,24 @@ Use the dot product
 </p>
 
 <div class="org-src-container">
-<pre class="src src-R">X  <span style="color: brightcyan;">&lt;-</span> iris3[,,1]
+<pre class="src src-R">X  <span style="color: #8be9fd;">&lt;-</span> iris3[,,1]
 
-M  <span style="color: brightcyan;">&lt;-</span> tcrossprod(X)
-m  <span style="color: brightcyan;">&lt;-</span> diag(M)
-o  <span style="color: brightcyan;">&lt;-</span> rep(1, nrow(M)) <span style="color: #0000ff;"># </span><span style="color: #0000ff;">column vector</span>
-h2 <span style="color: brightcyan;">&lt;-</span> m <span style="color: brightcyan;">%*%</span> t(o)      <span style="color: #0000ff;"># </span><span style="color: #0000ff;">outer(m, o) = m %*% t(o)</span>
+M  <span style="color: #8be9fd;">&lt;-</span> tcrossprod(X)
+m  <span style="color: #8be9fd;">&lt;-</span> diag(M)
+o  <span style="color: #8be9fd;">&lt;-</span> rep(1, nrow(M)) <span style="color: #a49462;"># </span><span style="color: #a49462;">column vector</span>
+h2 <span style="color: #8be9fd;">&lt;-</span> m <span style="color: #8be9fd;">%*%</span> t(o)      <span style="color: #a49462;"># </span><span style="color: #a49462;">outer(m, o) = m %*% t(o)</span>
 
-D2 <span style="color: brightcyan;">&lt;-</span> -2 * M + h2 + t(h2)
+D2 <span style="color: #8be9fd;">&lt;-</span> -2 * M + h2 + t(h2)
 
 all.equal(D2, unname(as.matrix(dist(X))^2))
 </pre>
 </div>
 
 <div class="org-src-container">
-<pre class="src src-python"><span style="color: #ff00ff; font-weight: bold;">def</span> <span style="color: #00ff00; font-weight: bold;">compute_distances_no_loops</span>(<span style="color: #ff00ff; font-weight: bold;">self</span>, X):
-  <span style="color: brightwhite; font-weight: bold;">dists</span> = -2 * np.dot(X, <span style="color: #ff00ff; font-weight: bold;">self</span>.X_train.T) +
-  np.<span style="color: brightred;">sum</span>(<span style="color: #ff00ff; font-weight: bold;">self</span>.X_train**2, axis=1) + np.<span style="color: brightred;">sum</span>(X**2, axis=1)[:, np.newaxis]
-  <span style="color: #ff00ff; font-weight: bold;">return</span> dists
+<pre class="src src-python"><span style="color: #ff79c6; font-weight: bold;">def</span> <span style="color: #50fa7b; font-weight: bold;">compute_distances_no_loops</span>(<span style="color: #ff79c6; font-weight: bold;">self</span>, X):
+  <span style="color: #f8f8f2; font-weight: bold;">dists</span> = -2 * np.dot(X, <span style="color: #ff79c6; font-weight: bold;">self</span>.X_train.T) +
+  np.<span style="color: #ffb86c;">sum</span>(<span style="color: #ff79c6; font-weight: bold;">self</span>.X_train**2, axis=1) + np.<span style="color: #ffb86c;">sum</span>(X**2, axis=1)[:, np.newaxis]
+  <span style="color: #ff79c6; font-weight: bold;">return</span> dists
 </pre>
 </div>
 
@@ -5185,7 +5190,7 @@ Source: <a href="https://stats.stackexchange.com/q/397288/31243">Dot Product and
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Luis Damiano</p>
-<p class="date">Created: 2022-10-19 Wed 10:31</p>
+<p class="date">Created: 2022-10-19 Wed 12:28</p>
 <p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
