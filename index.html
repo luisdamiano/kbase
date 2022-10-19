@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2022-10-13 Thu 11:37 -->
+<!-- 2022-10-19 Wed 10:31 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Knowledge Base</title>
@@ -1040,7 +1040,7 @@ Source: <a href="https://git-scm.com/book/en/v2/Git-Internals-Git-Objects">Git -
 <div id="outline-container-How%20to%20rename%20a%20branch%3F" class="outline-4">
 <h4 id="How%20to%20rename%20a%20branch%3F"><span class="section-number-4">3.1.2.</span> How to rename a branch?</h4>
 <div class="outline-text-4" id="text-3-1-2">
-<pre class="example" id="org78120b8">
+<pre class="example" id="org5447731">
 git branch -m newname
 </pre>
 </div>
@@ -1289,9 +1289,16 @@ Source:
 <h4 id="How%20to%20match%20all%20R%20dependencies%3F"><span class="section-number-4">3.3.2.</span> How to match all R dependencies?</h4>
 <div class="outline-text-4" id="text-3-3-2">
 <div class="org-src-container">
-<pre class="src src-shell">grep -Poh -r <span style="color: #ffff00;">"(\w+)::|(?:library|require|requireNamespace)\(\"?(\w+)\"?\)"</span> --include=<span style="color: #ffff00;">"*\.R"</span> | uniq -d -c | sort
+<pre class="src src-shell">grep -Eoh -r <span style="color: #ffff00;">"(\w+)::|(?:library|require|requireNamespace)\(\"?(\w+)\"?\)"</span> --include=<span style="color: #ffff00;">"*\.R"</span> | sort | uniq
 </pre>
 </div>
+
+<p>
+Source:
+</p>
+<ul class="org-ul">
+<li><a href="https://regex101.com/r/XDsxbU/1">https://regex101.com/r/XDsxbU/1</a></li>
+</ul>
 </div>
 </div>
 
@@ -5178,7 +5185,7 @@ Source: <a href="https://stats.stackexchange.com/q/397288/31243">Dot Product and
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Luis Damiano</p>
-<p class="date">Created: 2022-10-13 Thu 11:37</p>
+<p class="date">Created: 2022-10-19 Wed 10:31</p>
 <p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
