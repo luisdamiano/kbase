@@ -39,7 +39,7 @@
    space), space, at least four dash lines but typically enough to
    fill the column space. This can be matched with =\S+\s(.+?)\s-{4,}=
 
-   #+begin_src
+   #+begin_src ascii
 ;; Speed bar -------------------------------------------------------------------
 
 %% Introduction ----------------------------------------------------------------
@@ -49,7 +49,7 @@
 
 ** How to match any number with decimals up to 10?
 
-   #+begin_src
+   #+begin_src ascii
      ^(?:\d|\d?\.\d+|10(?:\.0+)?)$
    #+end_src
 
