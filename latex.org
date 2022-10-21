@@ -433,11 +433,16 @@
 
 ** How to bold my name using BibLaTeX?
 
-   This will bold YOURFAMILYNAME.
+   This will bold YOURFAMILYNAME in the bibliography but not in the citations.
 
    #+begin_src latex
      % Bibliography: bold last name
      \usepackage{ifthen}
+     \AtBeginBibliography{%
      \renewcommand*{\mkbibnamefamily}[1]{%
        \ifthenelse{\equal{#1}{YOURFAMILYNAM}}{\textbf{#1}}{#1}}
+     }
    #+end_src
+
+   Source:
+   - [[https://tex.stackexchange.com/a/178875/225233][Make author names bold in bibliography only - TeX - LaTeX Stack Ex...]]

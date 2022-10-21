@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2022-10-21 Fri 16:31 -->
+<!-- 2022-10-21 Fri 16:34 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Knowledge Base</title>
@@ -1045,7 +1045,7 @@ Source: <a href="https://git-scm.com/book/en/v2/Git-Internals-Git-Objects">Git -
 <div id="outline-container-How%20to%20rename%20a%20branch%3F" class="outline-4">
 <h4 id="How%20to%20rename%20a%20branch%3F"><span class="section-number-4">3.1.2.</span> How to rename a branch?</h4>
 <div class="outline-text-4" id="text-3-1-2">
-<pre class="example" id="orgf2cd295">
+<pre class="example" id="org3b9f443">
 git branch -m newname
 </pre>
 </div>
@@ -2307,16 +2307,25 @@ Source:
 <h4 id="How%20to%20bold%20my%20name%20using%20BibLaTeX%3F"><span class="section-number-4">4.2.2.</span> How to bold my name using BibLaTeX?</h4>
 <div class="outline-text-4" id="text-4-2-2">
 <p>
-This will bold YOURFAMILYNAME.
+This will bold YOURFAMILYNAME in the bibliography but not in the citations.
 </p>
 
 <div class="org-src-container">
 <pre class="src src-latex"><span style="color: #a49462;">% </span><span style="color: #a49462;">Bibliography: bold last name</span>
 <span style="color: #ff79c6; font-weight: bold;">\usepackage</span><span style="color: #f8f8f2;">{</span><span style="color: #50fa7b; font-weight: bold;">ifthen</span><span style="color: #f8f8f2;">}</span>
-<span style="color: #ff79c6; font-weight: bold;">\renewcommand</span><span style="color: #ff79c6; font-weight: bold;">*</span><span style="color: #f8f8f2;">{</span><span style="color: #50fa7b; font-weight: bold;">\mkbibnamefamily</span><span style="color: #f8f8f2;">}[</span><span style="color: #f8f8f2; font-weight: bold;">1</span><span style="color: #f8f8f2;">]{</span><span style="color: #a49462; font-weight: bold;">%</span>
-<span style="color: #50fa7b; font-weight: bold;">  </span><span style="color: #50fa7b; font-weight: bold;">\ifthenelse</span><span style="color: #8be9fd; font-weight: bold;">{</span><span style="color: #50fa7b; font-weight: bold;">\equal</span><span style="color: #bd93f9; font-weight: bold;">{</span><span style="color: #50fa7b; font-weight: bold;">#1</span><span style="color: #bd93f9; font-weight: bold;">}{</span><span style="color: #50fa7b; font-weight: bold;">YOURFAMILYNAM</span><span style="color: #bd93f9; font-weight: bold;">}</span><span style="color: #8be9fd; font-weight: bold;">}{</span><span style="color: #50fa7b; font-weight: bold;">\textbf</span><span style="color: #bd93f9; font-weight: bold;">{</span><span style="color: #50fa7b; font-weight: bold;">#1</span><span style="color: #bd93f9; font-weight: bold;">}</span><span style="color: #8be9fd; font-weight: bold;">}{</span><span style="color: #50fa7b; font-weight: bold;">#1</span><span style="color: #8be9fd; font-weight: bold;">}</span><span style="color: #f8f8f2;">}</span>
+<span style="color: #ffff00;">\AtBeginBibliography</span><span style="color: #f8f8f2;">{</span><span style="color: #a49462;">%</span>
+<span style="color: #ff79c6; font-weight: bold;">\renewcommand</span><span style="color: #ff79c6; font-weight: bold;">*</span><span style="color: #8be9fd;">{</span><span style="color: #50fa7b; font-weight: bold;">\mkbibnamefamily</span><span style="color: #8be9fd;">}[</span><span style="color: #f8f8f2; font-weight: bold;">1</span><span style="color: #8be9fd;">]{</span><span style="color: #a49462; font-weight: bold;">%</span>
+<span style="color: #50fa7b; font-weight: bold;">  </span><span style="color: #50fa7b; font-weight: bold;">\ifthenelse</span><span style="color: #bd93f9; font-weight: bold;">{</span><span style="color: #50fa7b; font-weight: bold;">\equal</span><span style="color: #ff79c6; font-weight: bold;">{</span><span style="color: #50fa7b; font-weight: bold;">#1</span><span style="color: #ff79c6; font-weight: bold;">}{</span><span style="color: #50fa7b; font-weight: bold;">YOURFAMILYNAM</span><span style="color: #ff79c6; font-weight: bold;">}</span><span style="color: #bd93f9; font-weight: bold;">}{</span><span style="color: #50fa7b; font-weight: bold;">\textbf</span><span style="color: #ff79c6; font-weight: bold;">{</span><span style="color: #50fa7b; font-weight: bold;">#1</span><span style="color: #ff79c6; font-weight: bold;">}</span><span style="color: #bd93f9; font-weight: bold;">}{</span><span style="color: #50fa7b; font-weight: bold;">#1</span><span style="color: #bd93f9; font-weight: bold;">}</span><span style="color: #8be9fd;">}</span>
+<span style="color: #f8f8f2;">}</span>
 </pre>
 </div>
+
+<p>
+Source:
+</p>
+<ul class="org-ul">
+<li><a href="https://tex.stackexchange.com/a/178875/225233">Make author names bold in bibliography only - TeX - LaTeX Stack Ex&#x2026;</a></li>
+</ul>
 </div>
 </div>
 </div>
@@ -5261,7 +5270,7 @@ Source: <a href="https://stats.stackexchange.com/q/397288/31243">Dot Product and
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Luis Damiano</p>
-<p class="date">Created: 2022-10-21 Fri 16:31</p>
+<p class="date">Created: 2022-10-21 Fri 16:34</p>
 <p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
