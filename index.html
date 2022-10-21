@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2022-10-19 Wed 14:43 -->
+<!-- 2022-10-21 Fri 16:30 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Knowledge Base</title>
@@ -193,21 +193,26 @@ ul.org-ul, ol.org-ol { font-size:16px }
 <li><a href="#Resources">4.1.33. Resources</a></li>
 </ul>
 </li>
-<li><a href="#Beamer">4.2. Beamer</a>
+<li><a href="#BibLaTeX">4.2. BibLaTeX</a>
 <ul>
-<li><a href="#How%20to%20hide%20a%20frame%20in%20Beamer%3F">4.2.1. How to hide a frame in Beamer?</a></li>
-<li><a href="#How%20not%20to%20count%20appendix%20slides%20in%20Beamer%3F">4.2.2. How not to count appendix slides in Beamer?</a></li>
-<li><a href="#How%20to%20add%20a%20hyperlink%20to%20a%20Beamer%20frame%3F">4.2.3. How to add a hyperlink to a Beamer frame?</a></li>
-<li><a href="#How%20to%20build%20a%20Beamer%20template%3F">4.2.4. How to build a Beamer template?</a></li>
+<li><a href="#How%20to%20format%20citations%20and%20the%20bibliography%20with%20BibLaTeX%3F">4.2.1. How to format citations and the bibliography with BibLaTeX?</a></li>
+<li><a href="#How%20to%20bold%20my%20name%20using%20BibLaTeX%3F">4.2.2. How to bold my name using BibLaTeX?</a></li>
 </ul>
 </li>
-<li><a href="#Graph%20diagrams">4.3. Graph diagrams</a>
+<li><a href="#Beamer">4.3. Beamer</a>
 <ul>
-<li><a href="#Graphviz">4.3.1. Graphviz</a></li>
-<li><a href="#PGF%2FTikZ">4.3.2. PGF/TikZ</a></li>
+<li><a href="#How%20to%20hide%20a%20frame%20in%20Beamer%3F">4.3.1. How to hide a frame in Beamer?</a></li>
+<li><a href="#How%20not%20to%20count%20appendix%20slides%20in%20Beamer%3F">4.3.2. How not to count appendix slides in Beamer?</a></li>
+<li><a href="#How%20to%20add%20a%20hyperlink%20to%20a%20Beamer%20frame%3F">4.3.3. How to add a hyperlink to a Beamer frame?</a></li>
+<li><a href="#How%20to%20build%20a%20Beamer%20template%3F">4.3.4. How to build a Beamer template?</a></li>
 </ul>
 </li>
-<li><a href="#Biblatex">4.4. Biblatex</a></li>
+<li><a href="#Graph%20diagrams">4.4. Graph diagrams</a>
+<ul>
+<li><a href="#Graphviz">4.4.1. Graphviz</a></li>
+<li><a href="#PGF%2FTikZ">4.4.2. PGF/TikZ</a></li>
+</ul>
+</li>
 <li><a href="#Reference%20management">4.5. Reference management</a></li>
 </ul>
 </li>
@@ -472,9 +477,9 @@ ul.org-ul, ol.org-ol { font-size:16px }
 <li><a href="#Typesetting">4. Typesetting</a>
 <ul>
 <li><a href="#%28La%29TeX">4.1. (La)TeX</a></li>
-<li><a href="#Beamer">4.2. Beamer</a></li>
-<li><a href="#Graph%20diagrams">4.3. Graph diagrams</a></li>
-<li><a href="#Biblatex">4.4. Biblatex</a></li>
+<li><a href="#BibLaTeX">4.2. BibLaTeX</a></li>
+<li><a href="#Beamer">4.3. Beamer</a></li>
+<li><a href="#Graph%20diagrams">4.4. Graph diagrams</a></li>
 <li><a href="#Reference%20management">4.5. Reference management</a></li>
 </ul>
 </li>
@@ -1040,7 +1045,7 @@ Source: <a href="https://git-scm.com/book/en/v2/Git-Internals-Git-Objects">Git -
 <div id="outline-container-How%20to%20rename%20a%20branch%3F" class="outline-4">
 <h4 id="How%20to%20rename%20a%20branch%3F"><span class="section-number-4">3.1.2.</span> How to rename a branch?</h4>
 <div class="outline-text-4" id="text-3-1-2">
-<pre class="example" id="orgc8eb204">
+<pre class="example" id="orga5fa09c">
 git branch -m newname
 </pre>
 </div>
@@ -2250,13 +2255,71 @@ programmers will ever need to know</li>
 </div>
 </div>
 </div>
-<div id="outline-container-Beamer" class="outline-3">
-<h3 id="Beamer"><span class="section-number-3">4.2.</span> Beamer</h3>
+
+
+<div id="outline-container-BibLaTeX" class="outline-3">
+<h3 id="BibLaTeX"><span class="section-number-3">4.2.</span> BibLaTeX</h3>
 <div class="outline-text-3" id="text-4-2">
+<ul class="org-ul">
+<li>Use biblatex (LaTeX package that format citations) with a biber
+backend (external program that processes bibliography information)</li>
+<li><a href="https://tex.stackexchange.com/a/25702/225233">bibtex vs. biber and biblatex vs. natbib</a></li>
+</ul>
+</div>
+
+<div id="outline-container-How%20to%20format%20citations%20and%20the%20bibliography%20with%20BibLaTeX%3F" class="outline-4">
+<h4 id="How%20to%20format%20citations%20and%20the%20bibliography%20with%20BibLaTeX%3F"><span class="section-number-4">4.2.1.</span> How to format citations and the bibliography with BibLaTeX?</h4>
+<div class="outline-text-4" id="text-4-2-1">
+<div class="org-src-container">
+<pre class="src src-latex"><span style="color: #a49462;">%% </span><span style="color: #a49462;">references</span>
+<span style="color: #ff79c6; font-weight: bold;">\usepackage</span><span style="color: #f8f8f2;">[</span>
+<span style="color: #f8f8f2; font-weight: bold;">backend=bibtex,            </span><span style="color: #a49462; font-weight: bold;">% Use legacy bibtex backend (biber is better)</span>
+<span style="color: #f8f8f2; font-weight: bold;">natbib=true,               </span><span style="color: #a49462; font-weight: bold;">% Load aliases for citation commands</span>
+<span style="color: #f8f8f2; font-weight: bold;">citestyle=authoryear-comp, </span><span style="color: #a49462; font-weight: bold;">% Inline: Author year, compressed</span>
+<span style="color: #f8f8f2; font-weight: bold;">maxcitenames=1,            </span><span style="color: #a49462; font-weight: bold;">% Inline: max 1 author name</span>
+<span style="color: #f8f8f2; font-weight: bold;">bibstyle=authoryear,       </span><span style="color: #a49462; font-weight: bold;">% Bibliography: Author year</span>
+<span style="color: #f8f8f2; font-weight: bold;">giveninits=true,           </span><span style="color: #a49462; font-weight: bold;">% Bibliography: first and middle name initials</span>
+<span style="color: #f8f8f2; font-weight: bold;">dashed=false,              </span><span style="color: #a49462; font-weight: bold;">% Bibliography: no dash for recurrent authors</span>
+<span style="color: #f8f8f2; font-weight: bold;">abbreviate=true,           </span><span style="color: #a49462; font-weight: bold;">% Bibliography: abbreviate</span>
+<span style="color: #f8f8f2; font-weight: bold;">maxbibnames=100,           </span><span style="color: #a49462; font-weight: bold;">% Bibliography: all author names</span>
+<span style="color: #f8f8f2; font-weight: bold;">sorting=nyt,               </span><span style="color: #a49462; font-weight: bold;">% Bibliography: sort by name, year, title</span>
+<span style="color: #f8f8f2; font-weight: bold;">isbn=true,                 </span><span style="color: #a49462; font-weight: bold;">% Bibliography: print ISBN</span>
+<span style="color: #f8f8f2; font-weight: bold;">url=false,                 </span><span style="color: #a49462; font-weight: bold;">% Bibliography: don't print URL</span>
+<span style="color: #f8f8f2; font-weight: bold;">doi=true,                  </span><span style="color: #a49462; font-weight: bold;">% Bibliography: print DOI</span>
+<span style="color: #f8f8f2; font-weight: bold;">eprint=false               </span><span style="color: #a49462; font-weight: bold;">% Bibliography: don't print eprint information</span>
+<span style="color: #f8f8f2;">]{</span><span style="color: #50fa7b; font-weight: bold;">biblatex</span><span style="color: #f8f8f2;">}</span>
+
+<span style="color: #a49462;">% </span><span style="color: #a49462;">Bibliography: print authors as "last name, first name"</span>
+<span style="color: #ffff00;">\DeclareNameAlias</span><span style="color: #f8f8f2;">{</span>sortname<span style="color: #f8f8f2;">}{</span>family-given<span style="color: #f8f8f2;">}</span>
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-How%20to%20bold%20my%20name%20using%20BibLaTeX%3F" class="outline-4">
+<h4 id="How%20to%20bold%20my%20name%20using%20BibLaTeX%3F"><span class="section-number-4">4.2.2.</span> How to bold my name using BibLaTeX?</h4>
+<div class="outline-text-4" id="text-4-2-2">
+<p>
+This will bold YOURFAMILYNAME.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-latex"><span style="color: #a49462;">% </span><span style="color: #a49462;">Bibliography: bold last name</span>
+<span style="color: #ff79c6; font-weight: bold;">\usepackage</span><span style="color: #f8f8f2;">{</span><span style="color: #50fa7b; font-weight: bold;">ifthen</span><span style="color: #f8f8f2;">}</span>
+<span style="color: #ff79c6; font-weight: bold;">\renewcommand</span><span style="color: #ff79c6; font-weight: bold;">*</span><span style="color: #f8f8f2;">{</span><span style="color: #50fa7b; font-weight: bold;">\mkbibnamefamily</span><span style="color: #f8f8f2;">}[</span><span style="color: #f8f8f2; font-weight: bold;">1</span><span style="color: #f8f8f2;">]{</span><span style="color: #a49462; font-weight: bold;">%</span>
+<span style="color: #50fa7b; font-weight: bold;">  </span><span style="color: #50fa7b; font-weight: bold;">\ifthenelse</span><span style="color: #8be9fd; font-weight: bold;">{</span><span style="color: #50fa7b; font-weight: bold;">\equal</span><span style="color: #bd93f9; font-weight: bold;">{</span><span style="color: #50fa7b; font-weight: bold;">#1</span><span style="color: #bd93f9; font-weight: bold;">}{</span><span style="color: #50fa7b; font-weight: bold;">YOURFAMILYNAM</span><span style="color: #bd93f9; font-weight: bold;">}</span><span style="color: #8be9fd; font-weight: bold;">}{</span><span style="color: #50fa7b; font-weight: bold;">\textbf</span><span style="color: #bd93f9; font-weight: bold;">{</span><span style="color: #50fa7b; font-weight: bold;">#1</span><span style="color: #bd93f9; font-weight: bold;">}</span><span style="color: #8be9fd; font-weight: bold;">}{</span><span style="color: #50fa7b; font-weight: bold;">#1</span><span style="color: #8be9fd; font-weight: bold;">}</span><span style="color: #f8f8f2;">}</span>
+</pre>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-Beamer" class="outline-3">
+<h3 id="Beamer"><span class="section-number-3">4.3.</span> Beamer</h3>
+<div class="outline-text-3" id="text-4-3">
 </div>
 <div id="outline-container-How%20to%20hide%20a%20frame%20in%20Beamer%3F" class="outline-4">
-<h4 id="How%20to%20hide%20a%20frame%20in%20Beamer%3F"><span class="section-number-4">4.2.1.</span> How to hide a frame in Beamer?</h4>
-<div class="outline-text-4" id="text-4-2-1">
+<h4 id="How%20to%20hide%20a%20frame%20in%20Beamer%3F"><span class="section-number-4">4.3.1.</span> How to hide a frame in Beamer?</h4>
+<div class="outline-text-4" id="text-4-3-1">
 <p>
 Use <code>&lt;beamer:0&gt;</code> to hide it in the presentation, use <code>&lt;handout:0&gt;</code> to hide it
 in the handout, use <code>&lt;handout:0|beamer:0&gt;</code> or simply <code>&lt;all:0&gt;</code> to hide it in
@@ -2281,8 +2344,8 @@ Source:
 </div>
 
 <div id="outline-container-How%20not%20to%20count%20appendix%20slides%20in%20Beamer%3F" class="outline-4">
-<h4 id="How%20not%20to%20count%20appendix%20slides%20in%20Beamer%3F"><span class="section-number-4">4.2.2.</span> How not to count appendix slides in Beamer?</h4>
-<div class="outline-text-4" id="text-4-2-2">
+<h4 id="How%20not%20to%20count%20appendix%20slides%20in%20Beamer%3F"><span class="section-number-4">4.3.2.</span> How not to count appendix slides in Beamer?</h4>
+<div class="outline-text-4" id="text-4-3-2">
 <p>
 Use <code>\usepackage{appendixnumberbeamer}</code> to automatically reset the frame
 counter when the <code>\appendix</code> command is called. No need to do this by hand :)
@@ -2297,8 +2360,8 @@ counter when the <code>\appendix</code> command is called. No need to do this by
 </div>
 
 <div id="outline-container-How%20to%20add%20a%20hyperlink%20to%20a%20Beamer%20frame%3F" class="outline-4">
-<h4 id="How%20to%20add%20a%20hyperlink%20to%20a%20Beamer%20frame%3F"><span class="section-number-4">4.2.3.</span> How to add a hyperlink to a Beamer frame?</h4>
-<div class="outline-text-4" id="text-4-2-3">
+<h4 id="How%20to%20add%20a%20hyperlink%20to%20a%20Beamer%20frame%3F"><span class="section-number-4">4.3.3.</span> How to add a hyperlink to a Beamer frame?</h4>
+<div class="outline-text-4" id="text-4-3-3">
 <p>
 Load <code>\usepckage{hyperref}</code>. Use <code>\label{somename}</code> or
 <code>\hypertarget{somename}</code> to set a target. Use <code>\hyperlink{somename}{text to
@@ -2314,8 +2377,8 @@ or button linking to the target.
 </div>
 
 <div id="outline-container-How%20to%20build%20a%20Beamer%20template%3F" class="outline-4">
-<h4 id="How%20to%20build%20a%20Beamer%20template%3F"><span class="section-number-4">4.2.4.</span> How to build a Beamer template?</h4>
-<div class="outline-text-4" id="text-4-2-4">
+<h4 id="How%20to%20build%20a%20Beamer%20template%3F"><span class="section-number-4">4.3.4.</span> How to build a Beamer template?</h4>
+<div class="outline-text-4" id="text-4-3-4">
 <p>
 Mix and match:
 </p>
@@ -2342,12 +2405,12 @@ Bright, and Minion Pro</li>
 </div>
 </div>
 <div id="outline-container-Graph%20diagrams" class="outline-3">
-<h3 id="Graph%20diagrams"><span class="section-number-3">4.3.</span> Graph diagrams</h3>
-<div class="outline-text-3" id="text-4-3">
+<h3 id="Graph%20diagrams"><span class="section-number-3">4.4.</span> Graph diagrams</h3>
+<div class="outline-text-3" id="text-4-4">
 </div>
 <div id="outline-container-Graphviz" class="outline-4">
-<h4 id="Graphviz"><span class="section-number-4">4.3.1.</span> Graphviz</h4>
-<div class="outline-text-4" id="text-4-3-1">
+<h4 id="Graphviz"><span class="section-number-4">4.4.1.</span> Graphviz</h4>
+<div class="outline-text-4" id="text-4-4-1">
 <ul class="org-ul">
 <li>Engine: <a href="https://graphviz.org/">graphviz</a>, mostly <a href="https://graphviz.org/doc/info/lang.html">DOT</a></li>
 <li>Editor online: <a href="https://edotor.net/">Edotor</a></li>
@@ -2356,8 +2419,8 @@ Bright, and Minion Pro</li>
 </div>
 
 <div id="outline-container-PGF%2FTikZ" class="outline-4">
-<h4 id="PGF%2FTikZ"><span class="section-number-4">4.3.2.</span> PGF/TikZ</h4>
-<div class="outline-text-4" id="text-4-3-2">
+<h4 id="PGF%2FTikZ"><span class="section-number-4">4.4.2.</span> PGF/TikZ</h4>
+<div class="outline-text-4" id="text-4-4-2">
 <p>
 Typically requires a bit more of work, but it's more flexible and
 allows for neater graphs
@@ -2370,17 +2433,6 @@ allows for neater graphs
 </div>
 </div>
 </div>
-<div id="outline-container-Biblatex" class="outline-3">
-<h3 id="Biblatex"><span class="section-number-3">4.4.</span> Biblatex</h3>
-<div class="outline-text-3" id="text-4-4">
-<ul class="org-ul">
-<li>Use biblatex (LaTeX package that format citations) with a biber
-backend (external program that processes bibliography information)</li>
-<li><a href="https://tex.stackexchange.com/a/25702/225233">bibtex vs. biber and biblatex vs. natbib</a></li>
-</ul>
-</div>
-</div>
-
 <div id="outline-container-Reference%20management" class="outline-3">
 <h3 id="Reference%20management"><span class="section-number-3">4.5.</span> Reference management</h3>
 <div class="outline-text-3" id="text-4-5">
@@ -5202,7 +5254,7 @@ Source: <a href="https://stats.stackexchange.com/q/397288/31243">Dot Product and
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Luis Damiano</p>
-<p class="date">Created: 2022-10-19 Wed 14:43</p>
+<p class="date">Created: 2022-10-21 Fri 16:30</p>
 <p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>

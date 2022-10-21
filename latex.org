@@ -395,3 +395,46 @@
    - [[https://www.ctan.org/pkg/texbook][The TeXbook]]: an example of the business of writing a book in TeX
    - [[https://www.ctan.org/pkg/texbytopic][TeXbyTopic]]: covers the way TeX works in as much detail as most ordinary
      programmers will ever need to know
+
+
+* BibLaTeX
+
+  - Use biblatex (LaTeX package that format citations) with a biber
+    backend (external program that processes bibliography information)
+  - [[https://tex.stackexchange.com/a/25702/225233][bibtex vs. biber and biblatex vs. natbib]]
+
+** How to format citations and the bibliography with BibLaTeX?
+
+   #+begin_src latex
+     %% references
+     \usepackage[
+     backend=bibtex,            % Use legacy bibtex backend (biber is better)
+     natbib=true,               % Load aliases for citation commands
+     citestyle=authoryear-comp, % Inline: Author year, compressed
+     maxcitenames=1,            % Inline: max 1 author name
+     bibstyle=authoryear,       % Bibliography: Author year
+     giveninits=true,           % Bibliography: first and middle name initials
+     dashed=false,              % Bibliography: no dash for recurrent authors
+     abbreviate=true,           % Bibliography: abbreviate
+     maxbibnames=100,           % Bibliography: all author names
+     sorting=nyt,               % Bibliography: sort by name, year, title
+     isbn=true,                 % Bibliography: print ISBN
+     url=false,                 % Bibliography: don't print URL
+     doi=true,                  % Bibliography: print DOI
+     eprint=false               % Bibliography: don't print eprint information
+     ]{biblatex}
+
+     % Bibliography: print authors as "last name, first name"
+     \DeclareNameAlias{sortname}{family-given}
+   #+end_src
+
+** How to bold my name using BibLaTeX?
+
+   This will bold YOURFAMILYNAME.
+
+   #+begin_src latex
+     % Bibliography: bold last name
+     \usepackage{ifthen}
+     \renewcommand*{\mkbibnamefamily}[1]{%
+       \ifthenelse{\equal{#1}{YOURFAMILYNAM}}{\textbf{#1}}{#1}}
+   #+end_src
