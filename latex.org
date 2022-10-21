@@ -428,6 +428,9 @@
      \DeclareNameAlias{sortname}{family-given}
    #+end_src
 
+   Source:
+   - [[https://tex.stackexchange.com/a/13076/225233][Guidelines for customizing biblatex styles - TeX - LaTeX Stack Exchange]]
+
 ** How to bold my name using BibLaTeX?
 
    This will bold YOURFAMILYNAME.
