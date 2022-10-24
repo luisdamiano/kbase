@@ -69,12 +69,22 @@ emacs $(/bin/ls */* --sort=time | tail -n 5)
    Source:
    - [[https://stackoverflow.com/a/17093431/2860744][Bash: comparing a string as an integer - Stack Overflow]]
 
-** How to make a conditional assignment in bash?
+** How to make a conditional assignment in bash for a string?
+
+   #+begin_src shell
+     ## Assign "string-true" to VAR if VARTOCHECK is equal to "string-cond"
+     [ $VARTOCHECK == "string-cond" ] && VAR="string-true" || VAR="string-false"
+   #+end_src
+
+   Source:
+   - [[https://unix.stackexchange.com/a/91554/88701][bash - Conditional assignment based on environment variable]]
+
+** How to make a conditional assignment in bash for a numeric?
 
    Use the following expression if the assignment is numerical.
 
    #+begin_src shell
-     # Assign 20 if true, or 10 if false
+     ## Assign 20 if true, or 10 if false
      variable=$(( 1 > 0 ? 20 : 10 ))
    #+end_src
 

@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2022-10-24 Mon 16:01 -->
+<!-- 2022-10-24 Mon 17:02 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Knowledge Base</title>
@@ -65,7 +65,8 @@ ul.org-ul, ol.org-ol { font-size:16px }
 <li><a href="#How%20to%20execute%20a%20loop%20conditionally%20%28dry%20runs%29">2.2.1. How to execute a loop conditionally (dry runs)</a></li>
 <li><a href="#How%20to%20open%20the%20N%20most%20recently%20modified%20files%3F">2.2.2. How to open the N most recently modified files?</a></li>
 <li><a href="#How%20to%20cast%20a%20string%20to%20intenger%3F">2.2.3. How to cast a string to intenger?</a></li>
-<li><a href="#How%20to%20make%20a%20conditional%20assignment%20in%20bash%3F">2.2.4. How to make a conditional assignment in bash?</a></li>
+<li><a href="#How%20to%20make%20a%20conditional%20assignment%20in%20bash%20for%20a%20string%3F">2.2.4. How to make a conditional assignment in bash for a string?</a></li>
+<li><a href="#How%20to%20make%20a%20conditional%20assignment%20in%20bash%20for%20a%20numeric%3F">2.2.5. How to make a conditional assignment in bash for a numeric?</a></li>
 </ul>
 </li>
 <li><a href="#Linux--Linux">2.3. Linux</a>
@@ -699,15 +700,33 @@ Source:
 </div>
 </div>
 
-<div id="outline-container-How%20to%20make%20a%20conditional%20assignment%20in%20bash%3F" class="outline-4">
-<h4 id="How%20to%20make%20a%20conditional%20assignment%20in%20bash%3F"><span class="section-number-4">2.2.4.</span> How to make a conditional assignment in bash?</h4>
+<div id="outline-container-How%20to%20make%20a%20conditional%20assignment%20in%20bash%20for%20a%20string%3F" class="outline-4">
+<h4 id="How%20to%20make%20a%20conditional%20assignment%20in%20bash%20for%20a%20string%3F"><span class="section-number-4">2.2.4.</span> How to make a conditional assignment in bash for a string?</h4>
 <div class="outline-text-4" id="text-2-2-4">
+<div class="org-src-container">
+<pre class="src src-shell"><span style="color: #a49462;">## </span><span style="color: #a49462;">Assign "string-true" to VAR if VARTOCHECK is equal to "string-cond"</span>
+[ $<span style="color: #f8f8f2; font-weight: bold;">VARTOCHECK</span> == <span style="color: #f1fa8c;">"string-cond"</span> ] &amp;&amp; <span style="color: #f8f8f2; font-weight: bold;">VAR</span>=<span style="color: #f1fa8c;">"string-true"</span> || <span style="color: #f8f8f2; font-weight: bold;">VAR</span>=<span style="color: #f1fa8c;">"string-false"</span>
+</pre>
+</div>
+
+<p>
+Source:
+</p>
+<ul class="org-ul">
+<li><a href="https://unix.stackexchange.com/a/91554/88701">bash - Conditional assignment based on environment variable</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-How%20to%20make%20a%20conditional%20assignment%20in%20bash%20for%20a%20numeric%3F" class="outline-4">
+<h4 id="How%20to%20make%20a%20conditional%20assignment%20in%20bash%20for%20a%20numeric%3F"><span class="section-number-4">2.2.5.</span> How to make a conditional assignment in bash for a numeric?</h4>
+<div class="outline-text-4" id="text-2-2-5">
 <p>
 Use the following expression if the assignment is numerical.
 </p>
 
 <div class="org-src-container">
-<pre class="src src-shell"><span style="color: #a49462;"># </span><span style="color: #a49462;">Assign 20 if true, or 10 if false</span>
+<pre class="src src-shell"><span style="color: #a49462;">## </span><span style="color: #a49462;">Assign 20 if true, or 10 if false</span>
 <span style="color: #f8f8f2; font-weight: bold;">variable</span>=$(<span style="color: #fa8072;">( 1 &gt; 0 ? 20 : 10 </span>))
 </pre>
 </div>
@@ -1046,7 +1065,7 @@ Source: <a href="https://git-scm.com/book/en/v2/Git-Internals-Git-Objects">Git -
 <div id="outline-container-How%20to%20rename%20a%20branch%3F" class="outline-4">
 <h4 id="How%20to%20rename%20a%20branch%3F"><span class="section-number-4">3.1.2.</span> How to rename a branch?</h4>
 <div class="outline-text-4" id="text-3-1-2">
-<pre class="example" id="orge01ff6e">
+<pre class="example" id="orga2f6114">
 git branch -m newname
 </pre>
 </div>
@@ -5294,7 +5313,7 @@ Source: <a href="https://stats.stackexchange.com/q/397288/31243">Dot Product and
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Luis Damiano</p>
-<p class="date">Created: 2022-10-24 Mon 16:01</p>
+<p class="date">Created: 2022-10-24 Mon 17:02</p>
 <p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
