@@ -100,3 +100,16 @@
    #+begin_src shell
      pdfcrop document.pdf
    #+end_src
+
+** How to extract and delete all the metadata in a PDF file?
+
+   Use =exiftool= for reading and manipulating PDF metadata.
+
+   #+begin_src shell
+     exiftool -all:all  file.pdf ## read all the tags
+     exiftool -all:all= file.pdf ## remove all the tags
+   #+end_src
+
+   Source:
+   - [[https://man.archlinux.org/man/exiftool.1p][exiftool(1p) — Arch manual pages]]
+   - [[https://tldr.ostera.io/exiftool][tldr | simplified, community driven man pages]]
