@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2022-10-24 Mon 17:02 -->
+<!-- 2022-10-26 Wed 13:03 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Knowledge Base</title>
@@ -125,10 +125,11 @@ ul.org-ul, ol.org-ol { font-size:16px }
 <ul>
 <li><a href="#How%20to%20match%20a%20keyword%20except%20when%20used%20as%20a%20tag%3F">3.3.1. How to match a keyword except when used as a tag?</a></li>
 <li><a href="#How%20to%20match%20all%20R%20dependencies%3F">3.3.2. How to match all R dependencies?</a></li>
-<li><a href="#How%20to%20match%20a%20custom%20file%20separator%3F">3.3.3. How to match a custom file separator?</a></li>
-<li><a href="#How%20to%20match%20any%20number%20with%20decimals%20up%20to%2010%3F">3.3.4. How to match any number with decimals up to 10?</a></li>
-<li><a href="#How%20to%20generate%20a%20string%20that%20matches%20a%20regular%20expression%3F">3.3.5. How to generate a string that matches a regular expression?</a></li>
-<li><a href="#General%20resources">3.3.6. General resources</a></li>
+<li><a href="#How%20to%20match%20URLs%3F">3.3.3. How to match URLs?</a></li>
+<li><a href="#How%20to%20match%20a%20custom%20file%20separator%3F">3.3.4. How to match a custom file separator?</a></li>
+<li><a href="#How%20to%20match%20any%20number%20with%20decimals%20up%20to%2010%3F">3.3.5. How to match any number with decimals up to 10?</a></li>
+<li><a href="#How%20to%20generate%20a%20string%20that%20matches%20a%20regular%20expression%3F">3.3.6. How to generate a string that matches a regular expression?</a></li>
+<li><a href="#General%20resources">3.3.7. General resources</a></li>
 </ul>
 </li>
 <li><a href="#GNU%20Make">3.4. GNU Make</a>
@@ -1065,7 +1066,7 @@ Source: <a href="https://git-scm.com/book/en/v2/Git-Internals-Git-Objects">Git -
 <div id="outline-container-How%20to%20rename%20a%20branch%3F" class="outline-4">
 <h4 id="How%20to%20rename%20a%20branch%3F"><span class="section-number-4">3.1.2.</span> How to rename a branch?</h4>
 <div class="outline-text-4" id="text-3-1-2">
-<pre class="example" id="orga2f6114">
+<pre class="example" id="orge043cdc">
 git branch -m newname
 </pre>
 </div>
@@ -1332,9 +1333,26 @@ Source:
 </div>
 </div>
 
-<div id="outline-container-How%20to%20match%20a%20custom%20file%20separator%3F" class="outline-4">
-<h4 id="How%20to%20match%20a%20custom%20file%20separator%3F"><span class="section-number-4">3.3.3.</span> How to match a custom file separator?</h4>
+<div id="outline-container-How%20to%20match%20URLs%3F" class="outline-4">
+<h4 id="How%20to%20match%20URLs%3F"><span class="section-number-4">3.3.3.</span> How to match URLs?</h4>
 <div class="outline-text-4" id="text-3-3-3">
+<div class="org-src-container">
+<pre class="src src-shell">grep -Poh <span style="color: #f1fa8c;">'(http|ftp|https):\/\/([\w_-]+(?:(?:\.[\w_-]+)+))([\w.,@?^=%&amp;:\/~+#-]*[\w@?^=%&amp;\/~+#-])'</span> myfile.txt | sort | uniq
+</pre>
+</div>
+
+<p>
+Source:
+</p>
+<ul class="org-ul">
+<li><a href="https://stackoverflow.com/a/6041965/2860744">Regular expression to find URLs within a string</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-How%20to%20match%20a%20custom%20file%20separator%3F" class="outline-4">
+<h4 id="How%20to%20match%20a%20custom%20file%20separator%3F"><span class="section-number-4">3.3.4.</span> How to match a custom file separator?</h4>
+<div class="outline-text-4" id="text-3-3-4">
 <p>
 I typically separate my file in labeled sections using this
 pattern: comment separator (one or more), space, label (can include
@@ -1354,8 +1372,8 @@ fill the column space. This can be matched with <code>\S+\s(.+?)\s-{4,}</code>
 </div>
 
 <div id="outline-container-How%20to%20match%20any%20number%20with%20decimals%20up%20to%2010%3F" class="outline-4">
-<h4 id="How%20to%20match%20any%20number%20with%20decimals%20up%20to%2010%3F"><span class="section-number-4">3.3.4.</span> How to match any number with decimals up to 10?</h4>
-<div class="outline-text-4" id="text-3-3-4">
+<h4 id="How%20to%20match%20any%20number%20with%20decimals%20up%20to%2010%3F"><span class="section-number-4">3.3.5.</span> How to match any number with decimals up to 10?</h4>
+<div class="outline-text-4" id="text-3-3-5">
 <div class="org-src-container">
 <pre class="src src-ascii">^(?:\d|\d?\.\d+|10(?:\.0+)?)$
 </pre>
@@ -1368,8 +1386,8 @@ Source: <a href="https://regex101.com/r/kk8SIF/1/">https://regex101.com/r/kk8SIF
 </div>
 
 <div id="outline-container-How%20to%20generate%20a%20string%20that%20matches%20a%20regular%20expression%3F" class="outline-4">
-<h4 id="How%20to%20generate%20a%20string%20that%20matches%20a%20regular%20expression%3F"><span class="section-number-4">3.3.5.</span> How to generate a string that matches a regular expression?</h4>
-<div class="outline-text-4" id="text-3-3-5">
+<h4 id="How%20to%20generate%20a%20string%20that%20matches%20a%20regular%20expression%3F"><span class="section-number-4">3.3.6.</span> How to generate a string that matches a regular expression?</h4>
+<div class="outline-text-4" id="text-3-3-6">
 <p>
 A <i>regex to string</i> kind of situation.
 </p>
@@ -1381,8 +1399,8 @@ A <i>regex to string</i> kind of situation.
 </div>
 
 <div id="outline-container-General%20resources" class="outline-4">
-<h4 id="General%20resources"><span class="section-number-4">3.3.6.</span> General resources</h4>
-<div class="outline-text-4" id="text-3-3-6">
+<h4 id="General%20resources"><span class="section-number-4">3.3.7.</span> General resources</h4>
+<div class="outline-text-4" id="text-3-3-7">
 <ul class="org-ul">
 <li><a href="https://docs.microsoft.com/en-us/dotnet/standard/base-types/best-practices">Best practices for regular expressions</a></li>
 </ul>
@@ -5313,7 +5331,7 @@ Source: <a href="https://stats.stackexchange.com/q/397288/31243">Dot Product and
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Luis Damiano</p>
-<p class="date">Created: 2022-10-24 Mon 17:02</p>
+<p class="date">Created: 2022-10-26 Wed 13:03</p>
 <p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
