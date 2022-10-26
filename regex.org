@@ -41,6 +41,12 @@
    Source:
    - [[https://stackoverflow.com/a/6041965/2860744][Regular expression to find URLs within a string]]
 
+** How to test all the URLs in a text file?
+
+   #+begin_src shell
+     grep -Poh '(http|ftp|https):\/\/([\w_-]+(?:(?:\.[\w_-]+)+))([\w.,@?^=%&:\/~+#-]*[\w@?^=%&\/~+#-])' myfile.txt | sort | uniq | xargs wget --spider
+   #+end_src
+
 ** How to match a custom file separator?
 
    I typically separate my file in labeled sections using this
