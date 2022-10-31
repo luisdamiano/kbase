@@ -5,3 +5,11 @@
    #+begin_src shell
      watch -d squeue --me --format=\"%.18i %.18P %.32j %.8u %.2t \| %.10M \| %.10l \| %.19S \| %.6D %20Y %R\" --sort=i
    #+end_src
+
+** What is a good guide for Slurm?
+
+   This is an excellent guide: [[https://researchcomputing.princeton.edu/support/knowledge-base/slurm][Introducing Slurm | Princeton Research Computing]].
+   It covers how to submit serial jobs, multithreaded jobs, multinode or
+   parallel MPI jobs, multinode, multithreaded jobs, job arrays, running
+   multiple jobs in parallel as a single job, and running a sequence of jobs
+   (job dependencies).
