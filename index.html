@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2022-10-31 Mon 10:40 -->
+<!-- 2022-11-02 Wed 10:36 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Knowledge Base</title>
@@ -239,7 +239,9 @@ ul.org-ul, ol.org-ol { font-size:16px }
 <ul>
 <li><a href="#What%20is%20the%20programming%20language%20identifier%20for%20a%20source%20block%3F">5.2.1. What is the programming language identifier for a source block?</a></li>
 <li><a href="#How%20to%20export%2Ftangle%20automatically%20on%20commit%3F">5.2.2. How to export/tangle automatically on commit?</a></li>
-<li><a href="#Org-mode--General%20resources">5.2.3. General resources</a></li>
+<li><a href="#How%20to%20add%20a%20custom%20format%20to%20display%20a%20horizontal%20line%20in%20the%20buffer%3F">5.2.3. How to add a custom format to display a horizontal line in the buffer?</a></li>
+<li><a href="#How%20to%20improve%20the%20look%20of%20an%20org-mode%20buffer%3F">5.2.4. How to improve the look of an org-mode buffer?</a></li>
+<li><a href="#Org-mode--General%20resources">5.2.5. General resources</a></li>
 </ul>
 </li>
 <li><a href="#Elisp">5.3. Elisp</a>
@@ -1068,7 +1070,7 @@ Source: <a href="https://git-scm.com/book/en/v2/Git-Internals-Git-Objects">Git -
 <div id="outline-container-How%20to%20rename%20a%20branch%3F" class="outline-4">
 <h4 id="How%20to%20rename%20a%20branch%3F"><span class="section-number-4">3.1.2.</span> How to rename a branch?</h4>
 <div class="outline-text-4" id="text-3-1-2">
-<pre class="example" id="org20a30b6">
+<pre class="example" id="orgf193339">
 git branch -m newname
 </pre>
 </div>
@@ -2684,9 +2686,55 @@ documentation from org when you git commit</li>
 </div>
 </div>
 
-<div id="outline-container-Org-mode--General%20resources" class="outline-4">
-<h4 id="Org-mode--General%20resources"><span class="section-number-4">5.2.3.</span> General resources</h4>
+<div id="outline-container-How%20to%20add%20a%20custom%20format%20to%20display%20a%20horizontal%20line%20in%20the%20buffer%3F" class="outline-4">
+<h4 id="How%20to%20add%20a%20custom%20format%20to%20display%20a%20horizontal%20line%20in%20the%20buffer%3F"><span class="section-number-4">5.2.3.</span> How to add a custom format to display a horizontal line in the buffer?</h4>
 <div class="outline-text-4" id="text-5-2-3">
+<p>
+Set up a custom font lock format by calling the function
+<code>font-lock-add-keywords</code>.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-elisp">(add-hook 'org-mode-hook
+     (<span style="color: #ff79c6; font-weight: bold;">lambda</span> ()
+       (font-lock-add-keywords
+        nil
+        '((<span style="color: #f1fa8c;">"^-\\{5,\\}"</span>  0 '(<span style="color: #ffb86c;">:foreground</span> <span style="color: #f1fa8c;">"green"</span> <span style="color: #ffb86c;">:weight</span> bold))))))
+</pre>
+</div>
+
+<p>
+Source:
+</p>
+<ul class="org-ul">
+<li><a href="https://emacs.stackexchange.com/a/68708">How can I color horizontal lines in org mode? - Emacs Stack Exchange</a></li>
+<li><a href="https://www.gnu.org/software/emacs/manual/html_node/emacs/Font-Lock.html">Font Lock (GNU Emacs Manual)</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-How%20to%20improve%20the%20look%20of%20an%20org-mode%20buffer%3F" class="outline-4">
+<h4 id="How%20to%20improve%20the%20look%20of%20an%20org-mode%20buffer%3F"><span class="section-number-4">5.2.4.</span> How to improve the look of an org-mode buffer?</h4>
+<div class="outline-text-4" id="text-5-2-4">
+<p>
+Use <code>org-modern</code> for a modern style via font locking and text properties.
+Consider also <code>org-superstar</code>, which has a reduced scope for headings and
+plain lists only.
+</p>
+
+<p>
+Source:
+</p>
+<ul class="org-ul">
+<li><a href="https://github.com/minad/org-modern">GitHub - minad/org-modern: Modern Org Style</a></li>
+<li><a href="https://github.com/integral-dw/org-superstar-mode">GitHub - integral-dw/org-superstar-mode: Make org-mode stars a little more super</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-Org-mode--General%20resources" class="outline-4">
+<h4 id="Org-mode--General%20resources"><span class="section-number-4">5.2.5.</span> General resources</h4>
+<div class="outline-text-4" id="text-5-2-5">
 <ul class="org-ul">
 <li><a href="https://academia.stackexchange.com/questions/1273/use-cases-of-org-mode-as-a-scientific-productivity-tool-for-academics-without-pr">Use cases of org-mode as a scientific productivity tool for academics</a></li>
 <li><a href="https://github.com/fniessen/refcard-org-mode">Org-mode reference card</a></li>
@@ -5356,7 +5404,7 @@ Source: <a href="https://stats.stackexchange.com/q/397288/31243">Dot Product and
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Luis Damiano</p>
-<p class="date">Created: 2022-10-31 Mon 10:40</p>
+<p class="date">Created: 2022-11-02 Wed 10:36</p>
 <p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
