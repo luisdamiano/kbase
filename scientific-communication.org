@@ -1,9 +1,10 @@
 * Scientific communication
 
-  Communication is as hard as it gets. There's a trade-off between
-  message length, precision, ease of reading, and understandability. I
-  thrive for short and precise sentences that are easy to digest that
-  are modular yet feel complete. Here's a couple notes for better writting.
+  [[https://duckduckgo.com/?q=%22it+can+be+understood+through+thorough+thought+though%22&t=h_&ia=web][English is weird but it can be understood through thorough thought though]].
+  Communication is as hard as it gets. There's a trade-off between message
+  length, precision, ease of reading, and understandability. I thrive for short
+  and precise sentences that are easy to digest that are modular yet feel
+  complete. Here's a couple notes for better writting.
 
 ** General resources
    - The Elements of Style by Strunk, W., Jr. and White, E.B. An
