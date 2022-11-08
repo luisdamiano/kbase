@@ -73,8 +73,7 @@
 
 ** Getting determiners right
 
-   - [[https://en.wikipedia.org/wiki/List_of_English_determiners#Positive_paucal_determiners[1]:_391][List
-     of English determiners: Positive paucal determiners]]
+   - [[https://en.wikipedia.org/wiki/List_of_English_determiners#Positive_paucal_determiners%5b1%5d:_391][List of English determiners: Positive paucal determiners]]
    - The Cambridge Grammar of the English Language. DOI: 10.1017/9781316423530
 
 ** Double negation is not an affirmation
