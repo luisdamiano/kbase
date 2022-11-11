@@ -117,3 +117,11 @@
      while giving an oral presentation? Now imagine how hard it is for
      the audience to understand anything too technical. Be a nice
      speaker instead :)
+
+** Research statement
+
+   - [[https://gradschool.cornell.edu/career-and-professional-development/pathways-to-success/prepare-for-your-career/take-action/research-statement/][Research Statement: Cornll University Graduate School]]
+
+** Research proposal
+
+   - [[https://www.overleaf.com/project/5ee71e595384510001fdaaaa][Research proposal template]] (published by the [[https://www.sml-group.cc/openings/][SML group for an opening]])
