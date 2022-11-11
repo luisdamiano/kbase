@@ -543,3 +543,5 @@ might be more efficient.
    - [[https://pj.freefaculty.org/R/Rtips.html][Rtips]]
    - [[http://karolis.koncevicius.lt/posts/collection_of_simple_r_shortcuts/][A Collection of Simple R Shortcuts]]
    - [[https://csgillespie.github.io/efficientR/set-up.html#blas-and-alternative-r-interpreters][Efficient R programming]]
+   - [[https://github.com/erikgahner/awesome-ggplot2][erikgahner/awesome-ggplot2: A curated list of awesome ggplot2 tutorials,
+     packages, etc.]]
