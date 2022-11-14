@@ -364,6 +364,11 @@
 
    Source: rickyrick at libera.chat
 
+** How to cache a read function?
+
+   Use [[https://cran.r-project.org/web/packages/memoise/index.html][memoise]] to store the function call on memory, or an ad-hoc implementation
+   like [[https://github.com/bioDS/phyloRNAanalysis/blob/b9032c8c3a3f134cd73c44fe25618f659b6f5d79/src/utils.r#L170-L191][here]] (Colombo at Libera.chat).
+
 ** How to use =geom_tile= with irregular data?
 
 Note that =?geom_tile= recommends =akima::interp=.
