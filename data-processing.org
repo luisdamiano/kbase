@@ -65,7 +65,4 @@
 
 * A typical workflow
 
-  1. For each dataset
-     1. Acquire raw data
-     2. Munge data
-     3. Run many independent
+  Scientific data generation, collection, curation and processing.
