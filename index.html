@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2022-11-20 Sun 11:53 -->
+<!-- 2022-11-20 Sun 12:40 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Knowledge Base</title>
@@ -89,6 +89,8 @@ ul.org-ul, ol.org-ol { font-size:16px }
 <li><a href="#What%20characters%20have%20superscripts%20and%20subscripts%3F">2.3.15. What characters have superscripts and subscripts?</a></li>
 <li><a href="#Which%20folder%20does%20this%20file%20belong%20in%3F">2.3.16. Which folder does this file belong in?</a></li>
 <li><a href="#How%20to%20connect%20OBS%20to%20Zoom%20or%20Webex%3F">2.3.17. How to connect OBS to Zoom or Webex?</a></li>
+<li><a href="#Where%20are%20the%20X.Org%20Server%20config%20files%3F">2.3.18. Where are the X.Org Server config files?</a></li>
+<li><a href="#How%20to%20migrate%20from%20nouveau%20to%20propietary%20NVIDIA%20drivers%20for%20a%20NVS%20510%20graphic%20card%3F">2.3.19. How to migrate from nouveau to propietary NVIDIA drivers for a NVS 510 graphic card?</a></li>
 </ul>
 </li>
 <li><a href="#Math%20typing">2.4. Math typing</a>
@@ -1044,6 +1046,29 @@ Create a null output device
 </ul>
 </div>
 </div>
+<div id="outline-container-Where%20are%20the%20X.Org%20Server%20config%20files%3F" class="outline-4">
+<h4 id="Where%20are%20the%20X.Org%20Server%20config%20files%3F"><span class="section-number-4">2.3.18.</span> Where are the X.Org Server config files?</h4>
+<div class="outline-text-4" id="text-2-3-18">
+<ul class="org-ul">
+<li><code>/etc/X11/xorg.conf.d/</code> (preferred place for host-specific configurations)</li>
+<li><code>/usr/share/X11/xorg.conf.d/</code></li>
+<li><code>/etc/X11/xorg.conf</code> (deprecated)</li>
+<li><code>/etc/xorg.conf</code> (deprecated)</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-How%20to%20migrate%20from%20nouveau%20to%20propietary%20NVIDIA%20drivers%20for%20a%20NVS%20510%20graphic%20card%3F" class="outline-4">
+<h4 id="How%20to%20migrate%20from%20nouveau%20to%20propietary%20NVIDIA%20drivers%20for%20a%20NVS%20510%20graphic%20card%3F"><span class="section-number-4">2.3.19.</span> How to migrate from nouveau to propietary NVIDIA drivers for a NVS 510 graphic card?</h4>
+<div class="outline-text-4" id="text-2-3-19">
+<ol class="org-ol">
+<li>Remove nouveau: <code>sudo pacman -R xf86-video-nouveau</code></li>
+<li>Remove all xorg.conf files that might still refer to nouveau drivers
+(check in <code>/etc/X11/xorg.conf.d/</code> and <code>/usr/share/X11/xorg.conf.d/</code>)</li>
+<li>Install the NVIDIA drivers: <a href="https://aur.archlinux.org/packages/nvidia-470xx-dkms">AUR (en) - nvidia-470xx-utils</a></li>
+</ol>
+</div>
+</div>
 </div>
 <div id="outline-container-Math%20typing" class="outline-3">
 <h3 id="Math%20typing"><span class="section-number-3">2.4.</span> Math typing</h3>
@@ -1098,7 +1123,7 @@ Source: <a href="https://git-scm.com/book/en/v2/Git-Internals-Git-Objects">Git -
 <div id="outline-container-How%20to%20rename%20a%20branch%3F" class="outline-4">
 <h4 id="How%20to%20rename%20a%20branch%3F"><span class="section-number-4">3.1.2.</span> How to rename a branch?</h4>
 <div class="outline-text-4" id="text-3-1-2">
-<pre class="example" id="org436d2c8">
+<pre class="example" id="orga51399c">
 git branch -m newname
 </pre>
 </div>
@@ -5504,7 +5529,7 @@ Source: <a href="https://stats.stackexchange.com/q/397288/31243">Dot Product and
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Luis Damiano</p>
-<p class="date">Created: 2022-11-20 Sun 11:53</p>
+<p class="date">Created: 2022-11-20 Sun 12:40</p>
 <p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>

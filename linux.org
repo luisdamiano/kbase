@@ -158,3 +158,16 @@
      - MacGyver at libera.chat,
      - [[https://wiki.archlinux.org/title/PulseAudio/Examples#Monitor_specific_output][PulseAudio/Examples - ArchWiki]]
      - [[https://unix.stackexchange.com/a/604082/88701][Redirecting Pulseaudio sink to a virtual source]]
+** Where are the X.Org Server config files?
+
+   - =/etc/X11/xorg.conf.d/= (preferred place for host-specific configurations)
+   - =/usr/share/X11/xorg.conf.d/=
+   - =/etc/X11/xorg.conf= (deprecated)
+   - =/etc/xorg.conf= (deprecated)
+
+** How to migrate from nouveau to propietary NVIDIA drivers for a NVS 510 graphic card?
+
+   1. Remove nouveau: =sudo pacman -R xf86-video-nouveau=
+   2. Remove all xorg.conf files that might still refer to nouveau drivers
+      (check in =/etc/X11/xorg.conf.d/= and =/usr/share/X11/xorg.conf.d/=)
+   3. Install the NVIDIA drivers: [[https://aur.archlinux.org/packages/nvidia-470xx-dkms][AUR (en) - nvidia-470xx-utils]]
