@@ -6,6 +6,29 @@
      watch -d squeue --me --format=\"%.18i %.18P %.32j %.8u %.2t \| %.10M \| %.10l \| %.19S \| %.6D %20Y %R\" --sort=i
    #+end_src
 
+** How to find out the CPU time and memory usage of a Slurm job?
+
+   Use =seff jobid= after the job has finished. Use =sacct -s r jobid= or =sstat
+   jobid= for jobs in progress.
+
+   Source:
+   - [[https://stackoverflow.com/questions/24020420/find-out-the-cpu-time-and-memory-usage-of-a-slurm-job][Find out the CPU time and memory usage of a slurm job]]
+
+** How to specify Slurm job resources conditionally or programatically?
+
+   Short answer: you can't if you're using =#SBATCH= tokens. Consider creating a
+   command called via =sbatch= instead, where you can pass modifiers and
+   arguments to the =sbatch= as needed (e.g., =sbatch --mem=$mymem=).
+
+   Source:
+   - [[https://stackoverflow.com/a/24510022/20521992][Use Bash variable within SLURM sbatch script]]
+
+   Alternatively, you can pass the script through =stdin= replacing the position
+   arguments.
+
+   Source:
+   - [[https://stackoverflow.com/a/36303809/20521992][Sbatch: pass job name as input argument]]
+
 ** What is a good guide for Slurm?
 
    This is an excellent guide: [[https://researchcomputing.princeton.edu/support/knowledge-base/slurm][Introducing Slurm | Princeton Research Computing]].

@@ -13,3 +13,15 @@
 
    - [[https://archlinux.org/mirrorlist/][Pacman Mirrorlist Generator]]
    - [[https://wiki.archlinux.org/title/reflector][Reflector]]: retrieve, filter, sort by speed, and overwrite mirror list
+
+** How to fix "Pacman is currently in use, please wait"?
+
+   If you're sure that pacman is not running in another shell, you can remove
+   the lock by hand.
+
+   #+begin_src shell
+     sudo rm /var/lib/pacman/db.lck
+   #+end_src
+
+   Source:
+   - [[https://bbs.archlinux.org/viewtopic.php?pid=517191#p517191]["Pacman is currently in use, please wait." / Pacman & Package Upgrade Issues ...]]

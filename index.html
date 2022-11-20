@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2022-11-14 Mon 13:39 -->
+<!-- 2022-11-20 Sun 11:53 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Knowledge Base</title>
@@ -58,6 +58,7 @@ ul.org-ul, ol.org-ol { font-size:16px }
 <li><a href="#Arch%20Linux">2.1. Arch Linux</a>
 <ul>
 <li><a href="#How%20to%20update%20pacman%20mirrors%3F">2.1.1. How to update pacman mirrors?</a></li>
+<li><a href="#How%20to%20fix%20%22Pacman%20is%20currently%20in%20use%2C%20please%20wait%22%3F">2.1.2. How to fix "Pacman is currently in use, please wait"?</a></li>
 </ul>
 </li>
 <li><a href="#Bash">2.2. Bash</a>
@@ -363,7 +364,9 @@ ul.org-ul, ol.org-ol { font-size:16px }
 <li><a href="#High%20power%20computing">9.6. High power computing</a>
 <ul>
 <li><a href="#How%20to%20nicely%20list%20all%20my%20jobs%20in%20Slurm%3F">9.6.1. How to nicely list all my jobs in Slurm?</a></li>
-<li><a href="#What%20is%20a%20good%20guide%20for%20Slurm%3F">9.6.2. What is a good guide for Slurm?</a></li>
+<li><a href="#How%20to%20find%20out%20the%20CPU%20time%20and%20memory%20usage%20of%20a%20Slurm%20job%3F">9.6.2. How to find out the CPU time and memory usage of a Slurm job?</a></li>
+<li><a href="#How%20to%20specify%20Slurm%20job%20resources%20conditionally%20or%20programatically%3F">9.6.3. How to specify Slurm job resources conditionally or programatically?</a></li>
+<li><a href="#What%20is%20a%20good%20guide%20for%20Slurm%3F">9.6.4. What is a good guide for Slurm?</a></li>
 </ul>
 </li>
 <li><a href="#Naming%20convention">9.7. Naming convention</a>
@@ -610,6 +613,28 @@ rate-mirrors --save=$<span style="color: #f8f8f2; font-weight: bold;">TMPFILE</s
 <ul class="org-ul">
 <li><a href="https://archlinux.org/mirrorlist/">Pacman Mirrorlist Generator</a></li>
 <li><a href="https://wiki.archlinux.org/title/reflector">Reflector</a>: retrieve, filter, sort by speed, and overwrite mirror list</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-How%20to%20fix%20%22Pacman%20is%20currently%20in%20use%2C%20please%20wait%22%3F" class="outline-4">
+<h4 id="How%20to%20fix%20%22Pacman%20is%20currently%20in%20use%2C%20please%20wait%22%3F"><span class="section-number-4">2.1.2.</span> How to fix "Pacman is currently in use, please wait"?</h4>
+<div class="outline-text-4" id="text-2-1-2">
+<p>
+If you're sure that pacman is not running in another shell, you can remove
+the lock by hand.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-shell">sudo rm /var/lib/pacman/db.lck
+</pre>
+</div>
+
+<p>
+Source:
+</p>
+<ul class="org-ul">
+<li><a href="https://bbs.archlinux.org/viewtopic.php?pid=517191#p517191">"Pacman is currently in use, please wait." / Pacman &amp; Package Upgrade Issues &#x2026;</a></li>
 </ul>
 </div>
 </div>
@@ -1073,7 +1098,7 @@ Source: <a href="https://git-scm.com/book/en/v2/Git-Internals-Git-Objects">Git -
 <div id="outline-container-How%20to%20rename%20a%20branch%3F" class="outline-4">
 <h4 id="How%20to%20rename%20a%20branch%3F"><span class="section-number-4">3.1.2.</span> How to rename a branch?</h4>
 <div class="outline-text-4" id="text-3-1-2">
-<pre class="example" id="org661c4cc">
+<pre class="example" id="org436d2c8">
 git branch -m newname
 </pre>
 </div>
@@ -4151,9 +4176,56 @@ colorblinds and non-colorblinds</li>
 </div>
 </div>
 
-<div id="outline-container-What%20is%20a%20good%20guide%20for%20Slurm%3F" class="outline-4">
-<h4 id="What%20is%20a%20good%20guide%20for%20Slurm%3F"><span class="section-number-4">9.6.2.</span> What is a good guide for Slurm?</h4>
+<div id="outline-container-How%20to%20find%20out%20the%20CPU%20time%20and%20memory%20usage%20of%20a%20Slurm%20job%3F" class="outline-4">
+<h4 id="How%20to%20find%20out%20the%20CPU%20time%20and%20memory%20usage%20of%20a%20Slurm%20job%3F"><span class="section-number-4">9.6.2.</span> How to find out the CPU time and memory usage of a Slurm job?</h4>
 <div class="outline-text-4" id="text-9-6-2">
+<p>
+Use <code>seff jobid</code> after the job has finished. Use <code>sacct -s r jobid</code> or <code>sstat
+   jobid</code> for jobs in progress.
+</p>
+
+<p>
+Source:
+</p>
+<ul class="org-ul">
+<li><a href="https://stackoverflow.com/questions/24020420/find-out-the-cpu-time-and-memory-usage-of-a-slurm-job">Find out the CPU time and memory usage of a slurm job</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-How%20to%20specify%20Slurm%20job%20resources%20conditionally%20or%20programatically%3F" class="outline-4">
+<h4 id="How%20to%20specify%20Slurm%20job%20resources%20conditionally%20or%20programatically%3F"><span class="section-number-4">9.6.3.</span> How to specify Slurm job resources conditionally or programatically?</h4>
+<div class="outline-text-4" id="text-9-6-3">
+<p>
+Short answer: you can't if you're using <code>#SBATCH</code> tokens. Consider creating a
+command called via <code>sbatch</code> instead, where you can pass modifiers and
+arguments to the <code>sbatch</code> as needed (e.g., <code>sbatch --mem=$mymem</code>).
+</p>
+
+<p>
+Source:
+</p>
+<ul class="org-ul">
+<li><a href="https://stackoverflow.com/a/24510022/20521992">Use Bash variable within SLURM sbatch script</a></li>
+</ul>
+
+<p>
+Alternatively, you can pass the script through <code>stdin</code> replacing the position
+arguments.
+</p>
+
+<p>
+Source:
+</p>
+<ul class="org-ul">
+<li><a href="https://stackoverflow.com/a/36303809/20521992">Sbatch: pass job name as input argument</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-What%20is%20a%20good%20guide%20for%20Slurm%3F" class="outline-4">
+<h4 id="What%20is%20a%20good%20guide%20for%20Slurm%3F"><span class="section-number-4">9.6.4.</span> What is a good guide for Slurm?</h4>
+<div class="outline-text-4" id="text-9-6-4">
 <p>
 This is an excellent guide: <a href="https://researchcomputing.princeton.edu/support/knowledge-base/slurm">Introducing Slurm | Princeton Research Computing</a>.
 It covers how to submit serial jobs, multithreaded jobs, multinode or
@@ -5432,7 +5504,7 @@ Source: <a href="https://stats.stackexchange.com/q/397288/31243">Dot Product and
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Luis Damiano</p>
-<p class="date">Created: 2022-11-14 Mon 13:39</p>
+<p class="date">Created: 2022-11-20 Sun 11:53</p>
 <p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
