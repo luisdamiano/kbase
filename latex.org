@@ -395,7 +395,8 @@
    - [[https://www.ctan.org/pkg/texbook][The TeXbook]]: an example of the business of writing a book in TeX
    - [[https://www.ctan.org/pkg/texbytopic][TeXbyTopic]]: covers the way TeX works in as much detail as most ordinary
      programmers will ever need to know
-
+   - [[https://www.ams.org/arc/handbook/index.html][AMS Author Handbook]]: include package recommendation, structure, and
+     checklist
 
 * BibLaTeX
 
