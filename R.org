@@ -563,6 +563,11 @@
    addins. You can install the =addinslist= package to browse the list from
    RStudio.
 
+   Here are some suggestions:
+   - [[https://github.com/seasmith/AlignAssign][GitHub - seasmith/AlignAssign: Align the assignment operators within a highli...]]
+   - [[https://github.com/petermeissner/assignparams][GitHub - petermeissner/assignparams: RStudio Addin to evaluate comma separate...]]
+   - [[https://github.com/dcomtois/sortLines][GitHub - dcomtois/sortLines: Adds "Sort Selected Lines" to RStudio's Addins menu]]
+
 ** Resources
 
    - [[https://pj.freefaculty.org/R/Rtips.html][Rtips]]
