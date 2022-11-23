@@ -557,6 +557,12 @@
     5. Line 5
   #+end_src
 
+** Where can I find useful addins for RStudio?
+
+   Check [[https://github.com/daattali/addinslist][GitHub - daattali/addinslist]] to discover and install useful RStudio
+   addins. You can install the =addinslist= package to browse the list from
+   RStudio.
+
 ** Resources
 
    - [[https://pj.freefaculty.org/R/Rtips.html][Rtips]]
