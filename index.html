@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2022-11-21 Mon 11:09 -->
+<!-- 2022-11-23 Wed 09:21 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Knowledge Base</title>
@@ -294,17 +294,10 @@ ul.org-ul, ol.org-ol { font-size:16px }
 <li><a href="#How%20to%20create%20named%20vector%20programatically%20in%20one%20statement%3F">7.2.13. How to create named vector programatically in one statement?</a></li>
 <li><a href="#How%20to%20get%20all%20function%20call%20arguments%20as%20a%20list%3F">7.2.14. How to get all function call arguments as a list?</a></li>
 <li><a href="#How%20to%20debug%20an%20error%20thrown%20in%20a%20package%3F">7.2.15. How to debug an error thrown in a package?</a></li>
-<li><a href="#How%20to%20draw%20a%20plot%20with%20minimal%20margins%3F">7.2.16. How to draw a plot with minimal margins?</a></li>
-<li><a href="#How%20to%20check%20if%20a%20value%20is%20in%20an%20interval%3F">7.2.17. How to check if a value is in an interval?</a></li>
-<li><a href="#How%20to%20cache%20a%20read%20function%3F">7.2.18. How to cache a read function?</a></li>
-<li><a href="#How%20to%20use%20%3Dgeom_tile%3D%20with%20irregular%20data%3F">7.2.19. How to use <code>geom_tile</code> with irregular data?</a></li>
-<li><a href="#How%20to%20plot%20in%20reverse%20log%20scale%20with%20ggplot2%3F">7.2.20. How to plot in reverse log scale with ggplot2?</a></li>
-<li><a href="#How%20to%20add%20labels%20near%20the%20plot%20boundaries%20with%20ggplot2%3F">7.2.21. How to add labels near the plot boundaries with ggplot2?</a></li>
-<li><a href="#How%20to%20plot%20in%20log%20scale%20with%20base%20R%3F">7.2.22. How to plot in log scale with base R?</a></li>
-<li><a href="#How%20to%20fine%20tune%20R%20plot%20margins%3F">7.2.23. How to fine tune R plot margins?</a></li>
-<li><a href="#How%20to%20make%20beautiful%20plots%20with%20base%20R%3F">7.2.24. How to make beautiful plots with base R?</a></li>
-<li><a href="#How%20to%20improve%20the%20look%20of%20my%20rmarkdown%20HTML%20document%3F">7.2.25. How to improve the look of my rmarkdown HTML document?</a></li>
-<li><a href="#R%20programming--Resources">7.2.26. Resources</a></li>
+<li><a href="#How%20to%20compute%20a%20simple%20moving%20average%20with%20base%20R%3F">7.2.16. How to compute a simple moving average with base R?</a></li>
+<li><a href="#Visualization">7.2.17. Visualization</a></li>
+<li><a href="#How%20to%20improve%20the%20look%20of%20my%20rmarkdown%20HTML%20document%3F">7.2.18. How to improve the look of my rmarkdown HTML document?</a></li>
+<li><a href="#R%20programming--Resources">7.2.19. Resources</a></li>
 </ul>
 </li>
 <li><a href="#RStudio">7.3. RStudio</a>
@@ -1123,7 +1116,7 @@ Source: <a href="https://git-scm.com/book/en/v2/Git-Internals-Git-Objects">Git -
 <div id="outline-container-How%20to%20rename%20a%20branch%3F" class="outline-4">
 <h4 id="How%20to%20rename%20a%20branch%3F"><span class="section-number-4">3.1.2.</span> How to rename a branch?</h4>
 <div class="outline-text-4" id="text-3-1-2">
-<pre class="example" id="orgcee28c3">
+<pre class="example" id="orgf7b2e8c">
 git branch -m newname
 </pre>
 </div>
@@ -3577,9 +3570,33 @@ error occurred?</a>
 </div>
 </div>
 
-<div id="outline-container-How%20to%20draw%20a%20plot%20with%20minimal%20margins%3F" class="outline-4">
-<h4 id="How%20to%20draw%20a%20plot%20with%20minimal%20margins%3F"><span class="section-number-4">7.2.16.</span> How to draw a plot with minimal margins?</h4>
+<div id="outline-container-How%20to%20compute%20a%20simple%20moving%20average%20with%20base%20R%3F" class="outline-4">
+<h4 id="How%20to%20compute%20a%20simple%20moving%20average%20with%20base%20R%3F"><span class="section-number-4">7.2.16.</span> How to compute a simple moving average with base R?</h4>
 <div class="outline-text-4" id="text-7-2-16">
+<div class="org-src-container">
+<pre class="src src-R"><span style="color: #50fa7b; font-weight: bold;">SMA</span> <span style="color: #8be9fd;">&lt;-</span> <span style="color: #ff79c6; font-weight: bold;">function</span>(x, K) {
+  <span style="color: #ff79c6; font-weight: bold;">if</span>(K %% 2) <span style="color: #ff79c6; font-weight: bold;">stop</span>(<span style="color: #f1fa8c;">"K is not even"</span>)
+  rowMeans(embed(c(rep(<span style="color: #bd93f9;">NA</span>, K / 2), x, rep(<span style="color: #bd93f9;">NA</span>, K / 2)),  K), na.rm = <span style="color: #bd93f9;">TRUE</span>)
+}
+</pre>
+</div>
+
+<p>
+Source:
+</p>
+<ul class="org-ul">
+<li><a href="https://stackoverflow.com/a/51472225/20521992">Centered moving average in R (without using packages)</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-Visualization" class="outline-4">
+<h4 id="Visualization"><span class="section-number-4">7.2.17.</span> Visualization</h4>
+<div class="outline-text-4" id="text-7-2-17">
+</div>
+<ol class="org-ol">
+<li><a id="How%20to%20draw%20a%20plot%20with%20minimal%20margins%3F"></a>How to draw a plot with minimal margins?<br />
+<div class="outline-text-5" id="text-7-2-17-1">
 <div class="org-src-container">
 <pre class="src src-R"><span style="color: #a49462;">## </span><span style="color: #a49462;">oma: Outer  = device margin lines (bltr)</span>
 <span style="color: #a49462;">## </span><span style="color: #a49462;">mar: Margin = figure margin lines (bltr)</span>
@@ -3605,11 +3622,10 @@ plot(x = 1:10, y = 1:10)
 </pre>
 </div>
 </div>
-</div>
+</li>
 
-<div id="outline-container-How%20to%20check%20if%20a%20value%20is%20in%20an%20interval%3F" class="outline-4">
-<h4 id="How%20to%20check%20if%20a%20value%20is%20in%20an%20interval%3F"><span class="section-number-4">7.2.17.</span> How to check if a value is in an interval?</h4>
-<div class="outline-text-4" id="text-7-2-17">
+<li><a id="How%20to%20check%20if%20a%20value%20is%20in%20an%20interval%3F"></a>How to check if a value is in an interval?<br />
+<div class="outline-text-5" id="text-7-2-17-2">
 <div class="org-src-container">
 <pre class="src src-R"><span style="color: #a49462;">## </span><span style="color: #a49462;">x &lt;- 1</span>
 <span style="color: #a49462;">## </span><span style="color: #a49462;">confint &lt;- c(-0.5, 0.5)</span>
@@ -3621,21 +3637,19 @@ plot(x = 1:10, y = 1:10)
 Source: rickyrick at libera.chat
 </p>
 </div>
-</div>
+</li>
 
-<div id="outline-container-How%20to%20cache%20a%20read%20function%3F" class="outline-4">
-<h4 id="How%20to%20cache%20a%20read%20function%3F"><span class="section-number-4">7.2.18.</span> How to cache a read function?</h4>
-<div class="outline-text-4" id="text-7-2-18">
+<li><a id="How%20to%20cache%20a%20read%20function%3F"></a>How to cache a read function?<br />
+<div class="outline-text-5" id="text-7-2-17-3">
 <p>
 Use <a href="https://cran.r-project.org/web/packages/memoise/index.html">memoise</a> to store the function call on memory, or an ad-hoc implementation
 like <a href="https://github.com/bioDS/phyloRNAanalysis/blob/b9032c8c3a3f134cd73c44fe25618f659b6f5d79/src/utils.r#L170-L191">here</a> (Colombo at Libera.chat).
 </p>
 </div>
-</div>
+</li>
 
-<div id="outline-container-How%20to%20use%20%3Dgeom_tile%3D%20with%20irregular%20data%3F" class="outline-4">
-<h4 id="How%20to%20use%20%3Dgeom_tile%3D%20with%20irregular%20data%3F"><span class="section-number-4">7.2.19.</span> How to use <code>geom_tile</code> with irregular data?</h4>
-<div class="outline-text-4" id="text-7-2-19">
+<li><a id="How%20to%20use%20%3Dgeom_tile%3D%20with%20irregular%20data%3F"></a>How to use <code>geom_tile</code> with irregular data?<br />
+<div class="outline-text-5" id="text-7-2-17-4">
 <p>
 Note that <code>?geom_tile</code> recommends <code>akima::interp</code>.
 </p>
@@ -3667,11 +3681,10 @@ DF$z <span style="color: #8be9fd;">&lt;-</span> ak[[3]]
 </pre>
 </div>
 </div>
-</div>
+</li>
 
-<div id="outline-container-How%20to%20plot%20in%20reverse%20log%20scale%20with%20ggplot2%3F" class="outline-4">
-<h4 id="How%20to%20plot%20in%20reverse%20log%20scale%20with%20ggplot2%3F"><span class="section-number-4">7.2.20.</span> How to plot in reverse log scale with ggplot2?</h4>
-<div class="outline-text-4" id="text-7-2-20">
+<li><a id="How%20to%20plot%20in%20reverse%20log%20scale%20with%20ggplot2%3F"></a>How to plot in reverse log scale with ggplot2?<br />
+<div class="outline-text-5" id="text-7-2-17-5">
 <div class="org-src-container">
 <pre class="src src-R"><span style="color: #a49462;">#</span><span style="color: #a49462;">'</span><span style="color: #a49462;"> Reverse log transformation</span>
 <span style="color: #a49462;">#</span><span style="color: #a49462;">'</span>
@@ -3699,11 +3712,10 @@ DF$z <span style="color: #8be9fd;">&lt;-</span> ak[[3]]
 </pre>
 </div>
 </div>
-</div>
+</li>
 
-<div id="outline-container-How%20to%20add%20labels%20near%20the%20plot%20boundaries%20with%20ggplot2%3F" class="outline-4">
-<h4 id="How%20to%20add%20labels%20near%20the%20plot%20boundaries%20with%20ggplot2%3F"><span class="section-number-4">7.2.21.</span> How to add labels near the plot boundaries with ggplot2?</h4>
-<div class="outline-text-4" id="text-7-2-21">
+<li><a id="How%20to%20add%20labels%20near%20the%20plot%20boundaries%20with%20ggplot2%3F"></a>How to add labels near the plot boundaries with ggplot2?<br />
+<div class="outline-text-5" id="text-7-2-17-6">
 <p>
 Use <code>-Inf</code> and <code>Inf</code> to signal the left/bottom and right/top end
 respectively, e.g., use <code>x=Inf</code> and <code>y=Inf</code> to place a <code>geom_label</code> on the
@@ -3725,11 +3737,10 @@ Source:
 <li><a href="https://stackoverflow.com/a/61277246/2860744">How to add a geom<sub>text</sub> label containing data in the top right of a ggplot&#x2026;</a></li>
 </ul>
 </div>
-</div>
+</li>
 
-<div id="outline-container-How%20to%20plot%20in%20log%20scale%20with%20base%20R%3F" class="outline-4">
-<h4 id="How%20to%20plot%20in%20log%20scale%20with%20base%20R%3F"><span class="section-number-4">7.2.22.</span> How to plot in log scale with base R?</h4>
-<div class="outline-text-4" id="text-7-2-22">
+<li><a id="How%20to%20plot%20in%20log%20scale%20with%20base%20R%3F"></a>How to plot in log scale with base R?<br />
+<div class="outline-text-5" id="text-7-2-17-7">
 <div class="org-src-container">
 <pre class="src src-R">plot(exp(1:10), 1:10, log = <span style="color: #f1fa8c;">"x"</span>)
 plot(1:10, exp(1:10), log = <span style="color: #f1fa8c;">"y"</span>)
@@ -3737,29 +3748,29 @@ plot(exp(1:10), exp(1:10), log = <span style="color: #f1fa8c;">"xy"</span>)
 </pre>
 </div>
 </div>
-</div>
+</li>
 
-<div id="outline-container-How%20to%20fine%20tune%20R%20plot%20margins%3F" class="outline-4">
-<h4 id="How%20to%20fine%20tune%20R%20plot%20margins%3F"><span class="section-number-4">7.2.23.</span> How to fine tune R plot margins?</h4>
-<div class="outline-text-4" id="text-7-2-23">
+<li><a id="How%20to%20fine%20tune%20R%20plot%20margins%3F"></a>How to fine tune R plot margins?<br />
+<div class="outline-text-5" id="text-7-2-17-8">
 <ul class="org-ul">
 <li><a href="https://www.rstudio.com/wp-content/uploads/2016/10/how-big-is-your-graph.pdf">How Big is Your Graph?</a></li>
 </ul>
 </div>
-</div>
+</li>
 
-<div id="outline-container-How%20to%20make%20beautiful%20plots%20with%20base%20R%3F" class="outline-4">
-<h4 id="How%20to%20make%20beautiful%20plots%20with%20base%20R%3F"><span class="section-number-4">7.2.24.</span> How to make beautiful plots with base R?</h4>
-<div class="outline-text-4" id="text-7-2-24">
+<li><a id="How%20to%20make%20beautiful%20plots%20with%20base%20R%3F"></a>How to make beautiful plots with base R?<br />
+<div class="outline-text-5" id="text-7-2-17-9">
 <ul class="org-ul">
 <li><a href="http://karolis.koncevicius.lt/posts/r_base_plotting_without_wrappers/">R base plotting without wrappers</a></li>
 </ul>
 </div>
+</li>
+</ol>
 </div>
 
 <div id="outline-container-How%20to%20improve%20the%20look%20of%20my%20rmarkdown%20HTML%20document%3F" class="outline-4">
-<h4 id="How%20to%20improve%20the%20look%20of%20my%20rmarkdown%20HTML%20document%3F"><span class="section-number-4">7.2.25.</span> How to improve the look of my rmarkdown HTML document?</h4>
-<div class="outline-text-4" id="text-7-2-25">
+<h4 id="How%20to%20improve%20the%20look%20of%20my%20rmarkdown%20HTML%20document%3F"><span class="section-number-4">7.2.18.</span> How to improve the look of my rmarkdown HTML document?</h4>
+<div class="outline-text-4" id="text-7-2-18">
 <p>
 Thanks to fendur on #R at libera.chat
 </p>
@@ -3857,8 +3868,8 @@ pairs(iris[, 1:3], col = iris$Species, bg = iris$Species, pch = 21)
 </div>
 
 <div id="outline-container-R%20programming--Resources" class="outline-4">
-<h4 id="R%20programming--Resources"><span class="section-number-4">7.2.26.</span> Resources</h4>
-<div class="outline-text-4" id="text-7-2-26">
+<h4 id="R%20programming--Resources"><span class="section-number-4">7.2.19.</span> Resources</h4>
+<div class="outline-text-4" id="text-7-2-19">
 <ul class="org-ul">
 <li><a href="https://pj.freefaculty.org/R/Rtips.html">Rtips</a></li>
 <li><a href="http://karolis.koncevicius.lt/posts/collection_of_simple_r_shortcuts/">A Collection of Simple R Shortcuts</a></li>
@@ -5530,7 +5541,7 @@ Source: <a href="https://stats.stackexchange.com/q/397288/31243">Dot Product and
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Luis Damiano</p>
-<p class="date">Created: 2022-11-21 Mon 11:09</p>
+<p class="date">Created: 2022-11-23 Wed 09:21</p>
 <p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>

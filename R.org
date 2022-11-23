@@ -328,133 +328,147 @@
    Source: [[https://stackoverflow.com/a/13456223/2860744][debugging unexpected errors in R -- how can I find where the
    error occurred?]]
 
-** How to draw a plot with minimal margins?
+** How to compute a simple moving average with base R?
 
    #+begin_src R
-     ## oma: Outer  = device margin lines (bltr)
-     ## mar: Margin = figure margin lines (bltr)
-     ## mgp:      ? = axis margin lines (title, label, line)
-
-     ## No title
-     opar <- par(
-       oma = c(0, 0, 0, 0) + .1,
-       mar = c(3, 3, 0, 0),
-       mgp = c(2, 1, 0)
-     )
-
-     plot(x = 1:10, y = 1:10)
-
-     ## No title nor axis labels
-     opar <- par(
-       oma = c(0, 0, 0, 0) + .1,
-       mar = c(2, 2, 0, 0),
-       mgp = c(2, 1, 0)
-     )
-
-     plot(x = 1:10, y = 1:10)
-   #+end_src
-
-** How to check if a value is in an interval?
-
-   #+begin_src R
-     ## x <- 1
-     ## confint <- c(-0.5, 0.5)
-     (prod(sign(confint - x)) < 0)
-   #+end_src
-
-   Source: rickyrick at libera.chat
-
-** How to cache a read function?
-
-   Use [[https://cran.r-project.org/web/packages/memoise/index.html][memoise]] to store the function call on memory, or an ad-hoc implementation
-   like [[https://github.com/bioDS/phyloRNAanalysis/blob/b9032c8c3a3f134cd73c44fe25618f659b6f5d79/src/utils.r#L170-L191][here]] (Colombo at Libera.chat).
-
-** How to use =geom_tile= with irregular data?
-
-Note that =?geom_tile= recommends =akima::interp=.
-
-#+begin_src R
-  x <- mtcars$hp ## x-axis
-  y <- mtcars$qsec ## y-axis
-  z <- mtcars$mpg ## surface color
-
-  ak   <- akima::interp(x, y, z)
-  DF   <- expand.grid(ak[1:2])
-  DF$z <- ak[[3]]
-
-  DF <- data.frame(expand.grid(ak[1:2]), z = c(ak[[3]]))
-
-  ggplot(DF, aes(x, y, fill = z)) +
-    geom_tile()
-#+end_src
-
-If the data size is large, constructing the data.frame as follows
-might be more efficient.
-
-#+begin_src R
-  DF   <- expand.grid(ak[1:2])
-  DF$z <- ak[[3]]
-#+end_src
-
-** How to plot in reverse log scale with ggplot2?
-
-   #+begin_src R
-     #' Reverse log transformation
-     #'
-     #' @param base a positive or complex number: logarithm base.
-     # 'Defaults to `e=exp(1)`.
-     #' @return
-     #' @reference https://gist.github.com/JoFrhwld/2266961
-     .revlog_trans <- function(base = exp(1)){
-       scales::trans_new(
-                 name      = paste("revlog-", base, sep = ""),
-                 transform = function(x){ -log(x, base) },
-                 inverse   = function(x){ base^(-x) },
-                 breaks    = scales::log_breaks(base = base),
-                 domain    = c(1e-100, Inf)
-               )
+     SMA <- function(x, K) {
+       if(K %% 2) stop("K is not even")
+       rowMeans(embed(c(rep(NA, K / 2), x, rep(NA, K / 2)),  K), na.rm = TRUE)
      }
-
-     scale_x_revlog10 <- function(...) {
-       scale_x_continuous(trans = .revlog_trans(base = 10), ...)
-     }
-
-     scale_y_revlog10 <- function(...) {
-       scale_y_continuous(trans = .revlog_trans(base = 10), ...)
-     }
-   #+end_src
-
-** How to add labels near the plot boundaries with ggplot2?
-
-   Use =-Inf= and =Inf= to signal the left/bottom and right/top end
-   respectively, e.g., use =x=Inf= and =y=Inf= to place a =geom_label= on the
-   north-eath.
-
-   #+begin_src R
-     ggplot() +
-       geom_point(aes(x = 1:10, y = rnorm(10))) +
-       geom_label(aes(x = Inf, y = Inf, label = "Some text"),
-                  vjust = 1, hjust = 1)
    #+end_src
 
    Source:
-   - [[https://stackoverflow.com/a/61277246/2860744][How to add a geom_text label containing data in the top right of a ggplot...]]
+   - [[https://stackoverflow.com/a/51472225/20521992][Centered moving average in R (without using packages)]]
 
-** How to plot in log scale with base R?
+** Visualization
 
-   #+begin_src R
-     plot(exp(1:10), 1:10, log = "x")
-     plot(1:10, exp(1:10), log = "y")
-     plot(exp(1:10), exp(1:10), log = "xy")
-   #+end_src
+*** How to draw a plot with minimal margins?
 
-** How to fine tune R plot margins?
+    #+begin_src R
+      ## oma: Outer  = device margin lines (bltr)
+      ## mar: Margin = figure margin lines (bltr)
+      ## mgp:      ? = axis margin lines (title, label, line)
 
-   - [[https://www.rstudio.com/wp-content/uploads/2016/10/how-big-is-your-graph.pdf][How Big is Your Graph?]]
+      ## No title
+      opar <- par(
+        oma = c(0, 0, 0, 0) + .1,
+        mar = c(3, 3, 0, 0),
+        mgp = c(2, 1, 0)
+      )
 
-** How to make beautiful plots with base R?
+      plot(x = 1:10, y = 1:10)
 
-   - [[http://karolis.koncevicius.lt/posts/r_base_plotting_without_wrappers/][R base plotting without wrappers]]
+      ## No title nor axis labels
+      opar <- par(
+        oma = c(0, 0, 0, 0) + .1,
+        mar = c(2, 2, 0, 0),
+        mgp = c(2, 1, 0)
+      )
+
+      plot(x = 1:10, y = 1:10)
+    #+end_src
+
+*** How to check if a value is in an interval?
+
+    #+begin_src R
+      ## x <- 1
+      ## confint <- c(-0.5, 0.5)
+      (prod(sign(confint - x)) < 0)
+    #+end_src
+
+    Source: rickyrick at libera.chat
+
+*** How to cache a read function?
+
+    Use [[https://cran.r-project.org/web/packages/memoise/index.html][memoise]] to store the function call on memory, or an ad-hoc implementation
+    like [[https://github.com/bioDS/phyloRNAanalysis/blob/b9032c8c3a3f134cd73c44fe25618f659b6f5d79/src/utils.r#L170-L191][here]] (Colombo at Libera.chat).
+
+*** How to use =geom_tile= with irregular data?
+
+ Note that =?geom_tile= recommends =akima::interp=.
+
+ #+begin_src R
+   x <- mtcars$hp ## x-axis
+   y <- mtcars$qsec ## y-axis
+   z <- mtcars$mpg ## surface color
+
+   ak   <- akima::interp(x, y, z)
+   DF   <- expand.grid(ak[1:2])
+   DF$z <- ak[[3]]
+
+   DF <- data.frame(expand.grid(ak[1:2]), z = c(ak[[3]]))
+
+   ggplot(DF, aes(x, y, fill = z)) +
+     geom_tile()
+ #+end_src
+
+ If the data size is large, constructing the data.frame as follows
+ might be more efficient.
+
+ #+begin_src R
+   DF   <- expand.grid(ak[1:2])
+   DF$z <- ak[[3]]
+ #+end_src
+
+*** How to plot in reverse log scale with ggplot2?
+
+    #+begin_src R
+      #' Reverse log transformation
+      #'
+      #' @param base a positive or complex number: logarithm base.
+      # 'Defaults to `e=exp(1)`.
+      #' @return
+      #' @reference https://gist.github.com/JoFrhwld/2266961
+      .revlog_trans <- function(base = exp(1)){
+        scales::trans_new(
+                  name      = paste("revlog-", base, sep = ""),
+                  transform = function(x){ -log(x, base) },
+                  inverse   = function(x){ base^(-x) },
+                  breaks    = scales::log_breaks(base = base),
+                  domain    = c(1e-100, Inf)
+                )
+      }
+
+      scale_x_revlog10 <- function(...) {
+        scale_x_continuous(trans = .revlog_trans(base = 10), ...)
+      }
+
+      scale_y_revlog10 <- function(...) {
+        scale_y_continuous(trans = .revlog_trans(base = 10), ...)
+      }
+    #+end_src
+
+*** How to add labels near the plot boundaries with ggplot2?
+
+    Use =-Inf= and =Inf= to signal the left/bottom and right/top end
+    respectively, e.g., use =x=Inf= and =y=Inf= to place a =geom_label= on the
+    north-eath.
+
+    #+begin_src R
+      ggplot() +
+        geom_point(aes(x = 1:10, y = rnorm(10))) +
+        geom_label(aes(x = Inf, y = Inf, label = "Some text"),
+                   vjust = 1, hjust = 1)
+    #+end_src
+
+    Source:
+    - [[https://stackoverflow.com/a/61277246/2860744][How to add a geom_text label containing data in the top right of a ggplot...]]
+
+*** How to plot in log scale with base R?
+
+    #+begin_src R
+      plot(exp(1:10), 1:10, log = "x")
+      plot(1:10, exp(1:10), log = "y")
+      plot(exp(1:10), exp(1:10), log = "xy")
+    #+end_src
+
+*** How to fine tune R plot margins?
+
+    - [[https://www.rstudio.com/wp-content/uploads/2016/10/how-big-is-your-graph.pdf][How Big is Your Graph?]]
+
+*** How to make beautiful plots with base R?
+
+    - [[http://karolis.koncevicius.lt/posts/r_base_plotting_without_wrappers/][R base plotting without wrappers]]
 
 ** How to improve the look of my rmarkdown HTML document?
 
