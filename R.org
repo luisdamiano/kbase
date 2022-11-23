@@ -332,7 +332,7 @@
 
    #+begin_src R
      SMA <- function(x, K) {
-       if(K %% 2) stop("K is not even")
+       if(!(K %% 2)) stop("K is not even")
        rowMeans(embed(c(rep(NA, K / 2), x, rep(NA, K / 2)),  K), na.rm = TRUE)
      }
    #+end_src
