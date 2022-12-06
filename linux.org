@@ -39,6 +39,42 @@
 
    Source: [[https://stackoverflow.com/a/3327022/2860744][How to determine the current shell I'm working on]]
 
+** How to set Firefox to default browser in xdg settings?
+
+   Check that there is a desktop file in
+   =/usr/share/applications/firefox.desktop=. If there isn't, create one:
+
+   #+begin_export ascii
+   [Desktop Entry]
+   Version=1.0
+   Name=Firefox
+   GenericName=Web Browser
+   Comment=Browse the World Wide Web
+   Keywords=Internet;WWW;Browser;Web;Explorer
+   Exec=/usr/lib/firefox/firefox %u
+   Icon=firefox
+   Terminal=false
+   X-MultipleArgs=false
+   Type=Application
+   MimeType=text/html;text/xml;application/xhtml+xml;x-scheme-handler/http;x-scheme-handler/https;application/x-xpinstall;application/pdf;application/json;
+   StartupNotify=true
+   StartupWMClass=firefox
+   Categories=Network;WebBrowser;
+   Actions=new-window;new-private-window;
+
+   [Desktop Action new-window]
+   Name=New Window
+   Exec=/usr/lib/firefox/firefox --new-window %u
+
+   [Desktop Action new-private-window]
+   Name=New Private Window
+   Exec=/usr/lib/firefox/firefox --private-window %u
+   #+end_export
+
+   Then, update the corresponding xdg entry =xdg-settings set
+   default-web-browser firefox.desktop=. Test by running
+   =xdg-open "www.mozilla.org"=.
+
 ** How to find and copy all files that match a regex?
 
    Use =rsync --parent= to keep the folder structure.
