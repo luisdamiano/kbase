@@ -43,6 +43,17 @@
    - [[https://corpix.dev/2022/02/collaborative-editing-with-emacs.html][Collaborative editing with Emacs]]
    - [[https://emacsconf.org/2021/talks/erg/][EmacsConf - 2021 - talks - Emacs Research Group, Season Zero]]
 
+** How to have custom outlining and folding in Emacs?
+
+   - Use =tree-sitter= if your expression is a programming language identifier
+   - Use =origami= for general purpose folding, i.e., [[https://github.com/gregsexton/origami.el][GitHub -
+     gregsexton/origami.el: A folding minor mode for Emacs]]
+   - Change =imenu='s regular expressions, e.g., see =imenu-generic-expression=
+     in [[https://www.gnu.org/software/emacs/manual/html_node/elisp/Imenu.html][Imenu (GNU Emacs Lisp Reference Manual)]]
+   - See more information about category folding [[http://emacswiki.org/wiki/CategoryFolding][EmacsWiki: Category Outline]]
+
+   bpalmer at Libera.chat
+
 ** What are some good .emacs config files?
 
    - [[https://github.com/caisah/emacs.dz][GitHub - caisah/emacs.dz: Awesome emacs config files]]

@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2022-12-12 Mon 12:39 -->
+<!-- 2022-12-12 Mon 13:09 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Knowledge Base</title>
@@ -236,9 +236,10 @@ ul.org-ul, ol.org-ol { font-size:16px }
 <li><a href="#How%20to%20profile%20init%20%2F%20settings%3F">5.1.4. How to profile init / settings?</a></li>
 <li><a href="#How%20to%20navigate%20back%20to%20part%20of%20a%20buffer%3F">5.1.5. How to navigate back to part of a buffer?</a></li>
 <li><a href="#How%20to%20do%20collaborative%20editing%20with%20Emacs%3F">5.1.6. How to do collaborative editing with Emacs?</a></li>
-<li><a href="#What%20are%20some%20good%20.emacs%20config%20files%3F">5.1.7. What are some good .emacs config files?</a></li>
-<li><a href="#Emacs%20packages%20worth%20checking">5.1.8. Emacs packages worth checking</a></li>
-<li><a href="#Useful%20modes">5.1.9. Useful modes</a></li>
+<li><a href="#How%20to%20have%20custom%20outlining%20and%20folding%20in%20Emacs%3F">5.1.7. How to have custom outlining and folding in Emacs?</a></li>
+<li><a href="#What%20are%20some%20good%20.emacs%20config%20files%3F">5.1.8. What are some good .emacs config files?</a></li>
+<li><a href="#Emacs%20packages%20worth%20checking">5.1.9. Emacs packages worth checking</a></li>
+<li><a href="#Useful%20modes">5.1.10. Useful modes</a></li>
 </ul>
 </li>
 <li><a href="#Org-mode">5.2. Org-mode</a>
@@ -1156,7 +1157,7 @@ Source: <a href="https://git-scm.com/book/en/v2/Git-Internals-Git-Objects">Git -
 <div id="outline-container-How%20to%20rename%20a%20branch%3F" class="outline-4">
 <h4 id="How%20to%20rename%20a%20branch%3F"><span class="section-number-4">3.1.2.</span> How to rename a branch?</h4>
 <div class="outline-text-4" id="text-3-1-2">
-<pre class="example" id="org821e388">
+<pre class="example" id="org5e1bc11">
 git branch -m newname
 </pre>
 </div>
@@ -2728,9 +2729,27 @@ jump to position in register r <code>C-x r j r</code> (<code>jump-to-register</c
 </div>
 </div>
 
-<div id="outline-container-What%20are%20some%20good%20.emacs%20config%20files%3F" class="outline-4">
-<h4 id="What%20are%20some%20good%20.emacs%20config%20files%3F"><span class="section-number-4">5.1.7.</span> What are some good .emacs config files?</h4>
+<div id="outline-container-How%20to%20have%20custom%20outlining%20and%20folding%20in%20Emacs%3F" class="outline-4">
+<h4 id="How%20to%20have%20custom%20outlining%20and%20folding%20in%20Emacs%3F"><span class="section-number-4">5.1.7.</span> How to have custom outlining and folding in Emacs?</h4>
 <div class="outline-text-4" id="text-5-1-7">
+<ul class="org-ul">
+<li>Use <code>tree-sitter</code> if your expression is a programming language identifier</li>
+<li>Use <code>origami</code> for general purpose folding, i.e., <a href="https://github.com/gregsexton/origami.el">GitHub -
+gregsexton/origami.el: A folding minor mode for Emacs</a></li>
+<li>Change <code>imenu</code>'s regular expressions, e.g., see <code>imenu-generic-expression</code>
+in <a href="https://www.gnu.org/software/emacs/manual/html_node/elisp/Imenu.html">Imenu (GNU Emacs Lisp Reference Manual)</a></li>
+<li>See more information about category folding <a href="http://emacswiki.org/wiki/CategoryFolding">EmacsWiki: Category Outline</a></li>
+</ul>
+
+<p>
+bpalmer at Libera.chat
+</p>
+</div>
+</div>
+
+<div id="outline-container-What%20are%20some%20good%20.emacs%20config%20files%3F" class="outline-4">
+<h4 id="What%20are%20some%20good%20.emacs%20config%20files%3F"><span class="section-number-4">5.1.8.</span> What are some good .emacs config files?</h4>
+<div class="outline-text-4" id="text-5-1-8">
 <ul class="org-ul">
 <li><a href="https://github.com/caisah/emacs.dz">GitHub - caisah/emacs.dz: Awesome emacs config files</a></li>
 </ul>
@@ -2738,8 +2757,8 @@ jump to position in register r <code>C-x r j r</code> (<code>jump-to-register</c
 </div>
 
 <div id="outline-container-Emacs%20packages%20worth%20checking" class="outline-4">
-<h4 id="Emacs%20packages%20worth%20checking"><span class="section-number-4">5.1.8.</span> Emacs packages worth checking</h4>
-<div class="outline-text-4" id="text-5-1-8">
+<h4 id="Emacs%20packages%20worth%20checking"><span class="section-number-4">5.1.9.</span> Emacs packages worth checking</h4>
+<div class="outline-text-4" id="text-5-1-9">
 <ul class="org-ul">
 <li><a href="https://github.com/emacs-tw/awesome-emacs">GitHub - emacs-tw/awesome-emacs: A community driven list of useful Emacs pack&#x2026;</a></li>
 <li>ripgrep</li>
@@ -2753,8 +2772,8 @@ jump to position in register r <code>C-x r j r</code> (<code>jump-to-register</c
 </div>
 
 <div id="outline-container-Useful%20modes" class="outline-4">
-<h4 id="Useful%20modes"><span class="section-number-4">5.1.9.</span> Useful modes</h4>
-<div class="outline-text-4" id="text-5-1-9">
+<h4 id="Useful%20modes"><span class="section-number-4">5.1.10.</span> Useful modes</h4>
+<div class="outline-text-4" id="text-5-1-10">
 <ul class="org-ul">
 <li><a href="https://ftp.gnu.org/pub/gnu/auctex/12.2-extra/tex-ref.pdf">AucTex reference card</a></li>
 </ul>
@@ -5626,7 +5645,7 @@ Source: <a href="https://stats.stackexchange.com/q/397288/31243">Dot Product and
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Luis Damiano</p>
-<p class="date">Created: 2022-12-12 Mon 12:39</p>
+<p class="date">Created: 2022-12-12 Mon 13:09</p>
 <p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
