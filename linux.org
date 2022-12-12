@@ -90,6 +90,18 @@
      find . -exec grep optimHess {} +
    #+end_src
 
+** How to list all the unique file names?
+
+   #+begin_src shell
+     ## any file extension
+     find . -iname '*.*' -exec basename {} \; | sort | uniq
+     ## a specific file extension, e.g., rds files
+     find . -iname '*.rds' -exec basename {} \; | sort | uniq
+   #+end_src
+
+   Source:
+   - [[https://github.com/tldr-pages/tldr/blob/master/pages/common/find.md][tldr/find.md at master · tldr-pages/tldr]]
+
 ** How to list memory used by processes in remote cluster?
 
    #+begin_src shell
