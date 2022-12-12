@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2022-12-12 Mon 08:35 -->
+<!-- 2022-12-12 Mon 12:39 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Knowledge Base</title>
@@ -210,10 +210,11 @@ ul.org-ul, ol.org-ol { font-size:16px }
 </li>
 <li><a href="#Beamer">4.3. Beamer</a>
 <ul>
-<li><a href="#How%20to%20hide%20a%20frame%20in%20Beamer%3F">4.3.1. How to hide a frame in Beamer?</a></li>
-<li><a href="#How%20not%20to%20count%20appendix%20slides%20in%20Beamer%3F">4.3.2. How not to count appendix slides in Beamer?</a></li>
-<li><a href="#How%20to%20add%20a%20hyperlink%20to%20a%20Beamer%20frame%3F">4.3.3. How to add a hyperlink to a Beamer frame?</a></li>
-<li><a href="#How%20to%20build%20a%20Beamer%20template%3F">4.3.4. How to build a Beamer template?</a></li>
+<li><a href="#How%20to%20automatically%20add%20a%20section%20slide%20in%20Beamer%3F">4.3.1. How to automatically add a section slide in Beamer?</a></li>
+<li><a href="#How%20to%20hide%20a%20frame%20in%20Beamer%3F">4.3.2. How to hide a frame in Beamer?</a></li>
+<li><a href="#How%20not%20to%20count%20appendix%20slides%20in%20Beamer%3F">4.3.3. How not to count appendix slides in Beamer?</a></li>
+<li><a href="#How%20to%20add%20a%20hyperlink%20to%20a%20Beamer%20frame%3F">4.3.4. How to add a hyperlink to a Beamer frame?</a></li>
+<li><a href="#How%20to%20build%20a%20Beamer%20template%3F">4.3.5. How to build a Beamer template?</a></li>
 </ul>
 </li>
 <li><a href="#Graph%20diagrams">4.4. Graph diagrams</a>
@@ -1155,7 +1156,7 @@ Source: <a href="https://git-scm.com/book/en/v2/Git-Internals-Git-Objects">Git -
 <div id="outline-container-How%20to%20rename%20a%20branch%3F" class="outline-4">
 <h4 id="How%20to%20rename%20a%20branch%3F"><span class="section-number-4">3.1.2.</span> How to rename a branch?</h4>
 <div class="outline-text-4" id="text-3-1-2">
-<pre class="example" id="org6c41d40">
+<pre class="example" id="org821e388">
 git branch -m newname
 </pre>
 </div>
@@ -2494,9 +2495,34 @@ Source:
 <h3 id="Beamer"><span class="section-number-3">4.3.</span> Beamer</h3>
 <div class="outline-text-3" id="text-4-3">
 </div>
-<div id="outline-container-How%20to%20hide%20a%20frame%20in%20Beamer%3F" class="outline-4">
-<h4 id="How%20to%20hide%20a%20frame%20in%20Beamer%3F"><span class="section-number-4">4.3.1.</span> How to hide a frame in Beamer?</h4>
+<div id="outline-container-How%20to%20automatically%20add%20a%20section%20slide%20in%20Beamer%3F" class="outline-4">
+<h4 id="How%20to%20automatically%20add%20a%20section%20slide%20in%20Beamer%3F"><span class="section-number-4">4.3.1.</span> How to automatically add a section slide in Beamer?</h4>
 <div class="outline-text-4" id="text-4-3-1">
+<p>
+Use <code>AtBeginSection</code> and <code>AtBeginSubsection</code> respectively to add a frame when
+a section or a subsection is created. Beamer has the built-in templates
+<code>sectionpage</code> and <code>subsectionpage</code> for section slides. You may modify them or
+simply create a new template.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-latex"><span style="color: #ffff00;">\AtBeginSection</span><span style="color: #f8f8f2;">{</span><span style="color: #ffff00;">\frame</span><span style="color: #8be9fd;">{</span><span style="color: #ffff00;">\sectionpage</span><span style="color: #8be9fd;">}</span><span style="color: #f8f8f2;">}</span>
+<span style="color: #ffff00;">\AtBeginSubsection</span><span style="color: #f8f8f2;">{</span><span style="color: #ffff00;">\frame</span><span style="color: #8be9fd;">{</span><span style="color: #ffff00;">\subsectionpage</span><span style="color: #8be9fd;">}</span><span style="color: #f8f8f2;">}</span>
+</pre>
+</div>
+
+<p>
+Source:
+</p>
+<ul class="org-ul">
+<li><a href="https://tex.stackexchange.com/a/117661">sectioning - Automatically generate section title slides in beamer?</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-How%20to%20hide%20a%20frame%20in%20Beamer%3F" class="outline-4">
+<h4 id="How%20to%20hide%20a%20frame%20in%20Beamer%3F"><span class="section-number-4">4.3.2.</span> How to hide a frame in Beamer?</h4>
+<div class="outline-text-4" id="text-4-3-2">
 <p>
 Use <code>&lt;beamer:0&gt;</code> to hide it in the presentation, use <code>&lt;handout:0&gt;</code> to hide it
 in the handout, use <code>&lt;handout:0|beamer:0&gt;</code> or simply <code>&lt;all:0&gt;</code> to hide it in
@@ -2521,8 +2547,8 @@ Source:
 </div>
 
 <div id="outline-container-How%20not%20to%20count%20appendix%20slides%20in%20Beamer%3F" class="outline-4">
-<h4 id="How%20not%20to%20count%20appendix%20slides%20in%20Beamer%3F"><span class="section-number-4">4.3.2.</span> How not to count appendix slides in Beamer?</h4>
-<div class="outline-text-4" id="text-4-3-2">
+<h4 id="How%20not%20to%20count%20appendix%20slides%20in%20Beamer%3F"><span class="section-number-4">4.3.3.</span> How not to count appendix slides in Beamer?</h4>
+<div class="outline-text-4" id="text-4-3-3">
 <p>
 Use <code>\usepackage{appendixnumberbeamer}</code> to automatically reset the frame
 counter when the <code>\appendix</code> command is called. No need to do this by hand :)
@@ -2537,8 +2563,8 @@ counter when the <code>\appendix</code> command is called. No need to do this by
 </div>
 
 <div id="outline-container-How%20to%20add%20a%20hyperlink%20to%20a%20Beamer%20frame%3F" class="outline-4">
-<h4 id="How%20to%20add%20a%20hyperlink%20to%20a%20Beamer%20frame%3F"><span class="section-number-4">4.3.3.</span> How to add a hyperlink to a Beamer frame?</h4>
-<div class="outline-text-4" id="text-4-3-3">
+<h4 id="How%20to%20add%20a%20hyperlink%20to%20a%20Beamer%20frame%3F"><span class="section-number-4">4.3.4.</span> How to add a hyperlink to a Beamer frame?</h4>
+<div class="outline-text-4" id="text-4-3-4">
 <p>
 Load <code>\usepckage{hyperref}</code>. Use <code>\label{somename}</code> or
 <code>\hypertarget{somename}</code> to set a target. Use <code>\hyperlink{somename}{text to
@@ -2554,8 +2580,8 @@ or button linking to the target.
 </div>
 
 <div id="outline-container-How%20to%20build%20a%20Beamer%20template%3F" class="outline-4">
-<h4 id="How%20to%20build%20a%20Beamer%20template%3F"><span class="section-number-4">4.3.4.</span> How to build a Beamer template?</h4>
-<div class="outline-text-4" id="text-4-3-4">
+<h4 id="How%20to%20build%20a%20Beamer%20template%3F"><span class="section-number-4">4.3.5.</span> How to build a Beamer template?</h4>
+<div class="outline-text-4" id="text-4-3-5">
 <p>
 Mix and match:
 </p>
@@ -5600,7 +5626,7 @@ Source: <a href="https://stats.stackexchange.com/q/397288/31243">Dot Product and
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Luis Damiano</p>
-<p class="date">Created: 2022-12-12 Mon 08:35</p>
+<p class="date">Created: 2022-12-12 Mon 12:39</p>
 <p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>

@@ -1,5 +1,20 @@
 * Beamer
 
+** How to automatically add a section slide in Beamer?
+
+   Use =AtBeginSection= and =AtBeginSubsection= respectively to add a frame when
+   a section or a subsection is created. Beamer has the built-in templates
+   =sectionpage= and =subsectionpage= for section slides. You may modify them or
+   simply create a new template.
+
+   #+begin_src latex
+     \AtBeginSection{\frame{\sectionpage}}
+     \AtBeginSubsection{\frame{\subsectionpage}}
+   #+end_src
+
+   Source:
+   - [[https://tex.stackexchange.com/a/117661][sectioning - Automatically generate section title slides in beamer?]]
+
 ** How to hide a frame in Beamer?
 
    Use =<beamer:0>= to hide it in the presentation, use =<handout:0>= to hide it
