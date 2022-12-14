@@ -113,3 +113,18 @@
    Source:
    - [[https://man.archlinux.org/man/exiftool.1p][exiftool(1p) — Arch manual pages]]
    - [[https://tldr.ostera.io/exiftool][tldr | simplified, community driven man pages]]
+** How to set a password for a PDF file?
+
+Use =qpdf=, or the older and sometimes deprecated =pdftk=. Use single quotes
+when including special characters. The user password is mandatory. The user and
+owner passwords cannot be the same.
+
+#+begin_src shell
+  ## 128 and 256 bit encryption available in qpdf
+  qpdf --encrypt 'pass1' 'pass2' 256 -- input.pdf output.pdf
+  ## 128 bit or lower encryption available in pdftk
+  pdftk input.pdf output output.pdf owner_pw 'pass1' user_pw 'pass2' encrypt_128bit
+#+end_src
+
+Source:
+- [[https://unix.stackexchange.com/a/187405][How to set password for pdf files? - Unix & Linux Stack Exchange]]

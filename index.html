@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2022-12-12 Mon 13:09 -->
+<!-- 2022-12-14 Wed 09:43 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Knowledge Base</title>
@@ -153,6 +153,7 @@ ul.org-ul, ol.org-ol { font-size:16px }
 <li><a href="#How%20to%20compress%20a%20PDF%20file%3F">3.5.6. How to compress a PDF file?</a></li>
 <li><a href="#How%20to%20automatically%20crop%20margins%20from%20a%20PDF%20file%3F">3.5.7. How to automatically crop margins from a PDF file?</a></li>
 <li><a href="#How%20to%20extract%20and%20delete%20all%20the%20metadata%20in%20a%20PDF%20file%3F">3.5.8. How to extract and delete all the metadata in a PDF file?</a></li>
+<li><a href="#How%20to%20set%20a%20password%20for%20a%20PDF%20file%3F">3.5.9. How to set a password for a PDF file?</a></li>
 </ul>
 </li>
 <li><a href="#Hugo">3.6. Hugo</a>
@@ -1157,7 +1158,7 @@ Source: <a href="https://git-scm.com/book/en/v2/Git-Internals-Git-Objects">Git -
 <div id="outline-container-How%20to%20rename%20a%20branch%3F" class="outline-4">
 <h4 id="How%20to%20rename%20a%20branch%3F"><span class="section-number-4">3.1.2.</span> How to rename a branch?</h4>
 <div class="outline-text-4" id="text-3-1-2">
-<pre class="example" id="org5e1bc11">
+<pre class="example" id="org5331354">
 git branch -m newname
 </pre>
 </div>
@@ -1721,6 +1722,31 @@ Source:
 <ul class="org-ul">
 <li><a href="https://man.archlinux.org/man/exiftool.1p">exiftool(1p) — Arch manual pages</a></li>
 <li><a href="https://tldr.ostera.io/exiftool">tldr | simplified, community driven man pages</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-How%20to%20set%20a%20password%20for%20a%20PDF%20file%3F" class="outline-4">
+<h4 id="How%20to%20set%20a%20password%20for%20a%20PDF%20file%3F"><span class="section-number-4">3.5.9.</span> How to set a password for a PDF file?</h4>
+<div class="outline-text-4" id="text-3-5-9">
+<p>
+Use <code>qpdf</code>, or the older and sometimes deprecated <code>pdftk</code>. Use single quotes
+when including special characters. The user password is mandatory. The user and
+owner passwords cannot be the same.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-shell"><span style="color: #a49462;">## </span><span style="color: #a49462;">128 and 256 bit encryption available in qpdf</span>
+qpdf --encrypt <span style="color: #f1fa8c;">'pass1'</span> <span style="color: #f1fa8c;">'pass2'</span> 256 -- input.pdf output.pdf
+<span style="color: #a49462;">## </span><span style="color: #a49462;">128 bit or lower encryption available in pdftk</span>
+pdftk input.pdf output output.pdf owner_pw <span style="color: #f1fa8c;">'pass1'</span> user_pw <span style="color: #f1fa8c;">'pass2'</span> encrypt_128bit
+</pre>
+</div>
+
+<p>
+Source:
+</p>
+<ul class="org-ul">
+<li><a href="https://unix.stackexchange.com/a/187405">How to set password for pdf files? - Unix &amp; Linux Stack Exchange</a></li>
 </ul>
 </div>
 </div>
@@ -5645,7 +5671,7 @@ Source: <a href="https://stats.stackexchange.com/q/397288/31243">Dot Product and
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Luis Damiano</p>
-<p class="date">Created: 2022-12-12 Mon 13:09</p>
+<p class="date">Created: 2022-12-14 Wed 09:43</p>
 <p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
