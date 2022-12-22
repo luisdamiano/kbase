@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2022-12-14 Wed 09:43 -->
+<!-- 2022-12-22 Thu 12:18 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Knowledge Base</title>
@@ -392,9 +392,10 @@ ul.org-ul, ol.org-ol { font-size:16px }
 <li><a href="#How%20to%20transform%20a%20covariate%20taking%20non-negative%20values%20with%20zeroes%3F">10.1.8. How to transform a covariate taking non-negative values with zeroes?</a></li>
 <li><a href="#What%20is%20the%20difference%20between%20cross-validation%20and%20the%20WAIC%3F">10.1.9. What is the difference between cross-validation and the WAIC?</a></li>
 <li><a href="#How%20to%20do%20positivity-preserving%20interpolation%3F">10.1.10. How to do positivity-preserving interpolation?</a></li>
-<li><a href="#Priors">10.1.11. Priors</a></li>
-<li><a href="#MCMC">10.1.12. MCMC</a></li>
-<li><a href="#Neural%20networks">10.1.13. Neural networks</a></li>
+<li><a href="#What%20are%20some%20good%2C%20general%20rules%20on%20reporting%3F">10.1.11. What are some good, general rules on reporting?</a></li>
+<li><a href="#Priors">10.1.12. Priors</a></li>
+<li><a href="#MCMC">10.1.13. MCMC</a></li>
+<li><a href="#Neural%20networks">10.1.14. Neural networks</a></li>
 </ul>
 </li>
 <li><a href="#Gaussian%20processes">10.2. Gaussian processes</a>
@@ -1158,7 +1159,7 @@ Source: <a href="https://git-scm.com/book/en/v2/Git-Internals-Git-Objects">Git -
 <div id="outline-container-How%20to%20rename%20a%20branch%3F" class="outline-4">
 <h4 id="How%20to%20rename%20a%20branch%3F"><span class="section-number-4">3.1.2.</span> How to rename a branch?</h4>
 <div class="outline-text-4" id="text-3-1-2">
-<pre class="example" id="org5331354">
+<pre class="example" id="org70f1af5">
 git branch -m newname
 </pre>
 </div>
@@ -5034,9 +5035,40 @@ predictive performance for a new observation from a new group.
 </div>
 </div>
 
-<div id="outline-container-Priors" class="outline-4">
-<h4 id="Priors"><span class="section-number-4">10.1.11.</span> Priors</h4>
+<div id="outline-container-What%20are%20some%20good%2C%20general%20rules%20on%20reporting%3F" class="outline-4">
+<h4 id="What%20are%20some%20good%2C%20general%20rules%20on%20reporting%3F"><span class="section-number-4">10.1.11.</span> What are some good, general rules on reporting?</h4>
 <div class="outline-text-4" id="text-10-1-11">
+<p>
+Here is some general guidance, which of course may not be the best fit for
+some specific situations
+</p>
+<ul class="org-ul">
+<li>Clarify the research question</li>
+<li>Focus on estimates, confidence intervals, and clinical relevance</li>
+<li>Carefully account for missing data</li>
+<li>Do not dichotomise continuous variables</li>
+<li>Consider non-linear relationships</li>
+<li>Quantify differences in subgroup results</li>
+<li>Consider accounting for clustering</li>
+<li>Interpret I2 and meta-regression appropriately</li>
+<li>Assess calibration of model predictions</li>
+<li>Carefully consider the variable selection approach</li>
+<li>Assess the impact of any assumptions</li>
+<li>Use reporting guidelines and avoid overinterpretation</li>
+</ul>
+
+<p>
+Source
+</p>
+<ul class="org-ul">
+<li><a href="https://doi.org/10.1136/bmj-2022-072883">On the 12th Day of Christmas, a Statistician Sent to Me . . . | The BMJ</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-Priors" class="outline-4">
+<h4 id="Priors"><span class="section-number-4">10.1.12.</span> Priors</h4>
+<div class="outline-text-4" id="text-10-1-12">
 <ul class="org-ul">
 <li><a href="http://www.stats.org.uk/priors/noninformative/YangBerger1998.pdf">A Catalog of Noninformative Priors</a></li>
 </ul>
@@ -5044,8 +5076,8 @@ predictive performance for a new observation from a new group.
 </div>
 
 <div id="outline-container-MCMC" class="outline-4">
-<h4 id="MCMC"><span class="section-number-4">10.1.12.</span> MCMC</h4>
-<div class="outline-text-4" id="text-10-1-12">
+<h4 id="MCMC"><span class="section-number-4">10.1.13.</span> MCMC</h4>
+<div class="outline-text-4" id="text-10-1-13">
 <ul class="org-ul">
 <li><a href="http://users.stat.umn.edu/~geyer/mcmc/one.html">One long run in MCMC</a>: If you can't get a good answer with one
 long run, then you can't get a good answer with many short runs
@@ -5054,8 +5086,8 @@ either.</li>
 </div>
 </div>
 <div id="outline-container-Neural%20networks" class="outline-4">
-<h4 id="Neural%20networks"><span class="section-number-4">10.1.13.</span> Neural networks</h4>
-<div class="outline-text-4" id="text-10-1-13">
+<h4 id="Neural%20networks"><span class="section-number-4">10.1.14.</span> Neural networks</h4>
+<div class="outline-text-4" id="text-10-1-14">
 <ul class="org-ul">
 <li><a href="https://archive.org/download/c24bcbd791979fda2b274e7c42b22bb8b0462d20d28b0db09f8f60bd0bd1f827/c24bcbd791979fda2b274e7c42b22bb8b0462d20d28b0db09f8f60bd0bd1f827.png">A mostly complete chart of Neural Networks</a> by Fjodor van Veen at the Asimov
 Institute</li>
@@ -5671,7 +5703,7 @@ Source: <a href="https://stats.stackexchange.com/q/397288/31243">Dot Product and
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Luis Damiano</p>
-<p class="date">Created: 2022-12-14 Wed 09:43</p>
+<p class="date">Created: 2022-12-22 Thu 12:18</p>
 <p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>

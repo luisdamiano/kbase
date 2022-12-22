@@ -120,6 +120,26 @@
    - [[https://math.stackexchange.com/a/677839/113775][How can I find a non-negative interpolation function?]]
      (positivity-preserving interpolation is hard)
 
+** What are some good, general rules on reporting?
+
+   Here is some general guidance, which of course may not be the best fit for
+   some specific situations
+   - Clarify the research question
+   - Focus on estimates, confidence intervals, and clinical relevance
+   - Carefully account for missing data
+   - Do not dichotomise continuous variables
+   - Consider non-linear relationships
+   - Quantify differences in subgroup results
+   - Consider accounting for clustering
+   - Interpret I2 and meta-regression appropriately
+   - Assess calibration of model predictions
+   - Carefully consider the variable selection approach
+   - Assess the impact of any assumptions
+   - Use reporting guidelines and avoid overinterpretation
+
+   Source
+   - [[https://doi.org/10.1136/bmj-2022-072883][On the 12th Day of Christmas, a Statistician Sent to Me . . . | The BMJ]]
+
 ** Priors
 
    - [[http://www.stats.org.uk/priors/noninformative/YangBerger1998.pdf][A Catalog of Noninformative Priors]]
