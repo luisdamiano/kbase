@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2022-12-22 Thu 12:18 -->
+<!-- 2022-12-30 Fri 15:26 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Knowledge Base</title>
@@ -68,6 +68,8 @@ ul.org-ul, ol.org-ol { font-size:16px }
 <li><a href="#How%20to%20cast%20a%20string%20to%20intenger%3F">2.2.3. How to cast a string to intenger?</a></li>
 <li><a href="#How%20to%20make%20a%20conditional%20assignment%20in%20bash%20for%20a%20string%3F">2.2.4. How to make a conditional assignment in bash for a string?</a></li>
 <li><a href="#How%20to%20make%20a%20conditional%20assignment%20in%20bash%20for%20a%20numeric%3F">2.2.5. How to make a conditional assignment in bash for a numeric?</a></li>
+<li><a href="#How%20to%20explain%20shell%20code%3F">2.2.6. How to explain shell code?</a></li>
+<li><a href="#How%20to%20validate%20check%20shell%20code%3F">2.2.7. How to validate check shell code?</a></li>
 </ul>
 </li>
 <li><a href="#Linux--Linux">2.3. Linux</a>
@@ -300,10 +302,11 @@ ul.org-ul, ol.org-ol { font-size:16px }
 <li><a href="#How%20to%20get%20all%20function%20call%20arguments%20as%20a%20list%3F">7.2.14. How to get all function call arguments as a list?</a></li>
 <li><a href="#How%20to%20debug%20an%20error%20thrown%20in%20a%20package%3F">7.2.15. How to debug an error thrown in a package?</a></li>
 <li><a href="#How%20to%20compute%20a%20simple%20moving%20average%20with%20base%20R%3F">7.2.16. How to compute a simple moving average with base R?</a></li>
-<li><a href="#Visualization">7.2.17. Visualization</a></li>
-<li><a href="#How%20to%20improve%20the%20look%20of%20my%20rmarkdown%20HTML%20document%3F">7.2.18. How to improve the look of my rmarkdown HTML document?</a></li>
-<li><a href="#Where%20can%20I%20find%20useful%20addins%20for%20RStudio%3F">7.2.19. Where can I find useful addins for RStudio?</a></li>
-<li><a href="#R%20programming--Resources">7.2.20. Resources</a></li>
+<li><a href="#How%20to%20set%20the%20seed%20locally%20for%20a%20function%3F">7.2.17. How to set the seed locally for a function?</a></li>
+<li><a href="#Visualization">7.2.18. Visualization</a></li>
+<li><a href="#How%20to%20improve%20the%20look%20of%20my%20rmarkdown%20HTML%20document%3F">7.2.19. How to improve the look of my rmarkdown HTML document?</a></li>
+<li><a href="#Where%20can%20I%20find%20useful%20addins%20for%20RStudio%3F">7.2.20. Where can I find useful addins for RStudio?</a></li>
+<li><a href="#R%20programming--Resources">7.2.21. Resources</a></li>
 </ul>
 </li>
 <li><a href="#RStudio">7.3. RStudio</a>
@@ -415,12 +418,11 @@ ul.org-ul, ol.org-ol { font-size:16px }
 <ul>
 <li><a href="#Math">11.1. Math</a>
 <ul>
-<li><a href="#Resources%20for%20hard%20calculus">11.1.1. Resources for hard calculus</a></li>
-<li><a href="#Multivariable%20calculus">11.1.2. Multivariable calculus</a></li>
-<li><a href="#How%20to%20choose%20%24u%24%20and%20%24dv%24%20in%20integration%20by%20parts%3F">11.1.3. How to choose \(u\) and \(dv\) in integration by parts?</a></li>
-<li><a href="#Linear%20algebra">11.1.4. Linear algebra</a></li>
-<li><a href="#Optimization">11.1.5. Optimization</a></li>
-<li><a href="#Fourier%20basis%20functions">11.1.6. Fourier basis functions</a></li>
+<li><a href="#Calculus">11.1.1. Calculus</a></li>
+<li><a href="#Functional%20analysis">11.1.2. Functional analysis</a></li>
+<li><a href="#Linear%20algebra">11.1.3. Linear algebra</a></li>
+<li><a href="#Optimization">11.1.4. Optimization</a></li>
+<li><a href="#Fourier%20basis%20functions">11.1.5. Fourier basis functions</a></li>
 </ul>
 </li>
 </ul>
@@ -772,6 +774,24 @@ Source:
 <ul class="org-ul">
 <li><a href="https://stackoverflow.com/a/2440950/2860744">How to build a conditional assignment in bash? - Stack Overflow</a></li>
 </ul>
+</div>
+</div>
+<div id="outline-container-How%20to%20explain%20shell%20code%3F" class="outline-4">
+<h4 id="How%20to%20explain%20shell%20code%3F"><span class="section-number-4">2.2.6.</span> How to explain shell code?</h4>
+<div class="outline-text-4" id="text-2-2-6">
+<p>
+Use <a href="https://explainshell.com/">explainshell</a> to match command-line arguments to their help text.
+</p>
+</div>
+</div>
+
+<div id="outline-container-How%20to%20validate%20check%20shell%20code%3F" class="outline-4">
+<h4 id="How%20to%20validate%20check%20shell%20code%3F"><span class="section-number-4">2.2.7.</span> How to validate check shell code?</h4>
+<div class="outline-text-4" id="text-2-2-7">
+<p>
+Use <a href="https://github.com/koalaman/shellcheck">shellcheck</a> for warnings and suggestions for shell scripts. It can be used
+online in <a href="https://www.shellcheck.net/">ShellCheck.net</a>.
+</p>
 </div>
 </div>
 </div>
@@ -1159,7 +1179,7 @@ Source: <a href="https://git-scm.com/book/en/v2/Git-Internals-Git-Objects">Git -
 <div id="outline-container-How%20to%20rename%20a%20branch%3F" class="outline-4">
 <h4 id="How%20to%20rename%20a%20branch%3F"><span class="section-number-4">3.1.2.</span> How to rename a branch?</h4>
 <div class="outline-text-4" id="text-3-1-2">
-<pre class="example" id="org70f1af5">
+<pre class="example" id="org55cf026">
 git branch -m newname
 </pre>
 </div>
@@ -3701,13 +3721,31 @@ Source:
 </div>
 </div>
 
-<div id="outline-container-Visualization" class="outline-4">
-<h4 id="Visualization"><span class="section-number-4">7.2.17.</span> Visualization</h4>
+<div id="outline-container-How%20to%20set%20the%20seed%20locally%20for%20a%20function%3F" class="outline-4">
+<h4 id="How%20to%20set%20the%20seed%20locally%20for%20a%20function%3F"><span class="section-number-4">7.2.17.</span> How to set the seed locally for a function?</h4>
 <div class="outline-text-4" id="text-7-2-17">
+<p>
+Note: this needs validation.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-R"><span style="color: #50fa7b; font-weight: bold;">myfun</span> <span style="color: #8be9fd;">&lt;-</span> <span style="color: #ff79c6; font-weight: bold;">function</span>(seed) {
+  old  <span style="color: #8be9fd;">&lt;-</span> .Random.seed
+  <span style="color: #ff79c6; font-weight: bold;">on.exit</span>({assign(<span style="color: #f1fa8c;">".Random.seed"</span>, old, envir = .GlobalEnv)})
+  set.seed(seed)
+}
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-Visualization" class="outline-4">
+<h4 id="Visualization"><span class="section-number-4">7.2.18.</span> Visualization</h4>
+<div class="outline-text-4" id="text-7-2-18">
 </div>
 <ol class="org-ol">
 <li><a id="How%20to%20draw%20a%20plot%20with%20minimal%20margins%3F"></a>How to draw a plot with minimal margins?<br />
-<div class="outline-text-5" id="text-7-2-17-1">
+<div class="outline-text-5" id="text-7-2-18-1">
 <div class="org-src-container">
 <pre class="src src-R"><span style="color: #a49462;">## </span><span style="color: #a49462;">oma: Outer  = device margin lines (bltr)</span>
 <span style="color: #a49462;">## </span><span style="color: #a49462;">mar: Margin = figure margin lines (bltr)</span>
@@ -3736,7 +3774,7 @@ plot(x = 1:10, y = 1:10)
 </li>
 
 <li><a id="How%20to%20check%20if%20a%20value%20is%20in%20an%20interval%3F"></a>How to check if a value is in an interval?<br />
-<div class="outline-text-5" id="text-7-2-17-2">
+<div class="outline-text-5" id="text-7-2-18-2">
 <div class="org-src-container">
 <pre class="src src-R"><span style="color: #a49462;">## </span><span style="color: #a49462;">x &lt;- 1</span>
 <span style="color: #a49462;">## </span><span style="color: #a49462;">confint &lt;- c(-0.5, 0.5)</span>
@@ -3751,7 +3789,7 @@ Source: rickyrick at libera.chat
 </li>
 
 <li><a id="How%20to%20cache%20a%20read%20function%3F"></a>How to cache a read function?<br />
-<div class="outline-text-5" id="text-7-2-17-3">
+<div class="outline-text-5" id="text-7-2-18-3">
 <p>
 Use <a href="https://cran.r-project.org/web/packages/memoise/index.html">memoise</a> to store the function call on memory, or an ad-hoc implementation
 like <a href="https://github.com/bioDS/phyloRNAanalysis/blob/b9032c8c3a3f134cd73c44fe25618f659b6f5d79/src/utils.r#L170-L191">here</a> (Colombo at Libera.chat).
@@ -3760,7 +3798,7 @@ like <a href="https://github.com/bioDS/phyloRNAanalysis/blob/b9032c8c3a3f134cd73
 </li>
 
 <li><a id="How%20to%20use%20%3Dgeom_tile%3D%20with%20irregular%20data%3F"></a>How to use <code>geom_tile</code> with irregular data?<br />
-<div class="outline-text-5" id="text-7-2-17-4">
+<div class="outline-text-5" id="text-7-2-18-4">
 <p>
 Note that <code>?geom_tile</code> recommends <code>akima::interp</code>.
 </p>
@@ -3795,7 +3833,7 @@ DF$z <span style="color: #8be9fd;">&lt;-</span> ak[[3]]
 </li>
 
 <li><a id="How%20to%20plot%20in%20reverse%20log%20scale%20with%20ggplot2%3F"></a>How to plot in reverse log scale with ggplot2?<br />
-<div class="outline-text-5" id="text-7-2-17-5">
+<div class="outline-text-5" id="text-7-2-18-5">
 <div class="org-src-container">
 <pre class="src src-R"><span style="color: #a49462;">#</span><span style="color: #a49462;">'</span><span style="color: #a49462;"> Reverse log transformation</span>
 <span style="color: #a49462;">#</span><span style="color: #a49462;">'</span>
@@ -3826,7 +3864,7 @@ DF$z <span style="color: #8be9fd;">&lt;-</span> ak[[3]]
 </li>
 
 <li><a id="How%20to%20add%20labels%20near%20the%20plot%20boundaries%20with%20ggplot2%3F"></a>How to add labels near the plot boundaries with ggplot2?<br />
-<div class="outline-text-5" id="text-7-2-17-6">
+<div class="outline-text-5" id="text-7-2-18-6">
 <p>
 Use <code>-Inf</code> and <code>Inf</code> to signal the left/bottom and right/top end
 respectively, e.g., use <code>x=Inf</code> and <code>y=Inf</code> to place a <code>geom_label</code> on the
@@ -3851,7 +3889,7 @@ Source:
 </li>
 
 <li><a id="How%20to%20plot%20in%20log%20scale%20with%20base%20R%3F"></a>How to plot in log scale with base R?<br />
-<div class="outline-text-5" id="text-7-2-17-7">
+<div class="outline-text-5" id="text-7-2-18-7">
 <div class="org-src-container">
 <pre class="src src-R">plot(exp(1:10), 1:10, log = <span style="color: #f1fa8c;">"x"</span>)
 plot(1:10, exp(1:10), log = <span style="color: #f1fa8c;">"y"</span>)
@@ -3862,7 +3900,7 @@ plot(exp(1:10), exp(1:10), log = <span style="color: #f1fa8c;">"xy"</span>)
 </li>
 
 <li><a id="How%20to%20fine%20tune%20R%20plot%20margins%3F"></a>How to fine tune R plot margins?<br />
-<div class="outline-text-5" id="text-7-2-17-8">
+<div class="outline-text-5" id="text-7-2-18-8">
 <ul class="org-ul">
 <li><a href="https://www.rstudio.com/wp-content/uploads/2016/10/how-big-is-your-graph.pdf">How Big is Your Graph?</a></li>
 </ul>
@@ -3870,7 +3908,7 @@ plot(exp(1:10), exp(1:10), log = <span style="color: #f1fa8c;">"xy"</span>)
 </li>
 
 <li><a id="How%20to%20make%20beautiful%20plots%20with%20base%20R%3F"></a>How to make beautiful plots with base R?<br />
-<div class="outline-text-5" id="text-7-2-17-9">
+<div class="outline-text-5" id="text-7-2-18-9">
 <ul class="org-ul">
 <li><a href="http://karolis.koncevicius.lt/posts/r_base_plotting_without_wrappers/">R base plotting without wrappers</a></li>
 </ul>
@@ -3880,8 +3918,8 @@ plot(exp(1:10), exp(1:10), log = <span style="color: #f1fa8c;">"xy"</span>)
 </div>
 
 <div id="outline-container-How%20to%20improve%20the%20look%20of%20my%20rmarkdown%20HTML%20document%3F" class="outline-4">
-<h4 id="How%20to%20improve%20the%20look%20of%20my%20rmarkdown%20HTML%20document%3F"><span class="section-number-4">7.2.18.</span> How to improve the look of my rmarkdown HTML document?</h4>
-<div class="outline-text-4" id="text-7-2-18">
+<h4 id="How%20to%20improve%20the%20look%20of%20my%20rmarkdown%20HTML%20document%3F"><span class="section-number-4">7.2.19.</span> How to improve the look of my rmarkdown HTML document?</h4>
+<div class="outline-text-4" id="text-7-2-19">
 <p>
 Thanks to fendur on #R at libera.chat
 </p>
@@ -3979,8 +4017,8 @@ pairs(iris[, 1:3], col = iris$Species, bg = iris$Species, pch = 21)
 </div>
 
 <div id="outline-container-Where%20can%20I%20find%20useful%20addins%20for%20RStudio%3F" class="outline-4">
-<h4 id="Where%20can%20I%20find%20useful%20addins%20for%20RStudio%3F"><span class="section-number-4">7.2.19.</span> Where can I find useful addins for RStudio?</h4>
-<div class="outline-text-4" id="text-7-2-19">
+<h4 id="Where%20can%20I%20find%20useful%20addins%20for%20RStudio%3F"><span class="section-number-4">7.2.20.</span> Where can I find useful addins for RStudio?</h4>
+<div class="outline-text-4" id="text-7-2-20">
 <p>
 Check <a href="https://github.com/daattali/addinslist">GitHub - daattali/addinslist</a> to discover and install useful RStudio
 addins. You can install the <code>addinslist</code> package to browse the list from
@@ -3999,8 +4037,8 @@ Here are some suggestions:
 </div>
 
 <div id="outline-container-R%20programming--Resources" class="outline-4">
-<h4 id="R%20programming--Resources"><span class="section-number-4">7.2.20.</span> Resources</h4>
-<div class="outline-text-4" id="text-7-2-20">
+<h4 id="R%20programming--Resources"><span class="section-number-4">7.2.21.</span> Resources</h4>
+<div class="outline-text-4" id="text-7-2-21">
 <ul class="org-ul">
 <li><a href="https://pj.freefaculty.org/R/Rtips.html">Rtips</a></li>
 <li><a href="http://karolis.koncevicius.lt/posts/collection_of_simple_r_shortcuts/">A Collection of Simple R Shortcuts</a></li>
@@ -5212,9 +5250,13 @@ design, dimension reduction, and calibration.</a></li>
 <h3 id="Math"><span class="section-number-3">11.1.</span> Math</h3>
 <div class="outline-text-3" id="text-11-1">
 </div>
-<div id="outline-container-Resources%20for%20hard%20calculus" class="outline-4">
-<h4 id="Resources%20for%20hard%20calculus"><span class="section-number-4">11.1.1.</span> Resources for hard calculus</h4>
+<div id="outline-container-Calculus" class="outline-4">
+<h4 id="Calculus"><span class="section-number-4">11.1.1.</span> Calculus</h4>
 <div class="outline-text-4" id="text-11-1-1">
+</div>
+<ol class="org-ol">
+<li><a id="Resources%20for%20hard%20calculus"></a>Resources for hard calculus<br />
+<div class="outline-text-5" id="text-11-1-1-1">
 <ul class="org-ul">
 <li><p>
 Integrals
@@ -5239,21 +5281,19 @@ Integrals
 <li><a href="https://en.wikipedia.org/wiki/Integral_transform">Integral transform</a></li>
 </ul>
 </div>
-</div>
+</li>
 
-<div id="outline-container-Multivariable%20calculus" class="outline-4">
-<h4 id="Multivariable%20calculus"><span class="section-number-4">11.1.2.</span> Multivariable calculus</h4>
-<div class="outline-text-4" id="text-11-1-2">
+<li><a id="Multivariable%20calculus"></a>Multivariable calculus<br />
+<div class="outline-text-5" id="text-11-1-1-2">
 <ul class="org-ul">
 <li><a href="https://blog.yj0.se/2022/multivariable_calculus_cheatsheet/">Multivariable Calculus Cheatsheet | Yue Jiao's blog</a></li>
 <li><a href="https://en.wikipedia.org/wiki/Vector_calculus#Differential_operators">Vector calculus - Differential operators</a></li>
 </ul>
 </div>
-</div>
+</li>
 
-<div id="outline-container-How%20to%20choose%20%24u%24%20and%20%24dv%24%20in%20integration%20by%20parts%3F" class="outline-4">
-<h4 id="How%20to%20choose%20%24u%24%20and%20%24dv%24%20in%20integration%20by%20parts%3F"><span class="section-number-4">11.1.3.</span> How to choose \(u\) and \(dv\) in integration by parts?</h4>
-<div class="outline-text-4" id="text-11-1-3">
+<li><a id="How%20to%20choose%20%24u%24%20and%20%24dv%24%20in%20integration%20by%20parts%3F"></a>How to choose \(u\) and \(dv\) in integration by parts?<br />
+<div class="outline-text-5" id="text-11-1-1-3">
 <p>
 We pick \(u\) and \(dv\) from an expression of the form \(\int f(x) g(x) dx\). We
 need to differentiate \(u\) and integrate \(dv\).
@@ -5277,11 +5317,22 @@ Source:
 <li><a href="https://en.wikipedia.org/wiki/Integration_by_parts#LIATE_rule">Integration by parts - Wikipedia</a></li>
 </ul>
 </div>
+</li>
+</ol>
 </div>
 
+<div id="outline-container-Functional%20analysis" class="outline-4">
+<h4 id="Functional%20analysis"><span class="section-number-4">11.1.2.</span> Functional analysis</h4>
+<div class="outline-text-4" id="text-11-1-2">
+<ul class="org-ul">
+<li><a href="https://mathoverflow.net/q/72419">big list - A good book of functional analysis - MathOverflow</a></li>
+<li></li>
+</ul>
+</div>
+</div>
 <div id="outline-container-Linear%20algebra" class="outline-4">
-<h4 id="Linear%20algebra"><span class="section-number-4">11.1.4.</span> Linear algebra</h4>
-<div class="outline-text-4" id="text-11-1-4">
+<h4 id="Linear%20algebra"><span class="section-number-4">11.1.3.</span> Linear algebra</h4>
+<div class="outline-text-4" id="text-11-1-3">
 <ul class="org-ul">
 <li><a href="http://www2.imm.dtu.dk/pubdb/edoc/imm3274.pdf">The Matrix Cookbook</a>: collection of linear algebra facts</li>
 <li><a href="http://www.matrixcalculus.org/">Matrix calculus</a>: symbolic vector and matrix derivatives</li>
@@ -5296,16 +5347,16 @@ matrix and Gaussian formulae.</li>
 </div>
 
 <div id="outline-container-Optimization" class="outline-4">
-<h4 id="Optimization"><span class="section-number-4">11.1.5.</span> Optimization</h4>
-<div class="outline-text-4" id="text-11-1-5">
+<h4 id="Optimization"><span class="section-number-4">11.1.4.</span> Optimization</h4>
+<div class="outline-text-4" id="text-11-1-4">
 <ul class="org-ul">
 <li><a href="http://www.geno-project.org/">GENO</a>: optimization solver code generator</li>
 </ul>
 </div>
 </div>
 <div id="outline-container-Fourier%20basis%20functions" class="outline-4">
-<h4 id="Fourier%20basis%20functions"><span class="section-number-4">11.1.6.</span> Fourier basis functions</h4>
-<div class="outline-text-4" id="text-11-1-6">
+<h4 id="Fourier%20basis%20functions"><span class="section-number-4">11.1.5.</span> Fourier basis functions</h4>
+<div class="outline-text-4" id="text-11-1-5">
 <p>
 An orthonormal basis for \(L^2([0,1], \mathcal{R})\) is \(1, 2\sqrt{cos(2\pi
    nx)},2–\sqrt{sin(2\pi nx)}\) for \(x\in[0, 1]\) and \(n = 1,2,\dots\)
@@ -5703,7 +5754,7 @@ Source: <a href="https://stats.stackexchange.com/q/397288/31243">Dot Product and
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Luis Damiano</p>
-<p class="date">Created: 2022-12-22 Thu 12:18</p>
+<p class="date">Created: 2022-12-30 Fri 15:26</p>
 <p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>

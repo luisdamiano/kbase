@@ -340,6 +340,18 @@
    Source:
    - [[https://stackoverflow.com/a/51472225/20521992][Centered moving average in R (without using packages)]]
 
+** How to set the seed locally for a function?
+
+   Note: this needs validation.
+
+   #+begin_src R
+     myfun <- function(seed) {
+       old  <- .Random.seed
+       on.exit({assign(".Random.seed", old, envir = .GlobalEnv)})
+       set.seed(seed)
+     }
+   #+end_src
+
 ** Visualization
 
 *** How to draw a plot with minimal margins?

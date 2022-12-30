@@ -1,41 +1,47 @@
 * Math
 
-** Resources for hard calculus
+** Calculus
 
-   - Integrals
-     - General resources
-       - [[https://en.wikipedia.org/wiki/Lists_of_integrals][Lists of integrals]]
-       - [[https://en.wikipedia.org/wiki/List_of_integrals_of_Gaussian_functions][List of integrals of Gaussian functions]] sweet Normals o'f mine
-     - Hairy integrals
-       - Symbolic Integration I
-	 (Vol. 1). (2005). Springer-Verlag. https://doi.org/10.1007/b138171
-   - [[https://en.wikipedia.org/wiki/List_of_limits][List of limits]]
-   - [[https://en.wikipedia.org/wiki/List_of_logarithmic_identities][List of logarithmic identities]]
-   - [[https://en.wikipedia.org/wiki/List_of_mathematical_series][List of mathematical series]]
-   - [[https://en.wikipedia.org/wiki/Integral_transform][Integral transform]]
+*** Resources for hard calculus
 
-** Multivariable calculus
+    - Integrals
+      - General resources
+        - [[https://en.wikipedia.org/wiki/Lists_of_integrals][Lists of integrals]]
+        - [[https://en.wikipedia.org/wiki/List_of_integrals_of_Gaussian_functions][List of integrals of Gaussian functions]] sweet Normals o'f mine
+      - Hairy integrals
+        - Symbolic Integration I
+	  (Vol. 1). (2005). Springer-Verlag. https://doi.org/10.1007/b138171
+    - [[https://en.wikipedia.org/wiki/List_of_limits][List of limits]]
+    - [[https://en.wikipedia.org/wiki/List_of_logarithmic_identities][List of logarithmic identities]]
+    - [[https://en.wikipedia.org/wiki/List_of_mathematical_series][List of mathematical series]]
+    - [[https://en.wikipedia.org/wiki/Integral_transform][Integral transform]]
 
-   - [[https://blog.yj0.se/2022/multivariable_calculus_cheatsheet/][Multivariable Calculus Cheatsheet | Yue Jiao's blog]]
-   - [[https://en.wikipedia.org/wiki/Vector_calculus#Differential_operators][Vector calculus - Differential operators]]
+*** Multivariable calculus
 
-** How to choose $u$ and $dv$ in integration by parts?
+    - [[https://blog.yj0.se/2022/multivariable_calculus_cheatsheet/][Multivariable Calculus Cheatsheet | Yue Jiao's blog]]
+    - [[https://en.wikipedia.org/wiki/Vector_calculus#Differential_operators][Vector calculus - Differential operators]]
 
-   We pick $u$ and $dv$ from an expression of the form $\int f(x) g(x) dx$. We
-   need to differentiate $u$ and integrate $dv$.
+*** How to choose $u$ and $dv$ in integration by parts?
 
-   - Consider $dv = f$ for $f$ the most complex expression in the
-     integrand among all those with known integral
-   - Consider $u = f$ if $\int f dx$ is not known
-   - Consider $u = f$ when $df$ is nicer to work with than $\int f$
-   - Typical choices are $u = f$ when $f$ is a logarithmic, inverse
-     trigonometric, algebraic, trigonometric, or exponential function.
+    We pick $u$ and $dv$ from an expression of the form $\int f(x) g(x) dx$. We
+    need to differentiate $u$ and integrate $dv$.
 
-   Source:
-   - [[https://math.stackexchange.com/a/2123294/113775][Methods for choosing $u$ and $dv$ when integrating by parts? (1)]]
-   - [[https://math.stackexchange.com/a/2123477/113775][Methods for choosing $u$ and $dv$ when integrating by parts? (2)]]
-   - [[https://en.wikipedia.org/wiki/Integration_by_parts#LIATE_rule][Integration by parts - Wikipedia]]
+    - Consider $dv = f$ for $f$ the most complex expression in the
+      integrand among all those with known integral
+    - Consider $u = f$ if $\int f dx$ is not known
+    - Consider $u = f$ when $df$ is nicer to work with than $\int f$
+    - Typical choices are $u = f$ when $f$ is a logarithmic, inverse
+      trigonometric, algebraic, trigonometric, or exponential function.
 
+    Source:
+    - [[https://math.stackexchange.com/a/2123294/113775][Methods for choosing $u$ and $dv$ when integrating by parts? (1)]]
+    - [[https://math.stackexchange.com/a/2123477/113775][Methods for choosing $u$ and $dv$ when integrating by parts? (2)]]
+    - [[https://en.wikipedia.org/wiki/Integration_by_parts#LIATE_rule][Integration by parts - Wikipedia]]
+
+** Functional analysis
+
+   - [[https://mathoverflow.net/q/72419][big list - A good book of functional analysis - MathOverflow]]
+   - 
 ** Linear algebra
 
    - [[http://www2.imm.dtu.dk/pubdb/edoc/imm3274.pdf][The Matrix Cookbook]]: collection of linear algebra facts

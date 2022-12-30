@@ -90,3 +90,11 @@ emacs $(/bin/ls */* --sort=time | tail -n 5)
 
    Source:
    - [[https://stackoverflow.com/a/2440950/2860744][How to build a conditional assignment in bash? - Stack Overflow]]
+** How to explain shell code?
+
+   Use [[https://explainshell.com/][explainshell]] to match command-line arguments to their help text.
+
+** How to validate check shell code?
+
+   Use [[https://github.com/koalaman/shellcheck][shellcheck]] for warnings and suggestions for shell scripts. It can be used
+   online in [[https://www.shellcheck.net/][ShellCheck.net]].
