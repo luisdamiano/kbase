@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2022-12-30 Fri 15:26 -->
+<!-- 2023-01-02 Mon 08:51 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Knowledge Base</title>
@@ -92,9 +92,10 @@ ul.org-ul, ol.org-ol { font-size:16px }
 <li><a href="#How%20to%20set%20a%20compose%20key%20%28%3DMulti_key%3D%29%3F">2.3.16. How to set a compose key (<code>Multi_key</code>)?</a></li>
 <li><a href="#What%20characters%20have%20superscripts%20and%20subscripts%3F">2.3.17. What characters have superscripts and subscripts?</a></li>
 <li><a href="#Which%20folder%20does%20this%20file%20belong%20in%3F">2.3.18. Which folder does this file belong in?</a></li>
-<li><a href="#How%20to%20connect%20OBS%20to%20Zoom%20or%20Webex%3F">2.3.19. How to connect OBS to Zoom or Webex?</a></li>
-<li><a href="#Where%20are%20the%20X.Org%20Server%20config%20files%3F">2.3.20. Where are the X.Org Server config files?</a></li>
-<li><a href="#How%20to%20migrate%20from%20nouveau%20to%20propietary%20NVIDIA%20drivers%20for%20a%20NVS%20510%20graphic%20card%3F">2.3.21. How to migrate from nouveau to propietary NVIDIA drivers for a NVS 510 graphic card?</a></li>
+<li><a href="#How%20to%20display%20and%20sort%20by%20modified%20date%20time%20with%20find%20command%3F">2.3.19. How to display and sort by modified date time with find command?</a></li>
+<li><a href="#How%20to%20connect%20OBS%20to%20Zoom%20or%20Webex%3F">2.3.20. How to connect OBS to Zoom or Webex?</a></li>
+<li><a href="#Where%20are%20the%20X.Org%20Server%20config%20files%3F">2.3.21. Where are the X.Org Server config files?</a></li>
+<li><a href="#How%20to%20migrate%20from%20nouveau%20to%20propietary%20NVIDIA%20drivers%20for%20a%20NVS%20510%20graphic%20card%3F">2.3.22. How to migrate from nouveau to propietary NVIDIA drivers for a NVS 510 graphic card?</a></li>
 </ul>
 </li>
 <li><a href="#Math%20typing">2.4. Math typing</a>
@@ -1055,9 +1056,26 @@ Use a Compose key. Here's my .XCompose, below there are many more
 </div>
 </div>
 
-<div id="outline-container-How%20to%20connect%20OBS%20to%20Zoom%20or%20Webex%3F" class="outline-4">
-<h4 id="How%20to%20connect%20OBS%20to%20Zoom%20or%20Webex%3F"><span class="section-number-4">2.3.19.</span> How to connect OBS to Zoom or Webex?</h4>
+<div id="outline-container-How%20to%20display%20and%20sort%20by%20modified%20date%20time%20with%20find%20command%3F" class="outline-4">
+<h4 id="How%20to%20display%20and%20sort%20by%20modified%20date%20time%20with%20find%20command%3F"><span class="section-number-4">2.3.19.</span> How to display and sort by modified date time with find command?</h4>
 <div class="outline-text-4" id="text-2-3-19">
+<div class="org-src-container">
+<pre class="src src-shell">find . -name <span style="color: #f1fa8c;">"*.log"</span> | xargs ls -lt
+</pre>
+</div>
+
+<p>
+Source:
+</p>
+<ul class="org-ul">
+<li><a href="https://stackoverflow.com/a/45732184">How to display modified date time with 'find' command?</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-How%20to%20connect%20OBS%20to%20Zoom%20or%20Webex%3F" class="outline-4">
+<h4 id="How%20to%20connect%20OBS%20to%20Zoom%20or%20Webex%3F"><span class="section-number-4">2.3.20.</span> How to connect OBS to Zoom or Webex?</h4>
+<div class="outline-text-4" id="text-2-3-20">
 <p>
 A PulseAudio source works as an input device (microphone, monitor) sink
 works as an output device (speaker).
@@ -1103,8 +1121,8 @@ Create a null output device
 </div>
 </div>
 <div id="outline-container-Where%20are%20the%20X.Org%20Server%20config%20files%3F" class="outline-4">
-<h4 id="Where%20are%20the%20X.Org%20Server%20config%20files%3F"><span class="section-number-4">2.3.20.</span> Where are the X.Org Server config files?</h4>
-<div class="outline-text-4" id="text-2-3-20">
+<h4 id="Where%20are%20the%20X.Org%20Server%20config%20files%3F"><span class="section-number-4">2.3.21.</span> Where are the X.Org Server config files?</h4>
+<div class="outline-text-4" id="text-2-3-21">
 <ul class="org-ul">
 <li><code>/etc/X11/xorg.conf.d/</code> (preferred place for host-specific configurations)</li>
 <li><code>/usr/share/X11/xorg.conf.d/</code></li>
@@ -1115,8 +1133,8 @@ Create a null output device
 </div>
 
 <div id="outline-container-How%20to%20migrate%20from%20nouveau%20to%20propietary%20NVIDIA%20drivers%20for%20a%20NVS%20510%20graphic%20card%3F" class="outline-4">
-<h4 id="How%20to%20migrate%20from%20nouveau%20to%20propietary%20NVIDIA%20drivers%20for%20a%20NVS%20510%20graphic%20card%3F"><span class="section-number-4">2.3.21.</span> How to migrate from nouveau to propietary NVIDIA drivers for a NVS 510 graphic card?</h4>
-<div class="outline-text-4" id="text-2-3-21">
+<h4 id="How%20to%20migrate%20from%20nouveau%20to%20propietary%20NVIDIA%20drivers%20for%20a%20NVS%20510%20graphic%20card%3F"><span class="section-number-4">2.3.22.</span> How to migrate from nouveau to propietary NVIDIA drivers for a NVS 510 graphic card?</h4>
+<div class="outline-text-4" id="text-2-3-22">
 <ol class="org-ol">
 <li>Remove nouveau: <code>sudo pacman -R xf86-video-nouveau</code></li>
 <li>Remove all xorg.conf files that might still refer to nouveau drivers
@@ -1179,7 +1197,7 @@ Source: <a href="https://git-scm.com/book/en/v2/Git-Internals-Git-Objects">Git -
 <div id="outline-container-How%20to%20rename%20a%20branch%3F" class="outline-4">
 <h4 id="How%20to%20rename%20a%20branch%3F"><span class="section-number-4">3.1.2.</span> How to rename a branch?</h4>
 <div class="outline-text-4" id="text-3-1-2">
-<pre class="example" id="org55cf026">
+<pre class="example" id="org9862572">
 git branch -m newname
 </pre>
 </div>
@@ -5754,7 +5772,7 @@ Source: <a href="https://stats.stackexchange.com/q/397288/31243">Dot Product and
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Luis Damiano</p>
-<p class="date">Created: 2022-12-30 Fri 15:26</p>
+<p class="date">Created: 2023-01-02 Mon 08:51</p>
 <p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
