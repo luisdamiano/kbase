@@ -92,6 +92,26 @@
    - [[https://tex.stackexchange.com/a/60546/225233][Should I \mathrm the d in my integrals?]]
    - [[https://tex.stackexchange.com/a/14822/225233][What's the proper way to typeset a differential operator?]]
 
+** How to define a new operator like =log=?
+   Use =\mathop=, or =\DeclareMathOperator= if =amsopn= or =amsmath= are loaded
+   to create operators such as trace, diag, argmax, and argmin.
+
+   #+begin_src latex
+     \newcommand{\diag}{\mathop{\mathrm{diag}}}
+     \DeclareMathOperator{\diag}{diag}
+     \DeclareMathOperator{\trsym}{tr}
+     \DeclareMathOperator*{\argmax}{arg\,max}
+     \DeclareMathOperator*{\argmin}{arg\,min}
+     \DeclareMathOperator{\evsym}{E}
+     \DeclareMathOperator{\vsym}{V}
+     \DeclareMathOperator{\corsym}{Cor}
+     \DeclareMathOperator{\covsym}{Cov}
+     \DeclareMathOperator{\sesym}{SE}
+   #+end_src
+
+   Source:
+   - [[https://texfaq.org/FAQ-newfunction][Defining a new log-like function in LaTeX | The TeX FAQ]]
+
 ** How should I type ...?
 
    - Punctuation
