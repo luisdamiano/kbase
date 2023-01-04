@@ -216,6 +216,18 @@
    - [[https://ctan.math.utah.edu/ctan/tex-archive/macros/latex/contrib/layouts/layman.pdf][Layouts package]]: enable the display of various elements of a
      document's layout
 
+** How to clip an image with percentages?
+
+   Use the =adjustbox= package to
+
+   #+begin_src latex
+     \adjustbox{trim={.05\width} {.2\height} {0.1\width} {.15\height}, clip}%
+     {\includegraphics[width=0.5cm]{cupdot.png}}
+   #+end_src
+
+   Source:
+   - [[https://tex.stackexchange.com/a/52699][Cropping/Trimming an image with includegraphics by specifying perce...]]
+
 ** How to write a good proof in LaTeX?
 
    - Use the =\proof= environment from the ~amsthm~ package ([[https://texfaq.org/FAQ-proof][source]])
