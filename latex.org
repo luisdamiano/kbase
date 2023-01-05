@@ -288,6 +288,10 @@
      \end{tabular}
    #+end_src
 
+** How to gray out leading zeroes in a table?
+
+   [[https://gist.github.com/exaexa/56015a6cfba7bbb3b9bb3901a1da956f][This macro]] was shared by [exa] at libera.chat.
+
 ** How to add the (sub)section name in the page header?
 
    #+begin_src latex
