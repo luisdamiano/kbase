@@ -466,6 +466,21 @@
     Source:
     - [[https://stackoverflow.com/a/61277246/2860744][How to add a geom_text label containing data in the top right of a ggplot...]]
 
+*** How to make ggplot2 match LaTeX graphics and font size?
+
+    - Use =\show\f@size= in LaTeX to show the font length
+    - Use =theme(text = element_text(size = 11))= in R to set the target font
+      size in points
+    - Use =\the\linewidth= in LaTeX to show the line width
+      - Note that =\textwidth= ignore borders that could be defined in the
+        document class
+    - Use =ggsave(..., width = 10, units = "in")= to match LaTeX's line width
+    - Include the figure with ~width=\linewidth~
+
+    Source:
+    - [exa] at libera.chat
+    - [[https://tex.stackexchange.com/a/119229/38051][Get current font size as length - TeX - LaTeX Stack Exchange]]
+
 *** How to plot in log scale with base R?
 
     #+begin_src R

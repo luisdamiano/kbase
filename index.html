@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2023-01-05 Thu 13:48 -->
+<!-- 2023-01-06 Fri 17:06 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Knowledge Base</title>
@@ -1200,7 +1200,7 @@ Source: <a href="https://git-scm.com/book/en/v2/Git-Internals-Git-Objects">Git -
 <div id="outline-container-How%20to%20rename%20a%20branch%3F" class="outline-4">
 <h4 id="How%20to%20rename%20a%20branch%3F"><span class="section-number-4">3.1.2.</span> How to rename a branch?</h4>
 <div class="outline-text-4" id="text-3-1-2">
-<pre class="example" id="orgfeaccaa">
+<pre class="example" id="org6365041">
 git branch -m newname
 </pre>
 </div>
@@ -3971,8 +3971,33 @@ Source:
 </div>
 </li>
 
-<li><a id="How%20to%20plot%20in%20log%20scale%20with%20base%20R%3F"></a>How to plot in log scale with base R?<br />
+<li><a id="How%20to%20make%20ggplot2%20match%20LaTeX%20graphics%20and%20font%20size%3F"></a>How to make ggplot2 match LaTeX graphics and font size?<br />
 <div class="outline-text-5" id="text-7-2-18-7">
+<ul class="org-ul">
+<li>Use <code>\show\f@size</code> in LaTeX to show the font length</li>
+<li>Use <code>theme(text = element_text(size = 11))</code> in R to set the target font
+size in points</li>
+<li>Use <code>\the\linewidth</code> in LaTeX to show the line width
+<ul class="org-ul">
+<li>Note that <code>\textwidth</code> ignore borders that could be defined in the
+document class</li>
+</ul></li>
+<li>Use <code>ggsave(..., width = 10, units = "in")</code> to match LaTeX's line width</li>
+<li>Include the figure with <code>width=\linewidth</code></li>
+</ul>
+
+<p>
+Source:
+</p>
+<ul class="org-ul">
+<li>[exa] at libera.chat</li>
+<li><a href="https://tex.stackexchange.com/a/119229/38051">Get current font size as length - TeX - LaTeX Stack Exchange</a></li>
+</ul>
+</div>
+</li>
+
+<li><a id="How%20to%20plot%20in%20log%20scale%20with%20base%20R%3F"></a>How to plot in log scale with base R?<br />
+<div class="outline-text-5" id="text-7-2-18-8">
 <div class="org-src-container">
 <pre class="src src-R">plot(exp(1:10), 1:10, log = <span style="color: #f1fa8c;">"x"</span>)
 plot(1:10, exp(1:10), log = <span style="color: #f1fa8c;">"y"</span>)
@@ -3983,7 +4008,7 @@ plot(exp(1:10), exp(1:10), log = <span style="color: #f1fa8c;">"xy"</span>)
 </li>
 
 <li><a id="How%20to%20fine%20tune%20R%20plot%20margins%3F"></a>How to fine tune R plot margins?<br />
-<div class="outline-text-5" id="text-7-2-18-8">
+<div class="outline-text-5" id="text-7-2-18-9">
 <ul class="org-ul">
 <li><a href="https://www.rstudio.com/wp-content/uploads/2016/10/how-big-is-your-graph.pdf">How Big is Your Graph?</a></li>
 </ul>
@@ -3991,7 +4016,7 @@ plot(exp(1:10), exp(1:10), log = <span style="color: #f1fa8c;">"xy"</span>)
 </li>
 
 <li><a id="How%20to%20make%20beautiful%20plots%20with%20base%20R%3F"></a>How to make beautiful plots with base R?<br />
-<div class="outline-text-5" id="text-7-2-18-9">
+<div class="outline-text-5" id="text-7-2-18-10">
 <ul class="org-ul">
 <li><a href="http://karolis.koncevicius.lt/posts/r_base_plotting_without_wrappers/">R base plotting without wrappers</a></li>
 </ul>
@@ -5837,7 +5862,7 @@ Source: <a href="https://stats.stackexchange.com/q/397288/31243">Dot Product and
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Luis Damiano</p>
-<p class="date">Created: 2023-01-05 Thu 13:48</p>
+<p class="date">Created: 2023-01-06 Fri 17:06</p>
 <p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
