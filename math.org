@@ -7,10 +7,10 @@
     - Integrals
       - General resources
         - [[https://en.wikipedia.org/wiki/Lists_of_integrals][Lists of integrals]]
-        - [[https://en.wikipedia.org/wiki/List_of_integrals_of_Gaussian_functions][List of integrals of Gaussian functions]] sweet Normals o'f mine
+        - [[https://en.wikipedia.org/wiki/List_of_integrals_of_Gaussian_functions][List of integrals of Gaussian functions]] sweet Normals o' mine
       - Hairy integrals
-        - Symbolic Integration I
-	  (Vol. 1). (2005). Springer-Verlag. https://doi.org/10.1007/b138171
+        - Symbolic Integration I (Vol. 1). (2005). Springer-Verlag.
+          https://doi.org/10.1007/b138171
     - [[https://en.wikipedia.org/wiki/List_of_limits][List of limits]]
     - [[https://en.wikipedia.org/wiki/List_of_logarithmic_identities][List of logarithmic identities]]
     - [[https://en.wikipedia.org/wiki/List_of_mathematical_series][List of mathematical series]]
@@ -41,7 +41,7 @@
 ** Functional analysis
 
    - [[https://mathoverflow.net/q/72419][big list - A good book of functional analysis - MathOverflow]]
-   - 
+
 ** Linear algebra
 
    - [[http://www2.imm.dtu.dk/pubdb/edoc/imm3274.pdf][The Matrix Cookbook]]: collection of linear algebra facts
@@ -56,11 +56,12 @@
 ** Optimization
 
    - [[http://www.geno-project.org/][GENO]]: optimization solver code generator
+
 ** Fourier basis functions
    An orthonormal basis for $L^2([0,1], \mathcal{R})$ is $1, 2\sqrt{cos(2\pi
    nx)},2–\sqrt{sin(2\pi nx)}$ for $x\in[0, 1]$ and $n = 1,2,\dots$
 
    Source:
    - [[https://math.stackexchange.com/a/32663/113775][Fourier basis functions - Mathematics Stack Exchange]]
-   - For interval $[-\pi,\pi]$ [[https://math.stackexchange.com/a/4319183/113775][Are Fourier series a basis for $L^2((-\pi,\pi)^m)$? - Mat...]]
-   - For arbitrary $[a, b]$ [[https://math.stackexchange.com/a/1831469/113775][Orthonormal set of basis functions in $L^2({a,b})$ - Mathema...]]
+   - For interval $[-\pi,\pi]$ [[https://math.stackexchange.com/a/4319183/113775][Are Fourier series a basis for $L^2((-\pi,\pi)^m)$?]]
+   - For arbitrary $[a, b]$ [[https://math.stackexchange.com/a/1831469/113775][Orthonormal set of basis functions in $L^2({a,b})$]]
