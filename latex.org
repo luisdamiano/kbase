@@ -425,6 +425,10 @@
 
    - Source: [[https://www.ias.edu/math/computing/faq/local-latex-style-files][Where can I put local latex style files and packages?]]
 
+** How to make a poster in LaTeX?
+
+   Use [[https://www.ctan.org/pkg/beamerposter][beamerposter]] (possibly with the [[https://github.com/anishathalye/gemini][Gemini]] template) or [[https://www.ctan.org/pkg/tikzposter][tikzposter]].
+
 ** Resources
 
    - [[https://tobi.oetiker.ch/lshort/lshort.pdf][The Not So Short Introduction to LaTeX2e]]: LaTeX2e in 139 minutes
