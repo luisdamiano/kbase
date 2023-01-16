@@ -65,3 +65,15 @@
    - [[https://math.stackexchange.com/a/32663/113775][Fourier basis functions - Mathematics Stack Exchange]]
    - For interval $[-\pi,\pi]$ [[https://math.stackexchange.com/a/4319183/113775][Are Fourier series a basis for $L^2((-\pi,\pi)^m)$?]]
    - For arbitrary $[a, b]$ [[https://math.stackexchange.com/a/1831469/113775][Orthonormal set of basis functions in $L^2({a,b})$]]
+
+** Computer Assisted Algebra (CAS)
+
+   As with any software, for Computer Assisted Algebra I try to use open source
+   software as much as possible. I keep the use of Wolfram Alpha and Wolfram
+   Mathematica to a minimum.
+
+   - [[https://en.wikipedia.org/wiki/List_of_computer_algebra_systems#Functionality][List of computer algebra systems - Wikipedia]]
+   - [[https://www.sympy.org/en/index.html][SymPy]] ([[https://docs.sympy.org/latest/index.html][documentation]]): Python library for symbolic mathematics
+   - [[https://www.yacas.org/][Yacas]]: ([[https://yacas.readthedocs.io/en/latest/][documentation]]) can be access via R using the [[https://cran.r-project.org/package=Ryacas][Ryacas]] package
+   - [[https://www.wolfram.com/mathematica/][Wolfram Mathematica]] (proprietary, paid) and [[https://www.wolframalpha.com/][Wolfram Alpha]] (proprietary,
+     free in some cases)
