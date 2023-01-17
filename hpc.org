@@ -6,6 +6,19 @@
      watch -d squeue --me --format=\"%.18i %.18P %.32j %.8u %.2t \| %.10M \| %.10l \| %.19S \| %.6D %20Y %R\" --sort=i
    #+end_src
 
+** How to list previously submitted jobs in Slurm?
+
+   Use the =sacct= command, possibly with =-S starttime= and =-E endtime=
+   arguments. It also accepts the =--format= argument.
+
+   #+begin_src shell
+     sacct -S now-1days
+   #+end_src
+
+   Source:
+
+   - [[https://slurm.schedmd.com/sacct.html][Slurm Workload Manager - sacct]]
+
 ** How to find out the CPU time and memory usage of a Slurm job?
 
    Use =seff jobid= after the job has finished. Use =sacct -s r jobid= or =sstat

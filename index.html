@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2023-01-16 Mon 16:53 -->
+<!-- 2023-01-17 Tue 06:07 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Knowledge Base</title>
@@ -373,9 +373,10 @@ ul.org-ul, ol.org-ol { font-size:16px }
 <li><a href="#High%20power%20computing">9.6. High power computing</a>
 <ul>
 <li><a href="#How%20to%20nicely%20list%20all%20my%20jobs%20in%20Slurm%3F">9.6.1. How to nicely list all my jobs in Slurm?</a></li>
-<li><a href="#How%20to%20find%20out%20the%20CPU%20time%20and%20memory%20usage%20of%20a%20Slurm%20job%3F">9.6.2. How to find out the CPU time and memory usage of a Slurm job?</a></li>
-<li><a href="#How%20to%20specify%20Slurm%20job%20resources%20conditionally%20or%20programatically%3F">9.6.3. How to specify Slurm job resources conditionally or programatically?</a></li>
-<li><a href="#What%20is%20a%20good%20guide%20for%20Slurm%3F">9.6.4. What is a good guide for Slurm?</a></li>
+<li><a href="#How%20to%20list%20previously%20submitted%20jobs%20in%20Slurm%3F">9.6.2. How to list previously submitted jobs in Slurm?</a></li>
+<li><a href="#How%20to%20find%20out%20the%20CPU%20time%20and%20memory%20usage%20of%20a%20Slurm%20job%3F">9.6.3. How to find out the CPU time and memory usage of a Slurm job?</a></li>
+<li><a href="#How%20to%20specify%20Slurm%20job%20resources%20conditionally%20or%20programatically%3F">9.6.4. How to specify Slurm job resources conditionally or programatically?</a></li>
+<li><a href="#What%20is%20a%20good%20guide%20for%20Slurm%3F">9.6.5. What is a good guide for Slurm?</a></li>
 </ul>
 </li>
 <li><a href="#Naming%20convention">9.7. Naming convention</a>
@@ -1202,7 +1203,7 @@ Source: <a href="https://git-scm.com/book/en/v2/Git-Internals-Git-Objects">Git -
 <div id="outline-container-How%20to%20rename%20a%20branch%3F" class="outline-4">
 <h4 id="How%20to%20rename%20a%20branch%3F"><span class="section-number-4">3.1.2.</span> How to rename a branch?</h4>
 <div class="outline-text-4" id="text-3-1-2">
-<pre class="example" id="org1eafb9f">
+<pre class="example" id="org09bbe47">
 git branch -m newname
 </pre>
 </div>
@@ -4501,9 +4502,32 @@ colorblinds and non-colorblinds</li>
 </div>
 </div>
 
-<div id="outline-container-How%20to%20find%20out%20the%20CPU%20time%20and%20memory%20usage%20of%20a%20Slurm%20job%3F" class="outline-4">
-<h4 id="How%20to%20find%20out%20the%20CPU%20time%20and%20memory%20usage%20of%20a%20Slurm%20job%3F"><span class="section-number-4">9.6.2.</span> How to find out the CPU time and memory usage of a Slurm job?</h4>
+<div id="outline-container-How%20to%20list%20previously%20submitted%20jobs%20in%20Slurm%3F" class="outline-4">
+<h4 id="How%20to%20list%20previously%20submitted%20jobs%20in%20Slurm%3F"><span class="section-number-4">9.6.2.</span> How to list previously submitted jobs in Slurm?</h4>
 <div class="outline-text-4" id="text-9-6-2">
+<p>
+Use the <code>sacct</code> command, possibly with <code>-S starttime</code> and <code>-E endtime</code>
+arguments. It also accepts the <code>--format</code> argument.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-shell">sacct -S now-1days
+</pre>
+</div>
+
+<p>
+Source:
+</p>
+
+<ul class="org-ul">
+<li><a href="https://slurm.schedmd.com/sacct.html">Slurm Workload Manager - sacct</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-How%20to%20find%20out%20the%20CPU%20time%20and%20memory%20usage%20of%20a%20Slurm%20job%3F" class="outline-4">
+<h4 id="How%20to%20find%20out%20the%20CPU%20time%20and%20memory%20usage%20of%20a%20Slurm%20job%3F"><span class="section-number-4">9.6.3.</span> How to find out the CPU time and memory usage of a Slurm job?</h4>
+<div class="outline-text-4" id="text-9-6-3">
 <p>
 Use <code>seff jobid</code> after the job has finished. Use <code>sacct -s r jobid</code> or <code>sstat
    jobid</code> for jobs in progress.
@@ -4519,8 +4543,8 @@ Source:
 </div>
 
 <div id="outline-container-How%20to%20specify%20Slurm%20job%20resources%20conditionally%20or%20programatically%3F" class="outline-4">
-<h4 id="How%20to%20specify%20Slurm%20job%20resources%20conditionally%20or%20programatically%3F"><span class="section-number-4">9.6.3.</span> How to specify Slurm job resources conditionally or programatically?</h4>
-<div class="outline-text-4" id="text-9-6-3">
+<h4 id="How%20to%20specify%20Slurm%20job%20resources%20conditionally%20or%20programatically%3F"><span class="section-number-4">9.6.4.</span> How to specify Slurm job resources conditionally or programatically?</h4>
+<div class="outline-text-4" id="text-9-6-4">
 <p>
 Short answer: you can't if you're using <code>#SBATCH</code> tokens. Consider creating a
 command called via <code>sbatch</code> instead, where you can pass modifiers and
@@ -4549,8 +4573,8 @@ Source:
 </div>
 
 <div id="outline-container-What%20is%20a%20good%20guide%20for%20Slurm%3F" class="outline-4">
-<h4 id="What%20is%20a%20good%20guide%20for%20Slurm%3F"><span class="section-number-4">9.6.4.</span> What is a good guide for Slurm?</h4>
-<div class="outline-text-4" id="text-9-6-4">
+<h4 id="What%20is%20a%20good%20guide%20for%20Slurm%3F"><span class="section-number-4">9.6.5.</span> What is a good guide for Slurm?</h4>
+<div class="outline-text-4" id="text-9-6-5">
 <p>
 This is an excellent guide: <a href="https://researchcomputing.princeton.edu/support/knowledge-base/slurm">Introducing Slurm | Princeton Research Computing</a>.
 It covers how to submit serial jobs, multithreaded jobs, multinode or
@@ -5889,7 +5913,7 @@ Source: <a href="https://stats.stackexchange.com/q/397288/31243">Dot Product and
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Luis Damiano</p>
-<p class="date">Created: 2023-01-16 Mon 16:53</p>
+<p class="date">Created: 2023-01-17 Tue 06:07</p>
 <p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
