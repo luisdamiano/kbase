@@ -18,21 +18,55 @@
 ** Paper layout :noexport:
 
 *** Novel methodology with application
+    An applied statistics paper driven by a scientific application that requires
+    some novel methodology development. The application is interesting enough
+    for a subject-matter expert and, most importantly for us, is rich and
+    complex enough that demands more than off-the-shelf methodologies.
+
     - Title: <novel methodology name> with applications to
       <application name>
-    - Abstract:
-      - <application> is increasingly important in
-	<application context>. However, <methodology motivation>.
-      - We propose <novel methodology brief description>. <list of all
-	novel elements embeded in the methodology>.
-      - We demonstrate the methodology in <application brief
-	description> and show that <methodology benefits>.
+    - Abstract
+      - <application> is increasingly important in <application context>.
+        However, <methodology motivation>
+      - We propose <novel methodology brief description>. <list of all novel
+        elements embeded in the methodology>
+      - We demonstrate the methodology in <application brief description> and
+        show that <methodology benefits>
     - Introduction
-      - <application motivation>, <application state-of-the-art
-	approaches>.
+      - <application motivation>, <application state-of-the-art approaches>
       - <where and why state-of-the-art approaches are limited or fail>
       - <methodology benefits>, <methodology key aspects>
       - <paper layout>
+    - Data
+      - <application background>, which may include <scientific background>,
+        <measurement instruments>, <data sources>, <data collection>, <computer
+        model description>
+      - <limited exploratory data analysess>
+      - _Note on notation_: as a general rule, keep notation to a minimum in
+        this section and leave as much notation as possible for the methods
+        section instead.
+    - Methods
+      - <notation>
+      - <model specification, also known as model formulation>
+      - <model selection, comparison>
+      - <quantities and statistics of interest>
+    - Application
+      - Specify what was discussed in methods to what was actually carried out
+        for this application (being accurate is important)
+      - Discuss the results
+        - Discuss estimation, convergence, numerical stability and accuracy
+        - Discuss in-sample results, in-sample model selection criteria,
+          model interpretation and model-based scientific analys
+      - _Note on case study vs application_: case study is more limited
+    - Discussion
+      - <methodology extensions>: usually short sketches of extensions that are
+        not full fledged and were not needed for the application
+      - <methodology limitations>
+      - <future research>:
+        - adjacent methodologies that, in principle, you expect would pair well
+          with the current paper methodology
+        - adjacent applications that could benefit from the current paper
+          methodology
 
 *** Case study
     - Data

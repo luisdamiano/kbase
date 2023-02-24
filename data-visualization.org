@@ -1,5 +1,25 @@
 * Data visualization
 
+** What colors are recommended for data visualization?
+
+   - 1 color:
+     - for points: black #000000
+     - for lines: either black #000000 or honolulu blue #2271B2
+     - for filled areas: summer sky #3DB7E9
+     - for surfaces: TBD
+   - 2 colors:
+     - for points: TBD
+     - for lines: honolulu blue #2271B2 and gamboge #E69F001
+     - for filled area: honolulu blue #2271B2 and gamboge #E69F001
+   - 3 colors:
+     - for points: TBD
+     - for lines: TBD
+     - for filled areas: TBD
+
+  Source:
+   - [[http://mkweb.bcgsc.ca/colorblind/][Color-palette for color blindness]]: maintain perceptual luminance
+     uniformity in color blind space
+
 ** Color palette
 
    - [[https://ux.stackexchange.com/questions/94696/color-palette-for-all-types-of-color-blindness][Color Palette for All types of Color Blindness]]

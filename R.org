@@ -422,6 +422,17 @@
    DF$z <- ak[[3]]
  #+end_src
 
+*** How to remove white lines from =geom_tile= with ggplot2?
+    The horizontal and vertical variable values should be equally spaced for
+    =geom_tile= to work automatically. If there are white lines, there might be
+    small inconsistencies in the gap between a few values (e.g., the first value
+    is 1E-4 instead of an actual zero). Try ~round(x)~ or ~factor(x)~ for a
+    quick fix.
+
+    Source:
+    - [[https://stackoverflow.com/a/51934527][r - ggplot geom_tile, remove vertical white lines]]
+    - [[https://stackoverflow.com/a/60237872][r - how to remove white lines from geom_tile (heat map) using ggplot2]]
+
 *** How to plot in reverse log scale with ggplot2?
 
     #+begin_src R
@@ -465,6 +476,14 @@
 
     Source:
     - [[https://stackoverflow.com/a/61277246/2860744][How to add a geom_text label containing data in the top right of a ggplot...]]
+
+*** How to move the legend closer to the axis label with ggplot2?
+    Give yourself the gift of the manual fine tuning using =theme(legend.margin
+    = margin(-10, 0, 0, 0))=, where =-10= needs to be defined on a case-by-case
+    basis.
+
+    Source:
+    - [[https://stackoverflow.com/a/60119441][r - How to move legend up closer to the x-axis label in ggplot2]]
 
 *** How to make ggplot2 match LaTeX graphics and font size?
 

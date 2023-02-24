@@ -87,15 +87,49 @@
    - [[https://en.wikipedia.org/wiki/Litotes][Litotes - Wikipedia]]
    - [[https://english.stackexchange.com/a/21012]["Like" versus "not unlike" - English Language & Usage Stack Exchange]]
 
+** Verb tenses
+   I sometimes doubt about the /right/ verb tense for a sentence. When I read, I
+   often see authors changing tenses often, perhaps with a good reason. Here a
+   few thoughts.
+
+   - Active voice
+     - I don't have a reference to use, but I've seen a pushback against the
+       traditional use of passive voice. It's probably a good idea to stick to
+       either active or passive voice throughout the manuscript.
+   - Present tense
+     - Facts that are always true, e.g., a Gaussian process /is/ a probabilistic
+       model
+   - Present perfect
+     - Things that have been done recently, e.g., Author (year)
+       /has recently introduced/ a novel framework
+   - Past tense
+     - Things that were done in the past, e.g., Author (year) /built/ a
+       parametric function
+
 ** My own common tics to grep for
    - Hyphens are used when two or more adjectives or an adjective and
      a noun together modify another noun; for example, goodness-of-fit
      test is the equivalent of test for goodness of fit.
-   - Most words with prefixes such as sub and non are not hyphenated,
-     for example: subtable, nonnormal.
+   - Most words with prefixes such as sub, non, pre, post are not hyphenated,
+     for example: subtable, nonnormal, nonlinear, premultiply, postgraduate.
    - No dash when using the wise suffix, e.g., elementwise instead of
      element-wise, subspace instead of sub-space
    - Closed compound nouns, e.g., metadata instead of meta data
+   - Prefer "Considering/As/Since subject verb" over "Considering that subject
+     verb" (mdogg at libera.chat)
+   - /squared exponential/ is grammatical, /square exponential/ is not
+
+** Rules of thumb
+   - Use "respectively" at the end of the sentence, preferably, or in the
+     middle. Use comma.
+   - Prefer "and is thus" over "and thus is" (187M vs 24M matches). Consider
+     "therefore" or "thence" instead of "thus", which is becoming archaic, for
+     causation.
+   - Don't be unnecessarily indirect, don't be fluffy. E.g., "Consider"
+   - Can/could/may: /can/ expresses certainty, /could/ expresses uncertainty or
+     a conditional statement, /may/ expresses a possibility or a permission,
+     /may not/ expresses a denial of permission. (The Chicago manual of style,
+     2017, 5.250).
 
 ** Contextual formatting
 

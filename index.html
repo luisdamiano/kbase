@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2023-01-17 Tue 06:07 -->
+<!-- 2023-02-24 Fri 13:46 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Knowledge Base</title>
@@ -366,8 +366,9 @@ ul.org-ul, ol.org-ol { font-size:16px }
 <li><a href="#A%20typical%20workflow">9.4. A typical workflow</a></li>
 <li><a href="#Data%20visualization">9.5. Data visualization</a>
 <ul>
-<li><a href="#Color%20palette">9.5.1. Color palette</a></li>
-<li><a href="#Data%20visualization--Resources">9.5.2. Resources</a></li>
+<li><a href="#What%20colors%20are%20recommended%20for%20data%20visualization%3F">9.5.1. What colors are recommended for data visualization?</a></li>
+<li><a href="#Color%20palette">9.5.2. Color palette</a></li>
+<li><a href="#Data%20visualization--Resources">9.5.3. Resources</a></li>
 </ul>
 </li>
 <li><a href="#High%20power%20computing">9.6. High power computing</a>
@@ -398,13 +399,15 @@ ul.org-ul, ol.org-ol { font-size:16px }
 <li><a href="#How%20to%20find%20which%20variables%20are%20collinear%3F">10.1.5. How to find which variables are collinear?</a></li>
 <li><a href="#What%20classification%20model%20to%20use%20for%20observations%20in%20a%20map%3F">10.1.6. What classification model to use for observations in a map?</a></li>
 <li><a href="#How%20to%20compute%20the%20Cressie%20and%20Hawkins%20%281980%29%20robust%20estimator%3F">10.1.7. How to compute the Cressie and Hawkins (1980) robust estimator?</a></li>
-<li><a href="#How%20to%20transform%20a%20covariate%20taking%20non-negative%20values%20with%20zeroes%3F">10.1.8. How to transform a covariate taking non-negative values with zeroes?</a></li>
-<li><a href="#What%20is%20the%20difference%20between%20cross-validation%20and%20the%20WAIC%3F">10.1.9. What is the difference between cross-validation and the WAIC?</a></li>
-<li><a href="#How%20to%20do%20positivity-preserving%20interpolation%3F">10.1.10. How to do positivity-preserving interpolation?</a></li>
-<li><a href="#What%20are%20some%20good%2C%20general%20rules%20on%20reporting%3F">10.1.11. What are some good, general rules on reporting?</a></li>
-<li><a href="#Priors">10.1.12. Priors</a></li>
-<li><a href="#MCMC">10.1.13. MCMC</a></li>
-<li><a href="#Neural%20networks">10.1.14. Neural networks</a></li>
+<li><a href="#When%20should%20I%20apply%20log%20transformation%20to%20positive%20data%3F">10.1.8. When should I apply log transformation to positive data?</a></li>
+<li><a href="#When%20should%20I%20visualize%20positive%20data%20in%20log%20scale%3F">10.1.9. When should I visualize positive data in log scale?</a></li>
+<li><a href="#How%20to%20transform%20a%20covariate%20taking%20non-negative%20values%20with%20zeroes%3F">10.1.10. How to transform a covariate taking non-negative values with zeroes?</a></li>
+<li><a href="#What%20is%20the%20difference%20between%20cross-validation%20and%20the%20WAIC%3F">10.1.11. What is the difference between cross-validation and the WAIC?</a></li>
+<li><a href="#How%20to%20do%20positivity-preserving%20interpolation%3F">10.1.12. How to do positivity-preserving interpolation?</a></li>
+<li><a href="#What%20are%20some%20good%2C%20general%20rules%20on%20reporting%3F">10.1.13. What are some good, general rules on reporting?</a></li>
+<li><a href="#Priors">10.1.14. Priors</a></li>
+<li><a href="#MCMC">10.1.15. MCMC</a></li>
+<li><a href="#Neural%20networks">10.1.16. Neural networks</a></li>
 </ul>
 </li>
 <li><a href="#Gaussian%20processes">10.2. Gaussian processes</a>
@@ -448,11 +451,13 @@ ul.org-ul, ol.org-ol { font-size:16px }
 <li><a href="#Prefer%20short%20precise%20terms%20over%20phrases">12.1.8. Prefer short precise terms over phrases</a></li>
 <li><a href="#Getting%20determiners%20right">12.1.9. Getting determiners right</a></li>
 <li><a href="#Double%20negation%20is%20not%20an%20affirmation">12.1.10. Double negation is not an affirmation</a></li>
-<li><a href="#My%20own%20common%20tics%20to%20grep%20for">12.1.11. My own common tics to grep for</a></li>
-<li><a href="#Contextual%20formatting">12.1.12. Contextual formatting</a></li>
-<li><a href="#Oral%20presentations">12.1.13. Oral presentations</a></li>
-<li><a href="#Research%20statement">12.1.14. Research statement</a></li>
-<li><a href="#Research%20proposal">12.1.15. Research proposal</a></li>
+<li><a href="#Verb%20tenses">12.1.11. Verb tenses</a></li>
+<li><a href="#My%20own%20common%20tics%20to%20grep%20for">12.1.12. My own common tics to grep for</a></li>
+<li><a href="#Rules%20of%20thumb">12.1.13. Rules of thumb</a></li>
+<li><a href="#Contextual%20formatting">12.1.14. Contextual formatting</a></li>
+<li><a href="#Oral%20presentations">12.1.15. Oral presentations</a></li>
+<li><a href="#Research%20statement">12.1.16. Research statement</a></li>
+<li><a href="#Research%20proposal">12.1.17. Research proposal</a></li>
 </ul>
 </li>
 <li><a href="#Scientific%20programming">12.2. Scientific programming</a></li>
@@ -1203,7 +1208,7 @@ Source: <a href="https://git-scm.com/book/en/v2/Git-Internals-Git-Objects">Git -
 <div id="outline-container-How%20to%20rename%20a%20branch%3F" class="outline-4">
 <h4 id="How%20to%20rename%20a%20branch%3F"><span class="section-number-4">3.1.2.</span> How to rename a branch?</h4>
 <div class="outline-text-4" id="text-3-1-2">
-<pre class="example" id="org09bbe47">
+<pre class="example" id="org855aa5a">
 git branch -m newname
 </pre>
 </div>
@@ -3927,8 +3932,28 @@ DF$z <span style="color: #8be9fd;">&lt;-</span> ak[[3]]
 </div>
 </li>
 
-<li><a id="How%20to%20plot%20in%20reverse%20log%20scale%20with%20ggplot2%3F"></a>How to plot in reverse log scale with ggplot2?<br />
+<li><a id="How%20to%20remove%20white%20lines%20from%20%3Dgeom_tile%3D%20with%20ggplot2%3F"></a>How to remove white lines from <code>geom_tile</code> with ggplot2?<br />
 <div class="outline-text-5" id="text-7-2-18-5">
+<p>
+The horizontal and vertical variable values should be equally spaced for
+<code>geom_tile</code> to work automatically. If there are white lines, there might be
+small inconsistencies in the gap between a few values (e.g., the first value
+is 1E-4 instead of an actual zero). Try <code>round(x)</code> or <code>factor(x)</code> for a
+quick fix.
+</p>
+
+<p>
+Source:
+</p>
+<ul class="org-ul">
+<li><a href="https://stackoverflow.com/a/51934527">r - ggplot geom<sub>tile</sub>, remove vertical white lines</a></li>
+<li><a href="https://stackoverflow.com/a/60237872">r - how to remove white lines from geom<sub>tile</sub> (heat map) using ggplot2</a></li>
+</ul>
+</div>
+</li>
+
+<li><a id="How%20to%20plot%20in%20reverse%20log%20scale%20with%20ggplot2%3F"></a>How to plot in reverse log scale with ggplot2?<br />
+<div class="outline-text-5" id="text-7-2-18-6">
 <div class="org-src-container">
 <pre class="src src-R"><span style="color: #a49462;">#</span><span style="color: #a49462;">'</span><span style="color: #a49462;"> Reverse log transformation</span>
 <span style="color: #a49462;">#</span><span style="color: #a49462;">'</span>
@@ -3959,7 +3984,7 @@ DF$z <span style="color: #8be9fd;">&lt;-</span> ak[[3]]
 </li>
 
 <li><a id="How%20to%20add%20labels%20near%20the%20plot%20boundaries%20with%20ggplot2%3F"></a>How to add labels near the plot boundaries with ggplot2?<br />
-<div class="outline-text-5" id="text-7-2-18-6">
+<div class="outline-text-5" id="text-7-2-18-7">
 <p>
 Use <code>-Inf</code> and <code>Inf</code> to signal the left/bottom and right/top end
 respectively, e.g., use <code>x=Inf</code> and <code>y=Inf</code> to place a <code>geom_label</code> on the
@@ -3983,8 +4008,25 @@ Source:
 </div>
 </li>
 
+<li><a id="How%20to%20move%20the%20legend%20closer%20to%20the%20axis%20label%20with%20ggplot2%3F"></a>How to move the legend closer to the axis label with ggplot2?<br />
+<div class="outline-text-5" id="text-7-2-18-8">
+<p>
+Give yourself the gift of the manual fine tuning using <code>theme(legend.margin
+    = margin(-10, 0, 0, 0))</code>, where <code>-10</code> needs to be defined on a case-by-case
+basis.
+</p>
+
+<p>
+Source:
+</p>
+<ul class="org-ul">
+<li><a href="https://stackoverflow.com/a/60119441">r - How to move legend up closer to the x-axis label in ggplot2</a></li>
+</ul>
+</div>
+</li>
+
 <li><a id="How%20to%20make%20ggplot2%20match%20LaTeX%20graphics%20and%20font%20size%3F"></a>How to make ggplot2 match LaTeX graphics and font size?<br />
-<div class="outline-text-5" id="text-7-2-18-7">
+<div class="outline-text-5" id="text-7-2-18-9">
 <ul class="org-ul">
 <li>Use <code>\show\f@size</code> in LaTeX to show the font length</li>
 <li>Use <code>theme(text = element_text(size = 11))</code> in R to set the target font
@@ -4009,7 +4051,7 @@ Source:
 </li>
 
 <li><a id="How%20to%20plot%20in%20log%20scale%20with%20base%20R%3F"></a>How to plot in log scale with base R?<br />
-<div class="outline-text-5" id="text-7-2-18-8">
+<div class="outline-text-5" id="text-7-2-18-10">
 <div class="org-src-container">
 <pre class="src src-R">plot(exp(1:10), 1:10, log = <span style="color: #f1fa8c;">"x"</span>)
 plot(1:10, exp(1:10), log = <span style="color: #f1fa8c;">"y"</span>)
@@ -4020,7 +4062,7 @@ plot(exp(1:10), exp(1:10), log = <span style="color: #f1fa8c;">"xy"</span>)
 </li>
 
 <li><a id="How%20to%20fine%20tune%20R%20plot%20margins%3F"></a>How to fine tune R plot margins?<br />
-<div class="outline-text-5" id="text-7-2-18-9">
+<div class="outline-text-5" id="text-7-2-18-11">
 <ul class="org-ul">
 <li><a href="https://www.rstudio.com/wp-content/uploads/2016/10/how-big-is-your-graph.pdf">How Big is Your Graph?</a></li>
 </ul>
@@ -4028,7 +4070,7 @@ plot(exp(1:10), exp(1:10), log = <span style="color: #f1fa8c;">"xy"</span>)
 </li>
 
 <li><a id="How%20to%20make%20beautiful%20plots%20with%20base%20R%3F"></a>How to make beautiful plots with base R?<br />
-<div class="outline-text-5" id="text-7-2-18-10">
+<div class="outline-text-5" id="text-7-2-18-12">
 <ul class="org-ul">
 <li><a href="http://karolis.koncevicius.lt/posts/r_base_plotting_without_wrappers/">R base plotting without wrappers</a></li>
 </ul>
@@ -4465,9 +4507,44 @@ Scientific data generation, collection, curation and processing.
 <h3 id="Data%20visualization"><span class="section-number-3">9.5.</span> Data visualization</h3>
 <div class="outline-text-3" id="text-9-5">
 </div>
-<div id="outline-container-Color%20palette" class="outline-4">
-<h4 id="Color%20palette"><span class="section-number-4">9.5.1.</span> Color palette</h4>
+<div id="outline-container-What%20colors%20are%20recommended%20for%20data%20visualization%3F" class="outline-4">
+<h4 id="What%20colors%20are%20recommended%20for%20data%20visualization%3F"><span class="section-number-4">9.5.1.</span> What colors are recommended for data visualization?</h4>
 <div class="outline-text-4" id="text-9-5-1">
+<ul class="org-ul">
+<li>1 color:
+<ul class="org-ul">
+<li>for points: black #000000</li>
+<li>for lines: either black #000000 or honolulu blue #2271B2</li>
+<li>for filled areas: summer sky #3DB7E9</li>
+<li>for surfaces: TBD</li>
+</ul></li>
+<li>2 colors:
+<ul class="org-ul">
+<li>for points: TBD</li>
+<li>for lines: honolulu blue #2271B2 and gamboge #E69F001</li>
+<li>for filled area: honolulu blue #2271B2 and gamboge #E69F001</li>
+</ul></li>
+<li>3 colors:
+<ul class="org-ul">
+<li>for points: TBD</li>
+<li>for lines: TBD</li>
+<li>for filled areas: TBD</li>
+</ul></li>
+</ul>
+
+<p>
+Source:
+</p>
+<ul class="org-ul">
+<li><a href="http://mkweb.bcgsc.ca/colorblind/">Color-palette for color blindness</a>: maintain perceptual luminance
+uniformity in color blind space</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-Color%20palette" class="outline-4">
+<h4 id="Color%20palette"><span class="section-number-4">9.5.2.</span> Color palette</h4>
+<div class="outline-text-4" id="text-9-5-2">
 <ul class="org-ul">
 <li><a href="https://ux.stackexchange.com/questions/94696/color-palette-for-all-types-of-color-blindness">Color Palette for All types of Color Blindness</a></li>
 <li><a href="http://mkweb.bcgsc.ca/colorblind/">Color-palette for color blindness</a>: maintain perceptual luminance
@@ -4479,8 +4556,8 @@ colorblinds and non-colorblinds</li>
 </div>
 
 <div id="outline-container-Data%20visualization--Resources" class="outline-4">
-<h4 id="Data%20visualization--Resources"><span class="section-number-4">9.5.2.</span> Resources</h4>
-<div class="outline-text-4" id="text-9-5-2">
+<h4 id="Data%20visualization--Resources"><span class="section-number-4">9.5.3.</span> Resources</h4>
+<div class="outline-text-4" id="text-9-5-3">
 <ul class="org-ul">
 <li><a href="https://blog.datawrapper.de/colors/">What to consider when choosing colors for data visualization</a></li>
 <li><a href="https://www.data-to-viz.com/#explore">Data-to-viz</a>: visualization decision tree guide</li>
@@ -5156,9 +5233,50 @@ visualization.
 </div>
 </div>
 
-<div id="outline-container-How%20to%20transform%20a%20covariate%20taking%20non-negative%20values%20with%20zeroes%3F" class="outline-4">
-<h4 id="How%20to%20transform%20a%20covariate%20taking%20non-negative%20values%20with%20zeroes%3F"><span class="section-number-4">10.1.8.</span> How to transform a covariate taking non-negative values with zeroes?</h4>
+<div id="outline-container-When%20should%20I%20apply%20log%20transformation%20to%20positive%20data%3F" class="outline-4">
+<h4 id="When%20should%20I%20apply%20log%20transformation%20to%20positive%20data%3F"><span class="section-number-4">10.1.8.</span> When should I apply log transformation to positive data?</h4>
 <div class="outline-text-4" id="text-10-1-8">
+<p>
+Some heuristics that I have heard here and there.
+</p>
+
+<ul class="org-ul">
+<li>Recall that linearity, additivity, and constant variance are key
+assumptions for a linear model</li>
+<li>Are you analyzing multiple responses separately? Do some responses benefit
+from the log transformation? Do you want to apply the same transformation
+to all the responses to avoid "p-hacking"?</li>
+<li>Are the changes on the responses happening on a relative scale?</li>
+<li>"Log transform, kids. And don’t listen to people who tell you otherwise."</li>
+</ul>
+
+<p>
+Source:
+</p>
+<ul class="org-ul">
+<li><a href="https://statmodeling.stat.columbia.edu/2019/08/21/you-should-usually-log-transform-your-positive-data/">You should (usually) log transform your positive data</a></li>
+<li>Gelman, A., &amp; Hill, J. (2006). Data analysis using regression and
+multilevel/hierarchical models. Cambridge university press.</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-When%20should%20I%20visualize%20positive%20data%20in%20log%20scale%3F" class="outline-4">
+<h4 id="When%20should%20I%20visualize%20positive%20data%20in%20log%20scale%3F"><span class="section-number-4">10.1.9.</span> When should I visualize positive data in log scale?</h4>
+<div class="outline-text-4" id="text-10-1-9">
+<ul class="org-ul">
+<li>If the <code>range(x) = max(x) - min(x)</code> is equal to or larger than 10 (Jarad)</li>
+<li>Similarly, if the <code>ratio(x) = max(x) / min(x)</code> is equal to or larger than
+10</li>
+<li>If plot is more loaded to the left of 1 than to the right (Jarad),
+especially for ratios.</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-How%20to%20transform%20a%20covariate%20taking%20non-negative%20values%20with%20zeroes%3F" class="outline-4">
+<h4 id="How%20to%20transform%20a%20covariate%20taking%20non-negative%20values%20with%20zeroes%3F"><span class="section-number-4">10.1.10.</span> How to transform a covariate taking non-negative values with zeroes?</h4>
+<div class="outline-text-4" id="text-10-1-10">
 <p>
 Consider a covariate (AKA independent variable, regressor, predictor) with
 true zeroes observed.
@@ -5191,8 +5309,8 @@ useful for identifying an appropriate re-expression</li>
 </div>
 
 <div id="outline-container-What%20is%20the%20difference%20between%20cross-validation%20and%20the%20WAIC%3F" class="outline-4">
-<h4 id="What%20is%20the%20difference%20between%20cross-validation%20and%20the%20WAIC%3F"><span class="section-number-4">10.1.9.</span> What is the difference between cross-validation and the WAIC?</h4>
-<div class="outline-text-4" id="text-10-1-9">
+<h4 id="What%20is%20the%20difference%20between%20cross-validation%20and%20the%20WAIC%3F"><span class="section-number-4">10.1.11.</span> What is the difference between cross-validation and the WAIC?</h4>
+<div class="outline-text-4" id="text-10-1-11">
 <p>
 For hierarchical models, WAIC estimates predictive performance for a new
 observation from an existing group whereas cross-validation estimates the
@@ -5206,8 +5324,8 @@ predictive performance for a new observation from a new group.
 </div>
 
 <div id="outline-container-How%20to%20do%20positivity-preserving%20interpolation%3F" class="outline-4">
-<h4 id="How%20to%20do%20positivity-preserving%20interpolation%3F"><span class="section-number-4">10.1.10.</span> How to do positivity-preserving interpolation?</h4>
-<div class="outline-text-4" id="text-10-1-10">
+<h4 id="How%20to%20do%20positivity-preserving%20interpolation%3F"><span class="section-number-4">10.1.12.</span> How to do positivity-preserving interpolation?</h4>
+<div class="outline-text-4" id="text-10-1-12">
 <ul class="org-ul">
 <li><a href="https://doi.org/10.2307/2005928">Splines with Nonnegative $B$-Spline Coefficients</a></li>
 <li><a href="https://math.stackexchange.com/a/677839/113775">How can I find a non-negative interpolation function?</a>
@@ -5217,8 +5335,8 @@ predictive performance for a new observation from a new group.
 </div>
 
 <div id="outline-container-What%20are%20some%20good%2C%20general%20rules%20on%20reporting%3F" class="outline-4">
-<h4 id="What%20are%20some%20good%2C%20general%20rules%20on%20reporting%3F"><span class="section-number-4">10.1.11.</span> What are some good, general rules on reporting?</h4>
-<div class="outline-text-4" id="text-10-1-11">
+<h4 id="What%20are%20some%20good%2C%20general%20rules%20on%20reporting%3F"><span class="section-number-4">10.1.13.</span> What are some good, general rules on reporting?</h4>
+<div class="outline-text-4" id="text-10-1-13">
 <p>
 Here is some general guidance, which of course may not be the best fit for
 some specific situations
@@ -5248,8 +5366,8 @@ Source
 </div>
 
 <div id="outline-container-Priors" class="outline-4">
-<h4 id="Priors"><span class="section-number-4">10.1.12.</span> Priors</h4>
-<div class="outline-text-4" id="text-10-1-12">
+<h4 id="Priors"><span class="section-number-4">10.1.14.</span> Priors</h4>
+<div class="outline-text-4" id="text-10-1-14">
 <ul class="org-ul">
 <li><a href="http://www.stats.org.uk/priors/noninformative/YangBerger1998.pdf">A Catalog of Noninformative Priors</a></li>
 </ul>
@@ -5257,8 +5375,8 @@ Source
 </div>
 
 <div id="outline-container-MCMC" class="outline-4">
-<h4 id="MCMC"><span class="section-number-4">10.1.13.</span> MCMC</h4>
-<div class="outline-text-4" id="text-10-1-13">
+<h4 id="MCMC"><span class="section-number-4">10.1.15.</span> MCMC</h4>
+<div class="outline-text-4" id="text-10-1-15">
 <ul class="org-ul">
 <li><a href="http://users.stat.umn.edu/~geyer/mcmc/one.html">One long run in MCMC</a>: If you can't get a good answer with one
 long run, then you can't get a good answer with many short runs
@@ -5267,8 +5385,8 @@ either.</li>
 </div>
 </div>
 <div id="outline-container-Neural%20networks" class="outline-4">
-<h4 id="Neural%20networks"><span class="section-number-4">10.1.14.</span> Neural networks</h4>
-<div class="outline-text-4" id="text-10-1-14">
+<h4 id="Neural%20networks"><span class="section-number-4">10.1.16.</span> Neural networks</h4>
+<div class="outline-text-4" id="text-10-1-16">
 <ul class="org-ul">
 <li><a href="https://archive.org/download/c24bcbd791979fda2b274e7c42b22bb8b0462d20d28b0db09f8f60bd0bd1f827/c24bcbd791979fda2b274e7c42b22bb8b0462d20d28b0db09f8f60bd0bd1f827.png">A mostly complete chart of Neural Networks</a> by Fjodor van Veen at the Asimov
 Institute</li>
@@ -5689,25 +5807,81 @@ Source:
 </div>
 </div>
 
-<div id="outline-container-My%20own%20common%20tics%20to%20grep%20for" class="outline-4">
-<h4 id="My%20own%20common%20tics%20to%20grep%20for"><span class="section-number-4">12.1.11.</span> My own common tics to grep for</h4>
+<div id="outline-container-Verb%20tenses" class="outline-4">
+<h4 id="Verb%20tenses"><span class="section-number-4">12.1.11.</span> Verb tenses</h4>
 <div class="outline-text-4" id="text-12-1-11">
+<p>
+I sometimes doubt about the <i>right</i> verb tense for a sentence. When I read, I
+often see authors changing tenses often, perhaps with a good reason. Here a
+few thoughts.
+</p>
+
+<ul class="org-ul">
+<li>Active voice
+<ul class="org-ul">
+<li>I don't have a reference to use, but I've seen a pushback against the
+traditional use of passive voice. It's probably a good idea to stick to
+either active or passive voice throughout the manuscript.</li>
+</ul></li>
+<li>Present tense
+<ul class="org-ul">
+<li>Facts that are always true, e.g., a Gaussian process <i>is</i> a probabilistic
+model</li>
+</ul></li>
+<li>Present perfect
+<ul class="org-ul">
+<li>Things that have been done recently, e.g., Author (year)
+<i>has recently introduced</i> a novel framework</li>
+</ul></li>
+<li>Past tense
+<ul class="org-ul">
+<li>Things that were done in the past, e.g., Author (year) <i>built</i> a
+parametric function</li>
+</ul></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-My%20own%20common%20tics%20to%20grep%20for" class="outline-4">
+<h4 id="My%20own%20common%20tics%20to%20grep%20for"><span class="section-number-4">12.1.12.</span> My own common tics to grep for</h4>
+<div class="outline-text-4" id="text-12-1-12">
 <ul class="org-ul">
 <li>Hyphens are used when two or more adjectives or an adjective and
 a noun together modify another noun; for example, goodness-of-fit
 test is the equivalent of test for goodness of fit.</li>
-<li>Most words with prefixes such as sub and non are not hyphenated,
-for example: subtable, nonnormal.</li>
+<li>Most words with prefixes such as sub, non, pre, post are not hyphenated,
+for example: subtable, nonnormal, nonlinear, premultiply, postgraduate.</li>
 <li>No dash when using the wise suffix, e.g., elementwise instead of
 element-wise, subspace instead of sub-space</li>
 <li>Closed compound nouns, e.g., metadata instead of meta data</li>
+<li>Prefer "Considering/As/Since subject verb" over "Considering that subject
+verb" (mdogg at libera.chat)</li>
+<li><i>squared exponential</i> is grammatical, <i>square exponential</i> is not</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-Rules%20of%20thumb" class="outline-4">
+<h4 id="Rules%20of%20thumb"><span class="section-number-4">12.1.13.</span> Rules of thumb</h4>
+<div class="outline-text-4" id="text-12-1-13">
+<ul class="org-ul">
+<li>Use "respectively" at the end of the sentence, preferably, or in the
+middle. Use comma.</li>
+<li>Prefer "and is thus" over "and thus is" (187M vs 24M matches). Consider
+"therefore" or "thence" instead of "thus", which is becoming archaic, for
+causation.</li>
+<li>Don't be unnecessarily indirect, don't be fluffy. E.g., "Consider"</li>
+<li>Can/could/may: <i>can</i> expresses certainty, <i>could</i> expresses uncertainty or
+a conditional statement, <i>may</i> expresses a possibility or a permission,
+<i>may not</i> expresses a denial of permission. (The Chicago manual of style,
+2017, 5.250).</li>
 </ul>
 </div>
 </div>
 
 <div id="outline-container-Contextual%20formatting" class="outline-4">
-<h4 id="Contextual%20formatting"><span class="section-number-4">12.1.12.</span> Contextual formatting</h4>
-<div class="outline-text-4" id="text-12-1-12">
+<h4 id="Contextual%20formatting"><span class="section-number-4">12.1.14.</span> Contextual formatting</h4>
+<div class="outline-text-4" id="text-12-1-14">
 <ul class="org-ul">
 <li>Use <b>bold</b> for (i) make the core of the message as salient as
 possible, (ii) in-line headings at the start of the line</li>
@@ -5722,8 +5896,8 @@ final version</li>
 </div>
 
 <div id="outline-container-Oral%20presentations" class="outline-4">
-<h4 id="Oral%20presentations"><span class="section-number-4">12.1.13.</span> Oral presentations</h4>
-<div class="outline-text-4" id="text-12-1-13">
+<h4 id="Oral%20presentations"><span class="section-number-4">12.1.15.</span> Oral presentations</h4>
+<div class="outline-text-4" id="text-12-1-15">
 <ul class="org-ul">
 <li>A sentence is better than a paragraph. A phrase is better than a
 sentence. A word is better than a phrase. An image is better than
@@ -5737,8 +5911,8 @@ speaker instead :)</li>
 </div>
 
 <div id="outline-container-Research%20statement" class="outline-4">
-<h4 id="Research%20statement"><span class="section-number-4">12.1.14.</span> Research statement</h4>
-<div class="outline-text-4" id="text-12-1-14">
+<h4 id="Research%20statement"><span class="section-number-4">12.1.16.</span> Research statement</h4>
+<div class="outline-text-4" id="text-12-1-16">
 <ul class="org-ul">
 <li><a href="https://gradschool.cornell.edu/career-and-professional-development/pathways-to-success/prepare-for-your-career/take-action/research-statement/">Research Statement: Cornll University Graduate School</a></li>
 </ul>
@@ -5746,8 +5920,8 @@ speaker instead :)</li>
 </div>
 
 <div id="outline-container-Research%20proposal" class="outline-4">
-<h4 id="Research%20proposal"><span class="section-number-4">12.1.15.</span> Research proposal</h4>
-<div class="outline-text-4" id="text-12-1-15">
+<h4 id="Research%20proposal"><span class="section-number-4">12.1.17.</span> Research proposal</h4>
+<div class="outline-text-4" id="text-12-1-17">
 <ul class="org-ul">
 <li><a href="https://www.overleaf.com/project/5ee71e595384510001fdaaaa">Research proposal template</a> (published by the <a href="https://www.sml-group.cc/openings/">SML group for an opening</a>)</li>
 </ul>
@@ -5913,7 +6087,7 @@ Source: <a href="https://stats.stackexchange.com/q/397288/31243">Dot Product and
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Luis Damiano</p>
-<p class="date">Created: 2023-01-17 Tue 06:07</p>
+<p class="date">Created: 2023-02-24 Fri 13:46</p>
 <p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>

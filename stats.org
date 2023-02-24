@@ -85,6 +85,31 @@
 
    - Source: [[https://www.doi.org/10.1002/9781119115151][10.1002/9781119115151]] eq. (2.2.8)
 
+** When should I apply log transformation to positive data?
+
+   Some heuristics that I have heard here and there.
+
+   - Recall that linearity, additivity, and constant variance are key
+     assumptions for a linear model
+   - Are you analyzing multiple responses separately? Do some responses benefit
+     from the log transformation? Do you want to apply the same transformation
+     to all the responses to avoid "p-hacking"?
+   - Are the changes on the responses happening on a relative scale?
+   - "Log transform, kids. And don’t listen to people who tell you otherwise."
+
+   Source:
+   - [[https://statmodeling.stat.columbia.edu/2019/08/21/you-should-usually-log-transform-your-positive-data/][You should (usually) log transform your positive data]]
+   - Gelman, A., & Hill, J. (2006). Data analysis using regression and
+     multilevel/hierarchical models. Cambridge university press.
+
+** When should I visualize positive data in log scale?
+
+   - If the =range(x) = max(x) - min(x)= is equal to or larger than 10 (Jarad)
+   - Similarly, if the =ratio(x) = max(x) / min(x)= is equal to or larger than
+     10
+   - If plot is more loaded to the left of 1 than to the right (Jarad),
+     especially for ratios.
+
 ** How to transform a covariate taking non-negative values with zeroes?
 
    Consider a covariate (AKA independent variable, regressor, predictor) with
