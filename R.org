@@ -487,6 +487,9 @@
 
 *** How to make ggplot2 match LaTeX graphics and font size?
 
+    Reasonable sizes are 11pt (3.87mm) for manuscripts, 24pt (8.44mm) or
+    25pt (8.79mm) for posters read at 1m of distance.
+
     - Use =\show\f@size= in LaTeX to show the font length
     - Use =theme(text = element_text(size = 11))= in R to set the target font
       size in points
