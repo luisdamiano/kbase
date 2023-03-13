@@ -118,6 +118,7 @@
    - Prefer "Considering/As/Since subject verb" over "Considering that subject
      verb" (mdogg at libera.chat)
    - /squared exponential/ is grammatical, /square exponential/ is not
+   - /y is quadratic in x/ or /y is a quadratic function of x/, but never /y is quadratic on x/
 
 ** Rules of thumb
    - Use "respectively" at the end of the sentence, preferably, or in the
